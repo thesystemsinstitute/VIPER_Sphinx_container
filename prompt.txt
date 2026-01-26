@@ -1,0 +1,153 @@
+
+Sphinx Container
+----------------
+Create a Docker container, that can be run on a Windows platform around the Sphinx tool
+that can be called from a project to generate HTML documentation.
+
+Install the smallest footprint Python 3.13 possible for the task neededs fin this container
+
+Install the following tools:
+- Graphviz
+- pyan3
+
+Install the following Sphinx-Python packages:
+- pdoc3
+- Sphinx
+- sphinx-charts
+- sphinx-confluence
+- sphinx-lint
+- sphinx-library
+- sphinx2doxygen
+- sphinx-issues
+- sphinx-tagtoctree
+- sphinx-vhdl
+- sphinx-c-autodoc
+- sphinx-theme
+- sphinx-refdoc
+- sphinx-gitref
+- sphinx-autoschematics
+- sphinx-pyreverse
+- sphinx-uml
+- sphinxcontrib-asyncio
+- sphinxcontrib-googlemaps
+- sphinx-kml
+- sphinxnotes-fasthtml
+- sphinx-wagtail-theme
+- sphinx-diagrams
+- btd.sphinx.graphviz
+- sphinx-tojupyter
+- sphinxcontrib-cadquery
+- epub2sphinx
+- sphinx-autodoc-defaultargs
+- sphinx-autodoc-annotation
+- sphinx-autodoc2-fern
+- sphinx-collapsible-autodoc
+- sphinx-autodoc-toml
+- sphinx-autopyproject/
+- project/meta-sphinx
+- sphinx-automodapi
+- pytest-doctestplus
+- sphinx-copybutton
+- sphinx-prompt
+- sphinxemoji
+- sphinx-favicon
+- myst-parser
+- sphinxcontrib-httpdomain
+- sphinx-autobuild
+- sphinx-autoapi
+- nbsphinx
+- nbsphinx-link
+- sphinx-jupyter-kernel
+- sphinx-notfound-page
+- sphinx-version-warning
+- sphinx-hoverxref
+- sphinx-last-updated-by-git
+- sphinx-git
+- sphinxext-opengraph
+- ansible-sphinx
+- invoke-sphinx
+- sphinx-analytics
+- sphinx-apischema
+- sphinx-autoindex
+- sphinx-autofixture
+- sphinx-autopackagesummary
+- sphinx-autoschematics
+- sphinx-advanced
+- sphinx-changelog
+- sphinx-charts
+
+
+Markdown related Python packages:
+- markdown
+- enumerate-markdown
+- flake8-markdown
+- markdown-it-py
+
+
+Graphviz related Python packages:
+- graphviz-py
+- pydot3
+- gprof2dot
+- py2dot
+- python-graph-dot
+- graphviz
+- graphviz-managed
+- graphviz-artist
+- graphviz-py
+- graphviz2drawio
+- jirafs-graphviz
+- python-markdown-graphviz
+- btd.sphinx.graphviz
+- graphviz2drawio
+- fsmdot
+- python-graphs
+- quickdiagrams
+- dtreeplt
+- pyprojectviz
+- python-docutils-graphviz
+- graphviz-overlay
+- graphviz-artist
+- graphviz-anywidget
+- graphviz2drawio
+- jirafs-graphviz
+- pydot_modern
+
+
+Install the Sphinx themes from:
+- https://sphinx-themes.org/
+
+Install the Sphinx extensions from:
+- https://sphinxthemes.com/extensions/
+
+
+
+Generate HTML documentation for this container.
+The title page:
+	- explains the purpose of this container
+	- link to the Sphinx documentation
+	- Explanation how to use the installed tools in this container from your project
+	- Links to the following sub pages:
+	- "Sphinx packages" with table listing all installed Sphinx-related Python packages with the following columns
+            - "Name" for the names of the package
+            - "Version" for the version of the Python package installed
+            - "Pypi" for the links to the Pypi page for the Python package
+            - "docs" for the links to the generated pdoc3 doumentation for the Python package
+            - "manual" link to the online documentation  for the Python package or tool
+            - "descr" for a one line description of the Package
+			- "Tutorial" a link to the included tutorial for this package.
+	- Tutorial page on how to use all Sphinx features, with a link to an example page. Embed youtube videos where possible.
+	- Tutorial page for every Sphinx package installed , with a link to an example page. Embed youtube videos where possible.
+
+Embed the generated documentation in the container.
+Run the generated HTML pages on a small embedded  webserver based Python http.server.
+Expose the port to allow expternal users to show the web pages in their browser
+
+
+create scripts for Windows and Linux to build the project:
+- generatethe HTML documentation under docs folder
+- build the docker inmage
+
+
+
+upload this project to Github account https://github.com/thesystemsinstitute under project called "KENSAI_Sphinx_container"
+

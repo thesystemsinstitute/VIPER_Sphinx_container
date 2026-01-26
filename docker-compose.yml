@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  sphinx-docs:
+    build: .
+    image: kensai-sphinx:latest
+    container_name: kensai-sphinx-docs
+    ports:
+      - "8080:8080"
+    environment:
+      - DOCS_PORT=8080
+    volumes:
+      # Mount your project documentation
+      - ./docs:/sphinx/docs
+      # Persist built documentation
+      - ./docs/_build:/sphinx/docs/_build
+    restart: unless-stopped
+    networks:
+      - sphinx-network
+
+  # Optional: Sphinx autobuild service for development
+  sphinx-autobuild:
+    build: .
+    image: kensai-sphinx:latest
+    container_name: kensai-sphinx-autobuild
+    ports:
+      - "8000:8000"
+    environment:
+      - DOCS_PORT=8000
+    volumes:
+      - ./docs:/sphinx/docs
+      - ./docs/_build:/sphinx/docs/_build
+    command: >
+      sh -c "cd /sphinx/docs && 
+             sphinx-autobuild . _build/html 
+             --host 0.0.0.0 
+             --port 8000 
+             --ignore '*.swp' 
+             --ignore '*~'"
+    restart: unless-stopped
+    networks:
+      - sphinx-network
+    profiles:
+      - dev
+
+networks:
+  sphinx-network:
+    driver: bridge
+
+volumes:
+  docs-build:
+    driver: local

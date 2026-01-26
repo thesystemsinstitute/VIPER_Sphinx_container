@@ -148,6 +148,67 @@ create scripts for Windows and Linux to build the project:
 - build the docker inmage
 
 
+add Python packages:
+- pyreverse 
+- code2flow 
+- snakeviz 
+- pydeps 
+- diagrams
+- diagrams-xtd
+- diagrams-yaml
+- diagrams-as-code
+- flow-diagrams
+- protobuf-uml-diagram
+- renderschema
+- flowdiagram
+- mathdiagram
+- pyumldiagrams
+- matplotlib-set-diagrams
+- sphinxcontrib-hdl-diagrams
+- sun-path-diagrams
+- k8s-diagrams
+- er-diagrams-generator
+- markdown-diagram-fixer
+- yarrow-diagrams
+- railroad-diagrams
+- syntax-diagrams
+- multicloud-diagrams
+- bdp
+- blockdiag
+- palette-diagram
+- cadCAD-diagram
+- diagram-autobuild
+- sphinx-diagrams
+- infrastructure-diagrams
+- diagrams
+- pydiagrams
+- railroad-diagrams
+- PDFDiagramming
+- projman
+- idgrms
+- N2G
+- orthogram
+- rptree
+- pinout
+- pyagram
+- nwdiag
+- Image2Dia
+- quickdiagrams
+- autonode-diagrams
+- chalk-diagrams
+- polar-diagrams
+- airflow-diagrams
+- diagrams-adapters
+- reverse-diagrams
+- pytex2svg
+- svg-schematic
+- svg-plot
+- svg-ultralight
+- svg.py
+- python-svg
+- markdown-graphviz-svg
 
-upload this project to Github account https://github.com/thesystemsinstitute under project called "KENSAI_Sphinx_container"
+
+
+
 

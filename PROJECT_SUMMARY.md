@@ -19,6 +19,8 @@ This project provides a comprehensive Docker container for Sphinx documentation 
    - Extensions: 60+ Sphinx extensions
    - Themes: RTD, Furo, Book, PyData, Material
    - Tools: Graphviz bindings, Markdown processors
+   - Diagram Tools: 60+ packages (diagrams, pyreverse, code2flow, blockdiag, nwdiag, etc.)
+   - SVG Tools: pytex2svg, svg-schematic, svg-plot, and more
    - Utilities: Code analysis, diagram generation
 
 3. **docker-compose.yml** - Multi-service setup:

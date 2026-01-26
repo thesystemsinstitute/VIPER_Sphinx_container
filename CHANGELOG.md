@@ -131,17 +131,81 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Comprehensive README
 - Project summary documentation
 
+## [1.1.0] - 2026-01-25
+
+### Added
+
+**Advanced Diagram and Visualization Packages (60+):**
+
+- `pyreverse` - UML diagram generator from Python code
+- `code2flow` - Generate call graphs from code
+- `snakeviz` - Browser-based graphical viewer for Python profiler
+- `pydeps` - Python module dependency visualization
+- `diagrams` - Diagrams as code for cloud architectures
+- `diagrams-xtd` - Extended diagrams
+- `diagrams-yaml` - YAML-based diagram definitions
+- `diagrams-as-code` - Infrastructure diagrams as code
+- `flow-diagrams` - Flowchart generation
+- `protobuf-uml-diagram` - UML diagrams from Protocol Buffers
+- `renderschema` - Schema rendering
+- `flowdiagram` - Flow diagram generation
+- `mathdiagram` - Mathematical diagrams
+- `pyumldiagrams` - UML diagrams for Python
+- `matplotlib-set-diagrams` - Set diagrams with matplotlib
+- `sphinxcontrib-hdl-diagrams` - Hardware diagrams for Sphinx
+- `sun-path-diagrams` - Solar path diagrams
+- `k8s-diagrams` - Kubernetes diagrams
+- `er-diagrams-generator` - Entity-relationship diagrams
+- `markdown-diagram-fixer` - Fix diagrams in Markdown
+- `yarrow-diagrams` - Yarrow diagram generation
+- `railroad-diagrams` - Railroad/syntax diagrams
+- `syntax-diagrams` - Syntax diagram generation
+- `multicloud-diagrams` - Multi-cloud architecture diagrams
+- `bdp` - Block diagram generator
+- `blockdiag` - Simple block diagram generator
+- `palette-diagram` - Palette-based diagrams
+- `cadCAD-diagram` - cadCAD system diagrams
+- `diagram-autobuild` - Auto-build diagrams
+- `infrastructure-diagrams` - Infrastructure visualization
+- `pydiagrams` - Python diagram library
+- `PDFDiagramming` - PDF diagram generation
+- `projman` - Project management diagrams
+- `idgrms` - ID-based diagrams
+- `N2G` - Network to graph conversion
+- `orthogram` - Orthogonal diagrams
+- `rptree` - Directory tree visualization
+- `pinout` - Pin diagram generation
+- `pyagram` - Program execution diagrams
+- `nwdiag` - Network diagrams
+- `Image2Dia` - Image to diagram conversion
+- `autonode-diagrams` - Auto-node diagram generation
+- `chalk-diagrams` - Chalk-style diagrams
+- `polar-diagrams` - Polar coordinate diagrams
+- `airflow-diagrams` - Airflow DAG visualization
+- `diagrams-adapters` - Diagram adapters
+- `reverse-diagrams` - Reverse engineering diagrams
+
+**SVG and Vector Graphics:**
+
+- `pytex2svg` - LaTeX to SVG conversion
+- `svg-schematic` - Schematic diagrams in SVG
+- `svg-plot` - SVG plotting
+- `svg-ultralight` - Lightweight SVG tools
+- `svg.py` - SVG generation library
+- `python-svg` - Python SVG library
+- `markdown-graphviz-svg` - Graphviz SVG in Markdown
+
 ## [Planned] - Future
 
 ### Potential Enhancements
-- Additional package-specific tutorials
+- Tutorial pages for new diagram packages
+- Diagram comparison examples
 - PDF generation with LaTeX support
 - More theme examples
 - CI/CD integration examples
 - Version info display script
 - Health check endpoint
 - Multi-language documentation support
-- Additional specialized plugins
 - Performance optimizations
 - Automated testing framework
 

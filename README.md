@@ -106,6 +106,8 @@ docker run -p 8000:8000 -v $(pwd):/project kensai-sphinx \
 - **pdoc3** - Auto-generate API documentation
 - **Graphviz** - Graph visualization
 - **pyan3** - Python call graph generator
+- **60+ Diagram Tools** - diagrams, pyreverse, code2flow, blockdiag, nwdiag, railroad-diagrams, etc.
+- **SVG Tools** - pytex2svg, svg-schematic, svg-plot, and more
 
 ### Sphinx Extensions (80+)
 
@@ -134,6 +136,8 @@ Complete list available in the container documentation at `/sphinx-packages`.
 - Markdown processors
 - Graphviz Python bindings
 - Code analysis tools
+- 60+ diagram and visualization libraries
+- SVG generation and manipulation tools
 
 ## 🎨 Customization
 

@@ -7,10 +7,6 @@ This page demonstrates the **sphinxcontrib-tikz** TikZ diagram support for Sphin
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinxcontrib-tikz package provides functionality for working with TikZ diagram support for Sphinx.
 
 Basic Usage
 -----------

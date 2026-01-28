@@ -7,10 +7,6 @@ This page demonstrates the **graphviz** Python interface to Graphviz.
    :local:
    :depth: 2
 
-Overview
---------
-
-The graphviz package provides functionality for working with Python interface to Graphviz.
 
 Basic Usage
 -----------

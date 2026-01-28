@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-rtd-theme, a popular Read the Docs 
 
 What is Read the Docs Theme?
 ---------------------------
-
 Read the Docs Theme provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Read the Docs Theme provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinx-rtd-theme package provides functionality for working with popular Read the Docs theme.
+
 
 Installation
 ------------

@@ -18,7 +18,6 @@ This tutorial demonstrates how to use sphinx-autodoc-defaultargs to show default
 
 What is Sphinx-Autodoc-Defaultargs?
 ------------------------------------
-
 sphinx-autodoc-defaultargs is a Sphinx extension that enhances autodoc to:
 
 - Display default argument values
@@ -33,8 +32,8 @@ sphinx-autodoc-defaultargs is a Sphinx extension that enhances autodoc to:
 
 This makes API documentation more complete by showing what values parameters default to.
 
-
 The sphinx-autodoc-defaultargs extension enhances autodoc to show default argument values in function signatures.
+
 
 Installation
 ------------
@@ -45,15 +44,18 @@ sphinx-autodoc-defaultargs is already installed in this container. To verify:
 
    docker run --rm kensai-sphinx:latest python -c "import sphinx_autodoc_defaultargs; print('Installed')"
 
+
 Configuration
 -------------
 
 Basic Setup
 ~~~~~~~~~~~
 
+
 Add to your ``conf.py``:
 
 .. code-block:: python
+
 
    extensions = [
        'sphinx.ext.autodoc',
@@ -86,6 +88,7 @@ Advanced Configuration
    autodoc_defaultargs_in_description = True
 
 
+
 Additional Configuration Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -111,45 +114,7 @@ Options
        'default-value-format': 'repr',  # or 'str'
    }
 
-Basic Usage
------------
 
-Simple Function
-~~~~~~~~~~~~~~~
-
-``mylib/utils.py``:
-
-.. code-block:: python
-
-   def greet(name, greeting="Hello", punctuation="!"):
-       """
-       Greet someone.
-       
-       :param name: Person's name
-       :param greeting: Greeting message
-       :param punctuation: End punctuation
-       :return: Greeting string
-       """
-       return f"{greeting}, {name}{punctuation}"
-
-Document:
-
-.. code-block:: rst
-
-   .. autofunction:: mylib.utils.greet
-
-Output shows:
-
-.. code-block:: rst
-
-   greet(name, greeting='Hello', punctuation='!')
-   
-   Greet someone.
-   
-   :param name: Person's name
-   :param greeting: Greeting message (default: 'Hello')
-   :param punctuation: End punctuation (default: '!')
-   :return: Greeting string
 
 Class with Defaults
 ~~~~~~~~~~~~~~~~~~~

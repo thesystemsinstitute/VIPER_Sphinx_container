@@ -16,15 +16,6 @@ This page demonstrates **sphinx-argparse** - Document argparse CLIs.
 Overview
 --------
 
-What is sphinx-argparse?
--------------------------
-
-sphinx-argparse provides:
-
-- Document argparse CLIs
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

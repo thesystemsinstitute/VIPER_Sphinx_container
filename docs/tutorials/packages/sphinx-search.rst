@@ -12,7 +12,6 @@ This tutorial demonstrates how to use sphinx-search in your Sphinx documentation
 
 What is Sphinx Search?
 ----------------------
-
 sphinx-search is a Sphinx extension that provides:
 
 - Enhanced search functionality
@@ -34,6 +33,8 @@ Key Features
 - **Fuzzy Matching**: Find results even with typos
 - **Code Search**: Search within code blocks
 - **Search Analytics**: Track search queries
+
+
 Installation
 ------------
 

@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-pyreverse** extension for generating UML cla
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-pyreverse extension integrates Pyreverse (from Pylint) to automatically generate UML diagrams from Python source code, including class diagrams, package diagrams, and dependency graphs.
 
 Basic Class Diagrams
 --------------------

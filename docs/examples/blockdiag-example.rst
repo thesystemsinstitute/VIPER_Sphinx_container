@@ -7,10 +7,6 @@ This page demonstrates the **blockdiag** block diagram generator.
    :local:
    :depth: 2
 
-Overview
---------
-
-The blockdiag package provides functionality for working with block diagram generator.
 
 Basic Usage
 -----------

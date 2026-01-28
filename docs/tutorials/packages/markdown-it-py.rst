@@ -19,7 +19,6 @@ This tutorial demonstrates how to use markdown-it-py, a Python port of markdown-
 
 What is Markdown-it-py?
 ----------------------
-
 Markdown-it-py provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Markdown-it-py provides features for:
 - Advanced features
 - Best practices
 
-
 The markdown-it-py package provides functionality for working with Python port of markdown-it parser.
+
 
 Installation
 ------------

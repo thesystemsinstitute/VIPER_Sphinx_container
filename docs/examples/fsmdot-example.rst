@@ -7,10 +7,6 @@ This page demonstrates the **fsmdot** finite state machine diagram generator.
    :local:
    :depth: 2
 
-Overview
---------
-
-The fsmdot package provides functionality for working with finite state machine diagram generator.
 
 Basic Usage
 -----------

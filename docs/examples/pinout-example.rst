@@ -7,10 +7,6 @@ This page demonstrates the **pinout** hardware pinout diagram generator.
    :local:
    :depth: 2
 
-Overview
---------
-
-The pinout package provides functionality for working with hardware pinout diagram generator.
 
 Basic Usage
 -----------

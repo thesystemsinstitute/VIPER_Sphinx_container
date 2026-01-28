@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-collapsible-autodoc** extension for creating
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-collapsible-autodoc extension adds collapsible sections to autodoc documentation, improving readability for large APIs.
 
 Basic Usage
 -----------

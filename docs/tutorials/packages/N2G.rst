@@ -19,7 +19,6 @@ This tutorial demonstrates how to use N2G, a Network to Graph converter.
 
 What is N2G?
 -----------
-
 N2G provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ N2G provides features for:
 - Advanced features
 - Best practices
 
-
 The N2G package provides functionality for working with Network to Graph converter.
+
 
 Installation
 ------------

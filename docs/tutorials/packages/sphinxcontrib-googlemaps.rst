@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxcontrib-googlemaps to embed interact
 
 What is Sphinxcontrib-Googlemaps?
 ----------------------------------
-
 sphinxcontrib-googlemaps is a Sphinx extension that provides directives for embedding Google Maps:
 
 - Interactive map embedding
@@ -34,8 +33,8 @@ sphinxcontrib-googlemaps is a Sphinx extension that provides directives for embe
 
 This is perfect for documentation that needs to show locations, facilities, offices, or geographic data.
 
-
 The sphinxcontrib-googlemaps extension allows embedding interactive Google Maps with markers, routes, and custom styling directly in documentation.
+
 
 Installation
 ------------

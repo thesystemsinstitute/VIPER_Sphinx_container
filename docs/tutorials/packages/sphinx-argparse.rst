@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-argparse in your Sphinx documentati
 
 What is Sphinx Argparse?
 -------------------------
-
 sphinx-argparse is a Sphinx extension that provides:
 
 - Document argparse CLIs
@@ -41,6 +40,8 @@ Key Features
 - **Feature 2**: Description of key feature
 - **Feature 3**: Description of key feature
 - **Feature 4**: Description of key feature
+
+
 Installation
 ------------
 

@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-immaterial** Material Design theme adaptatio
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-immaterial package provides functionality for working with Material Design theme adaptation.
 
 Basic Usage
 -----------

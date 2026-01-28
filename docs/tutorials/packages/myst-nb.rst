@@ -19,7 +19,6 @@ This tutorial demonstrates how to use myst-nb, a MyST Notebook parser for Jupyte
 
 What is MyST-NB?
 ---------------
-
 MyST-NB provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ MyST-NB provides features for:
 - Advanced features
 - Best practices
 
-
 The myst-nb package provides functionality for working with MyST Notebook parser for Jupyter notebooks.
+
 
 Installation
 ------------

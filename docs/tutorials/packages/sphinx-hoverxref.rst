@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-hoverxref to add tooltip previews w
 
 What is Sphinx-Hoverxref?
 --------------------------
-
 sphinx-hoverxref is a Sphinx extension that provides:
 
 - Tooltip previews on hover
@@ -35,8 +34,8 @@ sphinx-hoverxref is a Sphinx extension that provides:
 
 This enhances documentation by showing reference content without navigating away from the current page.
 
-
 The sphinx-hoverxref extension adds interactive tooltips that display the content of cross-referenced sections, allowing readers to preview content without navigating away from the current page.
+
 
 Installation
 ------------

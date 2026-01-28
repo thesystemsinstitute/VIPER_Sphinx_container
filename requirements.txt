@@ -113,11 +113,6 @@ sphinx-autobuild
 sphinx-lint
 sphinx-analytics
 
-## Theme Utilities & Builders
-sphinx-theme
-sphinx-wagtail-theme
-sphinxnotes-fasthtml
-
 ## Miscellaneous
 sphinx-autofixture
 sphinx-advanced
@@ -187,6 +182,11 @@ sphinx-press-theme
 karma-sphinx-theme
 sphinxawesome-theme
 sphinx-immaterial
+sphinx-wagtail-theme
+
+## Theme Utilities & Builders
+sphinx-theme
+sphinxnotes-fasthtml
 
 # Markdown Support
 markdown

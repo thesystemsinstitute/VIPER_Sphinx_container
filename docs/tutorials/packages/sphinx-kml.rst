@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-kml to embed and document KML (Keyh
 
 What is Sphinx-KML?
 -------------------
-
 sphinx-kml is a Sphinx extension that provides support for working with KML files:
 
 - Embed KML files in documentation
@@ -34,8 +33,8 @@ sphinx-kml is a Sphinx extension that provides support for working with KML file
 
 KML is an XML-based format used for displaying geographic data in mapping applications like Google Earth and Google Maps.
 
-
 The sphinx-kml extension allows you to include KML/KMZ files, create geographic placemarks, and visualize geographic data in documentation.
+
 
 Installation
 ------------

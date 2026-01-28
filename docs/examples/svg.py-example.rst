@@ -7,10 +7,6 @@ This page demonstrates the **svg.py** SVG generation library for Python.
    :local:
    :depth: 2
 
-Overview
---------
-
-The svg.py package provides functionality for working with SVG generation library for Python.
 
 Basic Usage
 -----------

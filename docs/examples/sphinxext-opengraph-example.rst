@@ -14,35 +14,6 @@ This page demonstrates the capabilities of **sphinxext-opengraph**, a Sphinx ext
    - **Use Case**: Improve documentation sharing on social platforms
    - **Tutorial**: :doc:`../tutorials/packages/sphinxext-opengraph`
 
-Overview
---------
-
-Open Graph protocol is a standard for providing metadata about web pages that social media platforms use to create rich previews when URLs are shared.
-
-Key Features
-~~~~~~~~~~~~
-
-**Social Media Integration**
-
-- Automatic Open Graph meta tag generation
-- Twitter Card support
-- LinkedIn preview optimization
-- Facebook sharing enhancements
-
-**Customization Options**
-
-- Per-page configuration
-- Default values for all pages
-- Image, title, and description control
-- Site name and URL configuration
-
-**Platform Support**
-
-- Facebook Open Graph
-- Twitter Cards (summary and large image)
-- LinkedIn rich previews
-- Slack unfurling
-- Discord embeds
 
 Installation
 ------------

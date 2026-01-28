@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxcontrib-katex in your Sphinx documen
 
 What is Sphinxcontrib Katex?
 -----------------------------
-
 sphinxcontrib-katex is a Sphinx extension that provides:
 
 - KaTeX math rendering
@@ -41,6 +40,8 @@ Key Features
 - **LaTeX Support**: Full LaTeX math syntax support
 - **Inline & Display**: Both inline and display math modes
 - **Customizable**: Configure delimiters and options
+
+
 Installation
 ------------
 

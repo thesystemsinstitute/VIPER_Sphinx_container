@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxcontrib-bibtex in your Sphinx docume
 
 What is Sphinxcontrib Bibtex?
 ------------------------------
-
 sphinxcontrib-bibtex is a Sphinx extension that provides:
 
 - BibTeX bibliography support
@@ -41,6 +40,8 @@ Key Features
 - **Citation Styles**: Multiple citation and reference styles
 - **Filtering**: Filter bibliography entries
 - **Cross-references**: Link citations to bibliography
+
+
 Installation
 ------------
 

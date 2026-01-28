@@ -7,10 +7,6 @@ This page demonstrates the **piccolo-theme** Piccolo ORM documentation theme.
    :local:
    :depth: 2
 
-Overview
---------
-
-The piccolo-theme package provides functionality for working with Piccolo ORM documentation theme.
 
 Basic Usage
 -----------

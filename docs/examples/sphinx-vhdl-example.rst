@@ -3,16 +3,6 @@ Sphinx-VHDL Example
 
 This page demonstrates the **sphinx-vhdl** extension which provides VHDL (VHSIC Hardware Description Language) domain support for documenting hardware designs.
 
-What is sphinx-vhdl?
---------------------
-
-sphinx-vhdl adds comprehensive VHDL support to Sphinx, enabling:
-
-- Automatic VHDL code documentation
-- Hardware entity documentation
-- Architecture and component descriptions
-- Signal and port documentation
-- Cross-referencing between hardware modules
 
 Configuration
 -------------

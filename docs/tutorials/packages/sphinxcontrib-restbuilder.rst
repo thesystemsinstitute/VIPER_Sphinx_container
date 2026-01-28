@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxcontrib-restbuilder in your Sphinx d
 
 What is Sphinxcontrib Restbuilder?
 -----------------------------------
-
 sphinxcontrib-restbuilder is a Sphinx extension that provides:
 
 - REST builder for Sphinx
@@ -41,6 +40,8 @@ Key Features
 - **Feature 2**: Description of key feature
 - **Feature 3**: Description of key feature
 - **Feature 4**: Description of key feature
+
+
 Installation
 ------------
 

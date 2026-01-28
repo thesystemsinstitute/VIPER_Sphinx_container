@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-asdf in your Sphinx documentation.
 
 What is Sphinx Asdf?
 --------------------
-
 sphinx-asdf is a Sphinx extension that provides:
 
 - ASDF schema documentation
@@ -41,6 +40,8 @@ Key Features
 - **Validation Examples**: Include schema validation examples
 - **Schema Trees**: Generate schema reference trees
 - **Custom Paths**: Flexible schema path configuration
+
+
 Installation
 ------------
 

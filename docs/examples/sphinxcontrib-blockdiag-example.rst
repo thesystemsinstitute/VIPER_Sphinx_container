@@ -7,10 +7,6 @@ This page demonstrates the **sphinxcontrib-blockdiag** BlockDiag integration for
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinxcontrib-blockdiag package provides functionality for working with BlockDiag integration for Sphinx.
 
 Basic Usage
 -----------

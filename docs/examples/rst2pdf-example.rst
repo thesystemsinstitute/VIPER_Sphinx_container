@@ -16,15 +16,6 @@ This page demonstrates **rst2pdf** - PDF generation from RST.
 Overview
 --------
 
-What is rst2pdf?
-----------------
-
-rst2pdf provides:
-
-- PDF generation from RST
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

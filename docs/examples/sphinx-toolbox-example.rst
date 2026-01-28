@@ -16,15 +16,6 @@ This page demonstrates **sphinx-toolbox** - Collection of Sphinx extensions.
 Overview
 --------
 
-What is sphinx-toolbox?
------------------------
-
-sphinx-toolbox provides:
-
-- Collection of Sphinx extensions
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-hoverxref** extension for showing tooltips a
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-hoverxref extension adds interactive tooltips that display the content of cross-referenced sections, allowing readers to preview content without navigating away from the current page.
 
 Basic Configuration
 -------------------

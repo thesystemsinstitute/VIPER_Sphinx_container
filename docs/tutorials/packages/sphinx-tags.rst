@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-tags in your Sphinx documentation.
 
 What is Sphinx Tags?
 --------------------
-
 sphinx-tags is a Sphinx extension that provides:
 
 - Tag-based organization
@@ -41,6 +40,8 @@ Key Features
 - **Tag Pages**: Automatic tag index pages
 - **Tag Cloud**: Visual tag cloud representation
 - **Cross-referencing**: Link to tagged content
+
+
 Installation
 ------------
 

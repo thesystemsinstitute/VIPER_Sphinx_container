@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-press-theme** modern press-style theme.
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-press-theme package provides functionality for working with modern press-style theme.
 
 Basic Usage
 -----------

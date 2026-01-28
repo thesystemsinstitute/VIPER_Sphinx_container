@@ -19,7 +19,6 @@ This tutorial demonstrates how to use Exhale to automatically generate C++ API d
 
 What is Exhale?
 ---------------
-
 Exhale is a Sphinx extension that provides:
 
 - Automatic API page generation
@@ -35,8 +34,32 @@ Exhale is a Sphinx extension that provides:
 
 Exhale automates the creation of comprehensive C++ API documentation, eliminating manual page creation.
 
-
 Exhale analyzes Doxygen XML output and automatically creates a comprehensive documentation structure with class hierarchies, file listings, and namespace organization.
+
+Key Features
+~~~~~~~~~~~~
+
+**Automatic Generation**
+
+- Class hierarchy trees
+- File hierarchy trees
+- Namespace documentation
+- Automatic page generation
+
+**Organization**
+
+- Alphabetical listings
+- Inheritance hierarchies
+- File dependencies
+- Custom layouts
+
+**Integration**
+
+- Seamless Breathe integration
+- Doxygen workflow
+- Sphinx theming
+- Cross-referencing
+
 
 Installation
 ------------

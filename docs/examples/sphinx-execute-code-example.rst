@@ -16,15 +16,6 @@ This page demonstrates **sphinx-execute-code** - Execute code blocks during buil
 Overview
 --------
 
-What is sphinx-execute-code?
-----------------------------
-
-sphinx-execute-code provides:
-
-- Execute code blocks during build
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

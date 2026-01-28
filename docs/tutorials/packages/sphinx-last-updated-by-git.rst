@@ -18,7 +18,6 @@ This tutorial demonstrates how to use sphinx-last-updated-by-git to automaticall
 
 What is Sphinx-Last-Updated-By-Git?
 ------------------------------------
-
 sphinx-last-updated-by-git is a Sphinx extension that provides:
 
 - Automatic last-updated timestamps
@@ -34,8 +33,8 @@ sphinx-last-updated-by-git is a Sphinx extension that provides:
 
 This eliminates manual date tracking and ensures documentation always shows accurate last-modified information.
 
-
 The sphinx-last-updated-by-git extension automatically retrieves the last modification date from Git history and adds it to each documentation page.
+
 
 Installation
 ------------

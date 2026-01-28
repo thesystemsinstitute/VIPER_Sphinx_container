@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-uml** extension for creating UML diagrams us
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-uml extension integrates PlantUML to create various types of UML diagrams including class diagrams, sequence diagrams, activity diagrams, and more.
 
 Class Diagrams
 --------------

@@ -19,7 +19,6 @@ This tutorial demonstrates how to use diagrams, a architecture diagram generatio
 
 What is Diagrams?
 ----------------
-
 Diagrams provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Diagrams provides features for:
 - Advanced features
 - Best practices
 
-
 The diagrams package provides functionality for working with architecture diagram generation.
+
 
 Installation
 ------------

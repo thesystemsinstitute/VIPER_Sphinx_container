@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-theme to create and customize Sphin
 
 What is Sphinx-Theme?
 ----------------------
-
 sphinx-theme is a base package and framework for creating custom Sphinx themes. It provides:
 
 - Theme scaffolding and templates
@@ -40,6 +39,8 @@ sphinx-theme provides tools and utilities for building custom Sphinx themes:
 - Modern CSS/JavaScript integration
 - Responsive design support
 - Theme configuration helpers
+
+
 Installation
 ------------
 

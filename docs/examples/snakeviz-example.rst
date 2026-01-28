@@ -7,10 +7,6 @@ This page demonstrates the **snakeviz** profiling data visualization tool.
    :local:
    :depth: 2
 
-Overview
---------
-
-The snakeviz package provides functionality for working with profiling data visualization tool.
 
 Basic Usage
 -----------

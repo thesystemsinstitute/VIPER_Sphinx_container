@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-togglebutton** toggle button directive for c
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-togglebutton package provides functionality for working with toggle button directive for content.
 
 Basic Usage
 -----------

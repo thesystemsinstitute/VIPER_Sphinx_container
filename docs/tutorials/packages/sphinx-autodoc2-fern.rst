@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-autodoc2-fern, an enhanced autodoc 
 
 What is Sphinx-Autodoc2-Fern?
 ------------------------------
-
 sphinx-autodoc2-fern is a next-generation autodoc extension that provides:
 
 - Faster documentation generation
@@ -35,8 +34,8 @@ sphinx-autodoc2-fern is a next-generation autodoc extension that provides:
 
 This is a modern alternative to sphinx.ext.autodoc with enhanced capabilities for current Python versions.
 
-
 The sphinx-autodoc2-fern extension provides modern, Fern-inspired API documentation layouts with enhanced navigation and presentation.
+
 
 Installation
 ------------

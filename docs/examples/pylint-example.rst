@@ -7,10 +7,6 @@ This page demonstrates the **pylint** Python code static analyzer.
    :local:
    :depth: 2
 
-Overview
---------
-
-The pylint package provides functionality for working with Python code static analyzer.
 
 Basic Usage
 -----------

@@ -3,10 +3,6 @@ Sphinx-Lint Example
 
 This page demonstrates **sphinx-lint** in action, showing how it validates Sphinx documentation and catches common errors.
 
-Overview
---------
-
-sphinx-lint is a quality assurance tool that scans your reStructuredText documentation for issues. This example shows typical linting scenarios and their outputs.
 
 Example Documentation Files
 ----------------------------

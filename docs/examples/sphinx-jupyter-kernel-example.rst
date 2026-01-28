@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-jupyter-kernel** extension for executing cod
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-jupyter-kernel extension allows you to execute code blocks in your Sphinx documentation using Jupyter kernels, enabling live code execution and output display for multiple programming languages.
 
 Basic Configuration
 -------------------

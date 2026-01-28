@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-prompt to create formatted command-
 
 What is Sphinx-Prompt?
 -----------------------
-
 sphinx-prompt is a Sphinx extension that provides:
 
 - Formatted shell prompts
@@ -35,8 +34,8 @@ sphinx-prompt is a Sphinx extension that provides:
 
 This makes it easy to create consistent, professional-looking shell examples.
 
-
 The sphinx-prompt extension provides directives for creating command-line prompts with proper styling for shells, REPLs, and interactive sessions.
+
 
 Installation
 ------------

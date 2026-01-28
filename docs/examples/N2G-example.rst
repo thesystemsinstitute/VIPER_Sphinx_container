@@ -7,10 +7,6 @@ This page demonstrates the **N2G** Network to Graph converter.
    :local:
    :depth: 2
 
-Overview
---------
-
-The N2G package provides functionality for working with Network to Graph converter.
 
 Basic Usage
 -----------

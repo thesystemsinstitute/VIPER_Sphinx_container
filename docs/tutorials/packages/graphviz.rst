@@ -19,7 +19,6 @@ This tutorial demonstrates how to use graphviz, a Python interface to Graphviz.
 
 What is Graphviz?
 ----------------
-
 Graphviz provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Graphviz provides features for:
 - Advanced features
 - Best practices
 
-
 The graphviz package provides functionality for working with Python interface to Graphviz.
+
 
 Installation
 ------------

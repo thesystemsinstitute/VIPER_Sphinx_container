@@ -16,15 +16,6 @@ This page demonstrates **sphinx-spelling** - Spell checker for documentation.
 Overview
 --------
 
-What is sphinx-spelling?
-------------------------
-
-sphinx-spelling provides:
-
-- Spell checker for documentation
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

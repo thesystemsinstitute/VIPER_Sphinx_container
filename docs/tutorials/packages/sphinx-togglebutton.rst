@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-togglebutton, a toggle button direc
 
 What is Sphinx Toggle Button?
 ----------------------------
-
 Sphinx Toggle Button provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Sphinx Toggle Button provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinx-togglebutton package provides functionality for working with toggle button directive for content.
+
 
 Installation
 ------------

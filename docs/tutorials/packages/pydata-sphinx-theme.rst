@@ -19,7 +19,6 @@ This tutorial demonstrates how to use pydata-sphinx-theme, a PyData community th
 
 What is PyData Sphinx Theme?
 ---------------------------
-
 PyData Sphinx Theme provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ PyData Sphinx Theme provides features for:
 - Advanced features
 - Best practices
 
-
 The pydata-sphinx-theme package provides functionality for working with PyData community theme.
+
 
 Installation
 ------------

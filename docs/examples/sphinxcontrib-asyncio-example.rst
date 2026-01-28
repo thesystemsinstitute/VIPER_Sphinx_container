@@ -7,10 +7,6 @@ This page demonstrates the **sphinxcontrib-asyncio** extension for documenting P
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinxcontrib-asyncio extension provides specialized directives and roles for documenting asynchronous Python code, making it easier to document async/await patterns.
 
 Documenting Coroutines
 ----------------------

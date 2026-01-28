@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-autobuild** extension for automatically rebu
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-autobuild extension watches your documentation files and automatically rebuilds when changes are detected, with live browser reload for an efficient documentation development workflow.
 
 Basic Usage
 -----------

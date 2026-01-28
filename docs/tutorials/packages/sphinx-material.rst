@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-material, a Material Design inspire
 
 What is Sphinx Material Theme?
 -----------------------------
-
 Sphinx Material Theme provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Sphinx Material Theme provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinx-material package provides functionality for working with Material Design inspired theme.
+
 
 Installation
 ------------

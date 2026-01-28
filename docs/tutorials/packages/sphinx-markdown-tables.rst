@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-markdown-tables, a Markdown table s
 
 What is Sphinx Markdown Tables?
 ------------------------------
-
 Sphinx Markdown Tables provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Sphinx Markdown Tables provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinx-markdown-tables package provides functionality for working with Markdown table support for Sphinx.
+
 
 Installation
 ------------

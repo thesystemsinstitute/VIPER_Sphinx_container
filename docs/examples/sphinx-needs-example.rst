@@ -16,15 +16,6 @@ This page demonstrates **sphinx-needs** - Requirements management extension.
 Overview
 --------
 
-What is sphinx-needs?
----------------------
-
-sphinx-needs provides:
-
-- Requirements management extension
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

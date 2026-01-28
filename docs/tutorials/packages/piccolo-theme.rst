@@ -19,7 +19,6 @@ This tutorial demonstrates how to use piccolo-theme, a Piccolo ORM documentation
 
 What is Piccolo Theme?
 ---------------------
-
 Piccolo Theme provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Piccolo Theme provides features for:
 - Advanced features
 - Best practices
 
-
 The piccolo-theme package provides functionality for working with Piccolo ORM documentation theme.
+
 
 Installation
 ------------

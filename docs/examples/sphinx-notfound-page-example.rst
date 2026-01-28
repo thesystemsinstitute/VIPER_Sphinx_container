@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-notfound-page** extension for creating custo
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-notfound-page extension generates a custom 404 error page for your Sphinx documentation that matches your theme and provides helpful navigation options.
 
 Basic Configuration
 -------------------

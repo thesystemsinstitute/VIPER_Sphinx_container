@@ -3,15 +3,6 @@ Sphinx-TagTocTree Example
 
 This page demonstrates the **sphinx-tagtoctree** extension which allows organizing documentation using tags instead of traditional hierarchical structure.
 
-What is sphinx-tagtoctree?
----------------------------
-
-sphinx-tagtoctree enables tag-based organization of documentation, allowing:
-
-- Documents to appear in multiple categories
-- Flexible organization without folder structure constraints
-- Dynamic table of contents based on tags
-- Cross-cutting documentation themes
 
 Configuration
 -------------

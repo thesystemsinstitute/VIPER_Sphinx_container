@@ -18,7 +18,6 @@ This tutorial demonstrates how to use ansible-sphinx to document Ansible playboo
 
 What is Ansible-Sphinx?
 ------------------------
-
 ansible-sphinx is a Sphinx extension that provides:
 
 - Ansible documentation generation
@@ -35,8 +34,32 @@ ansible-sphinx is a Sphinx extension that provides:
 
 This enables comprehensive documentation of Ansible automation directly from your playbooks and roles.
 
-
 ansible-sphinx extends Sphinx with Ansible-specific documentation capabilities, understanding YAML playbooks, roles, and inventory structures.
+
+Key Features
+~~~~~~~~~~~~
+
+**Ansible Integration**
+
+- Playbook documentation
+- Role documentation
+- Module reference
+- Collection documentation
+
+**Auto-Documentation**
+
+- Automatic role extraction
+- Task listing
+- Variable documentation
+- Handler documentation
+
+**YAML Support**
+
+- Syntax highlighting
+- Structure validation
+- Cross-referencing
+- Examples rendering
+
 
 Installation
 ------------

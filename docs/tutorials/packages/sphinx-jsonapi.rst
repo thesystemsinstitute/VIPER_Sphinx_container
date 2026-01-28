@@ -12,7 +12,6 @@ This tutorial demonstrates how to use sphinx-jsonapi in your Sphinx documentatio
 
 What is Sphinx Jsonapi?
 -----------------------
-
 sphinx-jsonapi is a Sphinx extension that provides:
 
 - JSON API documentation support
@@ -34,6 +33,8 @@ Key Features
 - **Feature 2**: Description of key feature
 - **Feature 3**: Description of key feature
 - **Feature 4**: Description of key feature
+
+
 Installation
 ------------
 

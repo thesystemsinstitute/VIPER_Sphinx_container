@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-tagtoctree to organize documentatio
 
 What is Sphinx-Tagtoctree?
 ---------------------------
-
 sphinx-tagtoctree is a Sphinx extension that enables tag-based document organization. It allows you to:
 
 - Tag documents with custom metadata
@@ -37,6 +36,8 @@ sphinx-tagtoctree enables tag-based organization of documentation, allowing:
 - Flexible organization without folder structure constraints
 - Dynamic table of contents based on tags
 - Cross-cutting documentation themes
+
+
 Installation
 ------------
 

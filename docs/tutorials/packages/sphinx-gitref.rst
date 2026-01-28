@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-gitref to integrate Git repository 
 
 What is Sphinx-Gitref?
 -----------------------
-
 sphinx-gitref is a Sphinx extension that provides Git repository integration:
 
 - Display commit history in documentation
@@ -33,8 +32,8 @@ sphinx-gitref is a Sphinx extension that provides Git repository integration:
 
 This is invaluable for keeping documentation synchronized with code changes.
 
-
 The sphinx-gitref extension provides roles and directives for linking to Git repositories, commits, branches, tags, and files in version control systems.
+
 
 Installation
 ------------

@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-version-warning to display version 
 
 What is Sphinx-Version-Warning?
 --------------------------------
-
 sphinx-version-warning is a Sphinx extension that provides:
 
 - Version warning banners
@@ -35,8 +34,8 @@ sphinx-version-warning is a Sphinx extension that provides:
 
 This helps users know when they're viewing outdated documentation and directs them to the latest version.
 
-
 The sphinx-version-warning extension displays a banner warning users when they're viewing outdated documentation versions.
+
 
 Installation
 ------------

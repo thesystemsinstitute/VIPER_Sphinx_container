@@ -19,7 +19,6 @@ This tutorial demonstrates how to use nwdiag, a network diagram generator.
 
 What is NWDiag?
 --------------
-
 NWDiag provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ NWDiag provides features for:
 - Advanced features
 - Best practices
 
-
 The nwdiag package provides functionality for working with network diagram generator.
+
 
 Installation
 ------------

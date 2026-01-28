@@ -14,7 +14,6 @@ This tutorial demonstrates how to use sphinx-wagtail-theme, a modern, clean docu
 
 What is Sphinx-Wagtail-Theme?
 ------------------------------
-
 sphinx-wagtail-theme is a Sphinx theme that provides:
 
 - Clean, modern design
@@ -32,8 +31,42 @@ sphinx-wagtail-theme is a Sphinx theme that provides:
 
 Based on the Wagtail CMS documentation style, it's perfect for creating professional, user-friendly documentation.
 
-
 The sphinx-wagtail-theme brings the clean, modern design of Wagtail CMS to Sphinx documentation with responsive layouts and elegant typography.
+
+Theme Features
+--------------
+
+Clean Design
+~~~~~~~~~~~~
+
+The Wagtail theme features:
+
+- Modern, minimal interface
+- Responsive grid layout
+- Mobile-friendly navigation
+- Clean typography
+- Accessible color scheme
+
+Navigation
+~~~~~~~~~~
+
+Sidebar navigation with:
+
+- Collapsible sections
+- Breadcrumb trails
+- Quick search
+- Table of contents
+
+Content Display
+~~~~~~~~~~~~~~~
+
+Optimized content presentation:
+
+- Wide reading column
+- Syntax-highlighted code blocks
+- Formatted tables
+- Image galleries
+
 
 Installation
 ------------
@@ -71,6 +104,12 @@ Advanced Configuration
    
    # Theme options
    html_theme_options = {
+       'project_name': 'My Project',
+       'github_url': 'https://github.com/myorg/myproject',
+       'logo': 'images/logo.png',
+       'logo_alt': 'Project Logo',
+       'footer_links': True,
+
        # Logo
        'logo': 'logo.png',
        'logo_alt': 'Project Logo',
@@ -150,6 +189,34 @@ Color Customization
        'primary_color': '#43b1b0',
        'secondary_color': '#262626',
        'accent_color': '#e74c3c',
+   }
+
+Layout Options
+--------------
+
+Sidebar Configuration
+~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   html_theme_options = {
+       'navigation_depth': 4,
+       'collapse_navigation': False,
+       'display_version': True,
+       'sticky_navigation': True,
+   }
+
+Header Customization
+~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   html_theme_options = {
+       'header_links': [
+           ('Home', '/'),
+           ('Docs', '/docs/'),
+           ('API', '/api/'),
+       ],
    }
 
 Basic Usage

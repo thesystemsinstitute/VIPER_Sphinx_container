@@ -16,15 +16,6 @@ This page demonstrates **sphinxcontrib-restbuilder** - REST builder for Sphinx.
 Overview
 --------
 
-What is sphinxcontrib-restbuilder?
-----------------------------------
-
-sphinxcontrib-restbuilder provides:
-
-- REST builder for Sphinx
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

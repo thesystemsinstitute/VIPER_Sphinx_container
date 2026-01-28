@@ -7,10 +7,6 @@ This page demonstrates the **dtreeplt** decision tree plotting utility.
    :local:
    :depth: 2
 
-Overview
---------
-
-The dtreeplt package provides functionality for working with decision tree plotting utility.
 
 Basic Usage
 -----------

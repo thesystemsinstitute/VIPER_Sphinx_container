@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-autodoc-toml** extension for documenting Pyt
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-autodoc-toml extension automatically extracts documentation from pyproject.toml configuration files.
 
 Basic Usage
 -----------

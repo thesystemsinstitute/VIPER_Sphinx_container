@@ -7,10 +7,6 @@ This page demonstrates the **sphinxcontrib-actdiag** activity diagram support.
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinxcontrib-actdiag package provides functionality for working with activity diagram support.
 
 Basic Usage
 -----------

@@ -19,7 +19,6 @@ This tutorial demonstrates how to use rstcheck in your Sphinx documentation.
 
 What is Rstcheck?
 -----------------
-
 rstcheck is a Sphinx extension that provides:
 
 - Checks syntax of reStructuredText
@@ -41,6 +40,8 @@ Key Features
 - **Code Block Validation**: Checks code blocks in RST files
 - **CI/CD Integration**: Easy integration with build pipelines
 - **Custom Filters**: Ignore specific directives and roles
+
+
 Installation
 ------------
 

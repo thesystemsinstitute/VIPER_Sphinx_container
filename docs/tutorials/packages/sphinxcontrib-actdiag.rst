@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxcontrib-actdiag, a activity diagram 
 
 What is Sphinxcontrib-ActDiag?
 -----------------------------
-
 Sphinxcontrib-ActDiag provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Sphinxcontrib-ActDiag provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinxcontrib-actdiag package provides functionality for working with activity diagram support.
+
 
 Installation
 ------------

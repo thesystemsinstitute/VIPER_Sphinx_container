@@ -19,7 +19,6 @@ This tutorial demonstrates how to use pyan3, a Python call graph analyzer.
 
 What is Pyan3?
 -------------
-
 Pyan3 provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Pyan3 provides features for:
 - Advanced features
 - Best practices
 
-
 The pyan3 package provides functionality for working with Python call graph analyzer.
+
 
 Installation
 ------------

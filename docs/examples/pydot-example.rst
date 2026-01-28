@@ -7,10 +7,6 @@ This page demonstrates the **pydot** Python interface to Graphviz Dot.
    :local:
    :depth: 2
 
-Overview
---------
-
-The pydot package provides functionality for working with Python interface to Graphviz Dot.
 
 Basic Usage
 -----------

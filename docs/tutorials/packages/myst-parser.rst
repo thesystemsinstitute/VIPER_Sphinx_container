@@ -20,7 +20,6 @@ Markdown instead of reStructuredText.
 
 What is MyST?
 -------------
-
 MyST is a rich and extensible flavor of Markdown designed for technical documentation. 
 It's fully compatible with CommonMark and adds powerful features like:
 
@@ -31,8 +30,8 @@ It's fully compatible with CommonMark and adds powerful features like:
 - Admonitions
 - And much more!
 
-
 The myst-parser extension enables rich Markdown support in Sphinx, combining Markdown's simplicity with the power of reStructuredText through the MyST (Markedly Structured Text) syntax.
+
 
 Installation
 ------------

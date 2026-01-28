@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-gitref** extension for referencing Git repos
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-gitref extension provides roles and directives for linking to Git repositories, commits, branches, tags, and files in version control systems.
 
 Basic Git References
 --------------------

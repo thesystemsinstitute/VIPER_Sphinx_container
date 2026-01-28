@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-autofixture to automatically docume
 
 What is Sphinx-Autofixture?
 ----------------------------
-
 sphinx-autofixture is a Sphinx extension that provides:
 
 - Pytest fixture documentation
@@ -34,6 +33,30 @@ sphinx-autofixture is a Sphinx extension that provides:
 - Plugin fixture support
 
 This enables comprehensive documentation of your test fixtures alongside regular code documentation.
+
+What is sphinx-autofixture?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+sphinx-autofixture is a Sphinx extension that automatically documents test fixtures, making it easy to:
+
+- Document pytest fixtures
+- Generate fixture reference pages
+- Show fixture dependencies
+- Display fixture scopes and parameters
+- Create comprehensive test documentation
+
+Key Features
+~~~~~~~~~~~~
+
+- **Automatic Fixture Discovery**: Find and document all fixtures
+- **Dependency Visualization**: Show fixture dependency graphs
+- **Scope Documentation**: Display fixture scope information
+- **Parameter Documentation**: Document parametrized fixtures
+- **Type Annotations**: Show fixture return types
+- **Usage Examples**: Generate fixture usage examples
+- **Cross-References**: Link between fixtures and tests
+- **Multiple Sources**: Support conftest.py and fixture files
+
 
 Installation
 ------------

@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxcontrib-websupport in your Sphinx do
 
 What is Sphinxcontrib Websupport?
 ----------------------------------
-
 sphinxcontrib-websupport is a Sphinx extension that provides:
 
 - Web support utilities for Sphinx
@@ -41,6 +40,8 @@ Key Features
 - **Feature 2**: Description of key feature
 - **Feature 3**: Description of key feature
 - **Feature 4**: Description of key feature
+
+
 Installation
 ------------
 

@@ -16,15 +16,6 @@ This page demonstrates **sphinx-click** - Document Click CLIs.
 Overview
 --------
 
-What is sphinx-click?
----------------------
-
-sphinx-click provides:
-
-- Document Click CLIs
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

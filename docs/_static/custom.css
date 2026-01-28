@@ -1,0 +1,30 @@
+/* Style code block captions as boxes */
+.code-block-caption,
+.literal-block-wrapper .caption,
+.caption-text {
+    text-align: left !important;
+    background-color: #4542f1ec;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 0.9em;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+}
+
+/* Adjust code block to align with caption box */
+.literal-block-wrapper > .highlight {
+    margin-top: 0 !important;
+    border-radius: 0 0 4px 4px;
+}
+
+/* Dark theme support */
+.wy-body-for-nav .code-block-caption,
+.wy-body-for-nav .literal-block-wrapper .caption,
+.wy-body-for-nav .caption-text {
+    background-color: #110e92ec;
+    border-color: #0a0a0a;
+    color: #ffffff;
+}

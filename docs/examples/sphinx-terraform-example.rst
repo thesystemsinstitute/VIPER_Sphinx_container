@@ -16,15 +16,6 @@ This page demonstrates **sphinx-terraform** - Terraform documentation support.
 Overview
 --------
 
-What is sphinx-terraform?
---------------------------
-
-sphinx-terraform provides:
-
-- Terraform documentation support
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

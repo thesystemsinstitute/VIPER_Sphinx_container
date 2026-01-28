@@ -16,15 +16,6 @@ This page demonstrates **sphinx-polyversion** - Multi-version documentation.
 Overview
 --------
 
-What is sphinx-polyversion?
----------------------------
-
-sphinx-polyversion provides:
-
-- Multi-version documentation
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

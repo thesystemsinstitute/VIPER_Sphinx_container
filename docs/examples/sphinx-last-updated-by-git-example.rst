@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-last-updated-by-git** extension for automati
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-last-updated-by-git extension automatically retrieves the last modification date from Git history and adds it to each documentation page.
 
 Basic Configuration
 -------------------

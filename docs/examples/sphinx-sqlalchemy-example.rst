@@ -16,15 +16,6 @@ This page demonstrates **sphinx-sqlalchemy** - SQLAlchemy model documentation.
 Overview
 --------
 
-What is sphinx-sqlalchemy?
---------------------------
-
-sphinx-sqlalchemy provides:
-
-- SQLAlchemy model documentation
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

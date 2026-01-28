@@ -19,7 +19,6 @@ This tutorial demonstrates how to use doc8 in your Sphinx documentation.
 
 What is Doc8?
 -------------
-
 doc8 is a Sphinx extension that provides:
 
 - Style checker for reStructuredText
@@ -41,6 +40,8 @@ Key Features
 - **Feature 2**: Description of key feature
 - **Feature 3**: Description of key feature
 - **Feature 4**: Description of key feature
+
+
 Installation
 ------------
 

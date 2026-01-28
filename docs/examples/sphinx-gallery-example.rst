@@ -16,15 +16,6 @@ This page demonstrates **sphinx-gallery** - Build example galleries from scripts
 Overview
 --------
 
-What is sphinx-gallery?
------------------------
-
-sphinx-gallery provides:
-
-- Build example galleries from scripts
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

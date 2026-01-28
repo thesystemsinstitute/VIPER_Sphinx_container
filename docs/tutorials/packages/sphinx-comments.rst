@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-comments in your Sphinx documentati
 
 What is Sphinx Comments?
 -------------------------
-
 sphinx-comments is a Sphinx extension that provides:
 
 - Comments in documentation
@@ -41,6 +40,8 @@ Key Features
 - **Multiple Systems**: Support for various comment systems
 - **Easy Setup**: Simple configuration
 - **Moderation**: Comment moderation support
+
+
 Installation
 ------------
 

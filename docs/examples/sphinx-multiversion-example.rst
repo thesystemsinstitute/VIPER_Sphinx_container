@@ -16,15 +16,6 @@ This page demonstrates **sphinx-multiversion** - Build multiple versions of docs
 Overview
 --------
 
-What is sphinx-multiversion?
------------------------------
-
-sphinx-multiversion provides:
-
-- Build multiple versions of docs
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

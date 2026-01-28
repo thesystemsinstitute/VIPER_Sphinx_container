@@ -14,34 +14,6 @@ This page demonstrates the capabilities of **exhale**, a Sphinx extension that a
    - **Use Case**: Large C++ codebases needing organized documentation
    - **Tutorial**: :doc:`../tutorials/packages/exhale`
 
-Overview
---------
-
-Exhale analyzes Doxygen XML output and automatically creates a comprehensive documentation structure with class hierarchies, file listings, and namespace organization.
-
-Key Features
-~~~~~~~~~~~~
-
-**Automatic Generation**
-
-- Class hierarchy trees
-- File hierarchy trees
-- Namespace documentation
-- Automatic page generation
-
-**Organization**
-
-- Alphabetical listings
-- Inheritance hierarchies
-- File dependencies
-- Custom layouts
-
-**Integration**
-
-- Seamless Breathe integration
-- Doxygen workflow
-- Sphinx theming
-- Cross-referencing
 
 Installation
 ------------

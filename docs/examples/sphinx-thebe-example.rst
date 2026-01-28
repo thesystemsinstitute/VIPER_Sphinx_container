@@ -16,15 +16,6 @@ This page demonstrates **sphinx-thebe** - Interactive code cells with Thebe.
 Overview
 --------
 
-What is sphinx-thebe?
----------------------
-
-sphinx-thebe provides:
-
-- Interactive code cells with Thebe
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

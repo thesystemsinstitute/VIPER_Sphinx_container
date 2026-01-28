@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-favicon** extension for adding favicon suppo
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-favicon extension allows you to easily add favicons to your Sphinx documentation with support for multiple formats, sizes, and platform-specific icons.
 
 Basic Favicon
 -------------

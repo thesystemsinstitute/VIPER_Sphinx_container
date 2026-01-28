@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-polyversion in your Sphinx document
 
 What is Sphinx Polyversion?
 ----------------------------
-
 sphinx-polyversion is a Sphinx extension that provides:
 
 - Multi-version documentation
@@ -41,6 +40,8 @@ Key Features
 - **Git Integration**: Automatic version detection from Git tags
 - **Version Selector**: Add version switcher to documentation
 - **Flexible Sources**: Support multiple version sources
+
+
 Installation
 ------------
 

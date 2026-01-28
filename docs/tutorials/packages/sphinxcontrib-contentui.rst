@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxcontrib-contentui in your Sphinx doc
 
 What is Sphinxcontrib Contentui?
 ---------------------------------
-
 sphinxcontrib-contentui is a Sphinx extension that provides:
 
 - UI components for content
@@ -41,6 +40,8 @@ Key Features
 - **Toggle**: Collapsible sections
 - **Panels**: Organized content panels
 - **Responsive**: Mobile-friendly components
+
+
 Installation
 ------------
 

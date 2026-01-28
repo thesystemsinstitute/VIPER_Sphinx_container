@@ -16,15 +16,6 @@ This page demonstrates **eralchemy2** - Entity Relationship diagrams from databa
 Overview
 --------
 
-What is eralchemy2?
--------------------
-
-eralchemy2 provides:
-
-- Entity Relationship diagrams from databases
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

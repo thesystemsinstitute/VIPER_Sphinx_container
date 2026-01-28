@@ -3,10 +3,6 @@ Sphinx-Confluence Example
 
 This page demonstrates example output and configuration for **sphinx-confluence**, showing how Sphinx documentation can be published to Atlassian Confluence.
 
-Overview
---------
-
-When you use sphinx-confluence to publish documentation to Confluence, your reStructuredText files are converted into Confluence's storage format (XHTML). This example shows what various Sphinx elements look like when published.
 
 Example Configuration
 ---------------------

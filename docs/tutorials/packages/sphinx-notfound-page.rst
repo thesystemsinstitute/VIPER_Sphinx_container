@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-notfound-page to create custom 404 
 
 What is Sphinx-Notfound-Page?
 ------------------------------
-
 sphinx-notfound-page is a Sphinx extension that provides:
 
 - Custom 404 error pages
@@ -35,8 +34,8 @@ sphinx-notfound-page is a Sphinx extension that provides:
 
 This creates a user-friendly experience when visitors land on non-existent documentation pages.
 
-
 The sphinx-notfound-page extension generates a custom 404 error page for your Sphinx documentation that matches your theme and provides helpful navigation options.
+
 
 Installation
 ------------

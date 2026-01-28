@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxcontrib-openapi in your Sphinx docum
 
 What is Sphinxcontrib Openapi?
 ------------------------------
-
 sphinxcontrib-openapi is a Sphinx extension that provides:
 
 - OpenAPI (Swagger) specification rendering
@@ -41,6 +40,8 @@ Key Features
 - **Feature 2**: Description of key feature
 - **Feature 3**: Description of key feature
 - **Feature 4**: Description of key feature
+
+
 Installation
 ------------
 

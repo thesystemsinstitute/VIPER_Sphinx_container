@@ -16,15 +16,6 @@ This page demonstrates **doc8** - Style checker for reStructuredText.
 Overview
 --------
 
-What is doc8?
--------------
-
-doc8 provides:
-
-- Style checker for reStructuredText
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

@@ -7,10 +7,6 @@ This page demonstrates the **sphinxnotes-fasthtml** extension for quickly genera
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinxnotes-fasthtml extension provides a streamlined approach to HTML generation with sensible defaults and rapid build times.
 
 Basic Usage
 -----------

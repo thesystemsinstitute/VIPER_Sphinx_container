@@ -3,15 +3,6 @@ Sphinx-C-Autodoc Example
 
 This page demonstrates the **sphinx-c-autodoc** extension which automatically generates documentation for C code, similar to autodoc for Python.
 
-What is sphinx-c-autodoc?
---------------------------
-
-sphinx-c-autodoc provides automatic API documentation generation for C projects:
-
-- Extract documentation from C header files
-- Document functions, structs, enums, and macros
-- Support for Doxygen-style comments
-- Generate API references automatically
 
 Configuration
 -------------

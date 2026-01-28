@@ -16,15 +16,6 @@ This page demonstrates **sphinx-jsonapi** - JSON API documentation support.
 Overview
 --------
 
-What is sphinx-jsonapi?
------------------------
-
-sphinx-jsonapi provides:
-
-- JSON API documentation support
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

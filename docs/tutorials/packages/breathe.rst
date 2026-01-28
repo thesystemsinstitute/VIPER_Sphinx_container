@@ -19,7 +19,6 @@ This tutorial demonstrates how to use Breathe to integrate Doxygen-generated doc
 
 What is Breathe?
 ----------------
-
 Breathe is a Sphinx extension that provides:
 
 - Doxygen XML integration
@@ -35,8 +34,32 @@ Breathe is a Sphinx extension that provides:
 
 This bridges Doxygen (C/C++ documentation) with Sphinx (Python documentation), allowing unified documentation.
 
-
 Breathe allows you to use Sphinx's documentation system while leveraging Doxygen's superior C/C++ parsing capabilities.
+
+Key Features
+~~~~~~~~~~~~
+
+**Doxygen Integration**
+
+- Import Doxygen XML output
+- Support for C, C++, C#, IDL
+- Automatic API documentation
+- Cross-referencing support
+
+**Sphinx Directives**
+
+- Function documentation
+- Class hierarchies
+- File documentation
+- Group/namespace documentation
+
+**Customization**
+
+- Output filtering
+- Member selection
+- Documentation styling
+- Link configuration
+
 
 Installation
 ------------

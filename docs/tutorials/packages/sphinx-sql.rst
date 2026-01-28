@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-sql in your Sphinx documentation.
 
 What is Sphinx Sql?
 -------------------
-
 sphinx-sql is a Sphinx extension that provides:
 
 - Document SQL in Sphinx
@@ -41,6 +40,8 @@ Key Features
 - **Feature 2**: Description of key feature
 - **Feature 3**: Description of key feature
 - **Feature 4**: Description of key feature
+
+
 Installation
 ------------
 

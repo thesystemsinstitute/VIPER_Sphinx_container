@@ -19,7 +19,6 @@ This tutorial demonstrates how to use nbsphinx to include Jupyter Notebooks in y
 
 What is nbsphinx?
 -----------------
-
 nbsphinx is a Sphinx extension that provides:
 
 - Jupyter Notebook integration
@@ -36,8 +35,8 @@ nbsphinx is a Sphinx extension that provides:
 
 This allows you to include executable code examples and tutorials directly from Jupyter Notebooks.
 
-
 The nbsphinx extension allows you to use Jupyter notebooks (``.ipynb`` files) as source files for Sphinx documentation, with automatic rendering of code cells, outputs, and markdown cells.
+
 
 Installation
 ------------

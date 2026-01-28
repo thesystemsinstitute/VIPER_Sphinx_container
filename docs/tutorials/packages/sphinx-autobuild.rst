@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-autobuild to automatically rebuild 
 
 What is Sphinx-Autobuild?
 --------------------------
-
 sphinx-autobuild is a development tool that provides:
 
 - Automatic documentation rebuild
@@ -35,8 +34,8 @@ sphinx-autobuild is a development tool that provides:
 
 This dramatically speeds up the documentation writing workflow.
 
-
 The sphinx-autobuild extension watches your documentation files and automatically rebuilds when changes are detected, with live browser reload for an efficient documentation development workflow.
+
 
 Installation
 ------------

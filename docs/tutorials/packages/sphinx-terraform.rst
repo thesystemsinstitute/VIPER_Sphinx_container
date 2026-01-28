@@ -18,7 +18,6 @@ This tutorial demonstrates how to use sphinx-terraform in your Sphinx documentat
 
 What is Sphinx Terraform?
 --------------------------
-
 sphinx-terraform is a Sphinx extension that provides:
 
 - Terraform documentation support
@@ -40,6 +39,8 @@ Key Features
 - **Resource Documentation**: Document Terraform resources
 - **Variable Tables**: Display input/output variables
 - **Provider Support**: Multi-cloud provider support
+
+
 Installation
 ------------
 

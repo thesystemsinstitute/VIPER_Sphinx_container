@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxcontrib-blockdiag, a BlockDiag integ
 
 What is Sphinxcontrib-BlockDiag?
 -------------------------------
-
 Sphinxcontrib-BlockDiag provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Sphinxcontrib-BlockDiag provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinxcontrib-blockdiag package provides functionality for working with BlockDiag integration for Sphinx.
+
 
 Installation
 ------------

@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-book-theme, a book-style documentat
 
 What is Sphinx Book Theme?
 -------------------------
-
 Sphinx Book Theme provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Sphinx Book Theme provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinx-book-theme package provides functionality for working with book-style documentation theme.
+
 
 Installation
 ------------

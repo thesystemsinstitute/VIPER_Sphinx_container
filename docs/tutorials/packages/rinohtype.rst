@@ -19,7 +19,6 @@ This tutorial demonstrates how to use rinohtype in your Sphinx documentation.
 
 What is Rinohtype?
 ------------------
-
 rinohtype is a Sphinx extension that provides:
 
 - PDF renderer for Sphinx
@@ -41,6 +40,8 @@ Key Features
 - **Custom Templates**: Multiple document templates
 - **Styling**: Rich styling and formatting options
 - **Typography**: Professional typography support
+
+
 Installation
 ------------
 

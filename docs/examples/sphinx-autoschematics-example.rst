@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-autoschematics** extension for automatically
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-autoschematics extension integrates with circuit design tools to generate and embed electronic schematics directly in Sphinx documentation.
 
 Basic Circuit Diagrams
 ----------------------

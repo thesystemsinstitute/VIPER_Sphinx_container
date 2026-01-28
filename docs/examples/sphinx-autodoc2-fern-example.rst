@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-autodoc2-fern** extension for generating API
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-autodoc2-fern extension provides modern, Fern-inspired API documentation layouts with enhanced navigation and presentation.
 
 Basic Usage
 -----------

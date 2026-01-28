@@ -7,10 +7,6 @@ This page demonstrates the **markdown-it-py** Python port of markdown-it parser.
    :local:
    :depth: 2
 
-Overview
---------
-
-The markdown-it-py package provides functionality for working with Python port of markdown-it parser.
 
 Basic Usage
 -----------

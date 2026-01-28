@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-refdoc** extension for creating reference do
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-refdoc extension provides advanced reference documentation features, including automatic reference generation, enhanced cross-referencing, and structured API documentation.
 
 Basic Reference Documentation
 ------------------------------

@@ -57,6 +57,11 @@ html_js_files = [
     'custom.js',
 ]
 
+# Custom CSS
+html_css_files = [
+    'custom.css',
+]
+
 # -- Extension configuration -------------------------------------------------
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3', None),
@@ -84,3 +89,62 @@ myst_enable_extensions = [
     "substitution",
     "tasklist",
 ]
+
+# -- Custom setup function to add line numbers to all code blocks -----------
+def setup(app):
+    """Add line numbers and language captions to all code blocks by default."""
+    from sphinx.directives.code import CodeBlock
+    from sphinx.directives.code import LiteralInclude
+    
+    # Store original run methods
+    original_code_block_run = CodeBlock.run
+    original_literal_include_run = LiteralInclude.run
+    
+    def code_block_run_with_enhancements(self):
+        # Add linenos option if not explicitly set to False
+        if 'linenos' not in self.options and 'no-linenos' not in self.options:
+            self.options['linenos'] = True
+            self.options['lineno-start'] = 1
+        
+        # Add caption with language if not already present
+        if 'caption' not in self.options and 'name' not in self.options:
+            language = self.arguments[0] if self.arguments else 'text'       
+            self.options['caption'] = language
+        
+        return original_code_block_run(self)
+    
+    def literal_include_run_with_enhancements(self):
+        # Add linenos option if not explicitly set to False
+        if 'linenos' not in self.options and 'no-linenos' not in self.options:
+            self.options['linenos'] = True
+        
+        # Add caption with language if not already present
+        if 'caption' not in self.options and 'name' not in self.options:
+            language = self.options.get('language', '')
+            if language:
+                self.options['caption'] = language
+            else:
+                # Try to guess from file extension
+                filename = self.arguments[0] if self.arguments else ''
+                if filename.endswith('.py'):
+                    self.options['caption'] = 'Python'
+                elif filename.endswith('.rst'):
+                    self.options['caption'] = 'RST'
+                elif filename.endswith('.js'):
+                    self.options['caption'] = 'JavaScript'
+                elif filename.endswith(('.yml', '.yaml')):
+                    self.options['caption'] = 'YAML'
+                elif filename.endswith(('.c', '.h')):
+                    self.options['caption'] = 'C'
+                elif filename.endswith(('.C', '.cpp', '.cxx', '.h', '.hpp', '.hxx')):
+                    self.options['caption'] = 'C++'
+                elif filename.endswith('.json'):
+                    self.options['caption'] = 'JSON'
+                else:
+                    self.options['caption'] = 'Code'
+        
+        return original_literal_include_run(self)
+    
+    # Monkey patch the run methods
+    CodeBlock.run = code_block_run_with_enhancements
+    LiteralInclude.run = literal_include_run_with_enhancements

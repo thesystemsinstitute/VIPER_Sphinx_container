@@ -12,7 +12,6 @@ This tutorial demonstrates how to use sphinxcontrib-pandoc in your Sphinx docume
 
 What is Sphinxcontrib Pandoc?
 ------------------------------
-
 sphinxcontrib-pandoc is a Sphinx extension that provides:
 
 - Pandoc integration for Sphinx
@@ -34,6 +33,8 @@ Key Features
 - **Pandoc Power**: Leverage Pandoc's conversion capabilities
 - **Custom Templates**: Use custom Pandoc templates
 - **Flexible Options**: Configure Pandoc behavior
+
+
 Installation
 ------------
 

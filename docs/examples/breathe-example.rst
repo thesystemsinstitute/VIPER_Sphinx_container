@@ -14,34 +14,6 @@ This page demonstrates the capabilities of **breathe**, a Sphinx extension that 
    - **Use Case**: C/C++ API documentation in Sphinx
    - **Tutorial**: :doc:`../tutorials/packages/breathe`
 
-Overview
---------
-
-Breathe allows you to use Sphinx's documentation system while leveraging Doxygen's superior C/C++ parsing capabilities.
-
-Key Features
-~~~~~~~~~~~~
-
-**Doxygen Integration**
-
-- Import Doxygen XML output
-- Support for C, C++, C#, IDL
-- Automatic API documentation
-- Cross-referencing support
-
-**Sphinx Directives**
-
-- Function documentation
-- Class hierarchies
-- File documentation
-- Group/namespace documentation
-
-**Customization**
-
-- Output filtering
-- Member selection
-- Documentation styling
-- Link configuration
 
 Installation
 ------------

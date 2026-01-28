@@ -7,10 +7,6 @@ This page demonstrates the **rptree** directory tree generator.
    :local:
    :depth: 2
 
-Overview
---------
-
-The rptree package provides functionality for working with directory tree generator.
 
 Basic Usage
 -----------

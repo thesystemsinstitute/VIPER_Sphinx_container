@@ -7,10 +7,6 @@ This page demonstrates the **quickdiagrams** quick diagram generation tool.
    :local:
    :depth: 2
 
-Overview
---------
-
-The quickdiagrams package provides functionality for working with quick diagram generation tool.
 
 Basic Usage
 -----------

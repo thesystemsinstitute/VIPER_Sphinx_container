@@ -7,10 +7,6 @@ This page demonstrates the **python-markdown-graphviz** Graphviz extension for M
    :local:
    :depth: 2
 
-Overview
---------
-
-The python-markdown-graphviz package provides functionality for working with Graphviz extension for Markdown.
 
 Basic Usage
 -----------

@@ -7,10 +7,6 @@ This page demonstrates the **railroad-diagrams** syntax diagram generator.
    :local:
    :depth: 2
 
-Overview
---------
-
-The railroad-diagrams package provides functionality for working with syntax diagram generator.
 
 Basic Usage
 -----------

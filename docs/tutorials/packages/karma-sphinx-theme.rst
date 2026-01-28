@@ -19,7 +19,6 @@ This tutorial demonstrates how to use karma-sphinx-theme, a Karma documentation 
 
 What is Karma Sphinx Theme?
 --------------------------
-
 Karma Sphinx Theme provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Karma Sphinx Theme provides features for:
 - Advanced features
 - Best practices
 
-
 The karma-sphinx-theme package provides functionality for working with Karma documentation theme.
+
 
 Installation
 ------------

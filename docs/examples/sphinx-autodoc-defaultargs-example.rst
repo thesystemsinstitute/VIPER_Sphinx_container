@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-autodoc-defaultargs** extension for displayi
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-autodoc-defaultargs extension enhances autodoc to show default argument values in function signatures.
 
 Basic Usage
 -----------
@@ -77,6 +73,34 @@ Complex Defaults
        if options is None:
            options = {}
        # process...
+
+
+
+Simple Function
+~~~~~~~~~~~~~~~
+
+``sphinx_autodoc_defaultargs/utils.py``:
+
+.. literalinclude:: sphinx_autodoc_defaultargs/utils.py
+   :language: python
+
+
+Document:
+
+.. code-block:: rst
+
+   .. autofunction:: sphinx_autodoc_defaultargs.utils.greet
+
+
+.. autofunction:: sphinx_autodoc_defaultargs.utils.greet
+
+
+Output shows:
+
+generated documentation: :doc:`sphinx_autodoc_defaultargs/utils`
+
+
+
 
 See Also
 --------

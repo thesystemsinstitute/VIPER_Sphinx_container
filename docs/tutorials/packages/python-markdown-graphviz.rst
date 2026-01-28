@@ -18,7 +18,6 @@ This tutorial demonstrates how to use python-markdown-graphviz, a Graphviz exten
 
 What is Python Markdown Graphviz?
 --------------------------------
-
 Python Markdown Graphviz provides features for:
 
 - Core functionality
@@ -27,8 +26,8 @@ Python Markdown Graphviz provides features for:
 - Advanced features
 - Best practices
 
-
 The python-markdown-graphviz package provides functionality for working with Graphviz extension for Markdown.
+
 
 Installation
 ------------

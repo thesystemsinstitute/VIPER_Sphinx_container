@@ -7,10 +7,6 @@ This page demonstrates the **graphviz2drawio** Graphviz to Draw.io converter.
    :local:
    :depth: 2
 
-Overview
---------
-
-The graphviz2drawio package provides functionality for working with Graphviz to Draw.io converter.
 
 Basic Usage
 -----------

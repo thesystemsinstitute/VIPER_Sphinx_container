@@ -19,7 +19,6 @@ This tutorial demonstrates how to use rptree, a directory tree generator.
 
 What is RPTree?
 --------------
-
 RPTree provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ RPTree provides features for:
 - Advanced features
 - Best practices
 
-
 The rptree package provides functionality for working with directory tree generator.
+
 
 Installation
 ------------

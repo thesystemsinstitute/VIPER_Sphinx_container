@@ -19,7 +19,6 @@ This tutorial demonstrates how to use markdown, a Python Markdown parser and pro
 
 What is Python Markdown?
 -----------------------
-
 Python Markdown provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Python Markdown provides features for:
 - Advanced features
 - Best practices
 
-
 The markdown package provides functionality for working with Python Markdown parser and processor.
+
 
 Installation
 ------------

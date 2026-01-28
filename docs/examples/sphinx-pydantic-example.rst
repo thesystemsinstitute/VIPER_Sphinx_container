@@ -16,15 +16,6 @@ This page demonstrates **sphinx-pydantic** - Enhanced Pydantic documentation.
 Overview
 --------
 
-What is sphinx-pydantic?
-------------------------
-
-sphinx-pydantic provides:
-
-- Enhanced Pydantic documentation
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-changelog to automatically generate
 
 What is Sphinx-Changelog?
 --------------------------
-
 sphinx-changelog is a Sphinx extension that provides:
 
 - Automatic changelog generation
@@ -34,6 +33,30 @@ sphinx-changelog is a Sphinx extension that provides:
 - Issue tracking integration
 
 This automates changelog creation and keeps it synchronized with your project releases.
+
+What is sphinx-changelog?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+sphinx-changelog automatically generates changelog documentation from:
+
+- Git commit messages
+- GitHub/GitLab release notes
+- Keep a Changelog format files
+- Version tags and milestones
+- Pull requests and issues
+
+Key Features
+~~~~~~~~~~~~
+
+- **Automatic Generation**: Create changelogs from Git history
+- **Multiple Sources**: Git, GitHub, GitLab, file-based
+- **Semantic Versioning**: Organize by version numbers
+- **Category Grouping**: Group changes by type (Added, Changed, Fixed, etc.)
+- **Template Customization**: Control changelog appearance
+- **Filtering**: Include/exclude commits by pattern
+- **Cross-References**: Link to issues and pull requests
+- **Multi-Format**: Output as RST, Markdown, HTML
+
 
 Installation
 ------------

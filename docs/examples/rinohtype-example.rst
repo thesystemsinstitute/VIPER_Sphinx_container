@@ -16,15 +16,6 @@ This page demonstrates **rinohtype** - PDF renderer for Sphinx.
 Overview
 --------
 
-What is rinohtype?
-------------------
-
-rinohtype provides:
-
-- PDF renderer for Sphinx
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

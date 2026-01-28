@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-autoapi to automatically generate A
 
 What is Sphinx-AutoAPI?
 ------------------------
-
 sphinx-autoapi is a Sphinx extension that provides:
 
 - Automatic API documentation generation
@@ -35,8 +34,8 @@ sphinx-autoapi is a Sphinx extension that provides:
 
 This generates complete API documentation by parsing source code directly without importing it.
 
-
 The sphinx-autoapi extension automatically generates comprehensive API documentation by parsing source code, supporting Python, .NET, JavaScript, and Go.
+
 
 Installation
 ------------

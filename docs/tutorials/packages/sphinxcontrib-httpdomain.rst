@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxcontrib-httpdomain to document HTTP 
 
 What is Sphinxcontrib-HTTPDomain?
 ----------------------------------
-
 sphinxcontrib-httpdomain is a Sphinx extension that provides:
 
 - HTTP endpoint documentation
@@ -37,8 +36,8 @@ sphinxcontrib-httpdomain is a Sphinx extension that provides:
 
 This creates professional, comprehensive API documentation for web services.
 
-
 The sphinxcontrib-httpdomain extension provides domain directives for documenting RESTful HTTP APIs, including endpoints, methods, parameters, and responses.
+
 
 Installation
 ------------

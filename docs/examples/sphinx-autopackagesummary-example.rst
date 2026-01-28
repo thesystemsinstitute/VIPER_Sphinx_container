@@ -13,31 +13,6 @@ This page demonstrates the **sphinx-autopackagesummary** extension for automatic
    :local:
    :depth: 3
 
-Overview
---------
-
-What is sphinx-autopackagesummary?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-sphinx-autopackagesummary extends Sphinx's autosummary to provide enhanced package documentation with:
-
-- Automatic package structure documentation
-- Module summary generation
-- Hierarchical package trees
-- Subpackage discovery
-- API overview generation
-
-Key Features
-~~~~~~~~~~~~
-
-- **Automatic Discovery**: Recursively discover packages and modules
-- **Hierarchical Views**: Show package structure as trees
-- **Rich Summaries**: Generate detailed package overviews
-- **Customizable Output**: Control what gets documented
-- **Cross-References**: Automatic linking between packages
-- **Multi-Level**: Support deeply nested package structures
-- **Filtering**: Include/exclude patterns for packages
-- **Templates**: Customizable summary templates
 
 Installation
 ------------

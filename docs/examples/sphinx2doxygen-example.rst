@@ -3,15 +3,6 @@ Sphinx2Doxygen Example
 
 This page demonstrates the **sphinx2doxygen** extension which converts Sphinx documentation to Doxygen format for integration with C/C++ documentation systems.
 
-What is sphinx2doxygen?
------------------------
-
-sphinx2doxygen bridges the gap between Python documentation (Sphinx) and C/C++ documentation (Doxygen), allowing you to:
-
-- Export Sphinx documentation to Doxygen XML format
-- Integrate Python API docs with C++ projects
-- Maintain unified documentation across languages
-- Generate cross-referenced documentation
 
 Basic Configuration
 -------------------

@@ -19,7 +19,6 @@ This tutorial demonstrates how to use invoke-sphinx to integrate Invoke task aut
 
 What is Invoke-Sphinx?
 -----------------------
-
 invoke-sphinx is a Sphinx extension that provides:
 
 - Invoke task integration
@@ -35,8 +34,32 @@ invoke-sphinx is a Sphinx extension that provides:
 
 This simplifies documentation builds using Python's Invoke task automation framework.
 
-
 invoke-sphinx parses Invoke task collections and generates formatted documentation showing task names, parameters, descriptions, and usage examples.
+
+Key Features
+~~~~~~~~~~~~
+
+**Automatic Extraction**
+
+- Task discovery from tasks.py
+- Parameter documentation
+- Default value extraction
+- Help text integration
+
+**Documentation Generation**
+
+- Task reference pages
+- Usage examples
+- Parameter tables
+- Task organization
+
+**Integration**
+
+- Sphinx cross-referencing
+- Custom formatting
+- Namespace support
+- Collection grouping
+
 
 Installation
 ------------

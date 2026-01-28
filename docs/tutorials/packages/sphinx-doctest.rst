@@ -12,7 +12,6 @@ This tutorial demonstrates how to use sphinx-doctest in your Sphinx documentatio
 
 What is Sphinx Doctest?
 -----------------------
-
 sphinx-doctest is a Sphinx extension that provides:
 
 - Enhanced doctest integration
@@ -34,6 +33,8 @@ Key Features
 - **Test Groups**: Organize tests into logical groups
 - **Setup/Cleanup**: Add setup and cleanup code for tests
 - **Flexible Options**: Control test behavior with options
+
+
 Installation
 ------------
 

@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxawesome-theme, a awesome documentati
 
 What is Sphinxawesome Theme?
 ---------------------------
-
 Sphinxawesome Theme provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Sphinxawesome Theme provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinxawesome-theme package provides functionality for working with awesome documentation theme.
+
 
 Installation
 ------------

@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-multiversion in your Sphinx documen
 
 What is Sphinx Multiversion?
 -----------------------------
-
 sphinx-multiversion is a Sphinx extension that provides:
 
 - Build multiple versions of docs
@@ -41,6 +40,8 @@ Key Features
 - **Feature 2**: Description of key feature
 - **Feature 3**: Description of key feature
 - **Feature 4**: Description of key feature
+
+
 Installation
 ------------
 

@@ -16,15 +16,6 @@ This page demonstrates **sphinx-search** - Enhanced search functionality.
 Overview
 --------
 
-What is sphinx-search?
-----------------------
-
-sphinx-search provides:
-
-- Enhanced search functionality
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

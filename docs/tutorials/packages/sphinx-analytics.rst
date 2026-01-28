@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-analytics to add web analytics trac
 
 What is Sphinx-Analytics?
 --------------------------
-
 sphinx-analytics is a Sphinx extension that provides:
 
 - Google Analytics integration
@@ -35,8 +34,33 @@ sphinx-analytics is a Sphinx extension that provides:
 
 This enables you to understand how users interact with your documentation.
 
-
 sphinx-analytics simplifies adding analytics tracking to Sphinx documentation by automatically injecting tracking scripts into generated HTML pages.
+
+Key Features
+~~~~~~~~~~~~
+
+**Provider Support**
+
+- Google Analytics (GA4 and Universal)
+- Plausible Analytics
+- Matomo (Piwik)
+- Custom analytics providers
+- Multiple trackers simultaneously
+
+**Privacy Features**
+
+- Cookie consent integration
+- Do Not Track support
+- IP anonymization
+- GDPR compliance options
+
+**Configuration**
+
+- Simple setup
+- Per-page tracking
+- Custom dimensions
+- Event tracking support
+
 
 Installation
 ------------

@@ -7,10 +7,6 @@ This page demonstrates the **pyprojectviz** Python project visualization tool.
    :local:
    :depth: 2
 
-Overview
---------
-
-The pyprojectviz package provides functionality for working with Python project visualization tool.
 
 Basic Usage
 -----------

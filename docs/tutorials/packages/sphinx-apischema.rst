@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-apischema to generate API documenta
 
 What is Sphinx-Apischema?
 --------------------------
-
 sphinx-apischema is a Sphinx extension that provides:
 
 - JSON Schema documentation
@@ -34,6 +33,29 @@ sphinx-apischema is a Sphinx extension that provides:
 - REST API documentation
 
 This allows you to document APIs directly from their schema definitions.
+
+What is sphinx-apischema?
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+sphinx-apischema is a powerful Sphinx extension that automatically generates comprehensive API documentation from:
+
+- OpenAPI 3.0/3.1 specifications
+- Swagger 2.0 specifications
+- JSON Schema documents
+- API Blueprint files
+
+Key Features
+~~~~~~~~~~~~
+
+- **Automatic Documentation**: Generate complete API reference from schema files
+- **Interactive Examples**: Include request/response examples automatically
+- **Schema Validation**: Validate API schemas during build
+- **Multiple Formats**: Support for OpenAPI, Swagger, JSON Schema
+- **Customizable Templates**: Control documentation appearance
+- **Type Information**: Detailed parameter and response type documentation
+- **Authentication Documentation**: Automatic security scheme documentation
+- **Code Generation**: Generate client code examples in multiple languages
+
 
 Installation
 ------------

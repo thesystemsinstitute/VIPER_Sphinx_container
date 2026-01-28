@@ -19,7 +19,6 @@ This tutorial demonstrates how to use eralchemy2 in your Sphinx documentation.
 
 What is Eralchemy2?
 -------------------
-
 eralchemy2 is a Sphinx extension that provides:
 
 - Entity Relationship diagrams from databases
@@ -41,6 +40,8 @@ Key Features
 - **Feature 2**: Description of key feature
 - **Feature 3**: Description of key feature
 - **Feature 4**: Description of key feature
+
+
 Installation
 ------------
 

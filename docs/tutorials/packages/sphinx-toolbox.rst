@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-toolbox in your Sphinx documentatio
 
 What is Sphinx Toolbox?
 -----------------------
-
 sphinx-toolbox is a Sphinx extension that provides:
 
 - Collection of Sphinx extensions
@@ -41,6 +40,8 @@ Key Features
 - **Enhanced Autodoc**: More autodoc features
 - **Code Enhancements**: Better code blocks
 - **GitHub Integration**: GitHub-related features
+
+
 Installation
 ------------
 

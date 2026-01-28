@@ -7,10 +7,6 @@ This page demonstrates the **code2flow** call graph generation from source code.
    :local:
    :depth: 2
 
-Overview
---------
-
-The code2flow package provides functionality for working with call graph generation from source code.
 
 Basic Usage
 -----------

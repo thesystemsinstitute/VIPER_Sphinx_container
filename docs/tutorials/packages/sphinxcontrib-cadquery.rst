@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxcontrib-cadquery to embed interactiv
 
 What is Sphinxcontrib-CadQuery?
 --------------------------------
-
 sphinxcontrib-cadquery is a Sphinx extension that provides:
 
 - Embed CadQuery 3D models in documentation
@@ -35,8 +34,8 @@ sphinxcontrib-cadquery is a Sphinx extension that provides:
 
 CadQuery is a Python library for building parametric 3D CAD models. This extension lets you document those models directly in Sphinx.
 
-
 The sphinxcontrib-cadquery extension allows you to include parametric 3D CAD models in documentation with interactive viewers.
+
 
 Installation
 ------------

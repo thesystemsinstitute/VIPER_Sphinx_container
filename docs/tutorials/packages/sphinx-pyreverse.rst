@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-pyreverse to automatically generate
 
 What is Sphinx-Pyreverse?
 --------------------------
-
 sphinx-pyreverse is a Sphinx extension that integrates pyreverse (from Pylint) to automatically generate UML diagrams:
 
 - Class diagrams from Python code
@@ -33,8 +32,8 @@ sphinx-pyreverse is a Sphinx extension that integrates pyreverse (from Pylint) t
 
 This is invaluable for documenting Python project architecture and class relationships.
 
-
 The sphinx-pyreverse extension integrates Pyreverse (from Pylint) to automatically generate UML diagrams from Python source code, including class diagrams, package diagrams, and dependency graphs.
+
 
 Installation
 ------------

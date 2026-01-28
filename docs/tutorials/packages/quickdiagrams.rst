@@ -18,7 +18,6 @@ This tutorial demonstrates how to use quickdiagrams, a quick diagram generation 
 
 What is QuickDiagrams?
 ---------------------
-
 QuickDiagrams provides features for:
 
 - Core functionality
@@ -27,8 +26,8 @@ QuickDiagrams provides features for:
 - Advanced features
 - Best practices
 
-
 The quickdiagrams package provides functionality for working with quick diagram generation tool.
+
 
 Installation
 ------------

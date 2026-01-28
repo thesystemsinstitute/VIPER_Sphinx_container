@@ -19,7 +19,6 @@ This tutorial demonstrates how to use furo, a clean and customizable documentati
 
 What is Furo Theme?
 ------------------
-
 Furo Theme provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Furo Theme provides features for:
 - Advanced features
 - Best practices
 
-
 The furo package provides functionality for working with clean and customizable documentation theme.
+
 
 Installation
 ------------

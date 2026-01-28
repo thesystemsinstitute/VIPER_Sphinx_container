@@ -7,10 +7,6 @@ This page demonstrates the **myst-parser** extension for using Markdown (MyST - 
    :local:
    :depth: 2
 
-Overview
---------
-
-The myst-parser extension enables rich Markdown support in Sphinx, combining Markdown's simplicity with the power of reStructuredText through the MyST (Markedly Structured Text) syntax.
 
 Basic Markdown
 --------------

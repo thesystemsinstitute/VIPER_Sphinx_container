@@ -16,15 +16,6 @@ This page demonstrates **sphinx-doctest** - Enhanced doctest integration.
 Overview
 --------
 
-What is sphinx-doctest?
------------------------
-
-sphinx-doctest provides:
-
-- Enhanced doctest integration
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

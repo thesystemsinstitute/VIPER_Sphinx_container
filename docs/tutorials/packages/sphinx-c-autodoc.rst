@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-c-autodoc to automatically generate
 
 What is Sphinx-C-Autodoc?
 --------------------------
-
 sphinx-c-autodoc is a Sphinx extension that automatically extracts and documents C code elements including:
 
 - Functions and their signatures
@@ -38,6 +37,8 @@ sphinx-c-autodoc provides automatic API documentation generation for C projects:
 - Document functions, structs, enums, and macros
 - Support for Doxygen-style comments
 - Generate API references automatically
+
+
 Installation
 ------------
 

@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-autodoc-annotation** extension for enhanced 
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-autodoc-annotation extension improves how Python type annotations are displayed in Sphinx documentation.
 
 Basic Usage
 -----------

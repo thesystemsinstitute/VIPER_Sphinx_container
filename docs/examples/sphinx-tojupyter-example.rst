@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-tojupyter** extension for converting Sphinx 
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-tojupyter extension converts RST documentation into executable Jupyter notebooks, preserving code blocks, narrative text, and formatting.
 
 Basic Conversion
 ----------------

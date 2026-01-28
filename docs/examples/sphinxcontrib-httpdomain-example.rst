@@ -7,10 +7,6 @@ This page demonstrates the **sphinxcontrib-httpdomain** extension for documentin
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinxcontrib-httpdomain extension provides domain directives for documenting RESTful HTTP APIs, including endpoints, methods, parameters, and responses.
 
 Basic HTTP Methods
 ------------------

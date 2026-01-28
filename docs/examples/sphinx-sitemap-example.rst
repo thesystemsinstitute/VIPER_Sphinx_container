@@ -16,15 +16,6 @@ This page demonstrates **sphinx-sitemap** - Generate sitemap for docs.
 Overview
 --------
 
-What is sphinx-sitemap?
------------------------
-
-sphinx-sitemap provides:
-
-- Generate sitemap for docs
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-panels, a responsive panel componen
 
 What is Sphinx Panels?
 ---------------------
-
 Sphinx Panels provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Sphinx Panels provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinx-panels package provides functionality for working with responsive panel components for Sphinx.
+
 
 Installation
 ------------

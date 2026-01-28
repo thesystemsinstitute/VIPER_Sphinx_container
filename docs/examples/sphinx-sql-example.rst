@@ -16,15 +16,6 @@ This page demonstrates **sphinx-sql** - Document SQL in Sphinx.
 Overview
 --------
 
-What is sphinx-sql?
--------------------
-
-sphinx-sql provides:
-
-- Document SQL in Sphinx
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

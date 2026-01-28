@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-design, a design components and dir
 
 What is Sphinx Design?
 ---------------------
-
 Sphinx Design provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Sphinx Design provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinx-design package provides functionality for working with design components and directives.
+
 
 Installation
 ------------

@@ -13,31 +13,6 @@ This page demonstrates the **sphinx-autofixture** extension for automatically ge
    :local:
    :depth: 3
 
-Overview
---------
-
-What is sphinx-autofixture?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-sphinx-autofixture is a Sphinx extension that automatically documents test fixtures, making it easy to:
-
-- Document pytest fixtures
-- Generate fixture reference pages
-- Show fixture dependencies
-- Display fixture scopes and parameters
-- Create comprehensive test documentation
-
-Key Features
-~~~~~~~~~~~~
-
-- **Automatic Fixture Discovery**: Find and document all fixtures
-- **Dependency Visualization**: Show fixture dependency graphs
-- **Scope Documentation**: Display fixture scope information
-- **Parameter Documentation**: Document parametrized fixtures
-- **Type Annotations**: Show fixture return types
-- **Usage Examples**: Generate fixture usage examples
-- **Cross-References**: Link between fixtures and tests
-- **Multiple Sources**: Support conftest.py and fixture files
 
 Installation
 ------------

@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-inline-tabs, a inline tabs directiv
 
 What is Sphinx Inline Tabs?
 --------------------------
-
 Sphinx Inline Tabs provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Sphinx Inline Tabs provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinx-inline-tabs package provides functionality for working with inline tabs directive.
+
 
 Installation
 ------------

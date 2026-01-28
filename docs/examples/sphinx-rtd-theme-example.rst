@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-rtd-theme** popular Read the Docs theme.
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-rtd-theme package provides functionality for working with popular Read the Docs theme.
 
 Basic Usage
 -----------

@@ -16,15 +16,6 @@ This page demonstrates **sphinx-intl** - Internationalization utilities.
 Overview
 --------
 
-What is sphinx-intl?
---------------------
-
-sphinx-intl provides:
-
-- Internationalization utilities
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

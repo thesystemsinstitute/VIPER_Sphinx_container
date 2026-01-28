@@ -7,10 +7,6 @@ This page demonstrates the **gprof2dot** profiler data to dot graph converter.
    :local:
    :depth: 2
 
-Overview
---------
-
-The gprof2dot package provides functionality for working with profiler data to dot graph converter.
 
 Basic Usage
 -----------

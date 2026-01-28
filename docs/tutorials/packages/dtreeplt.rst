@@ -19,7 +19,6 @@ This tutorial demonstrates how to use dtreeplt, a decision tree plotting utility
 
 What is DTreePlt?
 ----------------
-
 DTreePlt provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ DTreePlt provides features for:
 - Advanced features
 - Best practices
 
-
 The dtreeplt package provides functionality for working with decision tree plotting utility.
+
 
 Installation
 ------------

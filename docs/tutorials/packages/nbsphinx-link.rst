@@ -19,7 +19,6 @@ This tutorial demonstrates how to use nbsphinx-link to reference Jupyter Noteboo
 
 What is nbsphinx-link?
 -----------------------
-
 nbsphinx-link is a Sphinx extension that provides:
 
 - Link to external notebooks
@@ -35,8 +34,8 @@ nbsphinx-link is a Sphinx extension that provides:
 
 This is perfect for including example notebooks that live alongside your source code.
 
-
 The nbsphinx-link extension allows you to include Jupyter notebooks that are stored outside your documentation source directory, which is useful for keeping examples with source code while including them in documentation.
+
 
 Installation
 ------------

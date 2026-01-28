@@ -13,7 +13,6 @@ This tutorial demonstrates how to use sphinx-typer in your Sphinx documentation.
 
 What is Sphinx Typer?
 ---------------------
-
 sphinx-typer is a Sphinx extension that provides:
 
 - Document Typer CLIs
@@ -35,6 +34,8 @@ Key Features
 - **Rich Output**: Support for rich console formatting
 - **Nested Commands**: Command group documentation
 - **Validation**: Document Typer's validation features
+
+
 Installation
 ------------
 

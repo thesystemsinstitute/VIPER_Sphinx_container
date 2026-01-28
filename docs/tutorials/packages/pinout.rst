@@ -19,7 +19,6 @@ This tutorial demonstrates how to use pinout, a hardware pinout diagram generato
 
 What is Pinout?
 --------------
-
 Pinout provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Pinout provides features for:
 - Advanced features
 - Best practices
 
-
 The pinout package provides functionality for working with hardware pinout diagram generator.
+
 
 Installation
 ------------

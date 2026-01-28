@@ -3,16 +3,6 @@ Sphinx-Theme Example
 
 This page demonstrates **sphinx-theme** - a framework for creating custom Sphinx themes with modern design and enhanced features.
 
-What is sphinx-theme?
-----------------------
-
-sphinx-theme provides tools and utilities for building custom Sphinx themes:
-
-- Theme development framework
-- Customizable components
-- Modern CSS/JavaScript integration
-- Responsive design support
-- Theme configuration helpers
 
 Installation & Configuration
 -----------------------------

@@ -19,7 +19,6 @@ This tutorial demonstrates how to use flake8-markdown, a linter for Python code 
 
 What is Flake8 Markdown?
 -----------------------
-
 Flake8 Markdown provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Flake8 Markdown provides features for:
 - Advanced features
 - Best practices
 
-
 The flake8-markdown package provides functionality for working with linter for Python code in Markdown files.
+
 
 Installation
 ------------

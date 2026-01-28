@@ -14,35 +14,6 @@ This page demonstrates the capabilities of **sphinx-analytics**, a Sphinx extens
    - **Use Case**: Track documentation usage and behavior
    - **Tutorial**: :doc:`../tutorials/packages/sphinx-analytics`
 
-Overview
---------
-
-sphinx-analytics simplifies adding analytics tracking to Sphinx documentation by automatically injecting tracking scripts into generated HTML pages.
-
-Key Features
-~~~~~~~~~~~~
-
-**Provider Support**
-
-- Google Analytics (GA4 and Universal)
-- Plausible Analytics
-- Matomo (Piwik)
-- Custom analytics providers
-- Multiple trackers simultaneously
-
-**Privacy Features**
-
-- Cookie consent integration
-- Do Not Track support
-- IP anonymization
-- GDPR compliance options
-
-**Configuration**
-
-- Simple setup
-- Per-page tracking
-- Custom dimensions
-- Event tracking support
 
 Installation
 ------------

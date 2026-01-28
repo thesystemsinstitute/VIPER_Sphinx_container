@@ -7,10 +7,6 @@ This page demonstrates the **flake8-markdown** linter for Python code in Markdow
    :local:
    :depth: 2
 
-Overview
---------
-
-The flake8-markdown package provides functionality for working with linter for Python code in Markdown files.
 
 Basic Usage
 -----------

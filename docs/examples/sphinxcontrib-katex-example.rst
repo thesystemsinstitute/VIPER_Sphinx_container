@@ -16,15 +16,6 @@ This page demonstrates **sphinxcontrib-katex** - KaTeX math rendering.
 Overview
 --------
 
-What is sphinxcontrib-katex?
------------------------------
-
-sphinxcontrib-katex provides:
-
-- KaTeX math rendering
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

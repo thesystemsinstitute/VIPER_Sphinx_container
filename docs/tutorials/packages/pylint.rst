@@ -19,7 +19,6 @@ This tutorial demonstrates how to use pylint, a Python code static analyzer.
 
 What is Pylint?
 --------------
-
 Pylint provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Pylint provides features for:
 - Advanced features
 - Best practices
 
-
 The pylint package provides functionality for working with Python code static analyzer.
+
 
 Installation
 ------------

@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-vhdl to document VHDL (VHSIC Hardwa
 
 What is Sphinx-VHDL?
 ---------------------
-
 sphinx-vhdl is a Sphinx extension that provides support for documenting VHDL hardware designs. It offers:
 
 - Automatic extraction of VHDL entities, architectures, and packages
@@ -39,6 +38,14 @@ sphinx-vhdl adds comprehensive VHDL support to Sphinx, enabling:
 - Architecture and component descriptions
 - Signal and port documentation
 - Cross-referencing between hardware modules
+
+- Automatic VHDL code documentation
+- Hardware entity documentation
+- Architecture and component descriptions
+- Signal and port documentation
+- Cross-referencing between hardware modules
+
+
 Installation
 ------------
 

@@ -16,15 +16,6 @@ This page demonstrates **rstcheck** - Checks syntax of reStructuredText.
 Overview
 --------
 
-What is rstcheck?
------------------
-
-rstcheck provides:
-
-- Checks syntax of reStructuredText
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

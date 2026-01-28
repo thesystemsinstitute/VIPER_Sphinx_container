@@ -7,10 +7,6 @@ This page demonstrates the **nwdiag** network diagram generator.
    :local:
    :depth: 2
 
-Overview
---------
-
-The nwdiag package provides functionality for working with network diagram generator.
 
 Basic Usage
 -----------

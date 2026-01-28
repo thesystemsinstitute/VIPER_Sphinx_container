@@ -14,34 +14,6 @@ This page demonstrates the capabilities of **ansible-sphinx**, a Sphinx extensio
    - **Use Case**: Documenting Ansible automation projects
    - **Tutorial**: :doc:`../tutorials/packages/ansible-sphinx`
 
-Overview
---------
-
-ansible-sphinx extends Sphinx with Ansible-specific documentation capabilities, understanding YAML playbooks, roles, and inventory structures.
-
-Key Features
-~~~~~~~~~~~~
-
-**Ansible Integration**
-
-- Playbook documentation
-- Role documentation
-- Module reference
-- Collection documentation
-
-**Auto-Documentation**
-
-- Automatic role extraction
-- Task listing
-- Variable documentation
-- Handler documentation
-
-**YAML Support**
-
-- Syntax highlighting
-- Structure validation
-- Cross-referencing
-- Examples rendering
 
 Installation
 ------------

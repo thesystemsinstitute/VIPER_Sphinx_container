@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxcontrib-tikz, a TikZ diagram support
 
 What is Sphinxcontrib-TikZ?
 --------------------------
-
 Sphinxcontrib-TikZ provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Sphinxcontrib-TikZ provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinxcontrib-tikz package provides functionality for working with TikZ diagram support for Sphinx.
+
 
 Installation
 ------------

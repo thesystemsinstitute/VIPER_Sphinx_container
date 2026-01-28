@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-thebe in your Sphinx documentation.
 
 What is Sphinx Thebe?
 ---------------------
-
 sphinx-thebe is a Sphinx extension that provides:
 
 - Interactive code cells with Thebe
@@ -41,6 +40,8 @@ Key Features
 - **Feature 2**: Description of key feature
 - **Feature 3**: Description of key feature
 - **Feature 4**: Description of key feature
+
+
 Installation
 ------------
 

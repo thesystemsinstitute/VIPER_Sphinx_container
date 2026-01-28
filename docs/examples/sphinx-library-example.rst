@@ -3,10 +3,6 @@ Sphinx-Library Example
 
 This page demonstrates **sphinx-library**, showing how to create organized, professional library documentation with automatic API organization and enhanced features.
 
-Overview
---------
-
-sphinx-library enhances Sphinx with specialized features for documenting software libraries, providing better structure, organization, and presentation of library APIs.
 
 Example Library Documentation
 ------------------------------

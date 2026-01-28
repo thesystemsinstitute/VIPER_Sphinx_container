@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-favicon to add custom favicons to y
 
 What is Sphinx-Favicon?
 ------------------------
-
 sphinx-favicon is a Sphinx extension that provides:
 
 - Custom favicon support
@@ -35,8 +34,8 @@ sphinx-favicon is a Sphinx extension that provides:
 
 This ensures your documentation has professional branding across all devices and platforms.
 
-
 The sphinx-favicon extension allows you to easily add favicons to your Sphinx documentation with support for multiple formats, sizes, and platform-specific icons.
+
 
 Installation
 ------------

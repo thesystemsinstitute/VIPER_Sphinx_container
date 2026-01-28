@@ -7,10 +7,6 @@ This page demonstrates the **nbsphinx** extension for including Jupyter notebook
    :local:
    :depth: 2
 
-Overview
---------
-
-The nbsphinx extension allows you to use Jupyter notebooks (``.ipynb`` files) as source files for Sphinx documentation, with automatic rendering of code cells, outputs, and markdown cells.
 
 Basic Setup
 -----------

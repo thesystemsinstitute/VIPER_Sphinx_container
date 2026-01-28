@@ -16,15 +16,6 @@ This page demonstrates **sphinxcontrib-openapi** - OpenAPI (Swagger) specificati
 Overview
 --------
 
-What is sphinxcontrib-openapi?
-------------------------------
-
-sphinxcontrib-openapi provides:
-
-- OpenAPI (Swagger) specification rendering
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

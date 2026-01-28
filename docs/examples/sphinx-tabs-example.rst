@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-tabs** tabbed content directive.
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-tabs package provides functionality for working with tabbed content directive.
 
 Basic Usage
 -----------

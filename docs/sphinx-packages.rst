@@ -896,46 +896,6 @@ Development & Build Tools
      - :doc:`link <examples/sphinx-analytics-example>`
      - Analytics integration
 
-Theme Utilities & Builders
---------------------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
-
-   * - Name
-     - Version
-     - PyPI
-     - API
-     - Manual
-     - Tutorial
-     - Example
-     - Description
-   * - sphinx-theme
-     - Latest
-     - `link <https://pypi.org/project/sphinx-theme/>`_
-     - `link <pdoc/sphinx_theme/index.html>`_
-     - `link <https://github.com/sphinx-contrib/sphinx-theme>`_
-     - :doc:`link <tutorials/packages/sphinx-theme>`
-     - :doc:`link <examples/sphinx-theme-example>`
-     - Theme utilities
-   * - sphinx-wagtail-theme
-     - Latest
-     - `link <https://pypi.org/project/sphinx-wagtail-theme/>`_
-     - `link <pdoc/sphinx_wagtail_theme/index.html>`_
-     - `link <https://github.com/wagtail/sphinx_wagtail_theme>`_
-     - :doc:`link <tutorials/packages/sphinx-wagtail-theme>`
-     - :doc:`link <examples/sphinx-wagtail-theme-example>`
-     - Wagtail theme
-   * - sphinxnotes-fasthtml
-     - Latest
-     - `link <https://pypi.org/project/sphinxnotes-fasthtml/>`_
-     - `link <pdoc/sphinxnotes_fasthtml/index.html>`_
-     - `link <https://github.com/sphinx-notes/fasthtml>`_
-     - :doc:`link <tutorials/packages/sphinxnotes-fasthtml>`
-     - :doc:`link <examples/sphinxnotes-fasthtml-example>`
-     - Fast HTML builder
-
 Miscellaneous Extensions
 ------------------------
 
@@ -1487,6 +1447,46 @@ Popular Sphinx Themes
      - :doc:`link <tutorials/packages/sphinx-immaterial>`
      - :doc:`link <examples/sphinx-immaterial-example>`
      - Material theme adaptation
+   * - sphinx-wagtail-theme
+     - Latest
+     - `link <https://pypi.org/project/sphinx-wagtail-theme/>`_
+     - `link <pdoc/sphinx_wagtail_theme/index.html>`_
+     - `link <https://github.com/wagtail/sphinx_wagtail_theme>`_
+     - :doc:`link <tutorials/packages/sphinx-wagtail-theme>`
+     - :doc:`link <examples/sphinx-wagtail-theme-example>`
+     - Wagtail CMS theme
+
+Theme Utilities & Builders
+--------------------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 8 5 5 6 8 8 40
+
+   * - Name
+     - Version
+     - PyPI
+     - API
+     - Manual
+     - Tutorial
+     - Example
+     - Description
+   * - sphinx-theme
+     - Latest
+     - `link <https://pypi.org/project/sphinx-theme/>`_
+     - `link <pdoc/sphinx_theme/index.html>`_
+     - `link <https://github.com/sphinx-contrib/sphinx-theme>`_
+     - :doc:`link <tutorials/packages/sphinx-theme>`
+     - :doc:`link <examples/sphinx-theme-example>`
+     - Theme utilities
+   * - sphinxnotes-fasthtml
+     - Latest
+     - `link <https://pypi.org/project/sphinxnotes-fasthtml/>`_
+     - `link <pdoc/sphinxnotes_fasthtml/index.html>`_
+     - `link <https://github.com/sphinx-notes/fasthtml>`_
+     - :doc:`link <tutorials/packages/sphinxnotes-fasthtml>`
+     - :doc:`link <examples/sphinxnotes-fasthtml-example>`
+     - Fast HTML builder
 
 Markdown Support
 ----------------

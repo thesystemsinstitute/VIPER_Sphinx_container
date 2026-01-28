@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxcontrib-asyncio to document asynchro
 
 What is Sphinxcontrib-Asyncio?
 -------------------------------
-
 sphinxcontrib-asyncio is a Sphinx extension that provides enhanced support for documenting asynchronous Python code:
 
 - Proper highlighting of async/await syntax
@@ -33,8 +32,8 @@ sphinxcontrib-asyncio is a Sphinx extension that provides enhanced support for d
 
 This is essential for documenting modern Python applications using asyncio, FastAPI, aiohttp, and other async frameworks.
 
-
 The sphinxcontrib-asyncio extension provides specialized directives and roles for documenting asynchronous Python code, making it easier to document async/await patterns.
+
 
 Installation
 ------------

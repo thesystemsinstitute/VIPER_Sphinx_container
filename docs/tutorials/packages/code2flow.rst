@@ -19,7 +19,6 @@ This tutorial demonstrates how to use code2flow, a call graph generation from so
 
 What is Code2Flow?
 -----------------
-
 Code2Flow provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Code2Flow provides features for:
 - Advanced features
 - Best practices
 
-
 The code2flow package provides functionality for working with call graph generation from source code.
+
 
 Installation
 ------------

@@ -12,7 +12,6 @@ This tutorial demonstrates how to use pydantic-sphinx in your Sphinx documentati
 
 What is Pydantic Sphinx?
 -------------------------
-
 pydantic-sphinx is a Sphinx extension that provides:
 
 - Pydantic model documentation
@@ -34,6 +33,8 @@ Key Features
 - **JSON Schema**: Display JSON schema
 - **Validators**: Document custom validators
 - **Configuration**: Show model configuration
+
+
 Installation
 ------------
 

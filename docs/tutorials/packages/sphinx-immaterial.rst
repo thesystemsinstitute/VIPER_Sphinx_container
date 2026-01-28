@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-immaterial, a Material Design theme
 
 What is Sphinx Immaterial Theme?
 -------------------------------
-
 Sphinx Immaterial Theme provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Sphinx Immaterial Theme provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinx-immaterial package provides functionality for working with Material Design theme adaptation.
+
 
 Installation
 ------------

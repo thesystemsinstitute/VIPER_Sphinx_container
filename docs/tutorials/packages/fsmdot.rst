@@ -19,7 +19,6 @@ This tutorial demonstrates how to use fsmdot, a finite state machine diagram gen
 
 What is FSMDot?
 --------------
-
 FSMDot provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ FSMDot provides features for:
 - Advanced features
 - Best practices
 
-
 The fsmdot package provides functionality for working with finite state machine diagram generator.
+
 
 Installation
 ------------

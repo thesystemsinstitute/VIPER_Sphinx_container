@@ -19,7 +19,6 @@ This tutorial demonstrates how to use railroad-diagrams, a syntax diagram genera
 
 What is Railroad Diagrams?
 -------------------------
-
 Railroad Diagrams provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Railroad Diagrams provides features for:
 - Advanced features
 - Best practices
 
-
 The railroad-diagrams package provides functionality for working with syntax diagram generator.
+
 
 Installation
 ------------

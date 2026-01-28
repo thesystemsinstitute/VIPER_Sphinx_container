@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-jsonschema in your Sphinx documenta
 
 What is Sphinx Jsonschema?
 --------------------------
-
 sphinx-jsonschema is a Sphinx extension that provides:
 
 - Sphinx extension to display JSON Schema
@@ -41,6 +40,8 @@ Key Features
 - **Feature 2**: Description of key feature
 - **Feature 3**: Description of key feature
 - **Feature 4**: Description of key feature
+
+
 Installation
 ------------
 

@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxnotes-fasthtml to generate fast, lig
 
 What is Sphinxnotes-FastHTML?
 ------------------------------
-
 sphinxnotes-fasthtml is a Sphinx extension that provides optimized HTML output:
 
 - Minimal JavaScript footprint
@@ -35,8 +34,8 @@ sphinxnotes-fasthtml is a Sphinx extension that provides optimized HTML output:
 
 This is ideal for documentation that prioritizes speed, accessibility, and works well on low-bandwidth connections.
 
-
 The sphinxnotes-fasthtml extension provides a streamlined approach to HTML generation with sensible defaults and rapid build times.
+
 
 Installation
 ------------

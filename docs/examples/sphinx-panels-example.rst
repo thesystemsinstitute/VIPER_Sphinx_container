@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-panels** responsive panel components for Sph
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-panels package provides functionality for working with responsive panel components for Sphinx.
 
 Basic Usage
 -----------

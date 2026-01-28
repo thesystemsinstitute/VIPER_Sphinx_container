@@ -7,10 +7,6 @@ This page demonstrates the **enumerate-markdown** markdown file enumeration util
    :local:
    :depth: 2
 
-Overview
---------
-
-The enumerate-markdown package provides functionality for working with markdown file enumeration utility.
 
 Basic Usage
 -----------

@@ -16,15 +16,6 @@ This page demonstrates **sqlalchemy** - SQL toolkit and ORM.
 Overview
 --------
 
-What is sqlalchemy?
--------------------
-
-sqlalchemy provides:
-
-- SQL toolkit and ORM
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

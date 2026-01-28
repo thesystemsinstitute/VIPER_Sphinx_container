@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-press-theme, a modern press-style t
 
 What is Sphinx Press Theme?
 --------------------------
-
 Sphinx Press Theme provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Sphinx Press Theme provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinx-press-theme package provides functionality for working with modern press-style theme.
+
 
 Installation
 ------------

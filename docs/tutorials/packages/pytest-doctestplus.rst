@@ -19,7 +19,6 @@ This tutorial demonstrates how to use pytest-doctestplus to run and test code ex
 
 What is Pytest-Doctestplus?
 ----------------------------
-
 pytest-doctestplus is a pytest plugin that enhances Python's doctest capabilities with:
 
 - Extended doctest support
@@ -37,8 +36,8 @@ pytest-doctestplus is a pytest plugin that enhances Python's doctest capabilitie
 
 Originally developed for the Astropy project, it's useful for any project with documentation examples.
 
-
 The pytest-doctestplus extension provides advanced doctest features including floating-point comparison and output normalization.
+
 
 Installation
 ------------

@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-git to integrate Git repository inf
 
 What is Sphinx-Git?
 -------------------
-
 sphinx-git is a Sphinx extension that provides:
 
 - Git changelog generation
@@ -35,8 +34,8 @@ sphinx-git is a Sphinx extension that provides:
 
 This allows automatic generation of changelogs and documentation of changes directly from Git history.
 
-
 The sphinx-git extension provides directives for displaying Git changelog, commit history, and repository information directly in your documentation.
+
 
 Installation
 ------------

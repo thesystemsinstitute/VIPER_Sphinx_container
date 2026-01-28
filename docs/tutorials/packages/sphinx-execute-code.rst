@@ -12,7 +12,6 @@ This tutorial demonstrates how to use sphinx-execute-code in your Sphinx documen
 
 What is Sphinx Execute Code?
 -----------------------------
-
 sphinx-execute-code is a Sphinx extension that provides:
 
 - Execute code blocks during build
@@ -34,6 +33,8 @@ Key Features
 - **Feature 2**: Description of key feature
 - **Feature 3**: Description of key feature
 - **Feature 4**: Description of key feature
+
+
 Installation
 ------------
 

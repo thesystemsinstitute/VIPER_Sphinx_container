@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxcontrib-nwdiag, a network diagram su
 
 What is Sphinxcontrib-NWDiag?
 ----------------------------
-
 Sphinxcontrib-NWDiag provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Sphinxcontrib-NWDiag provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinxcontrib-nwdiag package provides functionality for working with network diagram support.
+
 
 Installation
 ------------

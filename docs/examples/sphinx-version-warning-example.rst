@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-version-warning** extension for showing vers
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-version-warning extension displays a banner warning users when they're viewing outdated documentation versions.
 
 Basic Configuration
 -------------------

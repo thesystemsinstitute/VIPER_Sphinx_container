@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-tojupyter to convert your Sphinx do
 
 What is Sphinx-ToJupyter?
 --------------------------
-
 sphinx-tojupyter is a Sphinx extension that enables:
 
 - Convert RST documentation to Jupyter notebooks
@@ -35,8 +34,8 @@ sphinx-tojupyter is a Sphinx extension that enables:
 
 This is perfect for creating interactive tutorials, educational materials, and executable documentation from your Sphinx docs.
 
-
 The sphinx-tojupyter extension converts RST documentation into executable Jupyter notebooks, preserving code blocks, narrative text, and formatting.
+
 
 Installation
 ------------

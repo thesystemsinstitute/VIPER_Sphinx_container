@@ -7,10 +7,6 @@ This page demonstrates the **pydata-sphinx-theme** PyData community theme.
    :local:
    :depth: 2
 
-Overview
---------
-
-The pydata-sphinx-theme package provides functionality for working with PyData community theme.
 
 Basic Usage
 -----------

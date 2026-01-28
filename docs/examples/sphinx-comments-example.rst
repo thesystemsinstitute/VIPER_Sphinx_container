@@ -16,15 +16,6 @@ This page demonstrates **sphinx-comments** - Comments in documentation.
 Overview
 --------
 
-What is sphinx-comments?
--------------------------
-
-sphinx-comments provides:
-
-- Comments in documentation
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

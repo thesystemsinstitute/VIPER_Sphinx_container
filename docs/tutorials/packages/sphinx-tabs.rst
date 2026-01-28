@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-tabs, a tabbed content directive.
 
 What is Sphinx Tabs?
 -------------------
-
 Sphinx Tabs provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Sphinx Tabs provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinx-tabs package provides functionality for working with tabbed content directive.
+
 
 Installation
 ------------

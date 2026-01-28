@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxemoji to add emoji support to your S
 
 What is Sphinxemoji?
 --------------------
-
 sphinxemoji is a Sphinx extension that provides:
 
 - Emoji rendering in documentation
@@ -35,8 +34,8 @@ sphinxemoji is a Sphinx extension that provides:
 
 This makes documentation more engaging and easier to read.
 
-
 The sphinxemoji extension provides emoji support using GitHub-style emoji codes and Unicode emoji characters in reStructuredText documents.
+
 
 Installation
 ------------

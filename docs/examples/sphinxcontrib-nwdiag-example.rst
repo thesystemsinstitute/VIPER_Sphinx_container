@@ -7,10 +7,6 @@ This page demonstrates the **sphinxcontrib-nwdiag** network diagram support.
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinxcontrib-nwdiag package provides functionality for working with network diagram support.
 
 Basic Usage
 -----------

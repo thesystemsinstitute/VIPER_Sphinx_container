@@ -16,15 +16,6 @@ This page demonstrates **sphinxcontrib-bibtex** - BibTeX bibliography support.
 Overview
 --------
 
-What is sphinxcontrib-bibtex?
-------------------------------
-
-sphinxcontrib-bibtex provides:
-
-- BibTeX bibliography support
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

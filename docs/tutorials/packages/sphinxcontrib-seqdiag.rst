@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxcontrib-seqdiag, a sequence diagram 
 
 What is Sphinxcontrib-SeqDiag?
 -----------------------------
-
 Sphinxcontrib-SeqDiag provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Sphinxcontrib-SeqDiag provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinxcontrib-seqdiag package provides functionality for working with sequence diagram support.
+
 
 Installation
 ------------

@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-design** design components and directives.
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-design package provides functionality for working with design components and directives.
 
 Basic Usage
 -----------

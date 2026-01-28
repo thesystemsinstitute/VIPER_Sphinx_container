@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-git** extension for including Git repository
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-git extension provides directives for displaying Git changelog, commit history, and repository information directly in your documentation.
 
 Basic Configuration
 -------------------

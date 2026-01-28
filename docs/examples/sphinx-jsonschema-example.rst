@@ -16,15 +16,6 @@ This page demonstrates **sphinx-jsonschema** - Sphinx extension to display JSON 
 Overview
 --------
 
-What is sphinx-jsonschema?
---------------------------
-
-sphinx-jsonschema provides:
-
-- Sphinx extension to display JSON Schema
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

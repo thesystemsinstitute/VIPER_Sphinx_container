@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-prompt** extension for creating styled comma
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-prompt extension provides directives for creating command-line prompts with proper styling for shells, REPLs, and interactive sessions.
 
 Basic Usage
 -----------

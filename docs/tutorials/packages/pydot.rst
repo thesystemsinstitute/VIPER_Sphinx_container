@@ -19,7 +19,6 @@ This tutorial demonstrates how to use pydot, a Python interface to Graphviz Dot.
 
 What is PyDot?
 -------------
-
 PyDot provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ PyDot provides features for:
 - Advanced features
 - Best practices
 
-
 The pydot package provides functionality for working with Python interface to Graphviz Dot.
+
 
 Installation
 ------------

@@ -16,15 +16,6 @@ This page demonstrates **sphinxcontrib-websupport** - Web support utilities for 
 Overview
 --------
 
-What is sphinxcontrib-websupport?
----------------------------------
-
-sphinxcontrib-websupport provides:
-
-- Web support utilities for Sphinx
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

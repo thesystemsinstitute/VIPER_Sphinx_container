@@ -7,10 +7,6 @@ This page demonstrates the **furo** clean and customizable documentation theme.
    :local:
    :depth: 2
 
-Overview
---------
-
-The furo package provides functionality for working with clean and customizable documentation theme.
 
 Basic Usage
 -----------

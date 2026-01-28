@@ -7,10 +7,6 @@ This page demonstrates the **sphinxcontrib-plantuml** PlantUML diagram support.
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinxcontrib-plantuml package provides functionality for working with PlantUML diagram support.
 
 Basic Usage
 -----------

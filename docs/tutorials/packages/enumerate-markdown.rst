@@ -18,7 +18,6 @@ This tutorial demonstrates how to use enumerate-markdown, a markdown file enumer
 
 What is Enumerate Markdown?
 --------------------------
-
 Enumerate Markdown provides features for:
 
 - Core functionality
@@ -27,8 +26,8 @@ Enumerate Markdown provides features for:
 - Advanced features
 - Best practices
 
-
 The enumerate-markdown package provides functionality for working with markdown file enumeration utility.
+
 
 Installation
 ------------

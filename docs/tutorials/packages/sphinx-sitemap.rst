@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-sitemap in your Sphinx documentatio
 
 What is Sphinx Sitemap?
 -----------------------
-
 sphinx-sitemap is a Sphinx extension that provides:
 
 - Generate sitemap for docs
@@ -41,6 +40,8 @@ Key Features
 - **Feature 2**: Description of key feature
 - **Feature 3**: Description of key feature
 - **Feature 4**: Description of key feature
+
+
 Installation
 ------------
 

@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-jupyter-kernel to execute code exam
 
 What is Sphinx-Jupyter-Kernel?
 -------------------------------
-
 sphinx-jupyter-kernel is a Sphinx extension that provides:
 
 - Execute code with Jupyter kernels
@@ -35,8 +34,8 @@ sphinx-jupyter-kernel is a Sphinx extension that provides:
 
 This allows you to run code examples in Python, R, Julia, and other languages during documentation builds.
 
-
 The sphinx-jupyter-kernel extension allows you to execute code blocks in your Sphinx documentation using Jupyter kernels, enabling live code execution and output display for multiple programming languages.
+
 
 Installation
 ------------

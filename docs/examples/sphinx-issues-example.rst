@@ -3,10 +3,6 @@ Sphinx-Issues Example
 
 This page demonstrates the **sphinx-issues** extension which provides easy linking to GitHub, GitLab, and Bitbucket issues and pull requests.
 
-What is sphinx-issues?
------------------------
-
-sphinx-issues simplifies referencing issues and pull requests in your documentation by providing convenient roles that automatically create links to your issue tracker.
 
 Configuration
 -------------

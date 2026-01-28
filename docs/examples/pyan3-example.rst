@@ -7,10 +7,6 @@ This page demonstrates the **pyan3** Python call graph analyzer.
    :local:
    :depth: 2
 
-Overview
---------
-
-The pyan3 package provides functionality for working with Python call graph analyzer.
 
 Basic Usage
 -----------

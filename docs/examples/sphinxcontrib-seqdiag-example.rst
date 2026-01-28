@@ -7,10 +7,6 @@ This page demonstrates the **sphinxcontrib-seqdiag** sequence diagram support.
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinxcontrib-seqdiag package provides functionality for working with sequence diagram support.
 
 Basic Usage
 -----------

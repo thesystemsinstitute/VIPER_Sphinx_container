@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-collapsible-autodoc to create colla
 
 What is Sphinx-Collapsible-Autodoc?
 ------------------------------------
-
 sphinx-collapsible-autodoc is a Sphinx extension that provides:
 
 - Collapsible function/method documentation
@@ -35,8 +34,8 @@ sphinx-collapsible-autodoc is a Sphinx extension that provides:
 
 This makes large API documentation more manageable by allowing users to expand only what they need.
 
-
 The sphinx-collapsible-autodoc extension adds collapsible sections to autodoc documentation, improving readability for large APIs.
+
 
 Installation
 ------------

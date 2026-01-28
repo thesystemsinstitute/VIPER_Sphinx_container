@@ -4,23 +4,6 @@ Pydeps - Working Example
 .. note::
    :doc:`See Working Example <../tutorials/packages/pydeps>`
 
-Overview
---------
-
-Pydeps is a Python module dependency visualization tool that creates dependency graphs showing the relationships between modules in your Python project. It generates beautiful, informative diagrams that help developers understand project structure, identify circular dependencies, and plan refactoring efforts.
-
-Key features include:
-
-- Module dependency graph generation
-- Circular dependency detection
-- Multiple output formats (PNG, SVG, PDF)
-- Customizable filtering and clustering
-- External dependency visualization
-- Reverse dependency tracking
-- Interactive exploration
-- Integration with GraphViz
-- Large project support
-- Command-line and Python API
 
 Installation
 ------------

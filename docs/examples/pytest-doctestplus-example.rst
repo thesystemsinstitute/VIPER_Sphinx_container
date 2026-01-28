@@ -7,10 +7,6 @@ This page demonstrates the **pytest-doctestplus** extension for enhanced doctest
    :local:
    :depth: 2
 
-Overview
---------
-
-The pytest-doctestplus extension provides advanced doctest features including floating-point comparison and output normalization.
 
 Basic Usage
 -----------

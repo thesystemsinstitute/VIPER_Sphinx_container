@@ -16,15 +16,6 @@ This page demonstrates **sphinxcontrib-contentui** - UI components for content.
 Overview
 --------
 
-What is sphinxcontrib-contentui?
----------------------------------
-
-sphinxcontrib-contentui provides:
-
-- UI components for content
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

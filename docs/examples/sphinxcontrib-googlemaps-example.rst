@@ -7,10 +7,6 @@ This page demonstrates the **sphinxcontrib-googlemaps** extension for embedding 
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinxcontrib-googlemaps extension allows embedding interactive Google Maps with markers, routes, and custom styling directly in documentation.
 
 Basic Maps
 ----------

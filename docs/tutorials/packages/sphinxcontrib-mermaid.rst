@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxcontrib-mermaid, a Mermaid diagram s
 
 What is Sphinxcontrib-Mermaid?
 -----------------------------
-
 Sphinxcontrib-Mermaid provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Sphinxcontrib-Mermaid provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinxcontrib-mermaid package provides functionality for working with Mermaid diagram support for Sphinx.
+
 
 Installation
 ------------

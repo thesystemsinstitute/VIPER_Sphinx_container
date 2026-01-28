@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx2doxygen to convert Sphinx-style Pyt
 
 What is Sphinx2Doxygen?
 ------------------------
-
 sphinx2doxygen is a conversion tool that:
 
 - Converts Sphinx-style docstrings to Doxygen format
@@ -35,6 +34,8 @@ sphinx2doxygen bridges the gap between Python documentation (Sphinx) and C/C++ d
 - Integrate Python API docs with C++ projects
 - Maintain unified documentation across languages
 - Generate cross-referenced documentation
+
+
 Use Cases
 ---------
 

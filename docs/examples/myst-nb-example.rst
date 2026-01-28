@@ -7,10 +7,6 @@ This page demonstrates the **myst-nb** MyST Notebook parser for Jupyter notebook
    :local:
    :depth: 2
 
-Overview
---------
-
-The myst-nb package provides functionality for working with MyST Notebook parser for Jupyter notebooks.
 
 Basic Usage
 -----------

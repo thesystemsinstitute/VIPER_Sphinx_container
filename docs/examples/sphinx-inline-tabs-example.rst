@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-inline-tabs** inline tabs directive.
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-inline-tabs package provides functionality for working with inline tabs directive.
 
 Basic Usage
 -----------

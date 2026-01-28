@@ -19,7 +19,6 @@ This tutorial demonstrates how to use snakeviz, a profiling data visualization t
 
 What is SnakeViz?
 ----------------
-
 SnakeViz provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ SnakeViz provides features for:
 - Advanced features
 - Best practices
 
-
 The snakeviz package provides functionality for working with profiling data visualization tool.
+
 
 Installation
 ------------

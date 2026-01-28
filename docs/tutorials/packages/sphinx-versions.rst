@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-versions in your Sphinx documentati
 
 What is Sphinx Versions?
 -------------------------
-
 sphinx-versions is a Sphinx extension that provides:
 
 - Version management for Sphinx
@@ -41,6 +40,8 @@ Key Features
 - **Git Integration**: Automatic version detection from Git
 - **Version Banners**: Display version warnings
 - **Navigation**: Easy version switching
+
+
 Installation
 ------------
 

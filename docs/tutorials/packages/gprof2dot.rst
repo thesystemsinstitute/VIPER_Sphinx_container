@@ -18,7 +18,6 @@ This tutorial demonstrates how to use gprof2dot, a profiler data to dot graph co
 
 What is Gprof2Dot?
 -----------------
-
 Gprof2Dot provides features for:
 
 - Core functionality
@@ -27,8 +26,8 @@ Gprof2Dot provides features for:
 - Advanced features
 - Best practices
 
-
 The gprof2dot package provides functionality for working with profiler data to dot graph converter.
+
 
 Installation
 ------------

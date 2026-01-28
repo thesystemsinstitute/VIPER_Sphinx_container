@@ -7,10 +7,6 @@ This page demonstrates the **epub2sphinx** extension for importing and convertin
    :local:
    :depth: 2
 
-Overview
---------
-
-The epub2sphinx extension converts EPUB ebooks into reStructuredText format for integration with Sphinx documentation projects.
 
 Basic Conversion
 ----------------

@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-book-theme** book-style documentation theme.
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-book-theme package provides functionality for working with book-style documentation theme.
 
 Basic Usage
 -----------

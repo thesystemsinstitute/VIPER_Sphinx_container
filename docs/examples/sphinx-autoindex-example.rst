@@ -13,31 +13,6 @@ This page demonstrates the **sphinx-autoindex** extension for automatically gene
    :local:
    :depth: 3
 
-Overview
---------
-
-What is sphinx-autoindex?
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-sphinx-autoindex automatically generates various types of index pages and maintains cross-reference indexes throughout your documentation:
-
-- Module and package indexes
-- Symbol indexes (functions, classes, methods)
-- Topic indexes
-- Glossary generation
-- Automatic cross-referencing
-
-Key Features
-~~~~~~~~~~~~
-
-- **Automatic Index Generation**: Create comprehensive indexes automatically
-- **Multiple Index Types**: Modules, symbols, topics, glossaries
-- **Smart Cross-Referencing**: Automatic link generation
-- **Hierarchical Organization**: Nested index structures
-- **Customizable Formatting**: Control index appearance
-- **Search Integration**: Enhanced search capabilities
-- **Multi-language Support**: Internationalization support
-- **Incremental Updates**: Efficient index rebuilding
 
 Installation
 ------------

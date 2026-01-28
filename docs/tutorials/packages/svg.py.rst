@@ -19,7 +19,6 @@ This tutorial demonstrates how to use svg.py, a SVG generation library for Pytho
 
 What is SVG.py?
 --------------
-
 SVG.py provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ SVG.py provides features for:
 - Advanced features
 - Best practices
 
-
 The svg.py package provides functionality for working with SVG generation library for Python.
+
 
 Installation
 ------------

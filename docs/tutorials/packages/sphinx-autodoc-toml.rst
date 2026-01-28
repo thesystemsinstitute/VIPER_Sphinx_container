@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-autodoc-toml to generate documentat
 
 What is Sphinx-Autodoc-TOML?
 -----------------------------
-
 sphinx-autodoc-toml is a Sphinx extension that enables:
 
 - Document TOML configuration files
@@ -35,8 +34,8 @@ sphinx-autodoc-toml is a Sphinx extension that enables:
 
 This is perfect for documenting application configuration, pyproject.toml files, and TOML-based settings.
 
-
 The sphinx-autodoc-toml extension automatically extracts documentation from pyproject.toml configuration files.
+
 
 Installation
 ------------

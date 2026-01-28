@@ -12,7 +12,6 @@ This tutorial demonstrates how to use sphinx-sqlalchemy in your Sphinx documenta
 
 What is Sphinx Sqlalchemy?
 ---------------------------
-
 sphinx-sqlalchemy is a Sphinx extension that provides:
 
 - SQLAlchemy model documentation
@@ -34,6 +33,8 @@ Key Features
 - **Schema Generation**: Complete database schema documentation
 - **Relationship Mapping**: Document model relationships and foreign keys
 - **ER Diagrams**: Generate entity-relationship diagrams
+
+
 Installation
 ------------
 

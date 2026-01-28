@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-pydantic in your Sphinx documentati
 
 What is Sphinx Pydantic?
 -------------------------
-
 sphinx-pydantic is a Sphinx extension that provides:
 
 - Enhanced Pydantic documentation
@@ -41,6 +40,8 @@ Key Features
 - **Field Summary**: Tabular field information
 - **JSON Schema**: Display JSON/YAML schemas
 - **Validators**: Document custom validators
+
+
 Installation
 ------------
 

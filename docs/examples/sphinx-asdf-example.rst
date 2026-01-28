@@ -16,15 +16,6 @@ This page demonstrates **sphinx-asdf** - ASDF schema documentation.
 Overview
 --------
 
-What is sphinx-asdf?
---------------------
-
-sphinx-asdf provides:
-
-- ASDF schema documentation
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

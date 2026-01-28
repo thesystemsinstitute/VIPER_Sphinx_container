@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-refdoc to create and manage referen
 
 What is Sphinx-Refdoc?
 -----------------------
-
 sphinx-refdoc is a Sphinx extension that provides enhanced reference documentation features:
 
 - Advanced cross-referencing between documents
@@ -33,8 +32,8 @@ sphinx-refdoc is a Sphinx extension that provides enhanced reference documentati
 
 This is particularly useful for large documentation projects with complex cross-referencing needs.
 
-
 The sphinx-refdoc extension provides advanced reference documentation features, including automatic reference generation, enhanced cross-referencing, and structured API documentation.
+
 
 Installation
 ------------

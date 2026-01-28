@@ -18,7 +18,6 @@ This tutorial demonstrates how to use pyprojectviz, a Python project visualizati
 
 What is PyProjectViz?
 --------------------
-
 PyProjectViz provides features for:
 
 - Core functionality
@@ -27,8 +26,8 @@ PyProjectViz provides features for:
 - Advanced features
 - Best practices
 
-
 The pyprojectviz package provides functionality for working with Python project visualization tool.
+
 
 Installation
 ------------

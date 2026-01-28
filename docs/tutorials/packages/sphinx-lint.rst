@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-lint to check and validate your Sph
 
 What is Sphinx-Lint?
 --------------------
-
 sphinx-lint is a linting tool for Sphinx documentation that helps you:
 
 - Find errors in reStructuredText syntax
@@ -31,8 +30,8 @@ sphinx-lint is a linting tool for Sphinx documentation that helps you:
 
 Think of it as a spell-checker and style guide enforcer for your documentation.
 
-
 sphinx-lint is a quality assurance tool that scans your reStructuredText documentation for issues. This example shows typical linting scenarios and their outputs.
+
 
 Installation
 ------------

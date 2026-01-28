@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-issues to easily reference GitHub, 
 
 What is Sphinx-Issues?
 -----------------------
-
 sphinx-issues is a Sphinx extension that provides simple roles for linking to:
 
 - GitHub issues and pull requests
@@ -32,6 +31,8 @@ sphinx-issues is a Sphinx extension that provides simple roles for linking to:
 It automatically generates proper links with minimal markup, making your documentation more maintainable and connected to your project's development.
 
 sphinx-issues simplifies referencing issues and pull requests in your documentation by providing convenient roles that automatically create links to your issue tracker.
+
+
 Installation
 ------------
 

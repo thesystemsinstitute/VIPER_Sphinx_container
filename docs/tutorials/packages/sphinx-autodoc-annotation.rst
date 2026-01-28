@@ -18,7 +18,6 @@ This tutorial demonstrates how to use sphinx-autodoc-annotation to display Pytho
 
 What is Sphinx-Autodoc-Annotation?
 -----------------------------------
-
 sphinx-autodoc-annotation is a Sphinx extension that enhances autodoc to:
 
 - Display type annotations from function signatures
@@ -33,8 +32,8 @@ sphinx-autodoc-annotation is a Sphinx extension that enhances autodoc to:
 
 This makes API documentation clearer by showing exact type information from annotations.
 
-
 The sphinx-autodoc-annotation extension improves how Python type annotations are displayed in Sphinx documentation.
+
 
 Installation
 ------------

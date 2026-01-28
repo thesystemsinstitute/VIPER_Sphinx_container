@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-uml to create UML diagrams directly
 
 What is Sphinx-UML?
 -------------------
-
 sphinx-uml is a Sphinx extension that integrates PlantUML for creating various UML diagrams:
 
 - Class diagrams
@@ -37,8 +36,8 @@ sphinx-uml is a Sphinx extension that integrates PlantUML for creating various U
 
 Unlike sphinx-pyreverse which generates diagrams from code, sphinx-uml allows you to write diagrams directly in documentation.
 
-
 The sphinx-uml extension integrates PlantUML to create various types of UML diagrams including class diagrams, sequence diagrams, activity diagrams, and more.
+
 
 Installation
 ------------

@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-library to document software librar
 
 What is Sphinx-Library?
 ------------------------
-
 sphinx-library is a Sphinx extension that provides enhanced tools for documenting software libraries. It offers:
 
 - Automatic library structure organization
@@ -30,8 +29,8 @@ sphinx-library is a Sphinx extension that provides enhanced tools for documentin
 - Automatic index generation for library modules
 - Enhanced code examples with library context
 
-
 sphinx-library enhances Sphinx with specialized features for documenting software libraries, providing better structure, organization, and presentation of library APIs.
+
 
 Installation
 ------------

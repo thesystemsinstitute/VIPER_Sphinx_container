@@ -16,15 +16,6 @@ This page demonstrates **pydantic-sphinx** - Pydantic model documentation.
 Overview
 --------
 
-What is pydantic-sphinx?
-------------------------
-
-pydantic-sphinx provides:
-
-- Pydantic model documentation
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

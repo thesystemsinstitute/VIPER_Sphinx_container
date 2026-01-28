@@ -7,10 +7,6 @@ This page demonstrates the **sphinxcontrib-cadquery** extension for embedding 3D
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinxcontrib-cadquery extension allows you to include parametric 3D CAD models in documentation with interactive viewers.
 
 Basic Models
 ------------

@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-autoapi** extension for automatically genera
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-autoapi extension automatically generates comprehensive API documentation by parsing source code, supporting Python, .NET, JavaScript, and Go.
 
 Basic Configuration
 -------------------

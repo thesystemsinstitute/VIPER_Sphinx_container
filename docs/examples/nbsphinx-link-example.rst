@@ -7,10 +7,6 @@ This page demonstrates the **nbsphinx-link** extension for linking to notebooks 
    :local:
    :depth: 2
 
-Overview
---------
-
-The nbsphinx-link extension allows you to include Jupyter notebooks that are stored outside your documentation source directory, which is useful for keeping examples with source code while including them in documentation.
 
 Basic Usage
 -----------

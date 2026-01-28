@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-confluence (sphinxcontrib-confluenc
 
 What is Sphinx-Confluence?
 ---------------------------
-
 sphinx-confluence (also known as sphinxcontrib-confluencebuilder) is a Sphinx extension that enables you to build and publish your documentation to Confluence Wiki. This allows you to:
 
 - Maintain documentation in reStructuredText or Markdown
@@ -28,8 +27,8 @@ sphinx-confluence (also known as sphinxcontrib-confluencebuilder) is a Sphinx ex
 - Leverage Sphinx's powerful features while using Confluence as a platform
 - Keep documentation in version control while publishing to a wiki
 
-
 When you use sphinx-confluence to publish documentation to Confluence, your reStructuredText files are converted into Confluence's storage format (XHTML). This example shows what various Sphinx elements look like when published.
+
 
 Installation
 ------------

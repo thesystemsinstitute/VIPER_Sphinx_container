@@ -16,15 +16,6 @@ This page demonstrates **sphinxcontrib-pandoc** - Pandoc integration for Sphinx.
 Overview
 --------
 
-What is sphinxcontrib-pandoc?
-------------------------------
-
-sphinxcontrib-pandoc provides:
-
-- Pandoc integration for Sphinx
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

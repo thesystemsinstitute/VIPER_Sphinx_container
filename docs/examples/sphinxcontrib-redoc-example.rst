@@ -16,15 +16,6 @@ This page demonstrates **sphinxcontrib-redoc** - Embed ReDoc API documentation.
 Overview
 --------
 
-What is sphinxcontrib-redoc?
-----------------------------
-
-sphinxcontrib-redoc provides:
-
-- Embed ReDoc API documentation
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

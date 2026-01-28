@@ -14,34 +14,6 @@ This page demonstrates the capabilities of **invoke-sphinx**, a Sphinx extension
    - **Use Case**: Document project automation tasks
    - **Tutorial**: :doc:`../tutorials/packages/invoke-sphinx`
 
-Overview
---------
-
-invoke-sphinx parses Invoke task collections and generates formatted documentation showing task names, parameters, descriptions, and usage examples.
-
-Key Features
-~~~~~~~~~~~~
-
-**Automatic Extraction**
-
-- Task discovery from tasks.py
-- Parameter documentation
-- Default value extraction
-- Help text integration
-
-**Documentation Generation**
-
-- Task reference pages
-- Usage examples
-- Parameter tables
-- Task organization
-
-**Integration**
-
-- Sphinx cross-referencing
-- Custom formatting
-- Namespace support
-- Collection grouping
 
 Installation
 ------------

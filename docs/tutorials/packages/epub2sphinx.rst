@@ -19,7 +19,6 @@ This tutorial demonstrates how to use epub2sphinx to convert EPUB ebook files to
 
 What is Epub2Sphinx?
 ---------------------
-
 epub2sphinx is a tool that enables:
 
 - Convert EPUB files to reStructuredText
@@ -35,8 +34,8 @@ epub2sphinx is a tool that enables:
 
 This is useful for converting existing ebooks, technical manuals, or publications into maintainable Sphinx documentation.
 
-
 The epub2sphinx extension converts EPUB ebooks into reStructuredText format for integration with Sphinx documentation projects.
+
 
 Installation
 ------------

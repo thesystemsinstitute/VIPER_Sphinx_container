@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-autoschematics to automatically gen
 
 What is Sphinx-Autoschematics?
 -------------------------------
-
 sphinx-autoschematics is a Sphinx extension that provides automatic generation of circuit schematics:
 
 - Generate schematics from netlist files (SPICE, etc.)
@@ -33,8 +32,8 @@ sphinx-autoschematics is a Sphinx extension that provides automatic generation o
 
 This is essential for electronics documentation, hardware design guides, and circuit analysis.
 
-
 The sphinx-autoschematics extension integrates with circuit design tools to generate and embed electronic schematics directly in Sphinx documentation.
+
 
 Installation
 ------------

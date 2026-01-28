@@ -13,32 +13,6 @@ This page demonstrates **sphinx-advanced** - a collection of advanced Sphinx fea
    :local:
    :depth: 3
 
-Overview
---------
-
-What is sphinx-advanced?
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-sphinx-advanced provides a comprehensive set of advanced features for Sphinx documentation:
-
-- Advanced cross-referencing
-- Complex document structures
-- Build customization
-- Content transformation
-- Enhanced directives and roles
-- Output format extensions
-
-Key Features
-~~~~~~~~~~~~
-
-- **Advanced Cross-Refs**: Sophisticated linking and reference systems
-- **Content Processors**: Transform content during build
-- **Custom Builders**: Additional output formats
-- **Document Management**: Complex document workflows
-- **Metadata Handling**: Rich document metadata
-- **Build Optimization**: Performance improvements
-- **Template Enhancements**: Advanced Jinja2 features
-- **Extension API**: Powerful extension development tools
 
 Installation
 ------------

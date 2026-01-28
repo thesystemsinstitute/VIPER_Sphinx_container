@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sqlalchemy in your Sphinx documentation.
 
 What is Sqlalchemy?
 -------------------
-
 sqlalchemy is a Sphinx extension that provides:
 
 - SQL toolkit and ORM
@@ -41,6 +40,8 @@ Key Features
 - **Feature 2**: Description of key feature
 - **Feature 3**: Description of key feature
 - **Feature 4**: Description of key feature
+
+
 Installation
 ------------
 

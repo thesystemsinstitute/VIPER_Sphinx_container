@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-material** Material Design inspired theme.
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-material package provides functionality for working with Material Design inspired theme.
 
 Basic Usage
 -----------

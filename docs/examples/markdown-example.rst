@@ -7,10 +7,6 @@ This page demonstrates the **markdown** Python Markdown parser and processor.
    :local:
    :depth: 2
 
-Overview
---------
-
-The markdown package provides functionality for working with Python Markdown parser and processor.
 
 Basic Usage
 -----------

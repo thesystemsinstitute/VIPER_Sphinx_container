@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-diagrams to create cloud architectu
 
 What is Sphinx-Diagrams?
 -------------------------
-
 sphinx-diagrams integrates the Diagrams library with Sphinx to provide:
 
 - Cloud architecture diagrams (AWS, Azure, GCP, Kubernetes)
@@ -34,8 +33,8 @@ sphinx-diagrams integrates the Diagrams library with Sphinx to provide:
 
 Uses Python code to define diagrams, making them version-controllable and easy to maintain.
 
-
 The sphinx-diagrams extension integrates the Diagrams library to create cloud architecture diagrams, network diagrams, and system design visualizations.
+
 
 Installation
 ------------

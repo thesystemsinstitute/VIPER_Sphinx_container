@@ -13,7 +13,6 @@ This tutorial demonstrates how to use sphinx-spelling in your Sphinx documentati
 
 What is Sphinx Spelling?
 -------------------------
-
 sphinx-spelling is a Sphinx extension that provides:
 
 - Spell checker for documentation
@@ -35,6 +34,8 @@ Key Features
 - **Custom Dictionaries**: Support for project-specific word lists
 - **Multiple Languages**: Support for various languages
 - **CI/CD Integration**: Easy integration with build pipelines
+
+
 Installation
 ------------
 

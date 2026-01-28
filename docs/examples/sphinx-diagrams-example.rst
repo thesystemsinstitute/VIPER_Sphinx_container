@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-diagrams** extension for creating diagrams u
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-diagrams extension integrates the Diagrams library to create cloud architecture diagrams, network diagrams, and system design visualizations.
 
 Basic Diagrams
 --------------

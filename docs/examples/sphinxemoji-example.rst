@@ -7,10 +7,6 @@ This page demonstrates the **sphinxemoji** extension for adding emoji support to
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinxemoji extension provides emoji support using GitHub-style emoji codes and Unicode emoji characters in reStructuredText documents.
 
 Basic Emoji Usage
 -----------------

@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-markdown-tables** Markdown table support for
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-markdown-tables package provides functionality for working with Markdown table support for Sphinx.
 
 Basic Usage
 -----------

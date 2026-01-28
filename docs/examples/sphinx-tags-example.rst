@@ -16,15 +16,6 @@ This page demonstrates **sphinx-tags** - Tag-based organization.
 Overview
 --------
 
-What is sphinx-tags?
---------------------
-
-sphinx-tags provides:
-
-- Tag-based organization
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

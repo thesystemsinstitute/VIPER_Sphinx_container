@@ -19,7 +19,6 @@ This tutorial demonstrates how to use pydeps to generate Python dependency graph
 
 What is Pydeps?
 ---------------
-
 Pydeps is a Python dependency visualization tool that provides:
 
 - Package dependency graphs
@@ -37,7 +36,6 @@ Pydeps is a Python dependency visualization tool that provides:
 
 This enables automatic dependency documentation.
 
-
 Pydeps is a Python module dependency visualization tool that creates dependency graphs showing the relationships between modules in your Python project. It generates beautiful, informative diagrams that help developers understand project structure, identify circular dependencies, and plan refactoring efforts.
 
 Key features include:
@@ -52,6 +50,7 @@ Key features include:
 - Integration with GraphViz
 - Large project support
 - Command-line and Python API
+
 
 Installation
 ------------

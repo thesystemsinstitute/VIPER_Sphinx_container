@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinxcontrib-plantuml, a PlantUML diagram
 
 What is Sphinxcontrib-PlantUML?
 ------------------------------
-
 Sphinxcontrib-PlantUML provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Sphinxcontrib-PlantUML provides features for:
 - Advanced features
 - Best practices
 
-
 The sphinxcontrib-plantuml package provides functionality for working with PlantUML diagram support.
+
 
 Installation
 ------------

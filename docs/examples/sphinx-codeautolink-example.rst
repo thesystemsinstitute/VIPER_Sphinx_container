@@ -16,15 +16,6 @@ This page demonstrates **sphinx-codeautolink** - Automatic links in code blocks.
 Overview
 --------
 
-What is sphinx-codeautolink?
-----------------------------
-
-sphinx-codeautolink provides:
-
-- Automatic links in code blocks
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

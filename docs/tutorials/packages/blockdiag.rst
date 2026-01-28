@@ -19,7 +19,6 @@ This tutorial demonstrates how to use blockdiag, a block diagram generator.
 
 What is BlockDiag?
 -----------------
-
 BlockDiag provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ BlockDiag provides features for:
 - Advanced features
 - Best practices
 
-
 The blockdiag package provides functionality for working with block diagram generator.
+
 
 Installation
 ------------

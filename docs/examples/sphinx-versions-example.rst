@@ -16,15 +16,6 @@ This page demonstrates **sphinx-versions** - Version management for Sphinx.
 Overview
 --------
 
-What is sphinx-versions?
--------------------------
-
-sphinx-versions provides:
-
-- Version management for Sphinx
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

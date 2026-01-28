@@ -19,7 +19,6 @@ This tutorial demonstrates how to use sphinx-click in your Sphinx documentation.
 
 What is Sphinx Click?
 ----------------------
-
 sphinx-click is a Sphinx extension that provides:
 
 - Document Click CLIs
@@ -41,6 +40,8 @@ Key Features
 - **Nested Commands**: Support for command groups
 - **Options & Arguments**: Document all CLI options
 - **Examples**: Include usage examples
+
+
 Installation
 ------------
 

@@ -16,15 +16,6 @@ This page demonstrates **sphinx-typer** - Document Typer CLIs.
 Overview
 --------
 
-What is sphinx-typer?
----------------------
-
-sphinx-typer provides:
-
-- Document Typer CLIs
-- Integration with Sphinx documentation
-- Flexible configuration options
-- Professional output formatting
 
 Key Features
 ~~~~~~~~~~~~

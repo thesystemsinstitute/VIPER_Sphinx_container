@@ -7,10 +7,6 @@ This page demonstrates the **karma-sphinx-theme** Karma documentation theme.
    :local:
    :depth: 2
 
-Overview
---------
-
-The karma-sphinx-theme package provides functionality for working with Karma documentation theme.
 
 Basic Usage
 -----------

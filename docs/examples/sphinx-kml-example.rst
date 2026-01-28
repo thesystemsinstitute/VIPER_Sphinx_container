@@ -7,10 +7,6 @@ This page demonstrates the **sphinx-kml** extension for embedding KML (Keyhole M
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinx-kml extension allows you to include KML/KMZ files, create geographic placemarks, and visualize geographic data in documentation.
 
 Basic KML Elements
 ------------------

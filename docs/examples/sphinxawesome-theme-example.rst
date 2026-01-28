@@ -7,10 +7,6 @@ This page demonstrates the **sphinxawesome-theme** awesome documentation theme.
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinxawesome-theme package provides functionality for working with awesome documentation theme.
 
 Basic Usage
 -----------

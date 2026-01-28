@@ -19,7 +19,6 @@ This tutorial demonstrates how to use graphviz2drawio, a Graphviz to Draw.io con
 
 What is Graphviz2Drawio?
 -----------------------
-
 Graphviz2Drawio provides features for:
 
 - Core functionality
@@ -28,8 +27,8 @@ Graphviz2Drawio provides features for:
 - Advanced features
 - Best practices
 
-
 The graphviz2drawio package provides functionality for working with Graphviz to Draw.io converter.
+
 
 Installation
 ------------

@@ -7,10 +7,6 @@ This page demonstrates the **sphinxcontrib-mermaid** Mermaid diagram support for
    :local:
    :depth: 2
 
-Overview
---------
-
-The sphinxcontrib-mermaid package provides functionality for working with Mermaid diagram support for Sphinx.
 
 Basic Usage
 -----------

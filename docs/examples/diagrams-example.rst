@@ -7,10 +7,6 @@ This page demonstrates the **diagrams** architecture diagram generation.
    :local:
    :depth: 2
 
-Overview
---------
-
-The diagrams package provides functionality for working with architecture diagram generation.
 
 Basic Usage
 -----------

@@ -6,8 +6,14 @@ Sphinx-Autoindex Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-autoindex/>`_
-   - :doc:`See Working Example <../../examples/sphinx-autoindex-example>`
+   - `API Documentation <../../pdoc/sphinx_autoindex/index.html>`_
+   - `Manual <https://github.com/sphinx-contrib/autoindex>`_
+   - :doc:`Working Example <../../examples/sphinx-autoindex-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-autoindex to automatically generate index pages for your documentation.
 
@@ -76,6 +82,73 @@ Advanced Configuration
    autoindex_show_signatures = True
    autoindex_compact = False
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx.ext.autodoc',
+       'sphinx_autoindex',
+       # ... other extensions
+   ]
+   
+   # Enable auto-indexing
+   autoindex_generate = True
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all options:
+
+.. code-block:: python
+
+   # Auto-indexing Configuration
+   autoindex_generate = True
+   autoindex_ignore = ['_build', 'venv', '*.pyc']
+   
+   # Index Types
+   autoindex_modules = True
+   autoindex_classes = True
+   autoindex_functions = True
+   autoindex_methods = True
+   autoindex_attributes = True
+   autoindex_data = True
+   
+   # Index Organization
+   autoindex_group_by = 'module'  # 'module', 'type', 'alphabet'
+   autoindex_sort_by = 'name'     # 'name', 'type', 'module'
+   autoindex_hierarchical = True
+   
+   # Display Options
+   autoindex_show_private = False
+   autoindex_show_inherited = True
+   autoindex_show_undocumented = False
+   autoindex_format = 'detailed'  # 'detailed', 'compact', 'table'
+   
+   # Cross-References
+   autoindex_generate_refs = True
+   autoindex_ref_prefix = 'ref-'
+   autoindex_ref_format = 'short'  # 'short', 'full', 'module.name'
+   
+   # Template Options
+   autoindex_template = 'autoindex.html'
+   autoindex_custom_sections = ['Examples', 'See Also']
+   
+   # Search Integration
+   autoindex_enhance_search = True
+   autoindex_search_boost = 1.5
+   
+   # Performance
+   autoindex_cache_enabled = True
+   autoindex_parallel_build = True
+
 Basic Usage
 -----------
 
@@ -103,29 +176,6 @@ Generate Function Index
 
    .. autoindex:: mypackage
       :type: function
-
-Practical Examples
-------------------
-
-Example 1: Complete Package Index
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Project structure:
-
-.. code-block:: text
-
-   mypackage/
-   ├── __init__.py
-   ├── core.py
-   ├── utils.py
-   └── api/
-       ├── __init__.py
-       ├── client.py
-       └── server.py
-
-``docs/api/index.rst``:
-
-.. code-block:: rst
 
    API Reference
    =============

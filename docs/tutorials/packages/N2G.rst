@@ -6,8 +6,14 @@ N2G Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/N2G/>`_
-   - :doc:`See Working Example <../../examples/N2G-example>`
+   - `API Documentation <../../pdoc/N2G/index.html>`_
+   - `Manual <https://n2g.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/N2G-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use N2G, a Network to Graph converter.
 
@@ -21,6 +27,9 @@ N2G provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The N2G package provides functionality for working with Network to Graph converter.
 
 Installation
 ------------

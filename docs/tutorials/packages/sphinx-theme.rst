@@ -6,8 +6,14 @@ Sphinx-Theme Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-theme/>`_
-   - :doc:`See Working Example <../../examples/sphinx-theme-example>`
+   - `API Documentation <../../pdoc/sphinx_theme/index.html>`_
+   - `Manual <https://github.com/sphinx-contrib/sphinx-theme>`_
+   - :doc:`Working Example <../../examples/sphinx-theme-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-theme to create and customize Sphinx documentation themes, enabling you to build beautiful, branded documentation sites.
 
@@ -27,6 +33,13 @@ sphinx-theme is a base package and framework for creating custom Sphinx themes. 
 
 While Sphinx comes with built-in themes, sphinx-theme helps you create professional custom themes for your documentation.
 
+sphinx-theme provides tools and utilities for building custom Sphinx themes:
+
+- Theme development framework
+- Customizable components
+- Modern CSS/JavaScript integration
+- Responsive design support
+- Theme configuration helpers
 Installation
 ------------
 
@@ -348,112 +361,6 @@ Using Custom Theme
    
    html_theme = 'my_theme'
    html_theme_path = [os.path.abspath('_themes')]
-
-Practical Examples
-------------------
-
-Example 1: Corporate Branding
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: python
-
-   # conf.py
-   html_theme = 'sphinx_rtd_theme'
-   
-   html_theme_options = {
-       'logo_only': True,
-       'display_version': False,
-   }
-   
-   html_logo = '_static/company_logo.png'
-   html_favicon = '_static/company_favicon.ico'
-   
-   html_css_files = ['corporate.css']
-
-``_static/corporate.css``:
-
-.. code-block:: css
-
-   /* Corporate colors */
-   :root {
-       --brand-primary: #003366;
-       --brand-secondary: #FF6600;
-   }
-   
-   .navbar {
-       background-color: var(--brand-primary);
-   }
-   
-   a {
-       color: var(--brand-secondary);
-   }
-   
-   h1, h2, h3 {
-       color: var(--brand-primary);
-   }
-
-Example 2: Dark Mode Support
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: css
-
-   /* _static/dark-mode.css */
-   
-   /* Light mode (default) */
-   :root {
-       --bg-color: #FFFFFF;
-       --text-color: #333333;
-       --code-bg: #F5F5F5;
-   }
-   
-   /* Dark mode */
-   body.dark-mode {
-       --bg-color: #1E1E1E;
-       --text-color: #E0E0E0;
-       --code-bg: #2D2D2D;
-   }
-   
-   body {
-       background-color: var(--bg-color);
-       color: var(--text-color);
-   }
-   
-   pre {
-       background-color: var(--code-bg);
-   }
-
-Example 3: Mobile-First Responsive
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: css
-
-   /* _static/responsive.css */
-   
-   /* Mobile first */
-   .content {
-       padding: 1rem;
-       max-width: 100%;
-   }
-   
-   /* Tablet */
-   @media (min-width: 768px) {
-       .content {
-           padding: 2rem;
-           max-width: 720px;
-       }
-   }
-   
-   /* Desktop */
-   @media (min-width: 1024px) {
-       .content {
-           padding: 3rem;
-           max-width: 1200px;
-       }
-       
-       .sidebar {
-           display: block;
-       }
-   }
 
 Theme Comparison
 ----------------

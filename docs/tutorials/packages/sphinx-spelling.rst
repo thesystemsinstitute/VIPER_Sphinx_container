@@ -21,6 +21,20 @@ sphinx-spelling is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinx-spelling provides:
+
+- Spell checker for documentation
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Spell Checking**: Comprehensive spell checking for documentation
+- **Custom Dictionaries**: Support for project-specific word lists
+- **Multiple Languages**: Support for various languages
+- **CI/CD Integration**: Easy integration with build pipelines
 Installation
 ------------
 
@@ -57,6 +71,39 @@ Advanced Configuration
    spelling_word_list_filename = 'spelling_wordlist.txt'
    spelling_show_suggestions = True
    spelling_exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinxcontrib.spelling']
+   
+   # Package-specific configuration
+   spelling_lang = 'en_US'
+   spelling_word_list_filename = 'spelling_wordlist.txt'
+   spelling_show_suggestions = True
+   spelling_suggestion_limit = 5
+   
+   # Exclude patterns
+   spelling_exclude_patterns = [
+       '_build/**',
+       'Thumbs.db',
+       '.DS_Store',
+   ]
+   
+   # Filters
+   spelling_filters = [
+       'enchant.tokenize.EmailFilter',
+       'enchant.tokenize.URLFilter',
+   ]
+   
+   # Ignore specific content
+   spelling_ignore_pypi_package_names = True
+   spelling_ignore_wiki_words = True
+   spelling_ignore_acronyms = True
+   spelling_ignore_python_builtins = True
+   spelling_ignore_importable_modules = True
 
 Basic Usage
 -----------

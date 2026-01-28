@@ -6,8 +6,14 @@ Epub2Sphinx Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/epub2sphinx/>`_
-   - :doc:`See Working Example <../../examples/epub2sphinx-example>`
+   - `API Documentation <../../pdoc/epub2sphinx/index.html>`_
+   - `Manual <https://github.com/sphinx-contrib/epub>`_
+   - :doc:`Working Example <../../examples/epub2sphinx-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use epub2sphinx to convert EPUB ebook files to Sphinx documentation format.
 
@@ -28,6 +34,9 @@ epub2sphinx is a tool that enables:
 - Book documentation workflow
 
 This is useful for converting existing ebooks, technical manuals, or publications into maintainable Sphinx documentation.
+
+
+The epub2sphinx extension converts EPUB ebooks into reStructuredText format for integration with Sphinx documentation projects.
 
 Installation
 ------------
@@ -78,6 +87,34 @@ Advanced Configuration
    epub_to_sphinx_create_index = True
    epub_to_sphinx_chapter_pattern = 'chapter_{:02d}.rst'
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'epub2sphinx',
+   ]
+   
+   epub2sphinx_output_format = 'rst'
+
+Advanced Options
+~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   epub2sphinx_options = {
+       'extract_toc': True,
+       'convert_images': True,
+       'clean_html': True,
+   }
+
 Basic Usage
 -----------
 
@@ -114,44 +151,6 @@ Convert Specific Chapters
      --chapters 1,2,3,4,5 \
      --output docs/intro
 
-Practical Examples
-------------------
-
-Example 1: Technical Manual Import
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Convert a technical manual EPUB to Sphinx:
-
-.. code-block:: bash
-
-   # Convert the entire manual
-   docker run --rm \
-     -v $(pwd):/project \
-     kensai-sphinx:latest \
-     epub2sphinx /project/manuals/user_guide.epub \
-       --output /project/docs/user_guide \
-       --images-dir _static/manual_images
-
-Create ``docs/user_guide/index.rst``:
-
-.. code-block:: rst
-
-   User Guide
-   ==========
-   
-   Welcome to the user guide, converted from our published manual.
-   
-   .. toctree::
-      :maxdepth: 2
-      :caption: Contents:
-      
-      chapter_01
-      chapter_02
-      chapter_03
-      chapter_04
-      chapter_05
-      chapter_06
-   
    About This Guide
    ----------------
    

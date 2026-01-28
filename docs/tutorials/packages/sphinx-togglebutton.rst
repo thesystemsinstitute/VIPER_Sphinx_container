@@ -6,8 +6,14 @@ Sphinx Toggle Button Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-togglebutton/>`_
-   - :doc:`See Working Example <../../examples/sphinx-togglebutton-example>`
+   - `API Documentation <../../pdoc/sphinx_togglebutton/index.html>`_
+   - `Manual <https://sphinx-togglebutton.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinx-togglebutton-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-togglebutton, a toggle button directive for content.
 
@@ -21,6 +27,9 @@ Sphinx Toggle Button provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The sphinx-togglebutton package provides functionality for working with toggle button directive for content.
 
 Installation
 ------------

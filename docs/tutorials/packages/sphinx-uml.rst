@@ -6,8 +6,14 @@ Sphinx-UML Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-uml/>`_
-   - :doc:`See Working Example <../../examples/sphinx-uml-example>`
+   - `API Documentation <../../pdoc/sphinx_uml/index.html>`_
+   - `Manual <https://github.com/sphinx-contrib/plantuml>`_
+   - :doc:`Working Example <../../examples/sphinx-uml-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-uml to create UML diagrams directly in your Sphinx documentation using PlantUML syntax.
 
@@ -30,6 +36,9 @@ sphinx-uml is a Sphinx extension that integrates PlantUML for creating various U
 - SVG, PNG, and PDF output
 
 Unlike sphinx-pyreverse which generates diagrams from code, sphinx-uml allows you to write diagrams directly in documentation.
+
+
+The sphinx-uml extension integrates PlantUML to create various types of UML diagrams including class diagrams, sequence diagrams, activity diagrams, and more.
 
 Installation
 ------------
@@ -83,6 +92,19 @@ Advanced Configuration
    
    # Syntax options
    plantuml_syntax_error_image = True
+
+
+.. code-block:: python
+
+   # PlantUML settings
+   plantuml_latex_output_format = 'pdf'
+   plantuml_epstopdf = '/usr/bin/epstopdf'
+   
+   # Syntax highlighting
+   plantuml_syntax_error_image = True
+   
+   # Include path
+   plantuml_include_path = ['_diagrams/includes']
 
 Basic Usage
 -----------
@@ -297,16 +319,6 @@ Use Case Diagram
       Admin --> UC4
       Admin --> UC5
       @enduml
-
-Practical Examples
-------------------
-
-Example 1: API Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/api/authentication.rst``:
-
-.. code-block:: rst
 
    Authentication Flow
    ===================

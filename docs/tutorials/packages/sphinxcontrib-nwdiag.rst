@@ -6,8 +6,14 @@ Sphinxcontrib-NWDiag Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinxcontrib-nwdiag/>`_
-   - :doc:`See Working Example <../../examples/sphinxcontrib-nwdiag-example>`
+   - `API Documentation <../../pdoc/sphinxcontrib_nwdiag/index.html>`_
+   - `Manual <https://github.com/blockdiag/sphinxcontrib-nwdiag>`_
+   - :doc:`Working Example <../../examples/sphinxcontrib-nwdiag-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinxcontrib-nwdiag, a network diagram support.
 
@@ -21,6 +27,9 @@ Sphinxcontrib-NWDiag provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The sphinxcontrib-nwdiag package provides functionality for working with network diagram support.
 
 Installation
 ------------

@@ -5,9 +5,15 @@ Sphinx-Confluence Tutorial
    
    **Package Resources:**
    
-   - :doc:`../../examples/sphinx-confluence-example` - Live example
    - `PyPI Package <https://pypi.org/project/sphinx-confluence/>`_
+   - `API Documentation <../../pdoc/sphinx_confluence/index.html>`_
+   - `Manual <https://sphinxcontrib-confluencebuilder.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinx-confluence-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-confluence (sphinxcontrib-confluencebuilder) to publish your Sphinx documentation directly to Atlassian Confluence.
 
@@ -21,6 +27,9 @@ sphinx-confluence (also known as sphinxcontrib-confluencebuilder) is a Sphinx ex
 - Automatically sync documentation to Confluence
 - Leverage Sphinx's powerful features while using Confluence as a platform
 - Keep documentation in version control while publishing to a wiki
+
+
+When you use sphinx-confluence to publish documentation to Confluence, your reStructuredText files are converted into Confluence's storage format (XHTML). This example shows what various Sphinx elements look like when published.
 
 Installation
 ------------

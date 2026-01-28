@@ -6,8 +6,13 @@ PyProjectViz Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/pyprojectviz/>`_
-   - :doc:`See Working Example <../../examples/pyprojectviz-example>`
+   - `API Documentation <../../pdoc/pyprojectviz/index.html>`_
+   - :doc:`Working Example <../../examples/pyprojectviz-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use pyprojectviz, a Python project visualization tool.
 
@@ -21,6 +26,9 @@ PyProjectViz provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The pyprojectviz package provides functionality for working with Python project visualization tool.
 
 Installation
 ------------

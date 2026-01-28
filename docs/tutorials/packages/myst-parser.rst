@@ -6,9 +6,14 @@ myst-parser Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/myst-parser/>`_
-   - `Official Documentation <https://myst-parser.readthedocs.io/>`_
-   - :doc:`See Working Example <../../examples/myst-parser-example>`
+   - `API Documentation <../../pdoc/myst_parser/index.html>`_
+   - `Manual <https://myst-parser.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/myst-parser-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 The MyST (Markedly Structured Text) parser allows you to write Sphinx documentation in 
 Markdown instead of reStructuredText.
@@ -25,6 +30,9 @@ It's fully compatible with CommonMark and adds powerful features like:
 - Math equations
 - Admonitions
 - And much more!
+
+
+The myst-parser extension enables rich Markdown support in Sphinx, combining Markdown's simplicity with the power of reStructuredText through the MyST (Markedly Structured Text) syntax.
 
 Installation
 ------------
@@ -74,6 +82,47 @@ Enable MyST Extensions
        "strikethrough",    # ~~text~~
        "substitution",     # {{ variable }}
        "tasklist",         # - [ ] Task lists
+   ]
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Setup
+~~~~~~~~~~~
+
+.. code-block:: python
+
+   # conf.py
+   extensions = [
+       'myst_parser',
+   ]
+   
+   # Source file suffixes
+   source_suffix = {
+       '.rst': 'restructuredtext',
+       '.md': 'markdown',
+   }
+
+Enable Extensions
+~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   myst_enable_extensions = [
+       "amsmath",          # Math support
+       "colon_fence",      # ::: fences
+       "deflist",          # Definition lists
+       "dollarmath",       # $ and $$ for math
+       "fieldlist",        # Field lists
+       "html_admonition",  # HTML-style admonitions
+       "html_image",       # HTML images
+       "linkify",          # Auto-link URLs
+       "replacements",     # Character replacements
+       "smartquotes",      # Smart quotes
+       "strikethrough",    # ~~text~~
+       "substitution",     # Substitutions
+       "tasklist",         # Task lists
    ]
 
 Basic Markdown Syntax

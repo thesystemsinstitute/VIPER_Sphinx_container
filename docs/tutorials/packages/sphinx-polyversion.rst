@@ -6,8 +6,14 @@ Sphinx Polyversion Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-polyversion/>`_
-   - :doc:`See Working Example <../../examples/sphinx-polyversion-example>`
-   - `Official Documentation <https://sphinx-polyversion.readthedocs.io/>`_
+   - `API Documentation <../../pdoc/sphinx_polyversion/index.html>`_
+   - `Manual <https://github.com/Holzhaus/sphinx-polyversion>`_
+   - :doc:`Working Example <../../examples/sphinx-polyversion-example>`
+
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-polyversion in your Sphinx documentation.
 
@@ -21,6 +27,20 @@ sphinx-polyversion is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinx-polyversion provides:
+
+- Multi-version documentation
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Version Management**: Build documentation for multiple versions
+- **Git Integration**: Automatic version detection from Git tags
+- **Version Selector**: Add version switcher to documentation
+- **Flexible Sources**: Support multiple version sources
 Installation
 ------------
 
@@ -60,6 +80,52 @@ Advanced Configuration
    polyversion_template_vars = {
        'current_version': lambda: 'latest',
    }
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_polyversion',
+       # ... other extensions
+   ]
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinx_polyversion']
+   
+   # Package-specific configuration
+   polyversion_default_version = 'latest'
+   
+   # Version detection
+   polyversion_version_sources = {
+       'git': 'git describe --tags --always',
+       'env': 'DOCS_VERSION',
+   }
+   
+   # Template variables
+   polyversion_template_vars = {
+       'current_version': lambda: 'latest',
+       'all_versions': lambda: ['v1.0', 'v2.0', 'latest'],
+   }
+   
+   # Version filtering
+   polyversion_version_filter = lambda v: not v.endswith('-dev')
+   
+   # Output configuration
+   polyversion_output_format = '{version}'
 
 Basic Usage
 -----------

@@ -6,8 +6,14 @@ Sphinxawesome Theme Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinxawesome-theme/>`_
-   - :doc:`See Working Example <../../examples/sphinxawesome-theme-example>`
+   - `API Documentation <../../pdoc/sphinxawesome_theme/index.html>`_
+   - `Manual <https://sphinxawesome.xyz/>`_
+   - :doc:`Working Example <../../examples/sphinxawesome-theme-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinxawesome-theme, a awesome documentation theme.
 
@@ -21,6 +27,9 @@ Sphinxawesome Theme provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The sphinxawesome-theme package provides functionality for working with awesome documentation theme.
 
 Installation
 ------------

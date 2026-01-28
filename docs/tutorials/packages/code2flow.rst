@@ -6,8 +6,14 @@ Code2Flow Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/code2flow/>`_
-   - :doc:`See Working Example <../../examples/code2flow-example>`
+   - `API Documentation <../../pdoc/code2flow/index.html>`_
+   - `Manual <https://github.com/scottrogowski/code2flow>`_
+   - :doc:`Working Example <../../examples/code2flow-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use code2flow, a call graph generation from source code.
 
@@ -21,6 +27,9 @@ Code2Flow provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The code2flow package provides functionality for working with call graph generation from source code.
 
 Installation
 ------------

@@ -33,6 +33,39 @@ sphinx-uml
 btd.sphinx.graphviz
 sphinxcontrib-cadquery
 
+# Graphviz and Diagram Tools
+pyan3
+graphviz
+pydot
+gprof2dot
+graphviz2drawio
+python-markdown-graphviz
+fsmdot
+quickdiagrams
+dtreeplt
+pyprojectviz
+
+# Diagram and Visualization Tools
+# Note: pyreverse is included in pylint package
+pylint
+code2flow
+snakeviz
+pydeps
+diagrams
+railroad-diagrams
+blockdiag
+nwdiag
+N2G
+rptree
+pinout
+sphinxcontrib-mermaid
+sphinxcontrib-plantuml
+sphinxcontrib-blockdiag
+sphinxcontrib-seqdiag
+sphinxcontrib-nwdiag
+sphinxcontrib-actdiag
+sphinxcontrib-tikz
+
 ## Jupyter Notebook Integration
 nbsphinx
 nbsphinx-link
@@ -167,39 +200,6 @@ sphinx-design
 sphinx-togglebutton
 sphinx-tabs
 sphinx-inline-tabs
-
-# Graphviz and Diagram Tools
-pyan3
-graphviz
-pydot
-gprof2dot
-graphviz2drawio
-python-markdown-graphviz
-fsmdot
-quickdiagrams
-dtreeplt
-pyprojectviz
-
-# Diagram and Visualization Tools
-# Note: pyreverse is included in pylint package
-pylint
-code2flow
-snakeviz
-pydeps
-diagrams
-railroad-diagrams
-blockdiag
-nwdiag
-N2G
-rptree
-pinout
-sphinxcontrib-mermaid
-sphinxcontrib-plantuml
-sphinxcontrib-blockdiag
-sphinxcontrib-seqdiag
-sphinxcontrib-nwdiag
-sphinxcontrib-actdiag
-sphinxcontrib-tikz
 
 # SVG and Vector Graphics Tools
 svg.py 

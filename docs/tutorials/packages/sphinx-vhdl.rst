@@ -6,8 +6,14 @@ Sphinx-VHDL Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-vhdl/>`_
-   - :doc:`See Working Example <../../examples/sphinx-vhdl-example>`
+   - `API Documentation <../../pdoc/sphinx_vhdl/index.html>`_
+   - `Manual <https://cesnet.github.io/sphinx-vhdl/>`_
+   - :doc:`Working Example <../../examples/sphinx-vhdl-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-vhdl to document VHDL (VHSIC Hardware Description Language) code with Sphinx, enabling professional hardware design documentation.
 
@@ -26,6 +32,13 @@ sphinx-vhdl is a Sphinx extension that provides support for documenting VHDL har
 
 This is essential for FPGA developers, digital design engineers, and hardware verification teams.
 
+sphinx-vhdl adds comprehensive VHDL support to Sphinx, enabling:
+
+- Automatic VHDL code documentation
+- Hardware entity documentation
+- Architecture and component descriptions
+- Signal and port documentation
+- Cross-referencing between hardware modules
 Installation
 ------------
 
@@ -84,6 +97,28 @@ Advanced Configuration
    vhdl_entity_style = 'title_case'
    vhdl_signal_prefix = 's_'
    vhdl_generic_prefix = 'g_'
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_vhdl',
+       # ... other extensions
+   ]
+   
+   # VHDL source directory
+   vhdl_source_path = ['hardware/src']
+   
+   # Autodoc options
+   vhdl_autodoc_options = {
+       'members': True,
+       'show-inheritance': True
+   }
 
 Basic Usage
 -----------
@@ -228,108 +263,6 @@ Document it in ``docs/counter.rst``:
               up     => direction,
               count  => count_value
           );
-
-Practical Examples
-------------------
-
-Example 1: ALU Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``hdl/src/alu.vhd``:
-
-.. code-block:: vhdl
-
-   --! @brief Arithmetic Logic Unit
-   --! @details Performs arithmetic and logic operations
-   entity alu is
-       generic (
-           DATA_WIDTH : integer := 32  --! Operand width
-       );
-       port (
-           a      : in  std_logic_vector(DATA_WIDTH-1 downto 0);  --! Operand A
-           b      : in  std_logic_vector(DATA_WIDTH-1 downto 0);  --! Operand B
-           op     : in  std_logic_vector(3 downto 0);             --! Operation code
-           result : out std_logic_vector(DATA_WIDTH-1 downto 0);  --! Result
-           zero   : out std_logic;                                --! Zero flag
-           carry  : out std_logic                                 --! Carry flag
-       );
-   end alu;
-
-``docs/alu.rst``:
-
-.. code-block:: rst
-
-   ALU Module
-   ==========
-   
-   .. vhdl:autoentity:: alu
-   
-   Supported Operations
-   --------------------
-   
-   .. list-table::
-      :header-rows: 1
-      :widths: 20 30 50
-   
-      * - Op Code
-        - Operation
-        - Description
-      * - 0000
-        - ADD
-        - A + B
-      * - 0001
-        - SUB
-        - A - B
-      * - 0010
-        - AND
-        - A AND B
-      * - 0011
-        - OR
-        - A OR B
-      * - 0100
-        - XOR
-        - A XOR B
-      * - 0101
-        - SHL
-        - Shift Left
-      * - 0110
-        - SHR
-        - Shift Right
-
-Example 2: Package Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``hdl/src/types_pkg.vhd``:
-
-.. code-block:: vhdl
-
-   --! @brief Common types and constants package
-   package types_pkg is
-       
-       --! @brief Standard data width
-       constant DATA_WIDTH : integer := 32;
-       
-       --! @brief Address width
-       constant ADDR_WIDTH : integer := 16;
-       
-       --! @brief Control signal type
-       type ctrl_t is record
-           enable : std_logic;
-           write  : std_logic;
-           read   : std_logic;
-       end record;
-       
-       --! @brief State machine states
-       type state_t is (IDLE, READ, WRITE, DONE);
-       
-       --! @brief Byte enable array
-       type byte_enable_t is array (DATA_WIDTH/8-1 downto 0) of std_logic;
-       
-   end package types_pkg;
-
-``docs/packages.rst``:
-
-.. code-block:: rst
 
    Common Packages
    ===============
@@ -588,6 +521,12 @@ GitLab CI
      artifacts:
        paths:
          - public
+
+
+Use Cases
+---------
+
+1. **FPGA Design Documentation**
 
 Best Practices
 --------------

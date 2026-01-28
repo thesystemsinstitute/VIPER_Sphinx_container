@@ -6,8 +6,14 @@ Sphinx-Changelog Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-changelog/>`_
-   - :doc:`See Working Example <../../examples/sphinx-changelog-example>`
+   - `API Documentation <../../pdoc/sphinx_changelog/index.html>`_
+   - `Manual <https://github.com/OpenAstronomy/sphinx-changelog>`_
+   - :doc:`Working Example <../../examples/sphinx-changelog-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-changelog to automatically generate and manage changelog documentation.
 
@@ -87,6 +93,85 @@ Advanced Configuration
    changelog_issue_pattern = r'#(\d+)'
    changelog_issue_url = 'https://github.com/user/repo/issues/{}'
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_changelog',
+       # ... other extensions
+   ]
+   
+   # Basic changelog settings
+   changelog_source = 'git'  # 'git', 'github', 'gitlab', 'file'
+   changelog_file = 'CHANGELOG.rst'
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all options:
+
+.. code-block:: python
+
+   # Source Configuration
+   changelog_source = 'git'  # 'git', 'github', 'gitlab', 'file'
+   changelog_file = 'CHANGELOG.rst'
+   changelog_repo_path = '.'
+   
+   # Version Management
+   changelog_version_pattern = r'^v?(\d+\.\d+\.\d+)$'
+   changelog_include_unreleased = True
+   changelog_unreleased_title = 'Unreleased'
+   
+   # Grouping and Categories
+   changelog_categories = [
+       'Added',
+       'Changed',
+       'Deprecated',
+       'Removed',
+       'Fixed',
+       'Security',
+   ]
+   changelog_group_by = 'category'  # 'category', 'version', 'date'
+   
+   # Commit Filtering
+   changelog_include_patterns = [r'.*']
+   changelog_exclude_patterns = [
+       r'^Merge',
+       r'^WIP',
+       r'^\[skip\]',
+   ]
+   changelog_commit_format = 'conventional'  # 'conventional', 'custom'
+   
+   # GitHub/GitLab Integration
+   changelog_github_repo = 'owner/repo'
+   changelog_github_token = os.getenv('GITHUB_TOKEN')
+   changelog_gitlab_url = 'https://gitlab.com'
+   changelog_gitlab_project_id = '12345'
+   
+   # Cross-References
+   changelog_issue_pattern = r'#(\d+)'
+   changelog_issue_url = 'https://github.com/owner/repo/issues/{issue}'
+   changelog_pr_pattern = r'!(\d+)'
+   changelog_pr_url = 'https://github.com/owner/repo/pull/{pr}'
+   
+   # Display Options
+   changelog_show_authors = True
+   changelog_show_dates = True
+   changelog_show_commits = False
+   changelog_show_links = True
+   
+   # Template Options
+   changelog_template = 'changelog.rst_t'
+   changelog_section_depth = 2
+
 Basic Usage
 -----------
 
@@ -114,78 +199,6 @@ Latest Changes
    .. changelog::
       :latest: true
 
-Practical Examples
-------------------
-
-Example 1: Keep a Changelog Format
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``CHANGELOG.md``:
-
-.. code-block:: markdown
-
-   # Changelog
-   
-   All notable changes to this project will be documented in this file.
-   
-   The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-   and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-   
-   ## [Unreleased]
-   
-   ### Added
-   - New feature for data export
-   - Support for multiple file formats
-   
-   ### Fixed
-   - Bug in date parsing
-   - Memory leak in data processor
-   
-   ## [2.0.0] - 2024-01-15
-   
-   ### Added
-   - Complete API redesign
-   - New authentication system
-   - Support for async operations
-   
-   ### Changed
-   - Updated all dependencies
-   - Improved error messages
-   
-   ### Deprecated
-   - Old API endpoints (will be removed in 3.0.0)
-   
-   ### Removed
-   - Python 2.7 support
-   
-   ### Fixed
-   - Critical security vulnerability
-   - Performance issues with large datasets
-   
-   ### Security
-   - Updated crypto library to patch CVE-2023-12345
-   
-   ## [1.5.0] - 2023-12-01
-   
-   ### Added
-   - Export to CSV feature
-   - Batch processing support
-   
-   ### Fixed
-   - Timezone handling bug
-   - Validation error messages
-
-``docs/changelog.rst``:
-
-.. code-block:: rst
-
-   Changelog
-   =========
-   
-   This page shows the complete history of changes to this project.
-   
-   .. changelog::
-   
    Version History
    ---------------
    

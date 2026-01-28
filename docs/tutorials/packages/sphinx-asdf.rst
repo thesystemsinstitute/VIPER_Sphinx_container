@@ -6,7 +6,14 @@ Sphinx Asdf Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-asdf/>`_
-   - :doc:`See Working Example <../../examples/sphinx-asdf-example>`
+   - `API Documentation <../../pdoc/sphinx_asdf/index.html>`_
+   - `Manual <https://github.com/ska-telescope/ska-sdp-cip-developer-docs>`_
+   - :doc:`Working Example <../../examples/sphinx-asdf-example>`
+
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-asdf in your Sphinx documentation.
 
@@ -20,6 +27,20 @@ sphinx-asdf is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinx-asdf provides:
+
+- ASDF schema documentation
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Schema Documentation**: Automatic documentation of ASDF schemas
+- **Validation Examples**: Include schema validation examples
+- **Schema Trees**: Generate schema reference trees
+- **Custom Paths**: Flexible schema path configuration
 Installation
 ------------
 
@@ -54,6 +75,39 @@ Advanced Configuration
    # Configuration options
    asdf_schema_path = '_schemas'
    asdf_schema_standard_prefix = 'http://stsci.edu/schemas/asdf/'
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_asdf',
+       # ... other extensions
+   ]
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinx_asdf']
+   
+   # Package-specific configuration
+   asdf_schema_path = '_schemas'
+   asdf_schema_standard_prefix = 'http://stsci.edu/schemas/asdf/'
+   asdf_schema_reference_mapping = []
+   
+   # Extension configuration
+   asdf_extensions = []
 
 Basic Usage
 -----------

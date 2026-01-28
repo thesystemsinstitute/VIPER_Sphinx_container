@@ -6,8 +6,14 @@ BlockDiag Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/blockdiag/>`_
-   - :doc:`See Working Example <../../examples/blockdiag-example>`
+   - `API Documentation <../../pdoc/blockdiag/index.html>`_
+   - `Manual <http://blockdiag.com/>`_
+   - :doc:`Working Example <../../examples/blockdiag-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use blockdiag, a block diagram generator.
 
@@ -21,6 +27,9 @@ BlockDiag provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The blockdiag package provides functionality for working with block diagram generator.
 
 Installation
 ------------

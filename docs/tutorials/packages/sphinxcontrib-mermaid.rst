@@ -6,8 +6,14 @@ Sphinxcontrib-Mermaid Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinxcontrib-mermaid/>`_
-   - :doc:`See Working Example <../../examples/sphinxcontrib-mermaid-example>`
+   - `API Documentation <../../pdoc/sphinxcontrib_mermaid/index.html>`_
+   - `Manual <https://sphinxcontrib-mermaid-demo.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinxcontrib-mermaid-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinxcontrib-mermaid, a Mermaid diagram support for Sphinx.
 
@@ -21,6 +27,9 @@ Sphinxcontrib-Mermaid provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The sphinxcontrib-mermaid package provides functionality for working with Mermaid diagram support for Sphinx.
 
 Installation
 ------------

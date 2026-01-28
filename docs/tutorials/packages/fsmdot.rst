@@ -6,8 +6,14 @@ FSMDot Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/fsmdot/>`_
-   - :doc:`See Working Example <../../examples/fsmdot-example>`
+   - `API Documentation <../../pdoc/fsmdot/index.html>`_
+   - `Manual <https://github.com/Quentin18/fsmdot>`_
+   - :doc:`Working Example <../../examples/fsmdot-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use fsmdot, a finite state machine diagram generator.
 
@@ -21,6 +27,9 @@ FSMDot provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The fsmdot package provides functionality for working with finite state machine diagram generator.
 
 Installation
 ------------

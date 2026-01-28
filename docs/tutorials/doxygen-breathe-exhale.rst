@@ -1,5 +1,5 @@
-C++ Documentation with Doxygen, Breathe, and Exhale
-====================================================
+C++ Documentation in Sphinx
+===========================
 
 This tutorial shows how to create professional C++ API documentation by combining Doxygen with Sphinx using the breathe and exhale extensions.
 

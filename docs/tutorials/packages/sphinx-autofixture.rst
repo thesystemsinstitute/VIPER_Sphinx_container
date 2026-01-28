@@ -6,8 +6,14 @@ Sphinx-Autofixture Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-autofixture/>`_
-   - :doc:`See Working Example <../../examples/sphinx-autofixture-example>`
+   - `API Documentation <../../pdoc/sphinx_autofixture/index.html>`_
+   - `Manual <https://github.com/sphinx-contrib/autofixture>`_
+   - :doc:`Working Example <../../examples/sphinx-autofixture-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-autofixture to automatically document pytest fixtures in your Sphinx documentation.
 
@@ -76,6 +82,72 @@ Advanced Configuration
    autofixture_docstring_style = 'sphinx'  # or 'google', 'numpy'
    autofixture_group_by_scope = True
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_autofixture',
+       'sphinx.ext.autodoc',
+       # ... other extensions
+   ]
+   
+   # Basic fixture documentation
+   autofixture_enabled = True
+   autofixture_conftest_path = ['tests/conftest.py']
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all options:
+
+.. code-block:: python
+
+   # Fixture Discovery
+   autofixture_enabled = True
+   autofixture_conftest_path = [
+       'tests/conftest.py',
+       'tests/fixtures/common.py',
+       'tests/fixtures/database.py',
+   ]
+   autofixture_exclude_patterns = ['*.internal', '_*']
+   
+   # Documentation Options
+   autofixture_show_scope = True
+   autofixture_show_dependencies = True
+   autofixture_show_parameters = True
+   autofixture_show_source = True
+   autofixture_show_usage = True
+   
+   # Dependency Graph
+   autofixture_generate_graph = True
+   autofixture_graph_format = 'svg'  # 'svg', 'png', 'pdf'
+   autofixture_graph_direction = 'TB'  # 'TB', 'LR', 'BT', 'RL'
+   
+   # Display Options
+   autofixture_format = 'detailed'  # 'detailed', 'compact', 'table'
+   autofixture_group_by = 'scope'   # 'scope', 'file', 'name'
+   autofixture_sort_by = 'name'     # 'name', 'scope', 'file'
+   
+   # Type Annotations
+   autofixture_show_types = True
+   autofixture_resolve_types = True
+   
+   # Examples
+   autofixture_generate_examples = True
+   autofixture_example_format = 'pytest'  # 'pytest', 'doctest'
+   
+   # Cross-References
+   autofixture_generate_refs = True
+   autofixture_ref_prefix = 'fixture-'
+
 Basic Usage
 -----------
 
@@ -103,63 +175,6 @@ Document by Scope
 
    .. autofixture:: conftest
       :scope: session
-
-Practical Examples
-------------------
-
-Example 1: Database Fixtures
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``tests/conftest.py``:
-
-.. code-block:: python
-
-   import pytest
-   from sqlalchemy import create_engine
-   from sqlalchemy.orm import sessionmaker
-   
-   @pytest.fixture(scope='session')
-   def db_engine():
-       """
-       Database engine for testing.
-       
-       Creates an in-memory SQLite database.
-       
-       :return: SQLAlchemy engine instance
-       :rtype: sqlalchemy.engine.Engine
-       """
-       engine = create_engine('sqlite:///:memory:')
-       yield engine
-       engine.dispose()
-   
-   @pytest.fixture(scope='function')
-   def db_session(db_engine):
-       """
-       Database session for test.
-       
-       Provides a clean database session for each test.
-       Automatically rolls back after test completion.
-       
-       :param db_engine: Database engine fixture
-       :return: SQLAlchemy session
-       :rtype: sqlalchemy.orm.Session
-       
-       Example:
-           >>> def test_user_creation(db_session):
-           ...     user = User(name='Test')
-           ...     db_session.add(user)
-           ...     db_session.commit()
-           ...     assert user.id is not None
-       """
-       Session = sessionmaker(bind=db_engine)
-       session = Session()
-       yield session
-       session.rollback()
-       session.close()
-
-``docs/testing/fixtures.rst``:
-
-.. code-block:: rst
 
    Test Fixtures
    =============

@@ -6,9 +6,14 @@ Sphinx Intl Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-intl/>`_
-   - :doc:`See Working Example <../../examples/sphinx-intl-example>`
-   - `Official Documentation <https://sphinx-intl.readthedocs.io/>`_
+   - `API Documentation <../../pdoc/sphinx_intl/index.html>`_
+   - `Manual <https://sphinx-intl.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinx-intl-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-intl in your Sphinx documentation.
 
@@ -22,6 +27,20 @@ sphinx-intl is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinx-intl provides:
+
+- Internationalization utilities
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Feature 1**: Description of key feature
+- **Feature 2**: Description of key feature
+- **Feature 3**: Description of key feature
+- **Feature 4**: Description of key feature
 Installation
 ------------
 
@@ -55,6 +74,34 @@ Advanced Configuration
    
    # Configuration options
    # Add package-specific configuration here
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx-intl',
+       # ... other extensions
+   ]
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinx-intl']
+   
+   # Package-specific configuration
+   # Add configuration options here
 
 Basic Usage
 -----------

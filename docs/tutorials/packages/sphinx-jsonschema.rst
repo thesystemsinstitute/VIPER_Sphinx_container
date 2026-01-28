@@ -6,9 +6,14 @@ Sphinx Jsonschema Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-jsonschema/>`_
-   - :doc:`See Working Example <../../examples/sphinx-jsonschema-example>`
-   - `Official Documentation <https://sphinx-jsonschema.readthedocs.io/>`_
+   - `API Documentation <../../pdoc/sphinx_jsonschema/index.html>`_
+   - `Manual <https://github.com/lnoor/sphinx-jsonschema>`_
+   - :doc:`Working Example <../../examples/sphinx-jsonschema-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-jsonschema in your Sphinx documentation.
 
@@ -22,6 +27,20 @@ sphinx-jsonschema is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinx-jsonschema provides:
+
+- Sphinx extension to display JSON Schema
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Feature 1**: Description of key feature
+- **Feature 2**: Description of key feature
+- **Feature 3**: Description of key feature
+- **Feature 4**: Description of key feature
 Installation
 ------------
 
@@ -55,6 +74,34 @@ Advanced Configuration
    
    # Configuration options
    # Add package-specific configuration here
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx-jsonschema',
+       # ... other extensions
+   ]
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinx-jsonschema']
+   
+   # Package-specific configuration
+   # Add configuration options here
 
 Basic Usage
 -----------

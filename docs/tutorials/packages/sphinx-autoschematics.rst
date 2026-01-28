@@ -6,8 +6,14 @@ Sphinx-Autoschematics Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-autoschematics/>`_
-   - :doc:`See Working Example <../../examples/sphinx-autoschematics-example>`
+   - `API Documentation <../../pdoc/sphinx_autoschematics/index.html>`_
+   - `Manual <https://github.com/LudditeLabs/autodoc-tool>`_
+   - :doc:`Working Example <../../examples/sphinx-autoschematics-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-autoschematics to automatically generate circuit schematics and electrical diagrams in your Sphinx documentation from netlist or schematic description files.
 
@@ -26,6 +32,9 @@ sphinx-autoschematics is a Sphinx extension that provides automatic generation o
 - PCB layout documentation
 
 This is essential for electronics documentation, hardware design guides, and circuit analysis.
+
+
+The sphinx-autoschematics extension integrates with circuit design tools to generate and embed electronic schematics directly in Sphinx documentation.
 
 Installation
 ------------
@@ -87,6 +96,29 @@ Advanced Configuration
    autoschematics_show_grid = False
    autoschematics_wire_style = 'orthogonal'
 
+
+.. code-block:: python
+
+   # Circuit simulator integration
+   autoschematics_simulator = 'ngspice'  # 'ngspice', 'ltspice'
+   autoschematics_simulate = True
+   
+   # Component libraries
+   autoschematics_libraries = [
+       '/path/to/custom/lib',
+       'builtin:analog',
+       'builtin:digital',
+       'builtin:power',
+   ]
+   
+   # Style configuration
+   autoschematics_style = {
+       'wire_width': 2,
+       'component_scale': 1.0,
+       'font_size': 12,
+       'grid_size': 10,
+   }
+
 Basic Usage
 -----------
 
@@ -128,32 +160,6 @@ Circuit Symbol
    .. circuit-symbol:: resistor
       :value: 10kΩ
       :label: R1
-
-Practical Examples
-------------------
-
-Example 1: Basic Circuit Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Create ``circuits/voltage_divider.cir``:
-
-.. code-block:: spice
-
-   * Voltage Divider Circuit
-   * Input: 12V
-   * Output: 6V
-   
-   .title Voltage Divider
-   
-   V1 vin 0 DC 12
-   R1 vin vout 10k
-   R2 vout 0 10k
-   
-   .end
-
-Document in ``docs/circuits/voltage_divider.rst``:
-
-.. code-block:: rst
 
    Voltage Divider
    ===============

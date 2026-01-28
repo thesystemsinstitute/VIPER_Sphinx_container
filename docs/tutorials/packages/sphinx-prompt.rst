@@ -6,9 +6,14 @@ Sphinx-Prompt Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-prompt/>`_
-   - :doc:`See Working Example <../../examples/sphinx-prompt-example>`
-   - `Official Documentation <https://sbrunner.github.io/sphinx-prompt/>`_
+   - `API Documentation <../../pdoc/sphinx_prompt/index.html>`_
+   - `Manual <https://sphinx-prompt.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinx-prompt-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-prompt to create formatted command-line prompts and shell examples in your documentation.
 
@@ -29,6 +34,9 @@ sphinx-prompt is a Sphinx extension that provides:
 - Works with sphinx-copybutton
 
 This makes it easy to create consistent, professional-looking shell examples.
+
+
+The sphinx-prompt extension provides directives for creating command-line prompts with proper styling for shells, REPLs, and interactive sessions.
 
 Installation
 ------------
@@ -65,6 +73,29 @@ Integration with Copybutton
    
    # Copybutton will automatically handle prompt stripping
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx-prompt',
+   ]
+
+Custom Styles
+~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   prompt_default_language = 'bash'
+   prompt_default_prompt = '$'
+
 Basic Usage
 -----------
 
@@ -100,16 +131,6 @@ PowerShell Prompt
       Get-ChildItem
       Set-Location C:\Projects
       python script.py
-
-Practical Examples
-------------------
-
-Example 1: Installation Guide
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/installation.rst``:
-
-.. code-block:: rst
 
    Installation
    ============

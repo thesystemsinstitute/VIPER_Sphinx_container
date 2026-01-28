@@ -6,8 +6,14 @@ SnakeViz Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/snakeviz/>`_
-   - :doc:`See Working Example <../../examples/snakeviz-example>`
+   - `API Documentation <../../pdoc/snakeviz/index.html>`_
+   - `Manual <https://jiffyclub.github.io/snakeviz/>`_
+   - :doc:`Working Example <../../examples/snakeviz-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use snakeviz, a profiling data visualization tool.
 
@@ -21,6 +27,9 @@ SnakeViz provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The snakeviz package provides functionality for working with profiling data visualization tool.
 
 Installation
 ------------

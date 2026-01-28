@@ -6,8 +6,13 @@ Gprof2Dot Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/gprof2dot/>`_
-   - :doc:`See Working Example <../../examples/gprof2dot-example>`
+   - `Manual <https://github.com/jrfonseca/gprof2dot>`_
+   - :doc:`Working Example <../../examples/gprof2dot-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use gprof2dot, a profiler data to dot graph converter.
 
@@ -21,6 +26,9 @@ Gprof2Dot provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The gprof2dot package provides functionality for working with profiler data to dot graph converter.
 
 Installation
 ------------

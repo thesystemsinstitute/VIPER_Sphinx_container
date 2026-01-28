@@ -6,8 +6,14 @@ Sphinxcontrib Websupport Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinxcontrib-websupport/>`_
-   - :doc:`See Working Example <../../examples/sphinxcontrib-websupport-example>`
-   - `Official Documentation <https://www.sphinx-doc.org/en/master/usage/extensions/websupport.html>`_
+   - `API Documentation <../../pdoc/sphinxcontrib_websupport/index.html>`_
+   - `Manual <https://github.com/sphinx-doc/sphinxcontrib-websupport>`_
+   - :doc:`Working Example <../../examples/sphinxcontrib-websupport-example>`
+
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinxcontrib-websupport in your Sphinx documentation.
 
@@ -21,6 +27,20 @@ sphinxcontrib-websupport is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinxcontrib-websupport provides:
+
+- Web support utilities for Sphinx
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Feature 1**: Description of key feature
+- **Feature 2**: Description of key feature
+- **Feature 3**: Description of key feature
+- **Feature 4**: Description of key feature
 Installation
 ------------
 
@@ -54,6 +74,34 @@ Advanced Configuration
    
    # Configuration options
    # Add package-specific configuration here
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinxcontrib.websupport',
+       # ... other extensions
+   ]
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinxcontrib.websupport']
+   
+   # Package-specific configuration
+   # Add configuration options here
 
 Basic Usage
 -----------

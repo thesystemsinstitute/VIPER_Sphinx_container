@@ -6,8 +6,14 @@ Sphinx Markdown Tables Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-markdown-tables/>`_
-   - :doc:`See Working Example <../../examples/sphinx-markdown-tables-example>`
+   - `API Documentation <../../pdoc/sphinx_markdown_tables/index.html>`_
+   - `Manual <https://github.com/ryanfox/sphinx-markdown-tables>`_
+   - :doc:`Working Example <../../examples/sphinx-markdown-tables-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-markdown-tables, a Markdown table support for Sphinx.
 
@@ -21,6 +27,9 @@ Sphinx Markdown Tables provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The sphinx-markdown-tables package provides functionality for working with Markdown table support for Sphinx.
 
 Installation
 ------------

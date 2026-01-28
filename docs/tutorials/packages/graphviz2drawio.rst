@@ -6,8 +6,14 @@ Graphviz2Drawio Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/graphviz2drawio/>`_
-   - :doc:`See Working Example <../../examples/graphviz2drawio-example>`
+   - `API Documentation <../../pdoc/graphviz2drawio/index.html>`_
+   - `Manual <https://github.com/hbmartin/graphviz2drawio>`_
+   - :doc:`Working Example <../../examples/graphviz2drawio-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use graphviz2drawio, a Graphviz to Draw.io converter.
 
@@ -21,6 +27,9 @@ Graphviz2Drawio provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The graphviz2drawio package provides functionality for working with Graphviz to Draw.io converter.
 
 Installation
 ------------

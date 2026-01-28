@@ -6,8 +6,14 @@ Sphinx Panels Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-panels/>`_
-   - :doc:`See Working Example <../../examples/sphinx-panels-example>`
+   - `API Documentation <../../pdoc/sphinx_panels/index.html>`_
+   - `Manual <https://sphinx-panels.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinx-panels-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-panels, a responsive panel components for Sphinx.
 
@@ -21,6 +27,9 @@ Sphinx Panels provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The sphinx-panels package provides functionality for working with responsive panel components for Sphinx.
 
 Installation
 ------------

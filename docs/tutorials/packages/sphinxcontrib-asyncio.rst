@@ -6,8 +6,14 @@ Sphinxcontrib-Asyncio Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinxcontrib-asyncio/>`_
-   - :doc:`See Working Example <../../examples/sphinxcontrib-asyncio-example>`
+   - `API Documentation <../../pdoc/sphinxcontrib_asyncio/index.html>`_
+   - `Manual <https://github.com/sphinx-contrib/asyncio>`_
+   - :doc:`Working Example <../../examples/sphinxcontrib-asyncio-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinxcontrib-asyncio to document asynchronous Python code with proper async/await syntax highlighting and examples.
 
@@ -26,6 +32,9 @@ sphinxcontrib-asyncio is a Sphinx extension that provides enhanced support for d
 - Integration with autodoc for async methods
 
 This is essential for documenting modern Python applications using asyncio, FastAPI, aiohttp, and other async frameworks.
+
+
+The sphinxcontrib-asyncio extension provides specialized directives and roles for documenting asynchronous Python code, making it easier to document async/await patterns.
 
 Installation
 ------------
@@ -72,6 +81,20 @@ Advanced Configuration
    # Example options
    asyncio_run_examples = False  # Don't execute examples during build
    asyncio_example_timeout = 30  # Seconds
+
+
+.. code-block:: python
+
+   # Custom role names
+   asyncio_role_names = {
+       'coroutine': 'async',
+       'asynccontextmanager': 'async-ctx',
+       'asynciterator': 'async-iter',
+   }
+   
+   # Highlighting
+   asyncio_highlight_async = True
+   asyncio_show_awaitable = True
 
 Basic Usage
 -----------
@@ -125,63 +148,6 @@ Event Loop Examples
           print(result)
       
       asyncio.run(main())
-
-Practical Examples
-------------------
-
-Example 1: Basic Async Function Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Create ``mylib/async_http.py``:
-
-.. code-block:: python
-
-   """Asynchronous HTTP client module."""
-   import asyncio
-   import aiohttp
-   
-   async def fetch_url(url: str, timeout: int = 30) -> str:
-       """
-       Fetch content from a URL asynchronously.
-       
-       :param url: URL to fetch
-       :type url: str
-       :param timeout: Request timeout in seconds
-       :type timeout: int
-       :returns: Response text
-       :rtype: str
-       :raises aiohttp.ClientError: If request fails
-       
-       Example::
-       
-           result = await fetch_url("https://example.com")
-           print(result)
-       """
-       async with aiohttp.ClientSession() as session:
-           async with session.get(url, timeout=timeout) as response:
-               return await response.text()
-   
-   
-   async def fetch_multiple(urls: list[str]) -> list[str]:
-       """
-       Fetch multiple URLs concurrently.
-       
-       :param urls: List of URLs to fetch
-       :type urls: list[str]
-       :returns: List of responses
-       :rtype: list[str]
-       
-       Example::
-       
-           urls = ["https://example.com", "https://example.org"]
-           results = await fetch_multiple(urls)
-       """
-       tasks = [fetch_url(url) for url in urls]
-       return await asyncio.gather(*tasks)
-
-Document in ``docs/api/async_http.rst``:
-
-.. code-block:: rst
 
    Async HTTP Module
    =================
@@ -440,50 +406,6 @@ Example 3: Async Worker Pool
    .. autoclass:: mylib.async_worker.WorkerPool
       :members:
    
-   Examples
-   --------
-   
-   Basic Usage
-   ~~~~~~~~~~~
-   
-   .. code-block:: python
-   
-      import asyncio
-      from mylib.async_worker import WorkerPool
-      
-      async def fetch_and_process(url):
-          # Simulate fetch and processing
-          await asyncio.sleep(1)
-          return f"Processed: {url}"
-      
-      async def main():
-          urls = [f"https://example.com/page{i}" for i in range(20)]
-          
-          pool = WorkerPool(max_workers=5)
-          results = await pool.map(fetch_and_process, urls)
-          
-          for url, result in zip(urls, results):
-              print(f"{url} -> {result}")
-      
-      asyncio.run(main())
-   
-   Rate-Limited API Calls
-   ~~~~~~~~~~~~~~~~~~~~~~
-   
-   .. code-block:: python
-   
-      async def api_call(endpoint):
-          async with aiohttp.ClientSession() as session:
-              async with session.get(endpoint) as response:
-                  return await response.json()
-      
-      async def main():
-          endpoints = [f"/api/users/{i}" for i in range(100)]
-          
-          # Limit to 10 concurrent API calls
-          pool = WorkerPool(max_workers=10)
-          results = await pool.map(api_call, endpoints)
-
 Advanced Features
 -----------------
 

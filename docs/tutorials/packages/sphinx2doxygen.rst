@@ -6,8 +6,14 @@ Sphinx2Doxygen Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx2doxygen/>`_
-   - :doc:`See Working Example <../../examples/sphinx2doxygen-example>`
+   - `API Documentation <../../pdoc/sphinx2doxygen/index.html>`_
+   - `Manual <https://github.com/phn/sphinx2doxygen>`_
+   - :doc:`Working Example <../../examples/sphinx2doxygen-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx2doxygen to convert Sphinx-style Python docstrings to Doxygen format, enabling integration between Python and C/C++ documentation.
 
@@ -23,6 +29,12 @@ sphinx2doxygen is a conversion tool that:
 - Supports reStructuredText to Doxygen comment conversion
 - Facilitates documentation consistency across languages
 
+sphinx2doxygen bridges the gap between Python documentation (Sphinx) and C/C++ documentation (Doxygen), allowing you to:
+
+- Export Sphinx documentation to Doxygen XML format
+- Integrate Python API docs with C++ projects
+- Maintain unified documentation across languages
+- Generate cross-referenced documentation
 Use Cases
 ---------
 
@@ -258,167 +270,6 @@ Doxygen:
     * @warning This is a warning.
     * @see other_function
     */
-
-Practical Examples
-------------------
-
-Example 1: Converting Python Module
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Create ``mymodule.py``:
-
-.. code-block:: python
-
-   """
-   Data Processing Module
-   
-   This module provides data processing utilities.
-   
-   :author: John Doe
-   :version: 1.0.0
-   """
-   
-   class Processor:
-       """
-       Data processor class.
-       
-       :param config: Configuration dictionary
-       :type config: dict
-       """
-       
-       def __init__(self, config):
-           self.config = config
-       
-       def process(self, data):
-           """
-           Process input data.
-           
-           :param data: Input data
-           :type data: list
-           :return: Processed results
-           :rtype: list
-           """
-           return [x * 2 for x in data]
-
-Convert:
-
-.. code-block:: bash
-
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
-       sphinx2doxygen -o /project/doxygen /project/mymodule.py
-
-Example 2: Mixed C++ and Python Project
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Project structure:
-
-.. code-block:: text
-
-   myproject/
-   ├── cpp/
-   │   ├── processor.h
-   │   └── processor.cpp
-   ├── python/
-   │   ├── __init__.py
-   │   └── wrapper.py
-   └── docs/
-       └── Doxyfile
-
-Convert Python to Doxygen:
-
-.. code-block:: bash
-
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
-       sphinx2doxygen -r -o /project/docs/doxygen_py /project/python/
-
-Update ``Doxyfile``:
-
-.. code-block:: text
-
-   INPUT = cpp/ docs/doxygen_py/
-   FILE_PATTERNS = *.h *.cpp *.dox
-   RECURSIVE = YES
-
-Generate combined docs:
-
-.. code-block:: bash
-
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
-       doxygen /project/docs/Doxyfile
-
-Example 3: Automated Conversion Script
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Create ``convert_docs.sh``:
-
-.. code-block:: bash
-
-   #!/bin/bash
-   
-   PROJECT_DIR=$(pwd)
-   PYTHON_SRC="$PROJECT_DIR/src/python"
-   DOXYGEN_OUT="$PROJECT_DIR/docs/doxygen_py"
-   
-   echo "Converting Python docstrings to Doxygen..."
-   
-   docker run --rm \
-     -v "$PROJECT_DIR:/project" \
-     kensai-sphinx:latest \
-     sphinx2doxygen -r -o "/project/docs/doxygen_py" "/project/src/python"
-   
-   echo "Generating Doxygen documentation..."
-   
-   docker run --rm \
-     -v "$PROJECT_DIR:/project" \
-     kensai-sphinx:latest \
-     doxygen /project/docs/Doxyfile
-   
-   echo "Documentation generated in docs/html/"
-
-Make executable:
-
-.. code-block:: bash
-
-   chmod +x convert_docs.sh
-   ./convert_docs.sh
-
-Example 4: Integration with Sphinx Build
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Create custom Sphinx extension ``convert_to_doxygen.py``:
-
-.. code-block:: python
-
-   import os
-   from sphinx2doxygen import convert_file
-   from pathlib import Path
-   
-   def convert_python_to_doxygen(app, config):
-       """Convert Python files to Doxygen before build."""
-       source_dir = Path(app.srcdir) / '../src/python'
-       output_dir = Path(app.srcdir) / 'doxygen_py'
-       
-       output_dir.mkdir(exist_ok=True)
-       
-       for py_file in source_dir.rglob('*.py'):
-           out_file = output_dir / f"{py_file.stem}.dox"
-           convert_file(str(py_file), str(out_file))
-   
-   def setup(app):
-       app.connect('config-inited', convert_python_to_doxygen)
-       return {'version': '1.0'}
-
-Add to ``conf.py``:
-
-.. code-block:: python
-
-   import sys
-   sys.path.append('.')
-   
-   extensions = [
-       'convert_to_doxygen',
-       'breathe',
-   ]
 
 Configuration Options
 ---------------------

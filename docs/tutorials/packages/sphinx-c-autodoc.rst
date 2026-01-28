@@ -6,8 +6,14 @@ Sphinx-C-Autodoc Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-c-autodoc/>`_
-   - :doc:`See Working Example <../../examples/sphinx-c-autodoc-example>`
+   - `API Documentation <../../pdoc/sphinx_c_autodoc/index.html>`_
+   - `Manual <https://sphinx-c-autodoc.readthedocs.io/en/latest/>`_
+   - :doc:`Working Example <../../examples/sphinx-c-autodoc-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-c-autodoc to automatically generate documentation for C code from source files, similar to how autodoc works for Python.
 
@@ -26,6 +32,12 @@ sphinx-c-autodoc is a Sphinx extension that automatically extracts and documents
 
 Unlike Doxygen + Breathe, sphinx-c-autodoc works directly with C source files without requiring a separate Doxygen build step.
 
+sphinx-c-autodoc provides automatic API documentation generation for C projects:
+
+- Extract documentation from C header files
+- Document functions, structs, enums, and macros
+- Support for Doxygen-style comments
+- Generate API references automatically
 Installation
 ------------
 
@@ -81,6 +93,25 @@ Advanced Configuration
    
    # Code highlighting
    c_autodoc_syntax_highlight = True
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_c_autodoc',
+       # ... other extensions
+   ]
+   
+   # C source directories
+   c_autodoc_roots = ['src/', 'include/']
+   
+   # Header file patterns
+   c_autodoc_include_patterns = ['*.h']
 
 Basic Usage
 -----------
@@ -294,104 +325,6 @@ Structures and Types
    
    .. c:autoenum:: status_t
 
-Practical Examples
-------------------
-
-Example 1: Complete Module Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``src/string_utils.c``:
-
-.. code-block:: c
-
-   /**
-    * @file string_utils.c
-    * @brief String manipulation utilities
-    * @author John Doe
-    * @version 1.0
-    */
-   
-   #include <string.h>
-   #include <ctype.h>
-   #include <stdbool.h>
-   
-   /**
-    * @brief Convert string to uppercase
-    * 
-    * @param str String to convert (modified in-place)
-    * @return Pointer to the modified string
-    * 
-    * @note The input string is modified directly
-    * 
-    * Example:
-    * @code
-    * char text[] = "hello";
-    * str_upper(text);  // text is now "HELLO"
-    * @endcode
-    */
-   char* str_upper(char *str) {
-       if (!str) return NULL;
-       
-       for (char *p = str; *p; p++) {
-           *p = toupper(*p);
-       }
-       return str;
-   }
-   
-   /**
-    * @brief Check if string is empty or whitespace only
-    * 
-    * @param str String to check
-    * @return true if string is empty or contains only whitespace
-    * 
-    * @note NULL strings are considered empty
-    */
-   bool str_is_empty(const char *str) {
-       if (!str) return true;
-       
-       while (*str) {
-           if (!isspace(*str)) {
-               return false;
-           }
-           str++;
-       }
-       return true;
-   }
-   
-   /**
-    * @brief Trim whitespace from both ends of string
-    * 
-    * @param str String to trim (modified in-place)
-    * @return Pointer to the trimmed string
-    * 
-    * @warning String must be writable
-    */
-   char* str_trim(char *str) {
-       if (!str) return NULL;
-       
-       // Trim leading whitespace
-       char *start = str;
-       while (isspace(*start)) start++;
-       
-       // Trim trailing whitespace
-       char *end = start + strlen(start) - 1;
-       while (end > start && isspace(*end)) end--;
-       
-       // Write new null terminator
-       *(end + 1) = '\0';
-       
-       // Move trimmed string to beginning if needed
-       if (start != str) {
-           memmove(str, start, end - start + 2);
-       }
-       
-       return str;
-   }
-
-``docs/string_utils.rst``:
-
-.. code-block:: rst
-
    String Utilities
    ================
    
@@ -571,36 +504,6 @@ Example 2: Data Structure Library
    .. c:autofunction:: list_get
    .. c:autofunction:: list_size
    
-   Example Usage
-   -------------
-   
-   .. code-block:: c
-   
-      #include "list.h"
-      #include <stdio.h>
-      
-      int main() {
-          list_t my_list;
-          list_init(&my_list);
-          
-          // Add elements
-          int a = 10, b = 20, c = 30;
-          list_append(&my_list, &a);
-          list_append(&my_list, &b);
-          list_append(&my_list, &c);
-          
-          // Iterate
-          for (size_t i = 0; i < list_size(&my_list); i++) {
-              int *val = list_get(&my_list, i);
-              printf("Element %zu: %d\n", i, *val);
-          }
-          
-          // Cleanup
-          list_clear(&my_list, NULL);
-          
-          return 0;
-      }
-
 Advanced Features
 -----------------
 
@@ -790,21 +693,6 @@ API Reference Template
    
    .. c:autofunction:: {function_name}
    
-   Example
-   -------
-   
-   .. code-block:: c
-   
-      // Usage example
-
-Header File Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: rst
-
-   .. c:autofile:: {header.h}
-      :show-all:
-
 Troubleshooting
 ---------------
 

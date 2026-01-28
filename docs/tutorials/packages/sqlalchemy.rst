@@ -6,8 +6,14 @@ Sqlalchemy Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sqlalchemy/>`_
-   - :doc:`See Working Example <../../examples/sqlalchemy-example>`
-   - `Official Documentation <https://www.sqlalchemy.org/>`_
+   - `API Documentation <../../pdoc/sqlalchemy/index.html>`_
+   - `Manual <https://www.sqlalchemy.org/>`_
+   - :doc:`Working Example <../../examples/sqlalchemy-example>`
+
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sqlalchemy in your Sphinx documentation.
 
@@ -21,6 +27,20 @@ sqlalchemy is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sqlalchemy provides:
+
+- SQL toolkit and ORM
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Feature 1**: Description of key feature
+- **Feature 2**: Description of key feature
+- **Feature 3**: Description of key feature
+- **Feature 4**: Description of key feature
 Installation
 ------------
 
@@ -54,6 +74,34 @@ Advanced Configuration
    
    # Configuration options
    # Add package-specific configuration here
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sqlalchemy',
+       # ... other extensions
+   ]
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sqlalchemy']
+   
+   # Package-specific configuration
+   # Add configuration options here
 
 Basic Usage
 -----------

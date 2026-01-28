@@ -6,7 +6,13 @@ Sphinx Terraform Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-terraform/>`_
-   - :doc:`See Working Example <../../examples/sphinx-terraform-example>`
+   - `Manual <https://github.com/sphinx-contrib/terraform>`_
+   - :doc:`Working Example <../../examples/sphinx-terraform-example>`
+
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-terraform in your Sphinx documentation.
 
@@ -20,6 +26,20 @@ sphinx-terraform is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinx-terraform provides:
+
+- Terraform documentation support
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Module Documentation**: Automatic Terraform module documentation
+- **Resource Documentation**: Document Terraform resources
+- **Variable Tables**: Display input/output variables
+- **Provider Support**: Multi-cloud provider support
 Installation
 ------------
 
@@ -54,6 +74,40 @@ Advanced Configuration
    # Configuration options
    terraform_sources = ['terraform/']
    terraform_docs_path = 'docs/terraform'
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_terraform',
+       # ... other extensions
+   ]
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinx_terraform']
+   
+   # Package-specific configuration
+   terraform_sources = ['terraform/', 'modules/']
+   terraform_docs_path = 'docs/terraform'
+   terraform_auto_generate = True
+   terraform_module_paths = [
+       'terraform/modules',
+       'terraform/environments',
+   ]
 
 Basic Usage
 -----------

@@ -6,9 +6,14 @@ Doc8 Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/doc8/>`_
-   - :doc:`See Working Example <../../examples/doc8-example>`
-   - `Official Documentation <https://github.com/PyCQA/doc8>`_
+   - `API Documentation <../../pdoc/doc8/index.html>`_
+   - `Manual <https://github.com/PyCQA/doc8>`_
+   - :doc:`Working Example <../../examples/doc8-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use doc8 in your Sphinx documentation.
 
@@ -22,6 +27,20 @@ doc8 is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+doc8 provides:
+
+- Style checker for reStructuredText
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Feature 1**: Description of key feature
+- **Feature 2**: Description of key feature
+- **Feature 3**: Description of key feature
+- **Feature 4**: Description of key feature
 Installation
 ------------
 
@@ -55,6 +74,34 @@ Advanced Configuration
    
    # Configuration options
    # Add package-specific configuration here
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'doc8',
+       # ... other extensions
+   ]
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['doc8']
+   
+   # Package-specific configuration
+   # Add configuration options here
 
 Basic Usage
 -----------

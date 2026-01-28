@@ -21,6 +21,20 @@ sphinx-typer is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinx-typer provides:
+
+- Document Typer CLIs
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Type Hints**: Automatic documentation from type hints
+- **Rich Output**: Support for rich console formatting
+- **Nested Commands**: Command group documentation
+- **Validation**: Document Typer's validation features
 Installation
 ------------
 
@@ -54,6 +68,15 @@ Advanced Configuration
    
    # Configuration options
    # typer extension uses directives
+
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinxcontrib.typer']
+   
+   # sphinxcontrib-typer is configured through directives
 
 Basic Usage
 -----------

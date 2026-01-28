@@ -6,8 +6,14 @@ nbsphinx-link Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/nbsphinx-link/>`_
-   - :doc:`See Working Example <../../examples/nbsphinx-link-example>`
+   - `API Documentation <../../pdoc/nbsphinx_link/index.html>`_
+   - `Manual <https://nbsphinx-link.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/nbsphinx-link-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use nbsphinx-link to reference Jupyter Notebooks from outside your documentation directory.
 
@@ -28,6 +34,9 @@ nbsphinx-link is a Sphinx extension that provides:
 - No file copying needed
 
 This is perfect for including example notebooks that live alongside your source code.
+
+
+The nbsphinx-link extension allows you to include Jupyter notebooks that are stored outside your documentation source directory, which is useful for keeping examples with source code while including them in documentation.
 
 Installation
 ------------
@@ -112,194 +121,6 @@ Include in Toctree
 
 The linked notebook is rendered as if it were in the docs directory!
 
-Practical Examples
-------------------
-
-Example 1: Project with Examples Directory
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Project structure:
-
-.. code-block:: text
-
-   myproject/
-   ├── mypackage/
-   │   ├── __init__.py
-   │   └── core.py
-   ├── examples/
-   │   ├── basic_usage.ipynb
-   │   ├── advanced.ipynb
-   │   └── data_processing.ipynb
-   └── docs/
-       ├── conf.py
-       ├── index.rst
-       └── examples/
-           ├── basic_usage.nblink
-           ├── advanced.nblink
-           └── data_processing.nblink
-
-``docs/examples/basic_usage.nblink``:
-
-.. code-block:: json
-
-   {
-       "path": "../../examples/basic_usage.ipynb"
-   }
-
-``docs/examples/advanced.nblink``:
-
-.. code-block:: json
-
-   {
-       "path": "../../examples/advanced.ipynb"
-   }
-
-``docs/index.rst``:
-
-.. code-block:: rst
-
-   Examples
-   ========
-   
-   .. toctree::
-      :maxdepth: 1
-      
-      examples/basic_usage.nblink
-      examples/advanced.nblink
-      examples/data_processing.nblink
-
-Example 2: Multiple Source Locations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/tutorials/getting-started.nblink``:
-
-.. code-block:: json
-
-   {
-       "path": "../../notebooks/tutorials/getting-started.ipynb"
-   }
-
-``docs/tutorials/api-usage.nblink``:
-
-.. code-block:: json
-
-   {
-       "path": "../../examples/api/usage.ipynb"
-   }
-
-``docs/case-studies/analysis.nblink``:
-
-.. code-block:: json
-
-   {
-       "path": "../../../case-studies/analysis.ipynb"
-   }
-
-Example 3: Automated Link Generation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``generate_nblinks.py``:
-
-.. code-block:: python
-
-   """Generate .nblink files for all notebooks in examples/."""
-   
-   import json
-   import os
-   from pathlib import Path
-   
-   def generate_nblinks(
-       source_dir: str = "examples",
-       output_dir: str = "docs/examples",
-       relative_path: str = "../../examples"
-   ):
-       """
-       Generate .nblink files.
-       
-       Parameters
-       ----------
-       source_dir : str
-           Directory containing notebooks
-       output_dir : str
-           Directory for .nblink files
-       relative_path : str
-           Relative path from output_dir to source_dir
-       """
-       source_path = Path(source_dir)
-       output_path = Path(output_dir)
-       output_path.mkdir(parents=True, exist_ok=True)
-       
-       # Find all notebooks
-       notebooks = list(source_path.glob("**/*.ipynb"))
-       
-       for notebook in notebooks:
-           # Skip checkpoints
-           if ".ipynb_checkpoints" in str(notebook):
-               continue
-           
-           # Calculate relative path
-           rel_notebook = notebook.relative_to(source_path)
-           nblink_path = output_path / rel_notebook.with_suffix('.nblink')
-           
-           # Create parent directories
-           nblink_path.parent.mkdir(parents=True, exist_ok=True)
-           
-           # Generate link
-           link_target = f"{relative_path}/{rel_notebook}"
-           nblink_content = {
-               "path": link_target
-           }
-           
-           # Write .nblink file
-           with open(nblink_path, 'w') as f:
-               json.dump(nblink_content, f, indent=4)
-           
-           print(f"Created {nblink_path} -> {link_target}")
-   
-   if __name__ == '__main__':
-       generate_nblinks()
-
-Run to generate links:
-
-.. code-block:: bash
-
-   python generate_nblinks.py
-
-Example 4: Organization by Category
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Project structure:
-
-.. code-block:: text
-
-   project/
-   ├── notebooks/
-   │   ├── tutorials/
-   │   │   ├── beginner.ipynb
-   │   │   └── advanced.ipynb
-   │   ├── howtos/
-   │   │   ├── visualization.ipynb
-   │   │   └── optimization.ipynb
-   │   └── examples/
-   │       ├── example1.ipynb
-   │       └── example2.ipynb
-   └── docs/
-       ├── conf.py
-       └── notebooks/
-           ├── tutorials/
-           │   ├── beginner.nblink
-           │   └── advanced.nblink
-           ├── howtos/
-           │   ├── visualization.nblink
-           │   └── optimization.nblink
-           └── examples/
-               ├── example1.nblink
-               └── example2.nblink
-
-``docs/index.rst``:
-
-.. code-block:: rst
-
    Documentation
    =============
    
@@ -321,15 +142,6 @@ Project structure:
       notebooks/howtos/visualization.nblink
       notebooks/howtos/optimization.nblink
    
-   Examples
-   --------
-   
-   .. toctree::
-      :maxdepth: 1
-      
-      notebooks/examples/example1.nblink
-      notebooks/examples/example2.nblink
-
 Advanced Features
 -----------------
 

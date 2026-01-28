@@ -6,8 +6,14 @@ RPTree Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/rptree/>`_
-   - :doc:`See Working Example <../../examples/rptree-example>`
+   - `API Documentation <../../pdoc/rptree/index.html>`_
+   - `Manual <https://github.com/realpython/rptree>`_
+   - :doc:`Working Example <../../examples/rptree-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use rptree, a directory tree generator.
 
@@ -21,6 +27,9 @@ RPTree provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The rptree package provides functionality for working with directory tree generator.
 
 Installation
 ------------

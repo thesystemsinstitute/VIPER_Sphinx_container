@@ -6,8 +6,14 @@ Pyan3 Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/pyan3/>`_
-   - :doc:`See Working Example <../../examples/pyan3-example>`
+   - `API Documentation <../../pdoc/pyan3/index.html>`_
+   - `Manual <https://github.com/Technologicat/pyan>`_
+   - :doc:`Working Example <../../examples/pyan3-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use pyan3, a Python call graph analyzer.
 
@@ -21,6 +27,9 @@ Pyan3 provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The pyan3 package provides functionality for working with Python call graph analyzer.
 
 Installation
 ------------

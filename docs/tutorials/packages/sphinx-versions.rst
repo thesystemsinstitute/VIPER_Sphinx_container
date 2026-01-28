@@ -6,8 +6,14 @@ Sphinx Versions Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-versions/>`_
-   - :doc:`See Working Example <../../examples/sphinx-versions-example>`
-   - `Official Documentation <https://sphinx-versions.readthedocs.io/>`_
+   - `API Documentation <../../pdoc/sphinx_versions/index.html>`_
+   - `Manual <https://github.com/sphinx-contrib/versions>`_
+   - :doc:`Working Example <../../examples/sphinx-versions-example>`
+
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-versions in your Sphinx documentation.
 
@@ -21,6 +27,20 @@ sphinx-versions is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinx-versions provides:
+
+- Version management for Sphinx
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Multi-version Builds**: Build documentation for multiple versions
+- **Git Integration**: Automatic version detection from Git
+- **Version Banners**: Display version warnings
+- **Navigation**: Easy version switching
 Installation
 ------------
 
@@ -55,6 +75,37 @@ Advanced Configuration
    # Configuration options
    sphinx_versions_git_root = '.'
    sphinx_versions_banner_main_ref = 'master'
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_versions',
+       # ... other extensions
+   ]
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinx_versions']
+   
+   # Package-specific configuration
+   sphinx_versions_git_root = '.'
+   sphinx_versions_banner_main_ref = 'master'
+   sphinx_versions_banner_old_format = 'This is documentation for version {ref}. Latest is <a href="/{main}/">here</a>.'
+   sphinx_versions_template_dir = '_templates'
 
 Basic Usage
 -----------

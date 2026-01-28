@@ -20,6 +20,20 @@ sphinx-sqlalchemy is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinx-sqlalchemy provides:
+
+- SQLAlchemy model documentation
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Model Documentation**: Automatic documentation of SQLAlchemy models
+- **Schema Generation**: Complete database schema documentation
+- **Relationship Mapping**: Document model relationships and foreign keys
+- **ER Diagrams**: Generate entity-relationship diagrams
 Installation
 ------------
 
@@ -56,6 +70,30 @@ Advanced Configuration
    sqlalchemy_table_options = {
        'show_columns': True,
        'show_relationships': True,
+   }
+
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinx_sqlalchemy']
+   
+   # Package-specific configuration
+   sqlalchemy_autodoc_models = True
+   sqlalchemy_table_options = {
+       'show_columns': True,
+       'show_relationships': True,
+       'show_primary_keys': True,
+       'show_foreign_keys': True,
+       'show_indexes': True,
+   }
+   
+   # ER diagram options
+   sqlalchemy_erd_format = 'svg'
+   sqlalchemy_erd_options = {
+       'show_datatypes': True,
+       'show_indexes': True,
    }
 
 Basic Usage

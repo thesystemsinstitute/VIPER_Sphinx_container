@@ -6,9 +6,14 @@ Breathe Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/breathe/>`_
-   - `Official Documentation <https://breathe.readthedocs.io/>`_
-   - :doc:`See Working Example <../../examples/breathe-example>`
+   - `API Documentation <../../pdoc/breathe/index.html>`_
+   - `Manual <https://breathe.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/breathe-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use Breathe to integrate Doxygen-generated documentation into Sphinx.
 
@@ -29,6 +34,9 @@ Breathe is a Sphinx extension that provides:
 - Multiple project support
 
 This bridges Doxygen (C/C++ documentation) with Sphinx (Python documentation), allowing unified documentation.
+
+
+Breathe allows you to use Sphinx's documentation system while leveraging Doxygen's superior C/C++ parsing capabilities.
 
 Installation
 ------------
@@ -111,6 +119,76 @@ Advanced Configuration
    # Implementation details
    breathe_implementation_filename_extensions = ['.c', '.cc', '.cpp']
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Sphinx Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   # Enable breathe extension
+   extensions = ['breathe']
+   
+   # Breathe configuration
+   breathe_projects = {
+       "MyProject": "./doxyxml/"
+   }
+   breathe_default_project = "MyProject"
+
+Doxygen Configuration
+~~~~~~~~~~~~~~~~~~~~~
+
+Create a ``Doxyfile``:
+
+.. code-block:: text
+
+   # Doxyfile
+   PROJECT_NAME           = "MyProject"
+   OUTPUT_DIRECTORY       = docs/doxygen
+   GENERATE_HTML          = NO
+   GENERATE_XML           = YES
+   XML_OUTPUT             = xml
+   
+   # Input settings
+   INPUT                  = src/
+   RECURSIVE              = YES
+   FILE_PATTERNS          = *.c *.cpp *.h *.hpp
+   
+   # Extraction settings
+   EXTRACT_ALL            = YES
+   EXTRACT_PRIVATE        = YES
+   EXTRACT_STATIC         = YES
+
+Advanced Breathe Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   # conf.py - Advanced settings
+   breathe_projects = {
+       "MyProject": "./doxyxml/",
+       "SubProject": "./other_doxyxml/"
+   }
+   
+   breathe_default_project = "MyProject"
+   
+   # Default settings for directives
+   breathe_default_members = ('members', 'undoc-members')
+   
+   # Domain configuration
+   breathe_domain_by_extension = {
+       "h": "cpp",
+       "cpp": "cpp",
+   }
+   
+   # Debug options
+   breathe_debug_trace_directives = False
+   breathe_debug_trace_doxygen_ids = False
+
 Basic Usage
 -----------
 
@@ -138,71 +216,6 @@ Document a Namespace
 
    .. doxygennamespace:: MyNamespace
       :members:
-
-Practical Examples
-------------------
-
-Example 1: C++ Library Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``include/calculator.hpp``:
-
-.. code-block:: cpp
-
-   #ifndef CALCULATOR_HPP
-   #define CALCULATOR_HPP
-   
-   /**
-    * @brief A simple calculator class
-    * 
-    * This class provides basic arithmetic operations.
-    */
-   class Calculator {
-   public:
-       /**
-        * @brief Add two numbers
-        * @param a First number
-        * @param b Second number
-        * @return Sum of a and b
-        */
-       int add(int a, int b);
-       
-       /**
-        * @brief Subtract two numbers
-        * @param a First number
-        * @param b Second number
-        * @return Difference of a and b
-        */
-       int subtract(int a, int b);
-       
-       /**
-        * @brief Multiply two numbers
-        * @param a First number
-        * @param b Second number
-        * @return Product of a and b
-        */
-       int multiply(int a, int b);
-   
-   private:
-       int result_;  ///< Last calculation result
-   };
-   
-   #endif // CALCULATOR_HPP
-
-``Doxyfile``:
-
-.. code-block:: text
-
-   PROJECT_NAME = "Calculator"
-   INPUT = include
-   RECURSIVE = YES
-   GENERATE_HTML = NO
-   GENERATE_XML = YES
-   XML_OUTPUT = ../docs/doxygen/xml
-
-``docs/api.rst``:
-
-.. code-block:: rst
 
    API Reference
    =============
@@ -317,75 +330,6 @@ Example 2: Complete API Documentation
    ~~~~~~~~~~~~~
    
    .. doxygenfunction:: client_send
-   
-   Example Usage
-   -------------
-   
-   .. code-block:: c
-      
-      #include "api/client.h"
-      
-      int main() {
-          Client client;
-          
-          if (client_connect(&client, "example.com", 8080) == 0) {
-              const char* message = "Hello, Server!";
-              client_send(&client, message, strlen(message));
-              client_close(&client);
-          }
-          
-          return 0;
-      }
-
-Example 3: Namespace Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``include/utils/string.hpp``:
-
-.. code-block:: cpp
-
-   /**
-    * @namespace utils
-    * @brief Utility functions
-    */
-   namespace utils {
-   
-   /**
-    * @namespace utils::string
-    * @brief String manipulation utilities
-    */
-   namespace string {
-   
-   /**
-    * @brief Convert string to uppercase
-    * @param str Input string
-    * @return Uppercase string
-    */
-   std::string toUpper(const std::string& str);
-   
-   /**
-    * @brief Convert string to lowercase
-    * @param str Input string
-    * @return Lowercase string
-    */
-   std::string toLower(const std::string& str);
-   
-   /**
-    * @brief Trim whitespace from string
-    * @param str Input string
-    * @return Trimmed string
-    */
-   std::string trim(const std::string& str);
-   
-   } // namespace string
-   } // namespace utils
-
-``docs/api/utils.rst``:
-
-.. code-block:: rst
-
-   Utilities
-   =========
    
    String Utilities
    ----------------

@@ -6,8 +6,14 @@ Sphinx-Apischema Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-apischema/>`_
-   - :doc:`See Working Example <../../examples/sphinx-apischema-example>`
+   - `API Documentation <../../pdoc/sphinx_apischema/index.html>`_
+   - `Manual <https://wyfo.github.io/apischema/>`_
+   - :doc:`Working Example <../../examples/sphinx-apischema-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-apischema to generate API documentation from JSON Schema and OpenAPI specifications.
 
@@ -75,6 +81,67 @@ Advanced Configuration
    apischema_compact_mode = False
    apischema_expand_depth = 2
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_apischema',
+       # ... other extensions
+   ]
+   
+   # Basic settings
+   apischema_spec_file = '_static/openapi.yaml'
+   apischema_output_dir = 'api'
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all options:
+
+.. code-block:: python
+
+   # API Schema Configuration
+   apischema_spec_file = '_static/openapi.yaml'
+   apischema_spec_format = 'openapi3'  # 'openapi3', 'swagger2', 'jsonschema'
+   apischema_output_dir = 'api'
+   
+   # Generation Options
+   apischema_generate_examples = True
+   apischema_generate_models = True
+   apischema_generate_endpoints = True
+   
+   # Documentation Options
+   apischema_include_authentication = True
+   apischema_include_responses = True
+   apischema_include_request_body = True
+   apischema_include_parameters = True
+   
+   # Display Options
+   apischema_show_base_url = True
+   apischema_show_operation_id = True
+   apischema_show_tags = True
+   apischema_group_by_tag = True
+   
+   # Code Examples
+   apischema_example_languages = ['python', 'javascript', 'curl', 'java']
+   apischema_example_format = 'tabs'  # 'tabs', 'accordion', 'list'
+   
+   # Validation
+   apischema_validate_schema = True
+   apischema_strict_mode = False
+   
+   # Template Customization
+   apischema_template_dir = '_templates/apischema'
+   apischema_custom_css = 'custom-api.css'
+
 Basic Usage
 -----------
 
@@ -109,68 +176,6 @@ Inline Schema
           "age": {"type": "integer"}
         }
       }
-
-Practical Examples
-------------------
-
-Example 1: User Schema Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``schemas/user.json``:
-
-.. code-block:: json
-
-   {
-     "$schema": "http://json-schema.org/draft-07/schema#",
-     "$id": "https://example.com/schemas/user.json",
-     "title": "User",
-     "description": "A user in the system",
-     "type": "object",
-     "required": ["id", "email", "name"],
-     "properties": {
-       "id": {
-         "type": "integer",
-         "description": "Unique identifier",
-         "minimum": 1
-       },
-       "email": {
-         "type": "string",
-         "format": "email",
-         "description": "User's email address",
-         "examples": ["user@example.com"]
-       },
-       "name": {
-         "type": "string",
-         "description": "Full name",
-         "minLength": 1,
-         "maxLength": 100
-       },
-       "age": {
-         "type": "integer",
-         "description": "Age in years",
-         "minimum": 0,
-         "maximum": 150
-       },
-       "roles": {
-         "type": "array",
-         "description": "User roles",
-         "items": {
-           "type": "string",
-           "enum": ["admin", "user", "guest"]
-         },
-         "default": ["user"]
-       },
-       "metadata": {
-         "type": "object",
-         "description": "Additional user metadata",
-         "additionalProperties": true
-       }
-     }
-   }
-
-``docs/api/schemas.rst``:
-
-.. code-block:: rst
 
    API Schemas
    ===========

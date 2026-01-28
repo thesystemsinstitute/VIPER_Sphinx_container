@@ -6,8 +6,14 @@ Python Markdown Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/markdown/>`_
-   - :doc:`See Working Example <../../examples/markdown-example>`
+   - `API Documentation <../../pdoc/markdown/index.html>`_
+   - `Manual <https://python-markdown.github.io/>`_
+   - :doc:`Working Example <../../examples/markdown-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use markdown, a Python Markdown parser and processor.
 
@@ -21,6 +27,9 @@ Python Markdown provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The markdown package provides functionality for working with Python Markdown parser and processor.
 
 Installation
 ------------

@@ -6,8 +6,14 @@ Sphinx-Analytics Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-analytics/>`_
-   - :doc:`See Working Example <../../examples/sphinx-analytics-example>`
+   - `API Documentation <../../pdoc/sphinx_analytics/index.html>`_
+   - `Manual <https://github.com/sphinx-contrib/analytics>`_
+   - :doc:`Working Example <../../examples/sphinx-analytics-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-analytics to add web analytics tracking to your Sphinx documentation.
 
@@ -28,6 +34,9 @@ sphinx-analytics is a Sphinx extension that provides:
 - Custom dimensions
 
 This enables you to understand how users interact with your documentation.
+
+
+sphinx-analytics simplifies adding analytics tracking to Sphinx documentation by automatically injecting tracking scripts into generated HTML pages.
 
 Installation
 ------------
@@ -116,6 +125,86 @@ Alternative Providers
        },
    ]
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Google Analytics 4
+~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   # Enable the extension
+   extensions = [
+       'sphinx_analytics',
+   ]
+   
+   # Google Analytics 4 configuration
+   analytics = {
+       'google_analytics_id': 'G-XXXXXXXXXX',
+   }
+
+Google Universal Analytics (Legacy)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   # conf.py
+   extensions = ['sphinx_analytics']
+   
+   # Universal Analytics (legacy)
+   analytics = {
+       'google_analytics_id': 'UA-XXXXXXXXX-X',
+   }
+
+Plausible Analytics
+~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   # conf.py
+   extensions = ['sphinx_analytics']
+   
+   # Plausible Analytics
+   analytics = {
+       'plausible_domain': 'docs.example.com',
+       'plausible_url': 'https://plausible.io/js/script.js',  # Optional
+   }
+
+Matomo (Piwik)
+~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   # conf.py
+   extensions = ['sphinx_analytics']
+   
+   # Matomo configuration
+   analytics = {
+       'matomo_url': 'https://analytics.example.com/',
+       'matomo_site_id': '1',
+   }
+
+Multiple Providers
+~~~~~~~~~~~~~~~~~~
+
+Track with multiple analytics platforms:
+
+.. code-block:: python
+
+   # conf.py
+   extensions = ['sphinx_analytics']
+   
+   # Multiple analytics providers
+   analytics = {
+       'google_analytics_id': 'G-XXXXXXXXXX',
+       'plausible_domain': 'docs.example.com',
+       'matomo_url': 'https://analytics.example.com/',
+       'matomo_site_id': '1',
+   }
+
 Basic Usage
 -----------
 
@@ -145,208 +234,6 @@ Track custom events in documentation:
    <button onclick="gtag('event', 'download', {'event_category': 'engagement'});">
      Download
    </button>
-
-Practical Examples
-------------------
-
-Example 1: Google Analytics 4
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/conf.py``:
-
-.. code-block:: python
-
-   extensions = ['sphinx_analytics']
-   
-   # Google Analytics 4 configuration
-   analytics_id = 'G-ABC123XYZ'
-   analytics_anonymize_ip = True  # GDPR compliance
-   
-   # Additional settings
-   analytics_debug = False  # Set True for testing
-
-``docs/_templates/layout.html`` (optional custom tracking):
-
-.. code-block:: html
-
-   {% extends "!layout.html" %}
-   
-   {% block extrahead %}
-   {{ super() }}
-   <script>
-     // Custom event tracking
-     document.addEventListener('DOMContentLoaded', function() {
-       // Track downloads
-       document.querySelectorAll('a[href$=".pdf"]').forEach(function(link) {
-         link.addEventListener('click', function() {
-           gtag('event', 'download', {
-             'event_category': 'PDF',
-             'event_label': this.href
-           });
-         });
-       });
-       
-       // Track external links
-       document.querySelectorAll('a[href^="http"]').forEach(function(link) {
-         if (!link.href.includes(window.location.hostname)) {
-           link.addEventListener('click', function() {
-             gtag('event', 'outbound_click', {
-               'event_category': 'External Link',
-               'event_label': this.href
-             });
-           });
-         }
-       });
-     });
-   </script>
-   {% endblock %}
-
-Example 2: Privacy-Focused with Plausible
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/conf.py``:
-
-.. code-block:: python
-
-   extensions = ['sphinx_analytics']
-   
-   # Plausible Analytics (privacy-friendly)
-   analytics_trackers = [
-       {
-           'type': 'plausible',
-           'domain': 'docs.myproject.com',
-           'src': 'https://plausible.io/js/script.js',
-       },
-   ]
-
-Benefits of Plausible:
-
-- No cookies
-- GDPR/CCPA compliant
-- Lightweight (<1KB)
-- No personal data collection
-
-Example 3: Multi-Tracker Setup
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/conf.py``:
-
-.. code-block:: python
-
-   extensions = ['sphinx_analytics']
-   
-   # Track with multiple services
-   analytics_trackers = [
-       {
-           'type': 'google',
-           'id': 'G-XXXXXXXXXX',
-           'anonymize_ip': True,
-       },
-       {
-           'type': 'plausible',
-           'domain': 'docs.example.com',
-       },
-       {
-           'type': 'fathom',
-           'site_id': 'ABCDEFGH',
-       },
-   ]
-
-This sends data to multiple analytics platforms simultaneously.
-
-Example 4: Conditional Analytics
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/conf.py``:
-
-.. code-block:: python
-
-   import os
-   
-   extensions = ['sphinx_analytics']
-   
-   # Only enable analytics in production
-   on_rtd = os.environ.get('READTHEDOCS') == 'True'
-   in_ci = os.environ.get('CI') == 'true'
-   
-   if on_rtd or (not in_ci and os.environ.get('ENV') == 'production'):
-       analytics_id = 'G-XXXXXXXXXX'
-   else:
-       # No analytics in development/CI
-       analytics_id = None
-
-Example 5: Custom Analytics Provider
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/conf.py``:
-
-.. code-block:: python
-
-   extensions = ['sphinx_analytics']
-   
-   analytics_trackers = [
-       {
-           'type': 'custom',
-           'script': '''
-               <script>
-                 (function() {
-                   // Custom analytics code
-                   var tracker = {
-                     trackPageView: function(page) {
-                       console.log('Page view:', page);
-                       // Send to your analytics endpoint
-                       fetch('/api/analytics', {
-                         method: 'POST',
-                         headers: {'Content-Type': 'application/json'},
-                         body: JSON.stringify({
-                           page: page,
-                           timestamp: Date.now()
-                         })
-                       });
-                     }
-                   };
-                   
-                   tracker.trackPageView(window.location.pathname);
-                 })();
-               </script>
-           ''',
-       },
-   ]
-
-Example 6: Event Tracking in RST
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/downloads.rst``:
-
-.. code-block:: rst
-
-   Downloads
-   =========
-   
-   Download our latest release:
-   
-   .. raw:: html
-      
-      <a href="releases/v1.0.0.tar.gz"
-         onclick="gtag('event', 'download', {
-           'event_category': 'Release',
-           'event_label': 'v1.0.0',
-           'value': 1
-         });">
-        Download v1.0.0
-      </a>
-   
-   View on GitHub:
-   
-   .. raw:: html
-      
-      <a href="https://github.com/user/repo"
-         onclick="gtag('event', 'click', {
-           'event_category': 'External',
-           'event_label': 'GitHub'
-         });">
-        GitHub Repository
-      </a>
 
 Advanced Features
 -----------------

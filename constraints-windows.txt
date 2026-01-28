@@ -1,0 +1,2 @@
+# Constraint file to exclude packages that require C libraries on Windows
+pygraphviz

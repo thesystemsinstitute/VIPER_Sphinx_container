@@ -6,8 +6,14 @@ Sphinx Immaterial Theme Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-immaterial/>`_
-   - :doc:`See Working Example <../../examples/sphinx-immaterial-example>`
+   - `API Documentation <../../pdoc/sphinx_immaterial/index.html>`_
+   - `Manual <https://jbms.github.io/sphinx-immaterial/>`_
+   - :doc:`Working Example <../../examples/sphinx-immaterial-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-immaterial, a Material Design theme adaptation.
 
@@ -21,6 +27,9 @@ Sphinx Immaterial Theme provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The sphinx-immaterial package provides functionality for working with Material Design theme adaptation.
 
 Installation
 ------------

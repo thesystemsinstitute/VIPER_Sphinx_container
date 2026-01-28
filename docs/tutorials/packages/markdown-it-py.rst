@@ -6,8 +6,14 @@ Markdown-it-py Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/markdown-it-py/>`_
-   - :doc:`See Working Example <../../examples/markdown-it-py-example>`
+   - `API Documentation <../../pdoc/markdown_it_py/index.html>`_
+   - `Manual <https://markdown-it-py.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/markdown-it-py-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use markdown-it-py, a Python port of markdown-it parser.
 
@@ -21,6 +27,9 @@ Markdown-it-py provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The markdown-it-py package provides functionality for working with Python port of markdown-it parser.
 
 Installation
 ------------

@@ -6,8 +6,14 @@ Sphinx-Autodoc2-Fern Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-autodoc2-fern/>`_
-   - :doc:`See Working Example <../../examples/sphinx-autodoc2-fern-example>`
+   - `API Documentation <../../pdoc/sphinx_autodoc2_fern/index.html>`_
+   - `Manual <https://github.com/fern-api/sphinx-autodoc2-fern>`_
+   - :doc:`Working Example <../../examples/sphinx-autodoc2-fern-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-autodoc2-fern, an enhanced autodoc alternative with better performance and features.
 
@@ -28,6 +34,9 @@ sphinx-autodoc2-fern is a next-generation autodoc extension that provides:
 - Modern Python feature support
 
 This is a modern alternative to sphinx.ext.autodoc with enhanced capabilities for current Python versions.
+
+
+The sphinx-autodoc2-fern extension provides modern, Fern-inspired API documentation layouts with enhanced navigation and presentation.
 
 Installation
 ------------
@@ -91,6 +100,34 @@ Advanced Configuration
    autodoc2_skip_module_regexes = [r'.*\.tests\..*']
    autodoc2_docstring_parser = 'sphinx'  # sphinx, google, numpy
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_autodoc2_fern',
+   ]
+   
+   autodoc2_fern_layout = 'modern'
+
+Options
+~~~~~~~
+
+.. code-block:: python
+
+   autodoc2_fern_options = {
+       'sidebar_navigation': True,
+       'code_examples': True,
+       'response_samples': True,
+   }
+
 Basic Usage
 -----------
 
@@ -122,135 +159,6 @@ Document Specific Class
    .. autodoc2-object:: mylib.models.User
       :members:
       :exclude-members: _internal_method
-
-Practical Examples
-------------------
-
-Example 1: Complete Package Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``mylib/__init__.py``:
-
-.. code-block:: python
-
-   """MyLib - A sample library."""
-   __version__ = '1.0.0'
-   
-   from .core import Client
-   from .models import User, Post
-   from .utils import format_date, parse_json
-   
-   __all__ = ['Client', 'User', 'Post', 'format_date', 'parse_json']
-
-``mylib/core.py``:
-
-.. code-block:: python
-
-   """Core client functionality."""
-   from typing import Optional, List
-   from .models import User
-   
-   class Client:
-       """Main API client."""
-       
-       def __init__(self, api_key: str, timeout: int = 30):
-           """
-           Initialize client.
-           
-           Args:
-               api_key: API authentication key
-               timeout: Request timeout in seconds
-           """
-           self.api_key = api_key
-           self.timeout = timeout
-       
-       async def get_user(self, user_id: int) -> User:
-           """
-           Get user by ID.
-           
-           Args:
-               user_id: User ID to fetch
-           
-           Returns:
-               User object
-           
-           Raises:
-               ValueError: If user_id is invalid
-               APIError: If request fails
-           """
-           return User(id=user_id, name="John")
-       
-       async def list_users(
-           self,
-           limit: int = 10,
-           offset: int = 0
-       ) -> List[User]:
-           """
-           List users with pagination.
-           
-           Args:
-               limit: Maximum users to return
-               offset: Number of users to skip
-           
-           Returns:
-               List of User objects
-           """
-           return []
-
-``mylib/models.py``:
-
-.. code-block:: python
-
-   """Data models."""
-   from dataclasses import dataclass, field
-   from typing import Optional, List
-   from datetime import datetime
-   
-   @dataclass
-   class User:
-       """User model."""
-       
-       id: int
-       name: str
-       email: Optional[str] = None
-       created_at: datetime = field(default_factory=datetime.now)
-       tags: List[str] = field(default_factory=list)
-       
-       def is_active(self) -> bool:
-           """Check if user is active."""
-           return self.email is not None
-   
-   @dataclass
-   class Post:
-       """Blog post model."""
-       
-       id: int
-       title: str
-       content: str
-       author: User
-       published: bool = False
-
-``conf.py``:
-
-.. code-block:: python
-
-   project = 'MyLib'
-   extensions = ['sphinx_autodoc2_fern']
-   
-   autodoc2_packages = [
-       {
-           'path': 'mylib',
-           'auto_mode': True,
-       }
-   ]
-   
-   autodoc2_output_dir = 'api'
-   autodoc2_render_plugin = 'myst'
-   autodoc2_sort_names = True
-
-``docs/index.rst``:
-
-.. code-block:: rst
 
    MyLib Documentation
    ===================

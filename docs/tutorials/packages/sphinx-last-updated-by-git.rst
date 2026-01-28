@@ -6,8 +6,13 @@ Sphinx-Last-Updated-By-Git Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-last-updated-by-git/>`_
-   - :doc:`See Working Example <../../examples/sphinx-last-updated-by-git-example>`
+   - `Manual <https://github.com/mgeier/sphinx-last-updated-by-git>`_
+   - :doc:`Working Example <../../examples/sphinx-last-updated-by-git-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-last-updated-by-git to automatically add last-modified dates from Git history.
 
@@ -28,6 +33,9 @@ sphinx-last-updated-by-git is a Sphinx extension that provides:
 - Multi-language support
 
 This eliminates manual date tracking and ensures documentation always shows accurate last-modified information.
+
+
+The sphinx-last-updated-by-git extension automatically retrieves the last modification date from Git history and adds it to each documentation page.
 
 Installation
 ------------
@@ -96,199 +104,6 @@ Use in custom templates:
      Last modified: {{ last_updated }}
    </div>
    {% endif %}
-
-Practical Examples
-------------------
-
-Example 1: Basic Date Display
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/conf.py``:
-
-.. code-block:: python
-
-   extensions = ['sphinx_last_updated_by_git']
-   
-   # Simple date format
-   html_last_updated_fmt = '%Y-%m-%d'
-
-Result in footer:
-
-.. code-block:: text
-
-   Last updated on 2023-12-15
-
-Example 2: Detailed Timestamp
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/conf.py``:
-
-.. code-block:: python
-
-   extensions = ['sphinx_last_updated_by_git']
-   
-   # Detailed timestamp
-   html_last_updated_fmt = '%B %d, %Y at %I:%M %p %Z'
-   
-   # Timezone configuration
-   git_last_updated_timezone = 'UTC'
-
-Result:
-
-.. code-block:: text
-
-   Last updated on December 15, 2023 at 02:30 PM UTC
-
-Example 3: Custom Template with Author
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/_templates/page.html``:
-
-.. code-block:: html
-
-   {% extends "!page.html" %}
-   
-   {% block footer %}
-   {{ super() }}
-   
-   <div class="git-info">
-     {% if last_updated %}
-     <p class="last-updated">
-       <strong>Last Updated:</strong> {{ last_updated }}
-     </p>
-     {% endif %}
-     
-     {% if git_author %}
-     <p class="last-author">
-       <strong>Last Modified By:</strong> {{ git_author }}
-     </p>
-     {% endif %}
-   </div>
-   {% endblock %}
-
-``docs/conf.py``:
-
-.. code-block:: python
-
-   extensions = ['sphinx_last_updated_by_git']
-   
-   html_last_updated_fmt = '%b %d, %Y'
-   
-   # Enable author information
-   git_last_updated_author = True
-
-``docs/_static/git-info.css``:
-
-.. code-block:: css
-
-   .git-info {
-       margin-top: 20px;
-       padding: 15px;
-       background-color: #f8f9fa;
-       border-left: 4px solid #3498db;
-       font-size: 14px;
-   }
-   
-   .git-info p {
-       margin: 5px 0;
-   }
-   
-   .git-info strong {
-       color: #2c3e50;
-   }
-
-Example 4: Per-Page Modification Table
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/_templates/page.html``:
-
-.. code-block:: html
-
-   {% extends "!page.html" %}
-   
-   {% block body %}
-   {{ super() }}
-   
-   <div class="document-metadata">
-     <h4>Document Information</h4>
-     <table class="metadata-table">
-       <tr>
-         <th>Last Modified</th>
-         <td>{{ last_updated or 'Unknown' }}</td>
-       </tr>
-       <tr>
-         <th>Git Commit</th>
-         <td><code>{{ git_commit_hash[:8] if git_commit_hash else 'N/A' }}</code></td>
-       </tr>
-       <tr>
-         <th>Author</th>
-         <td>{{ git_author or 'Unknown' }}</td>
-       </tr>
-       <tr>
-         <th>File Path</th>
-         <td><code>{{ pagename }}.rst</code></td>
-       </tr>
-     </table>
-   </div>
-   {% endblock %}
-
-``docs/_static/metadata.css``:
-
-.. code-block:: css
-
-   .document-metadata {
-       margin: 30px 0;
-       padding: 20px;
-       background: #f5f5f5;
-       border-radius: 8px;
-   }
-   
-   .document-metadata h4 {
-       margin-top: 0;
-       color: #2c3e50;
-   }
-   
-   .metadata-table {
-       width: 100%;
-       border-collapse: collapse;
-   }
-   
-   .metadata-table th {
-       text-align: left;
-       padding: 8px 12px;
-       background-color: #e0e0e0;
-       font-weight: 600;
-       width: 30%;
-   }
-   
-   .metadata-table td {
-       padding: 8px 12px;
-       border-bottom: 1px solid #ddd;
-   }
-   
-   .metadata-table code {
-       background-color: #fff;
-       padding: 2px 6px;
-       border-radius: 3px;
-   }
-
-Example 5: Multilingual Date Formats
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/conf.py``:
-
-.. code-block:: python
-
-   import locale
-   
-   extensions = ['sphinx_last_updated_by_git']
-   
-   # Set locale for date formatting
-   try:
-       locale.setlocale(locale.LC_TIME, 'es_ES.UTF-8')  # Spanish
-       html_last_updated_fmt = '%d de %B de %Y'
-   except:
-       html_last_updated_fmt = '%B %d, %Y'
 
 Advanced Features
 -----------------

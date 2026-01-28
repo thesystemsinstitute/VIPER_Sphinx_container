@@ -6,8 +6,13 @@ QuickDiagrams Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/quickdiagrams/>`_
-   - :doc:`See Working Example <../../examples/quickdiagrams-example>`
+   - `API Documentation <../../pdoc/quickdiagrams/index.html>`_
+   - :doc:`Working Example <../../examples/quickdiagrams-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use quickdiagrams, a quick diagram generation tool.
 
@@ -21,6 +26,9 @@ QuickDiagrams provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The quickdiagrams package provides functionality for working with quick diagram generation tool.
 
 Installation
 ------------

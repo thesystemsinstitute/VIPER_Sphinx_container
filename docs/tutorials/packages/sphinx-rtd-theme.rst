@@ -6,8 +6,14 @@ Read the Docs Theme Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-rtd-theme/>`_
-   - :doc:`See Working Example <../../examples/sphinx-rtd-theme-example>`
+   - `API Documentation <../../pdoc/sphinx_rtd_theme/index.html>`_
+   - `Manual <https://sphinx-rtd-theme.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinx-rtd-theme-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-rtd-theme, a popular Read the Docs theme.
 
@@ -21,6 +27,9 @@ Read the Docs Theme provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The sphinx-rtd-theme package provides functionality for working with popular Read the Docs theme.
 
 Installation
 ------------

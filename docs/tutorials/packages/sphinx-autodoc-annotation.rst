@@ -6,8 +6,13 @@ Sphinx-Autodoc-Annotation Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-autodoc-annotation/>`_
-   - :doc:`See Working Example <../../examples/sphinx-autodoc-annotation-example>`
+   - `Manual <https://github.com/hsoft/sphinx-autodoc-annotation>`_
+   - :doc:`Working Example <../../examples/sphinx-autodoc-annotation-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-autodoc-annotation to display Python type annotations in your API documentation.
 
@@ -27,6 +32,9 @@ sphinx-autodoc-annotation is a Sphinx extension that enhances autodoc to:
 - Support Python 3.10+ syntax
 
 This makes API documentation clearer by showing exact type information from annotations.
+
+
+The sphinx-autodoc-annotation extension improves how Python type annotations are displayed in Sphinx documentation.
 
 Installation
 ------------
@@ -79,6 +87,30 @@ Advanced Configuration
    autodoc_typehints = 'description'  # signature, description, none, both
    autodoc_typehints_description_target = 'all'  # all, documented, documented_params
    autodoc_typehints_format = 'short'
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx.ext.autodoc',
+       'sphinx_autodoc_annotation',
+   ]
+
+Options
+~~~~~~~
+
+.. code-block:: python
+
+   autodoc_annotation_format = 'short'  # or 'long', 'full'
+   autodoc_typehints = 'description'  # or 'signature', 'both'
 
 Basic Usage
 -----------
@@ -152,244 +184,6 @@ Document:
 .. code-block:: rst
 
    .. autofunction:: mylib.data_processor.process_items
-
-Practical Examples
-------------------
-
-Example 1: Typed API Client
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``mylib/api_client.py``:
-
-.. code-block:: python
-
-   """Type-annotated API client."""
-   from typing import Dict, List, Optional, Any, TypedDict, Literal
-   from dataclasses import dataclass
-   
-   
-   class UserDict(TypedDict):
-       """User data structure."""
-       id: int
-       name: str
-       email: str
-       active: bool
-   
-   
-   @dataclass
-   class APIResponse:
-       """API response data."""
-       status: int
-       data: Any
-       error: Optional[str] = None
-   
-   
-   class APIClient:
-       """HTTP API client with type annotations."""
-       
-       def __init__(
-           self,
-           base_url: str,
-           api_key: str,
-           timeout: int = 30,
-           verify_ssl: bool = True
-       ) -> None:
-           """
-           Initialize API client.
-           
-           :param base_url: Base URL for API
-           :param api_key: API authentication key
-           :param timeout: Request timeout in seconds
-           :param verify_ssl: Verify SSL certificates
-           """
-           self.base_url = base_url
-           self.api_key = api_key
-           self.timeout = timeout
-           self.verify_ssl = verify_ssl
-       
-       def get_user(self, user_id: int) -> UserDict:
-           """
-           Get user by ID.
-           
-           :param user_id: User ID
-           :return: User data
-           :raises ValueError: If user_id is invalid
-           """
-           return {
-               'id': user_id,
-               'name': 'John Doe',
-               'email': 'john@example.com',
-               'active': True
-           }
-       
-       def list_users(
-           self,
-           page: int = 1,
-           per_page: int = 10,
-           active_only: bool = True
-       ) -> List[UserDict]:
-           """
-           List users with pagination.
-           
-           :param page: Page number
-           :param per_page: Items per page
-           :param active_only: Only return active users
-           :return: List of users
-           """
-           return []
-       
-       def create_user(
-           self,
-           name: str,
-           email: str,
-           metadata: Optional[Dict[str, Any]] = None
-       ) -> APIResponse:
-           """
-           Create new user.
-           
-           :param name: User's name
-           :param email: User's email
-           :param metadata: Additional user metadata
-           :return: API response with created user
-           """
-           return APIResponse(
-               status=201,
-               data={'id': 1, 'name': name, 'email': email}
-           )
-       
-       def update_user(
-           self,
-           user_id: int,
-           **kwargs: Union[str, int, bool]
-       ) -> APIResponse:
-           """
-           Update user fields.
-           
-           :param user_id: User ID to update
-           :param kwargs: Fields to update
-           :return: API response
-           """
-           return APIResponse(status=200, data={'id': user_id})
-
-``docs/api/client.rst``:
-
-.. code-block:: rst
-
-   API Client
-   ==========
-   
-   Type-safe API client with comprehensive type annotations.
-   
-   .. autoclass:: mylib.api_client.APIClient
-      :members:
-      :special-members: __init__
-   
-   Type Definitions
-   ----------------
-   
-   .. autoclass:: mylib.api_client.UserDict
-      :members:
-   
-   .. autoclass:: mylib.api_client.APIResponse
-      :members:
-
-Example 2: Data Processing Pipeline
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``mylib/pipeline.py``:
-
-.. code-block:: python
-
-   """Type-annotated data processing pipeline."""
-   from typing import (
-       Callable, Iterator, Iterable, Generic, TypeVar,
-       Protocol, runtime_checkable
-   )
-   from collections.abc import Sequence
-   
-   T = TypeVar('T')
-   U = TypeVar('U')
-   
-   
-   @runtime_checkable
-   class Processor(Protocol[T, U]):
-       """Protocol for data processors."""
-       
-       def process(self, item: T) -> U:
-           """Process single item."""
-           ...
-   
-   
-   class Pipeline(Generic[T, U]):
-       """Generic data processing pipeline."""
-       
-       def __init__(
-           self,
-           source: Iterable[T],
-           processors: Sequence[Callable[[T], T]]
-       ) -> None:
-           """
-           Initialize pipeline.
-           
-           :param source: Data source
-           :param processors: List of processing functions
-           """
-           self.source = source
-           self.processors = processors
-       
-       def process(self) -> Iterator[T]:
-           """
-           Process all items through pipeline.
-           
-           :yield: Processed items
-           """
-           for item in self.source:
-               for processor in self.processors:
-                   item = processor(item)
-               yield item
-       
-       def collect(self) -> list[T]:
-           """
-           Process and collect all results.
-           
-           :return: List of processed items
-           """
-           return list(self.process())
-   
-   
-   def filter_items(
-       items: Iterable[T],
-       predicate: Callable[[T], bool]
-   ) -> Iterator[T]:
-       """
-       Filter items using predicate.
-       
-       :param items: Items to filter
-       :param predicate: Filter function
-       :yield: Items that match predicate
-       """
-       for item in items:
-           if predicate(item):
-               yield item
-   
-   
-   def map_items(
-       items: Iterable[T],
-       transform: Callable[[T], U]
-   ) -> Iterator[U]:
-       """
-       Transform items using function.
-       
-       :param items: Items to transform
-       :param transform: Transformation function
-       :yield: Transformed items
-       """
-       for item in items:
-           yield transform(item)
-
-``docs/api/pipeline.rst``:
-
-.. code-block:: rst
 
    Data Pipeline
    =============

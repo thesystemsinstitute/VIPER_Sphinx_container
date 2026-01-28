@@ -6,9 +6,14 @@ Sphinxemoji Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinxemoji/>`_
-   - `Official Documentation <https://sphinxemoji.readthedocs.io/>`_
-   - :doc:`See Working Example <../../examples/sphinxemoji-example>`
+   - `API Documentation <../../pdoc/sphinxemoji/index.html>`_
+   - `Manual <https://sphinxemoji.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinxemoji-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinxemoji to add emoji support to your Sphinx documentation.
 
@@ -29,6 +34,9 @@ sphinxemoji is a Sphinx extension that provides:
 - Works with all themes
 
 This makes documentation more engaging and easier to read.
+
+
+The sphinxemoji extension provides emoji support using GitHub-style emoji codes and Unicode emoji characters in reStructuredText documents.
 
 Installation
 ------------
@@ -69,6 +77,41 @@ Advanced Configuration
        'company_logo': '🏢',
    }
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinxemoji.sphinxemoji',
+   ]
+
+Custom Emoji
+~~~~~~~~~~~~
+
+Define custom emoji mappings:
+
+.. code-block:: python
+
+   sphinxemoji_custom = {
+       'custom_logo': '🏢',
+       'custom_icon': '⚡',
+   }
+
+Style Configuration
+~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   # Emoji rendering style
+   sphinxemoji_style = 'twemoji'  # or 'unicode'
+
 Basic Usage
 -----------
 
@@ -99,19 +142,6 @@ Inline Emoji
 
    The process is :thumbsup: and works :ok_hand:.
 
-Practical Examples
-------------------
-
-Example 1: User Guide with Emoji
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/user-guide.rst``:
-
-.. code-block:: rst
-
-   User Guide
-   ==========
-   
    Getting Started :rocket:
    ------------------------
    

@@ -6,8 +6,14 @@ Sphinx Press Theme Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-press-theme/>`_
-   - :doc:`See Working Example <../../examples/sphinx-press-theme-example>`
+   - `API Documentation <../../pdoc/sphinx_press_theme/index.html>`_
+   - `Manual <https://schettino72.github.io/sphinx_press_site/>`_
+   - :doc:`Working Example <../../examples/sphinx-press-theme-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-press-theme, a modern press-style theme.
 
@@ -21,6 +27,9 @@ Sphinx Press Theme provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The sphinx-press-theme package provides functionality for working with modern press-style theme.
 
 Installation
 ------------

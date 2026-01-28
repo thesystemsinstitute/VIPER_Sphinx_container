@@ -6,9 +6,14 @@ Sphinx-Version-Warning Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-version-warning/>`_
-   - `Official Documentation <https://sphinx-version-warning.readthedocs.io/>`_
-   - :doc:`See Working Example <../../examples/sphinx-version-warning-example>`
+   - `API Documentation <../../pdoc/sphinx_version_warning/index.html>`_
+   - `Manual <https://github.com/humitos/sphinx-version-warning>`_
+   - :doc:`Working Example <../../examples/sphinx-version-warning-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-version-warning to display version warnings in your documentation.
 
@@ -29,6 +34,9 @@ sphinx-version-warning is a Sphinx extension that provides:
 - Version comparison
 
 This helps users know when they're viewing outdated documentation and directs them to the latest version.
+
+
+The sphinx-version-warning extension displays a banner warning users when they're viewing outdated documentation versions.
 
 Installation
 ------------
@@ -118,202 +126,6 @@ The warning looks like:
    The latest version is 2.0.
    
    [View Latest Documentation]
-
-Practical Examples
-------------------
-
-Example 1: Simple Version Warning
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/conf.py``:
-
-.. code-block:: python
-
-   extensions = ['versionwarning.extension']
-   
-   # Project version
-   version = '1.0'
-   release = '1.0.5'
-   
-   # Simple warning
-   versionwarning_admonition_type = 'warning'
-   versionwarning_banner_title = 'Outdated Version'
-   versionwarning_messages = {
-       'latest': (
-           'You are viewing the latest documentation. '
-           'Everything here is current!'
-       ),
-       '1.x': (
-           'This is version 1.x documentation. '
-           'Version 2.x is now available with many improvements.'
-       ),
-   }
-
-Example 2: Comprehensive Version System
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/conf.py``:
-
-.. code-block:: python
-
-   import os
-   
-   extensions = ['versionwarning.extension']
-   
-   # Detect version from environment or file
-   version = os.environ.get('DOC_VERSION', '2.1')
-   release = version
-   
-   # Detailed version warnings
-   versionwarning_admonition_type = 'tip'
-   versionwarning_banner_title = 'Documentation Version Notice'
-   
-   versionwarning_messages = {
-       'latest': (
-           '✅ <strong>Latest Version</strong><br>'
-           'You are viewing the most recent documentation. '
-           'This includes all the newest features and updates.'
-       ),
-       'stable': (
-           '✅ <strong>Stable Release</strong><br>'
-           'This is the latest stable version recommended for production use.'
-       ),
-       '2.x': (
-           '📌 <strong>Version 2.x</strong><br>'
-           'You are viewing documentation for version 2.x. '
-           'This is a stable release branch.'
-       ),
-       '1.x': (
-           '⚠️ <strong>Legacy Version</strong><br>'
-           'This is version 1.x documentation. While still supported, '
-           'we recommend upgrading to version 2.x for new features and improvements. '
-           '<a href="/en/stable/">View latest stable docs</a>'
-       ),
-       'dev': (
-           '🚧 <strong>Development Version</strong><br>'
-           'This documentation is for unreleased features. '
-           'Content may change without notice. '
-           'Use at your own risk!'
-       ),
-   }
-   
-   # Placeholder for versions not explicitly defined
-   versionwarning_message_placeholder = (
-       '📖 You are viewing documentation for version <strong>{version}</strong>. '
-       'The latest stable version is <strong>{latest}</strong>. '
-       '<a href="/en/{latest}/">Switch to latest</a>'
-   )
-
-Example 3: Read the Docs Integration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/conf.py``:
-
-.. code-block:: python
-
-   import os
-   
-   extensions = ['versionwarning.extension']
-   
-   # Read the Docs environment
-   on_rtd = os.environ.get('READTHEDOCS') == 'True'
-   rtd_version = os.environ.get('READTHEDOCS_VERSION', 'latest')
-   
-   if on_rtd:
-       version = rtd_version
-       release = rtd_version
-   else:
-       version = '2.0'
-       release = '2.0.0'
-   
-   # Configure warnings
-   versionwarning_admonition_type = 'warning'
-   versionwarning_banner_title = 'Version Notice'
-   
-   versionwarning_messages = {
-       'latest': 'You are reading the latest development version.',
-       'stable': 'You are reading the stable documentation.',
-   }
-   
-   # For Read the Docs
-   versionwarning_project_slug = 'myproject'
-   versionwarning_project_version = rtd_version
-
-Example 4: Custom Styled Banner
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/conf.py``:
-
-.. code-block:: python
-
-   versionwarning_admonition_type = 'note'
-   versionwarning_banner_title = ''  # No title, custom HTML
-   
-   versionwarning_messages = {
-       'latest': '''
-           <div class="version-banner version-latest">
-               <span class="version-icon">✨</span>
-               <div class="version-content">
-                   <h3>Latest Development Version</h3>
-                   <p>You're viewing cutting-edge documentation. Features may change.</p>
-               </div>
-           </div>
-       ''',
-       'stable': '''
-           <div class="version-banner version-stable">
-               <span class="version-icon">✅</span>
-               <div class="version-content">
-                   <h3>Stable Release</h3>
-                   <p>Recommended for production use.</p>
-               </div>
-           </div>
-       ''',
-   }
-
-``docs/_static/version-banner.css``:
-
-.. code-block:: css
-
-   .version-banner {
-       display: flex;
-       align-items: center;
-       padding: 15px 20px;
-       border-radius: 8px;
-       margin: 20px 0;
-       gap: 15px;
-   }
-   
-   .version-banner.version-latest {
-       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-       color: white;
-   }
-   
-   .version-banner.version-stable {
-       background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-       color: white;
-   }
-   
-   .version-icon {
-       font-size: 32px;
-   }
-   
-   .version-content h3 {
-       margin: 0 0 5px 0;
-       font-size: 18px;
-       font-weight: bold;
-   }
-   
-   .version-content p {
-       margin: 0;
-       font-size: 14px;
-       opacity: 0.9;
-   }
-
-``docs/conf.py``:
-
-.. code-block:: python
-
-   html_css_files = ['version-banner.css']
 
 Advanced Features
 -----------------

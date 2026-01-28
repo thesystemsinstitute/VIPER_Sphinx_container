@@ -6,8 +6,14 @@ BTD Sphinx Graphviz Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/btd.sphinx.graphviz/>`_
-   - :doc:`See Working Example <../../examples/btd-sphinx-graphviz-example>`
+   - `API Documentation <../../pdoc/btd_sphinx_graphviz/index.html>`_
+   - `Manual <https://github.com/berteh/btd.sphinx.graphviz>`_
+   - :doc:`Working Example <../../examples/btd-sphinx-graphviz-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use btd.sphinx.graphviz for advanced Graphviz integration in Sphinx documentation.
 
@@ -93,6 +99,48 @@ Advanced Configuration
    # Cache settings
    graphviz_cache_dir = '_build/graphviz'
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'btd.sphinx.graphviz',
+   ]
+   
+   graphviz_output_format = 'svg'
+   graphviz_dot_args = ['-Gdpi=300']
+
+Advanced Options
+~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   graphviz_default_options = {
+       'layout': 'dot',
+       'optimize': True,
+       'rankdir': 'TB',
+   }
+
+Custom Themes
+~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   graphviz_themes = {
+       'modern': {
+           'node_color': '#4A90E2',
+           'edge_color': '#333333',
+           'bg_color': '#FFFFFF',
+       },
+   }
+
 Basic Usage
 -----------
 
@@ -145,16 +193,6 @@ External DOT File
 .. code-block:: rst
 
    .. graphviz:: architecture.dot
-
-Practical Examples
-------------------
-
-Example 1: Software Architecture
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/architecture/system.rst``:
-
-.. code-block:: rst
 
    System Architecture
    ===================

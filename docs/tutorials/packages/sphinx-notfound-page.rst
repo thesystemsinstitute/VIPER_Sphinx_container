@@ -6,9 +6,14 @@ Sphinx-Notfound-Page Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-notfound-page/>`_
-   - `Official Documentation <https://sphinx-notfound-page.readthedocs.io/>`_
-   - :doc:`See Working Example <../../examples/sphinx-notfound-page-example>`
+   - `API Documentation <../../pdoc/sphinx_notfound_page/index.html>`_
+   - `Manual <https://sphinx-notfound-page.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinx-notfound-page-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-notfound-page to create custom 404 error pages for your Sphinx documentation.
 
@@ -29,6 +34,9 @@ sphinx-notfound-page is a Sphinx extension that provides:
 - GitHub Pages compatible
 
 This creates a user-friendly experience when visitors land on non-existent documentation pages.
+
+
+The sphinx-notfound-page extension generates a custom 404 error page for your Sphinx documentation that matches your theme and provides helpful navigation options.
 
 Installation
 ------------
@@ -125,20 +133,6 @@ Build and Test
 
 The 404 page is automatically created as ``404.html``.
 
-Practical Examples
-------------------
-
-Example 1: Comprehensive 404 Page
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/404.rst``:
-
-.. code-block:: rst
-
-   .. meta::
-      :description: Page not found - Documentation for MyProject
-      :keywords: 404, not found, error
-   
    404 - Page Not Found
    ====================
    

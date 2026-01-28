@@ -6,8 +6,14 @@ PyDot Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/pydot/>`_
-   - :doc:`See Working Example <../../examples/pydot-example>`
+   - `API Documentation <../../pdoc/pydot/index.html>`_
+   - `Manual <https://github.com/pydot/pydot>`_
+   - :doc:`Working Example <../../examples/pydot-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use pydot, a Python interface to Graphviz Dot.
 
@@ -21,6 +27,9 @@ PyDot provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The pydot package provides functionality for working with Python interface to Graphviz Dot.
 
 Installation
 ------------

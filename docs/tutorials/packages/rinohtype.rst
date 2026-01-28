@@ -6,8 +6,14 @@ Rinohtype Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/rinohtype/>`_
-   - :doc:`See Working Example <../../examples/rinohtype-example>`
-   - `Official Documentation <https://www.mos6581.org/rinohtype/>`_
+   - `API Documentation <../../pdoc/rinohtype/index.html>`_
+   - `Manual <https://www.mos6581.org/rinohtype/>`_
+   - :doc:`Working Example <../../examples/rinohtype-example>`
+
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use rinohtype in your Sphinx documentation.
 
@@ -21,6 +27,20 @@ rinohtype is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+rinohtype provides:
+
+- PDF renderer for Sphinx
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **PDF Generation**: High-quality PDF output from RST
+- **Custom Templates**: Multiple document templates
+- **Styling**: Rich styling and formatting options
+- **Typography**: Professional typography support
 Installation
 ------------
 
@@ -62,6 +82,56 @@ Advanced Configuration
    
    rinoh_template = 'book'
    rinoh_paper_size = 'A4'
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'rinoh.frontend.sphinx',
+       # ... other extensions
+   ]
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['rinoh.frontend.sphinx']
+   
+   # Package-specific configuration
+   rinoh_documents = [
+       dict(
+           doc='index',
+           target='manual',
+           title='Project Documentation',
+           subtitle='Complete Guide',
+           author='Your Name',
+           date='2026',
+           template='book',
+       )
+   ]
+   
+   # PDF settings
+   rinoh_paper_size = 'A4'
+   rinoh_page_orientation = 'portrait'
+   rinoh_columns = 1
+   
+   # Styling
+   rinoh_stylesheet = 'sphinx_base14'
+   rinoh_logo = '_static/logo.pdf'
+   
+   # Table of contents
+   rinoh_toc_depth = 3
 
 Basic Usage
 -----------

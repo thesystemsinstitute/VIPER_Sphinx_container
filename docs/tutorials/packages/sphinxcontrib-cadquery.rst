@@ -6,8 +6,14 @@ Sphinxcontrib-CadQuery Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinxcontrib-cadquery/>`_
-   - :doc:`See Working Example <../../examples/sphinxcontrib-cadquery-example>`
+   - `API Documentation <../../pdoc/sphinxcontrib_cadquery/index.html>`_
+   - `Manual <https://github.com/CadQuery/sphinxcontrib-cadquery>`_
+   - :doc:`Working Example <../../examples/sphinxcontrib-cadquery-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinxcontrib-cadquery to embed interactive 3D CAD models created with CadQuery in your Sphinx documentation.
 
@@ -28,6 +34,9 @@ sphinxcontrib-cadquery is a Sphinx extension that provides:
 - 3D viewer integration
 
 CadQuery is a Python library for building parametric 3D CAD models. This extension lets you document those models directly in Sphinx.
+
+
+The sphinxcontrib-cadquery extension allows you to include parametric 3D CAD models in documentation with interactive viewers.
 
 Installation
 ------------
@@ -86,6 +95,24 @@ Advanced Configuration
    cadquery_show_code = True
    cadquery_show_download_links = True
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinxcontrib.cadquery',
+   ]
+   
+   cadquery_output_dir = '_cadquery'
+   cadquery_format = 'stl'  # or 'step', 'gltf'
+
 Basic Usage
 -----------
 
@@ -140,16 +167,6 @@ With Download Links
       import cadquery as cq
       
       result = cq.Workplane("XY").sphere(10)
-
-Practical Examples
-------------------
-
-Example 1: Mechanical Part Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/parts/bracket.rst``:
-
-.. code-block:: rst
 
    Mounting Bracket
    ================

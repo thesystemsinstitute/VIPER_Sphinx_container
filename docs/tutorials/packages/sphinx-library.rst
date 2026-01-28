@@ -5,9 +5,15 @@ Sphinx-Library Tutorial
    
    **Package Resources:**
    
-   - :doc:`../../examples/sphinx-library-example` - Live example
    - `PyPI Package <https://pypi.org/project/sphinx-library/>`_
+   - `API Documentation <../../pdoc/sphinx_library/index.html>`_
+   - `Manual <https://github.com/sphinx-contrib/sphinx-library>`_
+   - :doc:`Working Example <../../examples/sphinx-library-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-library to document software libraries and create comprehensive API documentation with automatic organization and cross-referencing.
 
@@ -23,6 +29,9 @@ sphinx-library is a Sphinx extension that provides enhanced tools for documentin
 - Deprecation warnings and migration guides
 - Automatic index generation for library modules
 - Enhanced code examples with library context
+
+
+sphinx-library enhances Sphinx with specialized features for documenting software libraries, providing better structure, organization, and presentation of library APIs.
 
 Installation
 ------------
@@ -148,16 +157,6 @@ API Reference
          api/core
          api/utils
          api/extensions
-
-Practical Examples
-------------------
-
-Example 1: Simple Library Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Create ``docs/index.rst``:
-
-.. code-block:: rst
 
    MyLibrary Documentation
    =======================
@@ -289,19 +288,6 @@ Example 4: Class Library Documentation
          ProcessedData
              Processed result object
          
-         Examples
-         --------
-         
-         .. code-block:: python
-         
-            processor = DataProcessor()
-            result = processor.process({'key': 'value'})
-
-Example 5: Function Library Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: rst
-
    Utility Functions
    =================
    
@@ -371,44 +357,6 @@ Migration Guides
       - ``old_process()`` → ``process_async()``
       - ``Validator`` → ``DataValidator``
       
-      Examples
-      --------
-      
-      Old way (v1.x):
-      
-      .. code-block:: python
-      
-         result = old_process(data)
-      
-      New way (v2.x):
-      
-      .. code-block:: python
-      
-         result = await process_async(data)
-
-Code Examples with Context
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: rst
-
-   .. library-example::
-      :title: Basic Processing
-      :category: Getting Started
-      
-      .. code-block:: python
-      
-         from mylib import DataProcessor, Config
-         
-         # Initialize with configuration
-         config = Config(format='json', validate=True)
-         processor = DataProcessor(config)
-         
-         # Process data
-         data = {'name': 'example', 'value': 42}
-         result = processor.process(data)
-         
-         print(result.output)
-
 Docker Integration
 ------------------
 

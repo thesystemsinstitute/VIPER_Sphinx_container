@@ -6,8 +6,14 @@ Sphinx-Gitref Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-gitref/>`_
-   - :doc:`See Working Example <../../examples/sphinx-gitref-example>`
+   - `API Documentation <../../pdoc/sphinx_gitref/index.html>`_
+   - `Manual <https://github.com/westurner/sphinx-gitref>`_
+   - :doc:`Working Example <../../examples/sphinx-gitref-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-gitref to integrate Git repository information into your Sphinx documentation, including commit history, branches, and contributors.
 
@@ -26,6 +32,9 @@ sphinx-gitref is a Sphinx extension that provides Git repository integration:
 - Track documentation changes with Git history
 
 This is invaluable for keeping documentation synchronized with code changes.
+
+
+The sphinx-gitref extension provides roles and directives for linking to Git repositories, commits, branches, tags, and files in version control systems.
 
 Installation
 ------------
@@ -88,6 +97,26 @@ Advanced Configuration
    gitref_track_changes = True
    gitref_show_diff_stats = True
 
+
+.. code-block:: python
+
+   # Multiple repositories
+   gitref_repositories = {
+       'default': 'https://github.com/myorg/myproject',
+       'docs': 'https://github.com/myorg/documentation',
+       'lib': 'https://github.com/myorg/library',
+   }
+   
+   # Reference format
+   gitref_commit_format = 'short'  # 'short', 'long', or 'abbreviated'
+   gitref_link_format = 'github'   # 'github', 'gitlab', 'bitbucket'
+   
+   # Display options
+   gitref_show_hash = True
+   gitref_show_message = True
+   gitref_show_author = False
+   gitref_show_date = True
+
 Basic Usage
 -----------
 
@@ -142,16 +171,6 @@ File Changes
       :since: v1.0.0
       
       Changes to this file since version 1.0.0.
-
-Practical Examples
-------------------
-
-Example 1: Documentation Change Log
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Create ``docs/changelog.rst``:
-
-.. code-block:: rst
 
    Documentation Change Log
    =========================

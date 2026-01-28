@@ -30,6 +30,9 @@ sphinxext-opengraph is a Sphinx extension that provides:
 
 This ensures your documentation looks professional when shared on social media platforms.
 
+
+Open Graph protocol is a standard for providing metadata about web pages that social media platforms use to create rich previews when URLs are shared.
+
 Installation
 ------------
 
@@ -95,6 +98,24 @@ Advanced Configuration
        '<meta property="fb:app_id" content="123456789" />',
    ]
 
+
+.. code-block:: python
+
+   # Custom meta tags
+   ogp_custom_meta_tags = [
+       '<meta property="og:locale" content="en_US" />',
+       '<meta property="article:author" content="Your Name" />',
+   ]
+   
+   # Use absolute URLs for images
+   ogp_use_first_image = True
+   
+   # Exclude specific pages
+   ogp_exclude = [
+       "genindex",
+       "search",
+   ]
+
 Basic Usage
 -----------
 
@@ -122,33 +143,6 @@ Override metadata for specific pages:
       :description: Custom description for this page
       :og:title: Custom Social Media Title
       :og:image: https://example.com/custom-image.png
-
-Practical Examples
-------------------
-
-Example 1: Basic Social Sharing
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/conf.py``:
-
-.. code-block:: python
-
-   extensions = ['sphinxext.opengraph']
-   
-   # Site configuration
-   project = 'MyProject'
-   ogp_site_url = 'https://myproject.readthedocs.io/'
-   ogp_site_name = 'MyProject Documentation'
-   
-   # Default image
-   ogp_image = 'https://myproject.readthedocs.io/_static/logo.png'
-   
-   # Description
-   ogp_description_length = 160
-
-``docs/index.rst``:
-
-.. code-block:: rst
 
    Welcome to MyProject
    ====================

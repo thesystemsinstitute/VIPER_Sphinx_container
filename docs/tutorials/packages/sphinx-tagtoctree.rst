@@ -6,8 +6,14 @@ Sphinx-Tagtoctree Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-tagtoctree/>`_
-   - :doc:`See Working Example <../../examples/sphinx-tagtoctree-example>`
+   - `API Documentation <../../pdoc/sphinx_tagtoctree/index.html>`_
+   - `Manual <https://github.com/sphinx-contrib/tagtoctree>`_
+   - :doc:`Working Example <../../examples/sphinx-tagtoctree-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-tagtoctree to organize documentation with tags, creating dynamic table of contents based on document metadata.
 
@@ -25,6 +31,12 @@ sphinx-tagtoctree is a Sphinx extension that enables tag-based document organiza
 
 This is especially useful for large documentation projects where content can be organized in multiple ways (by topic, difficulty, version, etc.).
 
+sphinx-tagtoctree enables tag-based organization of documentation, allowing:
+
+- Documents to appear in multiple categories
+- Flexible organization without folder structure constraints
+- Dynamic table of contents based on tags
+- Cross-cutting documentation themes
 Installation
 ------------
 
@@ -85,6 +97,23 @@ Advanced Configuration
        },
    }
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_tagtoctree',
+       # ... other extensions
+   ]
+   
+   # Tag configuration
+   tagtoctree_tag_index_name = 'tags'
+   tagtoctree_generate_tag_pages = True
+
 Basic Usage
 -----------
 
@@ -141,16 +170,6 @@ Multiple Tags
       :operator: or
       
       Documents with 'python' OR 'javascript' tags.
-
-Practical Examples
-------------------
-
-Example 1: Multi-Level Learning Path
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Create ``docs/index.rst``:
-
-.. code-block:: rst
 
    Documentation
    =============
@@ -616,6 +635,28 @@ GitHub Actions
            with:
              name: tag-report
              path: tag_report.txt
+
+
+Use Cases
+---------
+
+1. **Large Documentation Sets**
+   
+   - Multiple categorization schemes
+   - Cross-cutting concerns
+   - Flexible navigation
+
+2. **Multi-Audience Documentation**
+   
+   - Role-based views (developer, admin, user)
+   - Skill-level filtering
+   - Topic-based organization
+
+3. **Evolving Documentation**
+   
+   - Easy reorganization
+   - No folder restructuring needed
+   - Maintain multiple views
 
 Best Practices
 --------------

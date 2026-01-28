@@ -20,6 +20,20 @@ sphinx-jsonapi is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinx-jsonapi provides:
+
+- JSON API documentation support
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Feature 1**: Description of key feature
+- **Feature 2**: Description of key feature
+- **Feature 3**: Description of key feature
+- **Feature 4**: Description of key feature
 Installation
 ------------
 
@@ -53,6 +67,16 @@ Advanced Configuration
    
    # Configuration options
    # Add package-specific configuration here
+
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinx_jsonapi']
+   
+   # Package-specific configuration
+   # Add configuration options here
 
 Basic Usage
 -----------

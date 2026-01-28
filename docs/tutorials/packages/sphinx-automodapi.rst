@@ -6,9 +6,14 @@ Sphinx-Automodapi Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-automodapi/>`_
-   - :doc:`See Working Example <../../examples/sphinx-automodapi-example>`
-   - `Official Documentation <https://sphinx-automodapi.readthedocs.io/>`_
+   - `API Documentation <../../pdoc/sphinx_automodapi/index.html>`_
+   - `Manual <https://sphinx-automodapi.readthedocs.io/en/latest/>`_
+   - :doc:`Working Example <../../examples/sphinx-automodapi-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-automodapi to automatically generate API documentation for Python packages and modules.
 
@@ -29,6 +34,9 @@ sphinx-automodapi is a Sphinx extension developed by the Astropy project that pr
 - Compatible with autodoc
 
 Originally created for astronomical Python packages, it's useful for any Python project with multiple modules.
+
+
+The sphinx-automodapi extension simplifies documenting entire modules by automatically generating API documentation for all classes, functions, and submodules.
 
 Installation
 ------------
@@ -89,6 +97,30 @@ Advanced Configuration
    napoleon_numpy_docstring = True
    napoleon_include_init_with_doc = True
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx.ext.autodoc',
+       'sphinx_automodapi.automodapi',
+   ]
+
+Options
+~~~~~~~
+
+.. code-block:: python
+
+   automodapi_toctreedirnm = 'api'
+   automodapi_writereprocessed = False
+
 Basic Usage
 -----------
 
@@ -116,205 +148,6 @@ Exclude Submodules
    .. automodapi:: mylib
       :no-inheritance-diagram:
       :skip: mylib.internal
-
-Practical Examples
-------------------
-
-Example 1: Data Processing Package
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``mylib/__init__.py``:
-
-.. code-block:: python
-
-   """Data processing library."""
-   
-   __version__ = '1.0.0'
-   
-   from .readers import CSVReader, JSONReader, XMLReader
-   from .processors import DataProcessor, FilterProcessor, TransformProcessor
-   from .writers import CSVWriter, JSONWriter, XMLWriter
-   
-   __all__ = [
-       'CSVReader', 'JSONReader', 'XMLReader',
-       'DataProcessor', 'FilterProcessor', 'TransformProcessor',
-       'CSVWriter', 'JSONWriter', 'XMLWriter',
-   ]
-
-``mylib/readers.py``:
-
-.. code-block:: python
-
-   """Data readers for various formats."""
-   
-   from abc import ABC, abstractmethod
-   from typing import Any, Dict, List
-   import csv
-   import json
-   import xml.etree.ElementTree as ET
-   
-   class BaseReader(ABC):
-       """
-       Base class for data readers.
-       
-       All readers should inherit from this class and implement
-       the read method.
-       """
-       
-       @abstractmethod
-       def read(self, filepath: str) -> List[Dict[str, Any]]:
-           """
-           Read data from file.
-           
-           Parameters
-           ----------
-           filepath : str
-               Path to the file to read
-           
-           Returns
-           -------
-           List[Dict[str, Any]]
-               List of dictionaries containing the data
-           """
-           pass
-   
-   class CSVReader(BaseReader):
-       """
-       CSV file reader.
-       
-       Parameters
-       ----------
-       delimiter : str, optional
-           Field delimiter (default: ',')
-       quotechar : str, optional
-           Quote character (default: '"')
-       
-       Examples
-       --------
-       >>> reader = CSVReader()
-       >>> data = reader.read('data.csv')
-       """
-       
-       def __init__(self, delimiter: str = ',', quotechar: str = '"'):
-           self.delimiter = delimiter
-           self.quotechar = quotechar
-       
-       def read(self, filepath: str) -> List[Dict[str, Any]]:
-           """Read CSV file."""
-           with open(filepath, 'r') as f:
-               reader = csv.DictReader(
-                   f,
-                   delimiter=self.delimiter,
-                   quotechar=self.quotechar
-               )
-               return list(reader)
-   
-   class JSONReader(BaseReader):
-       """
-       JSON file reader.
-       
-       Examples
-       --------
-       >>> reader = JSONReader()
-       >>> data = reader.read('data.json')
-       """
-       
-       def read(self, filepath: str) -> List[Dict[str, Any]]:
-           """Read JSON file."""
-           with open(filepath, 'r') as f:
-               data = json.load(f)
-               if isinstance(data, list):
-                   return data
-               return [data]
-
-``mylib/processors.py``:
-
-.. code-block:: python
-
-   """Data processors."""
-   
-   from typing import Any, Callable, Dict, List
-   
-   class DataProcessor:
-       """
-       Generic data processor.
-       
-       Parameters
-       ----------
-       transformations : List[Callable], optional
-           List of transformation functions to apply
-       
-       Examples
-       --------
-       >>> processor = DataProcessor()
-       >>> result = processor.process(data)
-       """
-       
-       def __init__(self, transformations: List[Callable] = None):
-           self.transformations = transformations or []
-       
-       def process(self, data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-           """
-           Process data through all transformations.
-           
-           Parameters
-           ----------
-           data : List[Dict[str, Any]]
-               Input data
-           
-           Returns
-           -------
-           List[Dict[str, Any]]
-               Processed data
-           """
-           result = data
-           for transform in self.transformations:
-               result = [transform(item) for item in result]
-           return result
-
-``mylib/writers.py``:
-
-.. code-block:: python
-
-   """Data writers."""
-   
-   from abc import ABC, abstractmethod
-   from typing import Any, Dict, List
-   import csv
-   import json
-   
-   class BaseWriter(ABC):
-       """Base class for data writers."""
-       
-       @abstractmethod
-       def write(self, data: List[Dict[str, Any]], filepath: str) -> None:
-           """Write data to file."""
-           pass
-   
-   class CSVWriter(BaseWriter):
-       """CSV file writer."""
-       
-       def write(self, data: List[Dict[str, Any]], filepath: str) -> None:
-           """Write data to CSV file."""
-           if not data:
-               return
-           
-           with open(filepath, 'w', newline='') as f:
-               writer = csv.DictWriter(f, fieldnames=data[0].keys())
-               writer.writeheader()
-               writer.writerows(data)
-   
-   class JSONWriter(BaseWriter):
-       """JSON file writer."""
-       
-       def write(self, data: List[Dict[str, Any]], filepath: str) -> None:
-           """Write data to JSON file."""
-           with open(filepath, 'w') as f:
-               json.dump(data, f, indent=2)
-
-``docs/api.rst``:
-
-.. code-block:: rst
 
    API Reference
    =============

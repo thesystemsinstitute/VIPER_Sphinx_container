@@ -5,9 +5,15 @@ Sphinx-Lint Tutorial
    
    **Package Resources:**
    
-   - :doc:`../../examples/sphinx-lint-example` - Live example
    - `PyPI Package <https://pypi.org/project/sphinx-lint/>`_
+   - `API Documentation <../../pdoc/sphinx_lint/index.html>`_
+   - `Manual <https://github.com/sphinx-contrib/sphinx-lint>`_
+   - :doc:`Working Example <../../examples/sphinx-lint-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-lint to check and validate your Sphinx documentation for common issues and best practices.
 
@@ -24,6 +30,9 @@ sphinx-lint is a linting tool for Sphinx documentation that helps you:
 - Maintain consistent style across your docs
 
 Think of it as a spell-checker and style guide enforcer for your documentation.
+
+
+sphinx-lint is a quality assurance tool that scans your reStructuredText documentation for issues. This example shows typical linting scenarios and their outputs.
 
 Installation
 ------------
@@ -215,54 +224,6 @@ Identifies malformed directives:
    .. note::
       
       Proper content with indentation
-
-Practical Examples
-------------------
-
-Example 1: Linting During Development
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Create a script ``lint-docs.sh``:
-
-.. code-block:: bash
-
-   #!/bin/bash
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
-       sphinx-lint -r /project/docs/
-
-Run before committing:
-
-.. code-block:: bash
-
-   chmod +x lint-docs.sh
-   ./lint-docs.sh
-
-Example 2: Ignoring Build Directories
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: bash
-
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
-       sphinx-lint -r -i "_build" -i "*.pyc" /project/docs/
-
-Example 3: Custom Line Length
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-For wider lines (e.g., code samples):
-
-.. code-block:: bash
-
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
-       sphinx-lint --max-line-length 120 /project/docs/
-
-Example 4: Checking Specific File Types
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: bash
-
-   # Only .rst files
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
-       find /project/docs -name "*.rst" -exec sphinx-lint {} +
 
 Integration with Development Workflow
 --------------------------------------

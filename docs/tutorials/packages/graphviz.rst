@@ -6,8 +6,14 @@ Graphviz Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/graphviz/>`_
-   - :doc:`See Working Example <../../examples/graphviz-example>`
+   - `API Documentation <../../pdoc/graphviz/index.html>`_
+   - `Manual <https://graphviz.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/graphviz-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use graphviz, a Python interface to Graphviz.
 
@@ -21,6 +27,9 @@ Graphviz provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The graphviz package provides functionality for working with Python interface to Graphviz.
 
 Installation
 ------------

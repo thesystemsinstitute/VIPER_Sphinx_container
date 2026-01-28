@@ -6,9 +6,14 @@ Eralchemy2 Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/eralchemy2/>`_
-   - :doc:`See Working Example <../../examples/eralchemy2-example>`
-   - `Official Documentation <https://github.com/maurerle/eralchemy2>`_
+   - `API Documentation <../../pdoc/eralchemy2/index.html>`_
+   - `Manual <https://github.com/maurerle/eralchemy2>`_
+   - :doc:`Working Example <../../examples/eralchemy2-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use eralchemy2 in your Sphinx documentation.
 
@@ -22,6 +27,20 @@ eralchemy2 is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+eralchemy2 provides:
+
+- Entity Relationship diagrams from databases
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Feature 1**: Description of key feature
+- **Feature 2**: Description of key feature
+- **Feature 3**: Description of key feature
+- **Feature 4**: Description of key feature
 Installation
 ------------
 
@@ -55,6 +74,34 @@ Advanced Configuration
    
    # Configuration options
    # Add package-specific configuration here
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'eralchemy2',
+       # ... other extensions
+   ]
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['eralchemy2']
+   
+   # Package-specific configuration
+   # Add configuration options here
 
 Basic Usage
 -----------

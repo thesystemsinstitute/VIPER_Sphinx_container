@@ -6,9 +6,14 @@ Sphinx-Hoverxref Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-hoverxref/>`_
-   - `Official Documentation <https://sphinx-hoverxref.readthedocs.io/>`_
-   - :doc:`See Working Example <../../examples/sphinx-hoverxref-example>`
+   - `API Documentation <../../pdoc/sphinx_hoverxref/index.html>`_
+   - `Manual <https://sphinx-hoverxref.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinx-hoverxref-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-hoverxref to add tooltip previews when hovering over cross-references.
 
@@ -29,6 +34,9 @@ sphinx-hoverxref is a Sphinx extension that provides:
 - Lazy loading support
 
 This enhances documentation by showing reference content without navigating away from the current page.
+
+
+The sphinx-hoverxref extension adds interactive tooltips that display the content of cross-referenced sections, allowing readers to preview content without navigating away from the current page.
 
 Installation
 ------------
@@ -130,16 +138,6 @@ Use explicit roles:
    See :hoverxref:`installation guide <installation>`.
    
    The :hoverxref:`MyClass <api.MyClass>` handles data processing.
-
-Practical Examples
-------------------
-
-Example 1: API Documentation with Tooltips
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/api.rst``:
-
-.. code-block:: rst
 
    API Reference
    =============

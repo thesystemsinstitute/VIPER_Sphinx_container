@@ -6,8 +6,14 @@ Sphinx-Autodoc-TOML Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-autodoc-toml/>`_
-   - :doc:`See Working Example <../../examples/sphinx-autodoc-toml-example>`
+   - `API Documentation <../../pdoc/sphinx_autodoc_toml/index.html>`_
+   - `Manual <https://github.com/calvingiles/autodoc-toml>`_
+   - :doc:`Working Example <../../examples/sphinx-autodoc-toml-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-autodoc-toml to generate documentation from TOML configuration files.
 
@@ -28,6 +34,9 @@ sphinx-autodoc-toml is a Sphinx extension that enables:
 - Settings reference generation
 
 This is perfect for documenting application configuration, pyproject.toml files, and TOML-based settings.
+
+
+The sphinx-autodoc-toml extension automatically extracts documentation from pyproject.toml configuration files.
 
 Installation
 ------------
@@ -74,6 +83,30 @@ Advanced Configuration
    autodoc_toml_expand_env_vars = False
    autodoc_toml_validate_schema = True
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_autodoc_toml',
+   ]
+   
+   toml_autodoc_file = 'pyproject.toml'
+
+Options
+~~~~~~~
+
+.. code-block:: python
+
+   toml_autodoc_sections = ['project', 'build-system', 'tool.pytest']
+
 Basic Usage
 -----------
 
@@ -101,52 +134,6 @@ Show Specific Section
 
    .. autotoml:: settings.toml
       :section: database
-
-Practical Examples
-------------------
-
-Example 1: Project Configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``pyproject.toml``:
-
-.. code-block:: toml
-
-   [tool.poetry]
-   name = "myproject"
-   version = "1.0.0"
-   description = "My awesome project"
-   authors = ["John Doe <john@example.com>"]
-   license = "MIT"
-   readme = "README.md"
-   homepage = "https://example.com"
-   repository = "https://github.com/user/myproject"
-   keywords = ["python", "example"]
-   
-   [tool.poetry.dependencies]
-   python = "^3.11"
-   requests = "^2.31.0"
-   pydantic = "^2.0.0"
-   
-   [tool.poetry.dev-dependencies]
-   pytest = "^7.0.0"
-   black = "^23.0.0"
-   mypy = "^1.0.0"
-   
-   [tool.black]
-   line-length = 88
-   target-version = ['py311']
-   include = '\.pyi?$'
-   
-   [tool.mypy]
-   python_version = "3.11"
-   warn_return_any = true
-   warn_unused_configs = true
-   disallow_untyped_defs = true
-
-``docs/configuration/pyproject.rst``:
-
-.. code-block:: rst
 
    Project Configuration
    =====================

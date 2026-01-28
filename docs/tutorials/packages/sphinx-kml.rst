@@ -6,8 +6,14 @@ Sphinx-KML Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-kml/>`_
-   - :doc:`See Working Example <../../examples/sphinx-kml-example>`
+   - `API Documentation <../../pdoc/sphinx_kml/index.html>`_
+   - `Manual <https://github.com/sphinx-contrib/kml>`_
+   - :doc:`Working Example <../../examples/sphinx-kml-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-kml to embed and document KML (Keyhole Markup Language) files in your Sphinx documentation.
 
@@ -27,6 +33,9 @@ sphinx-kml is a Sphinx extension that provides support for working with KML file
 - Geographic feature documentation
 
 KML is an XML-based format used for displaying geographic data in mapping applications like Google Earth and Google Maps.
+
+
+The sphinx-kml extension allows you to include KML/KMZ files, create geographic placemarks, and visualize geographic data in documentation.
 
 Installation
 ------------
@@ -78,6 +87,23 @@ Advanced Configuration
    kml_default_line_width = 2
    kml_default_fill_color = '#FF000080'
 
+
+.. code-block:: python
+
+   # Default styles
+   kml_default_style = {
+       'icon_scale': 1.0,
+       'icon_color': 'ff0000ff',
+       'line_width': 2,
+       'line_color': 'ff00ff00',
+       'poly_color': '7f00ff00',
+   }
+   
+   # Viewer settings
+   kml_viewer_width = '100%'
+   kml_viewer_height = '600px'
+   kml_enable_3d = True
+
 Basic Usage
 -----------
 
@@ -119,70 +145,6 @@ Multiple KML Layers
          - _static/data/layer1.kml
          - _static/data/layer2.kml
          - _static/data/layer3.kml
-
-Practical Examples
-------------------
-
-Example 1: GPS Track Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Create KML file ``docs/_static/data/hike.kml``:
-
-.. code-block:: xml
-
-   <?xml version="1.0" encoding="UTF-8"?>
-   <kml xmlns="http://www.opengis.net/kml/2.2">
-     <Document>
-       <name>Mountain Hike Trail</name>
-       <description>5-mile loop trail</description>
-       
-       <Style id="trailStyle">
-         <LineStyle>
-           <color>ff0000ff</color>
-           <width>3</width>
-         </LineStyle>
-       </Style>
-       
-       <Placemark>
-         <name>Trailhead</name>
-         <description>Starting point - Parking available</description>
-         <Point>
-           <coordinates>-122.4194,37.7749,0</coordinates>
-         </Point>
-       </Placemark>
-       
-       <Placemark>
-         <name>Scenic Viewpoint</name>
-         <description>Great views of the valley</description>
-         <Point>
-           <coordinates>-122.4150,37.7800,250</coordinates>
-         </Point>
-       </Placemark>
-       
-       <Placemark>
-         <name>Trail Route</name>
-         <styleUrl>#trailStyle</styleUrl>
-         <LineString>
-           <coordinates>
-             -122.4194,37.7749,0
-             -122.4180,37.7765,50
-             -122.4165,37.7780,100
-             -122.4150,37.7800,250
-             -122.4135,37.7815,300
-             -122.4120,37.7825,250
-             -122.4110,37.7810,150
-             -122.4120,37.7780,100
-             -122.4150,37.7760,50
-             -122.4194,37.7749,0
-           </coordinates>
-         </LineString>
-       </Placemark>
-     </Document>
-   </kml>
-
-Document in ``docs/trails/mountain-hike.rst``:
-
-.. code-block:: rst
 
    Mountain Hike Trail
    ===================

@@ -6,8 +6,14 @@ Sphinxcontrib Bibtex Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinxcontrib-bibtex/>`_
-   - :doc:`See Working Example <../../examples/sphinxcontrib-bibtex-example>`
-   - `Official Documentation <https://sphinxcontrib-bibtex.readthedocs.io/>`_
+   - `API Documentation <../../pdoc/sphinxcontrib_bibtex/index.html>`_
+   - `Manual <https://sphinxcontrib-bibtex.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinxcontrib-bibtex-example>`
+
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinxcontrib-bibtex in your Sphinx documentation.
 
@@ -21,6 +27,20 @@ sphinxcontrib-bibtex is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinxcontrib-bibtex provides:
+
+- BibTeX bibliography support
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **BibTeX Integration**: Use standard BibTeX files
+- **Citation Styles**: Multiple citation and reference styles
+- **Filtering**: Filter bibliography entries
+- **Cross-references**: Link citations to bibliography
 Installation
 ------------
 
@@ -59,6 +79,45 @@ Advanced Configuration
    bibtex_default_style = 'plain'
    bibtex_reference_style = 'author_year'
    bibtex_footbibliography_header = ''
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinxcontrib.bibtex',
+       # ... other extensions
+   ]
+   
+   bibtex_bibfiles = ['references.bib']
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinxcontrib.bibtex']
+   
+   # Package-specific configuration
+   bibtex_bibfiles = ['references.bib', 'additional.bib']
+   bibtex_default_style = 'plain'
+   bibtex_reference_style = 'author_year'
+   
+   # Bibliography options
+   bibtex_footbibliography_header = ''
+   bibtex_footbibliography_footer = ''
+   
+   # Encoding
+   bibtex_encoding = 'utf-8'
 
 Basic Usage
 -----------

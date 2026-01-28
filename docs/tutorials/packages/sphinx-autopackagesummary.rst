@@ -6,8 +6,13 @@ Sphinx-Autopackagesummary Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-autopackagesummary/>`_
-   - :doc:`See Working Example <../../examples/sphinx-autopackagesummary-example>`
+   - `Manual <https://github.com/sphinx-contrib/autopackagesummary>`_
+   - :doc:`Working Example <../../examples/sphinx-autopackagesummary-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-autopackagesummary to automatically generate package summaries and API documentation.
 
@@ -85,6 +90,72 @@ Advanced Configuration
    # Recursion depth
    autopackagesummary_max_depth = 3
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx.ext.autodoc',
+       'sphinx.ext.autosummary',
+       'sphinx_autopackagesummary',
+       # ... other extensions
+   ]
+   
+   # Enable autosummary
+   autosummary_generate = True
+   
+   # Package summary settings
+   autopackagesummary_generate = True
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all options:
+
+.. code-block:: python
+
+   # Package Discovery
+   autopackagesummary_generate = True
+   autopackagesummary_root_package = 'mypackage'
+   autopackagesummary_max_depth = None  # Unlimited depth
+   
+   # Include/Exclude
+   autopackagesummary_include_patterns = ['*']
+   autopackagesummary_exclude_patterns = ['*.tests', '*.test_*', '*._*']
+   
+   # Content Options
+   autopackagesummary_show_modules = True
+   autopackagesummary_show_classes = True
+   autopackagesummary_show_functions = True
+   autopackagesummary_show_attributes = False
+   autopackagesummary_show_private = False
+   
+   # Formatting
+   autopackagesummary_format = 'hierarchical'  # 'hierarchical', 'flat', 'tree'
+   autopackagesummary_show_docstrings = True
+   autopackagesummary_short_docstrings = True  # First line only
+   
+   # Output Control
+   autopackagesummary_toctree_dir = 'api'
+   autopackagesummary_template_dir = '_templates'
+   autopackagesummary_output_format = 'rst'  # 'rst', 'md'
+   
+   # Cross-References
+   autopackagesummary_generate_links = True
+   autopackagesummary_import_prefix = ''
+   
+   # Advanced Options
+   autopackagesummary_recursive = True
+   autopackagesummary_show_inheritance = True
+   autopackagesummary_imported_members = False
+
 Basic Usage
 -----------
 
@@ -113,26 +184,6 @@ Custom Depth
    .. autopackagesummary:: mypackage
       :recursive:
       :maxdepth: 2
-
-Practical Examples
-------------------
-
-Example 1: Simple Package Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Project structure:
-
-.. code-block:: text
-
-   mypackage/
-   ├── __init__.py
-   ├── core.py
-   ├── utils.py
-   └── config.py
-
-``docs/api/index.rst``:
-
-.. code-block:: rst
 
    API Reference
    =============

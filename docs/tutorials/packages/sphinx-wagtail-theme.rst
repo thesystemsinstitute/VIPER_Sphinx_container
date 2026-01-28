@@ -6,8 +6,9 @@ Sphinx-Wagtail-Theme Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-wagtail-theme/>`_
-   - :doc:`See Working Example <../../examples/sphinx-wagtail-theme-example>`
-
+   - `API Documentation <../../pdoc/sphinx_wagtail_theme/index.html>`_
+   - `Manual <https://github.com/wagtail/sphinx_wagtail_theme>`_
+   - :doc:`Working Example <../../examples/sphinx-wagtail-theme-example>`
 
 This tutorial demonstrates how to use sphinx-wagtail-theme, a modern, clean documentation theme inspired by Wagtail CMS documentation.
 
@@ -30,6 +31,9 @@ sphinx-wagtail-theme is a Sphinx theme that provides:
 - Accessible design
 
 Based on the Wagtail CMS documentation style, it's perfect for creating professional, user-friendly documentation.
+
+
+The sphinx-wagtail-theme brings the clean, modern design of Wagtail CMS to Sphinx documentation with responsive layouts and elegant typography.
 
 Installation
 ------------
@@ -108,6 +112,46 @@ Advanced Configuration
        ]
    }
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   import sphinx_wagtail_theme
+   
+   html_theme = 'sphinx_wagtail_theme'
+   html_theme_path = [sphinx_wagtail_theme.get_html_theme_path()]
+
+Theme Options
+~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   html_theme_options = {
+       'project_name': 'My Project',
+       'github_url': 'https://github.com/myorg/myproject',
+       'logo': 'images/logo.png',
+       'logo_alt': 'Project Logo',
+       'footer_links': True,
+   }
+
+Color Customization
+~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   html_theme_options = {
+       'primary_color': '#43b1b0',
+       'secondary_color': '#262626',
+       'accent_color': '#e74c3c',
+   }
+
 Basic Usage
 -----------
 
@@ -150,88 +194,6 @@ Add GitHub Link
        'github_url': 'https://github.com/user/repo',
        'github_button': True,
    }
-
-Practical Examples
-------------------
-
-Example 1: Product Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``conf.py``:
-
-.. code-block:: python
-
-   import sphinx_wagtail_theme
-   
-   project = 'MyProduct'
-   copyright = '2026, Company Inc'
-   author = 'Documentation Team'
-   
-   extensions = [
-       'sphinx.ext.autodoc',
-       'sphinx.ext.viewcode',
-       'sphinx.ext.napoleon',
-   ]
-   
-   html_theme = 'sphinx_wagtail_theme'
-   html_theme_path = [sphinx_wagtail_theme.get_html_theme_path()]
-   
-   html_theme_options = {
-       # Branding
-       'logo': '_static/logo.png',
-       'logo_alt': 'MyProduct',
-       'logo_url': '/',
-       
-       # Colors matching brand
-       'primary_color': '#2563eb',
-       'secondary_color': '#3b82f6',
-       'accent_color': '#f59e0b',
-       
-       # GitHub integration
-       'github_url': 'https://github.com/company/myproduct',
-       'github_button': True,
-       'github_type': 'star',
-       
-       # Footer
-       'footer_text': '© 2026 Company Inc. All rights reserved.',
-       
-       # Analytics
-       'analytics_id': 'G-XXXXXXXXXX',
-   }
-   
-   html_static_path = ['_static']
-   html_css_files = ['custom.css']
-
-``docs/_static/custom.css``:
-
-.. code-block:: css
-
-   /* Custom styles */
-   .wy-nav-content {
-       max-width: 1200px;
-   }
-   
-   /* Brand colors */
-   :root {
-       --brand-primary: #2563eb;
-       --brand-secondary: #3b82f6;
-   }
-   
-   /* Custom code block styling */
-   .highlight {
-       border-radius: 6px;
-       margin: 1em 0;
-   }
-   
-   /* Custom admonition colors */
-   .admonition.tip {
-       background-color: #f0fdf4;
-       border-left: 4px solid #22c55e;
-   }
-
-``docs/index.rst``:
-
-.. code-block:: rst
 
    MyProduct Documentation
    =======================

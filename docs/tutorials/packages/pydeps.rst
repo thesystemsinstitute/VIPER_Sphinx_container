@@ -6,9 +6,14 @@ Pydeps Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/pydeps/>`_
-   - `Official Documentation <https://pydeps.readthedocs.io/>`_
-   - :doc:`See Working Example <../../examples/pydeps-example>`
+   - `API Documentation <../../pdoc/pydeps/index.html>`_
+   - `Manual <https://github.com/thebjorn/pydeps>`_
+   - :doc:`Working Example <../../examples/pydeps-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use pydeps to generate Python dependency graphs for Sphinx documentation.
 
@@ -31,6 +36,22 @@ Pydeps is a Python dependency visualization tool that provides:
 - Integration with documentation
 
 This enables automatic dependency documentation.
+
+
+Pydeps is a Python module dependency visualization tool that creates dependency graphs showing the relationships between modules in your Python project. It generates beautiful, informative diagrams that help developers understand project structure, identify circular dependencies, and plan refactoring efforts.
+
+Key features include:
+
+- Module dependency graph generation
+- Circular dependency detection
+- Multiple output formats (PNG, SVG, PDF)
+- Customizable filtering and clustering
+- External dependency visualization
+- Reverse dependency tracking
+- Interactive exploration
+- Integration with GraphViz
+- Large project support
+- Command-line and Python API
 
 Installation
 ------------
@@ -209,74 +230,6 @@ Filter Dependencies
    
    # Only specific modules
    pydeps mypackage --only 'mypackage.core.*' -o deps.svg
-
-Practical Examples
-------------------
-
-Example 1: Project Dependency Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``generate_project_deps.py``:
-
-.. code-block:: python
-
-   """Generate comprehensive project dependency documentation."""
-   
-   import subprocess
-   from pathlib import Path
-   
-   
-   def generate_project_dependencies():
-       """Create multi-level dependency visualizations."""
-       output_dir = Path('docs/_static/dependencies')
-       output_dir.mkdir(parents=True, exist_ok=True)
-       
-       # Overall project structure
-       subprocess.run([
-           'pydeps',
-           'src',
-           '--cluster',
-           '--max-bacon', '2',
-           '-o', str(output_dir / 'project_overview.svg'),
-       ])
-       
-       # Internal dependencies only
-       subprocess.run([
-           'pydeps',
-           'src',
-           '--no-externals',
-           '--cluster',
-           '-o', str(output_dir / 'internal_deps.svg'),
-       ])
-       
-       # External dependencies
-       subprocess.run([
-           'pydeps',
-           'src',
-           '--only-external',
-           '-o', str(output_dir / 'external_deps.svg'),
-       ])
-       
-       # Per-module dependencies
-       for module in Path('src').iterdir():
-           if module.is_dir() and not module.name.startswith('_'):
-               module_name = module.name
-               subprocess.run([
-                   'pydeps',
-                   str(module),
-                   '--cluster',
-                   '-o', str(output_dir / f'{module_name}_deps.svg'),
-               ])
-       
-       print("✓ Generated project dependency graphs")
-   
-   
-   if __name__ == '__main__':
-       generate_project_dependencies()
-
-``docs/dependencies.rst``:
-
-.. code-block:: rst
 
    Project Dependencies
    ====================

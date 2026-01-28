@@ -6,8 +6,13 @@ Python Markdown Graphviz Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/python-markdown-graphviz/>`_
-   - :doc:`See Working Example <../../examples/python-markdown-graphviz-example>`
+   - `API Documentation <../../pdoc/python_markdown_graphviz/index.html>`_
+   - :doc:`Working Example <../../examples/python-markdown-graphviz-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use python-markdown-graphviz, a Graphviz extension for Markdown.
 
@@ -21,6 +26,9 @@ Python Markdown Graphviz provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The python-markdown-graphviz package provides functionality for working with Graphviz extension for Markdown.
 
 Installation
 ------------

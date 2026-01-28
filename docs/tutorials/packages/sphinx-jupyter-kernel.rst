@@ -6,8 +6,14 @@ Sphinx-Jupyter-Kernel Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-jupyter-kernel/>`_
-   - :doc:`See Working Example <../../examples/sphinx-jupyter-kernel-example>`
+   - `API Documentation <../../pdoc/sphinx_jupyter_kernel/index.html>`_
+   - `Manual <https://github.com/Armienn/sphinx-jupyter-kernel>`_
+   - :doc:`Working Example <../../examples/sphinx-jupyter-kernel-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-jupyter-kernel to execute code examples using Jupyter kernels during documentation builds.
 
@@ -28,6 +34,9 @@ sphinx-jupyter-kernel is a Sphinx extension that provides:
 - Support for IPython magics
 
 This allows you to run code examples in Python, R, Julia, and other languages during documentation builds.
+
+
+The sphinx-jupyter-kernel extension allows you to execute code blocks in your Sphinx documentation using Jupyter kernels, enabling live code execution and output display for multiple programming languages.
 
 Installation
 ------------
@@ -119,16 +128,6 @@ Hide Output
       
       # This runs but output is hidden
       setup_database()
-
-Practical Examples
-------------------
-
-Example 1: Interactive Tutorial
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/tutorial.rst``:
-
-.. code-block:: rst
 
    Python Tutorial
    ===============

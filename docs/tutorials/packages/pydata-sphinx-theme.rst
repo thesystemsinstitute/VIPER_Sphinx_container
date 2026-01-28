@@ -6,8 +6,14 @@ PyData Sphinx Theme Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/pydata-sphinx-theme/>`_
-   - :doc:`See Working Example <../../examples/pydata-sphinx-theme-example>`
+   - `API Documentation <../../pdoc/pydata_sphinx_theme/index.html>`_
+   - `Manual <https://pydata-sphinx-theme.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/pydata-sphinx-theme-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use pydata-sphinx-theme, a PyData community theme.
 
@@ -21,6 +27,9 @@ PyData Sphinx Theme provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The pydata-sphinx-theme package provides functionality for working with PyData community theme.
 
 Installation
 ------------

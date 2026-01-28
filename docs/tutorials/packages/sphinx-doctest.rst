@@ -20,6 +20,20 @@ sphinx-doctest is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinx-doctest provides:
+
+- Enhanced doctest integration
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Code Testing**: Test code examples in documentation
+- **Test Groups**: Organize tests into logical groups
+- **Setup/Cleanup**: Add setup and cleanup code for tests
+- **Flexible Options**: Control test behavior with options
 Installation
 ------------
 
@@ -58,6 +72,29 @@ Advanced Configuration
    import os
    '''
    doctest_global_cleanup = ''
+
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinx.ext.doctest']
+   
+   # Package-specific configuration
+   doctest_test_doctest_blocks = 'default'
+   doctest_path = ['.']
+   
+   # Global setup code
+   doctest_global_setup = '''
+   import sys
+   import os
+   from pathlib import Path
+   '''
+   
+   # Global cleanup code
+   doctest_global_cleanup = '''
+   # Cleanup code here
+   '''
 
 Basic Usage
 -----------

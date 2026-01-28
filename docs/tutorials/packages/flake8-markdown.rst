@@ -6,8 +6,14 @@ Flake8 Markdown Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/flake8-markdown/>`_
-   - :doc:`See Working Example <../../examples/flake8-markdown-example>`
+   - `API Documentation <../../pdoc/flake8_markdown/index.html>`_
+   - `Manual <https://github.com/johnfraney/flake8-markdown>`_
+   - :doc:`Working Example <../../examples/flake8-markdown-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use flake8-markdown, a linter for Python code in Markdown files.
 
@@ -21,6 +27,9 @@ Flake8 Markdown provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The flake8-markdown package provides functionality for working with linter for Python code in Markdown files.
 
 Installation
 ------------

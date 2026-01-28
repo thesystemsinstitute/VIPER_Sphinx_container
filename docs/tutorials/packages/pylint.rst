@@ -6,8 +6,14 @@ Pylint Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/pylint/>`_
-   - :doc:`See Working Example <../../examples/pylint-example>`
+   - `API Documentation <../../pdoc/pylint/index.html>`_
+   - `Manual <https://pylint.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/pylint-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use pylint, a Python code static analyzer.
 
@@ -21,6 +27,9 @@ Pylint provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The pylint package provides functionality for working with Python code static analyzer.
 
 Installation
 ------------

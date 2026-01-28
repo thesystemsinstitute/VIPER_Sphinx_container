@@ -6,8 +6,14 @@ Sphinx-Diagrams Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-diagrams/>`_
-   - :doc:`See Working Example <../../examples/sphinx-diagrams-example>`
+   - `API Documentation <../../pdoc/sphinx_diagrams/index.html>`_
+   - `Manual <https://sphinxcontrib-diagrams.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinx-diagrams-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-diagrams to create cloud architecture diagrams, infrastructure diagrams, and system architecture visualizations using Python code.
 
@@ -27,6 +33,9 @@ sphinx-diagrams integrates the Diagrams library with Sphinx to provide:
 - Container and orchestration diagrams
 
 Uses Python code to define diagrams, making them version-controllable and easy to maintain.
+
+
+The sphinx-diagrams extension integrates the Diagrams library to create cloud architecture diagrams, network diagrams, and system design visualizations.
 
 Installation
 ------------
@@ -82,6 +91,35 @@ Advanced Configuration
    diagrams_cache_diagrams = True
    diagrams_include_source = True
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_diagrams',
+   ]
+   
+   diagrams_output_format = 'png'  # or 'svg'
+   diagrams_output_dir = '_diagrams'
+
+Advanced Options
+~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   diagrams_default_options = {
+       'direction': 'LR',  # Left to Right
+       'show': False,
+       'outformat': 'png',
+   }
+
 Basic Usage
 -----------
 
@@ -126,16 +164,6 @@ Custom Filename
       
       from diagrams import Diagram
       # diagram code
-
-Practical Examples
-------------------
-
-Example 1: AWS Architecture
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/architecture/aws.rst``:
-
-.. code-block:: rst
 
    AWS Infrastructure
    ==================

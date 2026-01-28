@@ -6,9 +6,14 @@ Pytest-Doctestplus Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/pytest-doctestplus/>`_
-   - :doc:`See Working Example <../../examples/pytest-doctestplus-example>`
-   - `Official Documentation <https://pytest-doctestplus.readthedocs.io/>`_
+   - `API Documentation <../../pdoc/pytest_doctestplus/index.html>`_
+   - `Manual <https://github.com/scientific-python/pytest-doctestplus>`_
+   - :doc:`Working Example <../../examples/pytest-doctestplus-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use pytest-doctestplus to run and test code examples in docstrings and RST documentation.
 
@@ -31,6 +36,9 @@ pytest-doctestplus is a pytest plugin that enhances Python's doctest capabilitie
 - Parametrization
 
 Originally developed for the Astropy project, it's useful for any project with documentation examples.
+
+
+The pytest-doctestplus extension provides advanced doctest features including floating-point comparison and output normalization.
 
 Installation
 ------------
@@ -84,6 +92,37 @@ Advanced Configuration
    # Remote data
    remote_data_strict = true
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx.ext.doctest',
+   ]
+   
+   # pytest configuration in pyproject.toml
+   # [tool.pytest.ini_options]
+   # doctest_plus = "enabled"
+
+Options
+~~~~~~~
+
+.. code-block:: python
+
+   doctest_global_setup = '''
+   import numpy as np
+   import pandas as pd
+   '''
+   
+   doctest_test_doctest_blocks = 'default'
+
 Basic Usage
 -----------
 
@@ -114,267 +153,6 @@ Run All Doctests
      kensai-sphinx:latest \
      pytest --doctest-plus --doctest-rst
 
-Practical Examples
-------------------
-
-Example 1: Testing Function Docstrings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``mylib/math_utils.py``:
-
-.. code-block:: python
-
-   """Mathematical utility functions."""
-   
-   import numpy as np
-   from typing import List, Union
-   
-   def mean(values: List[float]) -> float:
-       """
-       Calculate arithmetic mean.
-       
-       Parameters
-       ----------
-       values : List[float]
-           List of numbers
-       
-       Returns
-       -------
-       float
-           Mean value
-       
-       Examples
-       --------
-       >>> mean([1, 2, 3, 4, 5])
-       3.0
-       
-       >>> mean([10, 20, 30])
-       20.0
-       
-       Works with numpy arrays:
-       
-       >>> import numpy as np
-       >>> mean(np.array([1.5, 2.5, 3.5]))  # doctest: +FLOAT_CMP
-       2.5
-       """
-       return sum(values) / len(values)
-   
-   def std_dev(values: List[float]) -> float:
-       """
-       Calculate standard deviation.
-       
-       Parameters
-       ----------
-       values : List[float]
-           List of numbers
-       
-       Returns
-       -------
-       float
-           Standard deviation
-       
-       Examples
-       --------
-       >>> std_dev([2, 4, 4, 4, 5, 5, 7, 9])  # doctest: +FLOAT_CMP
-       2.0
-       
-       Handles edge cases:
-       
-       >>> std_dev([5, 5, 5, 5])  # doctest: +FLOAT_CMP
-       0.0
-       """
-       avg = mean(values)
-       variance = sum((x - avg) ** 2 for x in values) / len(values)
-       return variance ** 0.5
-   
-   def normalize(values: List[float]) -> List[float]:
-       """
-       Normalize values to 0-1 range.
-       
-       Parameters
-       ----------
-       values : List[float]
-           Input values
-       
-       Returns
-       -------
-       List[float]
-           Normalized values
-       
-       Examples
-       --------
-       >>> normalize([0, 5, 10])  # doctest: +ELLIPSIS
-       [0.0, 0.5, 1.0...]
-       
-       >>> normalize([100, 200, 300])  # doctest: +ELLIPSIS
-       [0.0, 0.5, 1.0...]
-       
-       Single value:
-       
-       >>> normalize([42])
-       [0.0]
-       """
-       min_val = min(values)
-       max_val = max(values)
-       if min_val == max_val:
-           return [0.0] * len(values)
-       return [(x - min_val) / (max_val - min_val) for x in values]
-
-Run tests:
-
-.. code-block:: bash
-
-   pytest --doctest-plus mylib/math_utils.py -v
-
-Example 2: Testing Class Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``mylib/data.py``:
-
-.. code-block:: python
-
-   """Data structures."""
-   
-   from typing import Any, Dict, List, Optional
-   
-   class DataContainer:
-       """
-       Container for data with metadata.
-       
-       Parameters
-       ----------
-       data : Any
-           The data to store
-       metadata : Dict, optional
-           Metadata dictionary
-       
-       Examples
-       --------
-       Create a container:
-       
-       >>> container = DataContainer([1, 2, 3], {'source': 'test'})
-       >>> container.data
-       [1, 2, 3]
-       >>> container.metadata['source']
-       'test'
-       
-       Add metadata:
-       
-       >>> container.add_metadata('author', 'John Doe')
-       >>> container.metadata['author']
-       'John Doe'
-       
-       Get data with metadata:
-       
-       >>> info = container.get_info()
-       >>> info['has_metadata']
-       True
-       """
-       
-       def __init__(self, data: Any, metadata: Optional[Dict] = None):
-           self.data = data
-           self.metadata = metadata or {}
-       
-       def add_metadata(self, key: str, value: Any) -> None:
-           """
-           Add metadata entry.
-           
-           Examples
-           --------
-           >>> container = DataContainer([1, 2, 3])
-           >>> container.add_metadata('version', '1.0')
-           >>> container.metadata['version']
-           '1.0'
-           """
-           self.metadata[key] = value
-       
-       def get_info(self) -> Dict[str, Any]:
-           """
-           Get container information.
-           
-           Examples
-           --------
-           >>> container = DataContainer([1, 2, 3])
-           >>> info = container.get_info()
-           >>> info['data_type']
-           "<class 'list'>"
-           >>> info['has_metadata']
-           False
-           """
-           return {
-               'data_type': str(type(self.data)),
-               'has_metadata': bool(self.metadata),
-               'metadata_keys': list(self.metadata.keys()),
-           }
-
-Example 3: Testing RST Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/examples/tutorial.rst``:
-
-.. code-block:: rst
-
-   Tutorial
-   ========
-   
-   This tutorial demonstrates basic usage.
-   
-   Getting Started
-   ---------------
-   
-   Import the library:
-   
-   .. code-block:: python
-   
-      >>> from mylib import math_utils
-      >>> math_utils.mean([1, 2, 3, 4, 5])
-      3.0
-   
-   Calculate Statistics
-   --------------------
-   
-   Calculate mean and standard deviation:
-   
-   .. code-block:: python
-   
-      >>> data = [2, 4, 4, 4, 5, 5, 7, 9]
-      >>> math_utils.mean(data)
-      5.0
-      >>> math_utils.std_dev(data)  # doctest: +FLOAT_CMP
-      2.0
-   
-   Normalize Data
-   --------------
-   
-   Normalize values to 0-1 range:
-   
-   .. code-block:: python
-   
-      >>> values = [0, 5, 10]
-      >>> normalized = math_utils.normalize(values)
-      >>> normalized  # doctest: +ELLIPSIS
-      [0.0, 0.5, 1.0...]
-   
-   Using Data Containers
-   ---------------------
-   
-   Create and use a data container:
-   
-   .. code-block:: python
-   
-      >>> from mylib.data import DataContainer
-      >>> container = DataContainer([1, 2, 3], {'source': 'example'})
-      >>> container.data
-      [1, 2, 3]
-      >>> container.metadata
-      {'source': 'example'}
-
-Test the RST file:
-
-.. code-block:: bash
-
-   pytest --doctest-rst docs/examples/tutorial.rst -v
-
 Advanced Features
 -----------------
 
@@ -387,66 +165,6 @@ Float Comparison
        """
        Calculate pi approximation.
        
-       Examples
-       --------
-       >>> calculate_pi()  # doctest: +FLOAT_CMP
-       3.14159265
-       """
-       return 3.14159265358979
-
-Ellipsis for Long Output
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: python
-
-   def get_config():
-       """
-       Get configuration.
-       
-       Examples
-       --------
-       >>> config = get_config()  # doctest: +ELLIPSIS
-       {'database': ..., 'cache': ..., 'logging': ...}
-       """
-       return {
-           'database': {'host': 'localhost', 'port': 5432},
-           'cache': {'backend': 'redis', 'timeout': 300},
-           'logging': {'level': 'INFO', 'file': 'app.log'},
-       }
-
-Skip Tests
-~~~~~~~~~~
-
-.. code-block:: python
-
-   def requires_network():
-       """
-       Function requiring network.
-       
-       Examples
-       --------
-       >>> requires_network()  # doctest: +SKIP
-       'Success'
-       """
-       pass
-
-Remote Data
-~~~~~~~~~~~
-
-.. code-block:: python
-
-   def fetch_data():
-       """
-       Fetch remote data.
-       
-       Examples
-       --------
-       >>> data = fetch_data()  # doctest: +REMOTE_DATA
-       >>> len(data) > 0
-       True
-       """
-       pass
-
 Docker Integration
 ------------------
 

@@ -6,8 +6,14 @@ Sphinxnotes-FastHTML Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinxnotes-fasthtml/>`_
-   - :doc:`See Working Example <../../examples/sphinxnotes-fasthtml-example>`
+   - `API Documentation <../../pdoc/sphinxnotes_fasthtml/index.html>`_
+   - `Manual <https://github.com/sphinx-notes/fasthtml>`_
+   - :doc:`Working Example <../../examples/sphinxnotes-fasthtml-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinxnotes-fasthtml to generate fast, lightweight HTML output with minimal JavaScript and optimized performance.
 
@@ -28,6 +34,9 @@ sphinxnotes-fasthtml is a Sphinx extension that provides optimized HTML output:
 - SEO-friendly markup
 
 This is ideal for documentation that prioritizes speed, accessibility, and works well on low-bandwidth connections.
+
+
+The sphinxnotes-fasthtml extension provides a streamlined approach to HTML generation with sensible defaults and rapid build times.
 
 Installation
 ------------
@@ -95,6 +104,37 @@ Advanced Configuration
    fasthtml_structured_data = True
    fasthtml_meta_tags = True
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinxnotes.fasthtml',
+   ]
+   
+   # FastHTML settings
+   fasthtml_theme = 'clean'
+   fasthtml_minify = True
+
+Custom Themes
+~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   fasthtml_custom_css = '''
+   body {
+       font-family: Arial, sans-serif;
+       line-height: 1.6;
+   }
+   '''
+
 Basic Usage
 -----------
 
@@ -129,52 +169,6 @@ Lazy Load Images
 
    fasthtml_lazy_loading = True
    fasthtml_optimize_images = True
-
-Practical Examples
-------------------
-
-Example 1: High-Performance Documentation Site
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``conf.py``:
-
-.. code-block:: python
-
-   # Minimal configuration for maximum speed
-   project = 'FastDoc'
-   extensions = [
-       'sphinxnotes.fasthtml',
-       'sphinx.ext.autodoc',
-       'sphinx.ext.viewcode',
-   ]
-   
-   html_theme = 'fasthtml'
-   
-   # Performance optimizations
-   fasthtml_minify = True
-   fasthtml_inline_css = True
-   fasthtml_defer_scripts = True
-   fasthtml_lazy_loading = True
-   fasthtml_no_jquery = True
-   
-   # Reduce JavaScript
-   fasthtml_minimal_js = True
-   
-   # CSS optimization
-   fasthtml_purge_css = True
-   fasthtml_critical_css = True
-   
-   # SEO and accessibility
-   fasthtml_semantic_html = True
-   fasthtml_skip_links = True
-   fasthtml_meta_tags = True
-   
-   html_static_path = ['_static']
-   templates_path = ['_templates']
-
-``docs/index.rst``:
-
-.. code-block:: rst
 
    Welcome to FastDoc
    ==================

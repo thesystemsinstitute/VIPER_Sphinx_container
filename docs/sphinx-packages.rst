@@ -1,5 +1,5 @@
-Installed Sphinx Packages
-=========================
+Installed Sphinx Themes and Extensions
+=======================================
 
 This page lists all Sphinx-related Python packages installed in this container.
 
@@ -270,6 +270,255 @@ Charts, Diagrams & UML
      - :doc:`link <tutorials/packages/sphinxcontrib-cadquery>`
      - :doc:`link <examples/sphinxcontrib-cadquery-example>`
      - CAD model documentation
+
+Graphviz and Diagram Tools
+--------------------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 8 5 5 6 8 8 40
+
+   * - Name
+     - Version
+     - PyPI
+     - API
+     - Manual
+     - Tutorial
+     - Example
+     - Description
+   * - pyan3
+     - Latest
+     - `link <https://pypi.org/project/pyan3/>`_
+     - `link <pdoc/pyan3/index.html>`_
+     - `link <https://github.com/Technologicat/pyan>`_
+     - :doc:`link <tutorials/packages/pyan3>`
+     - :doc:`link <examples/pyan3-example>`
+     - Python call graph analyzer
+   * - graphviz
+     - Latest
+     - `link <https://pypi.org/project/graphviz/>`_
+     - `link <pdoc/graphviz/index.html>`_
+     - `link <https://graphviz.readthedocs.io/>`_
+     - :doc:`link <tutorials/packages/graphviz>`
+     - :doc:`link <examples/graphviz-example>`
+     - Graphviz Python interface
+   * - pydot
+     - Latest
+     - `link <https://pypi.org/project/pydot/>`_
+     - `link <pdoc/pydot/index.html>`_
+     - `link <https://github.com/pydot/pydot>`_
+     - :doc:`link <tutorials/packages/pydot>`
+     - :doc:`link <examples/pydot-example>`
+     - Python interface to Graphviz
+   * - gprof2dot
+     - Latest
+     - `link <https://pypi.org/project/gprof2dot/>`_
+     - 
+     - `link <https://github.com/jrfonseca/gprof2dot>`_
+     - :doc:`link <tutorials/packages/gprof2dot>`
+     - :doc:`link <examples/gprof2dot-example>`
+     - Profile data to dot graphs
+   * - graphviz2drawio
+     - Latest
+     - `link <https://pypi.org/project/graphviz2drawio/>`_
+     - `link <pdoc/graphviz2drawio/index.html>`_
+     - `link <https://github.com/hbmartin/graphviz2drawio>`_
+     - :doc:`link <tutorials/packages/graphviz2drawio>`
+     - :doc:`link <examples/graphviz2drawio-example>`
+     - Convert Graphviz to Draw.io
+   * - python-markdown-graphviz
+     - Latest
+     - `link <https://pypi.org/project/python-markdown-graphviz/>`_
+     - `link <pdoc/python_markdown_graphviz/index.html>`_
+     - 
+     - :doc:`link <tutorials/packages/python-markdown-graphviz>`
+     - :doc:`link <examples/python-markdown-graphviz-example>`
+     - Graphviz in Markdown
+   * - fsmdot
+     - Latest
+     - `link <https://pypi.org/project/fsmdot/>`_
+     - `link <pdoc/fsmdot/index.html>`_
+     - `link <https://github.com/Quentin18/fsmdot>`_
+     - :doc:`link <tutorials/packages/fsmdot>`
+     - :doc:`link <examples/fsmdot-example>`
+     - Finite state machine diagrams
+   * - quickdiagrams
+     - Latest
+     - `link <https://pypi.org/project/quickdiagrams/>`_
+     - `link <pdoc/quickdiagrams/index.html>`_
+     - 
+     - :doc:`link <tutorials/packages/quickdiagrams>`
+     - :doc:`link <examples/quickdiagrams-example>`
+     - Quick diagram generation
+   * - dtreeplt
+     - Latest
+     - `link <https://pypi.org/project/dtreeplt/>`_
+     - `link <pdoc/dtreeplt/index.html>`_
+     - `link <https://github.com/nekoumei/dtreeplt>`_
+     - :doc:`link <tutorials/packages/dtreeplt>`
+     - :doc:`link <examples/dtreeplt-example>`
+     - Decision tree plotting
+   * - pyprojectviz
+     - Latest
+     - `link <https://pypi.org/project/pyprojectviz/>`_
+     - `link <pdoc/pyprojectviz/index.html>`_
+     - 
+     - :doc:`link <tutorials/packages/pyprojectviz>`
+     - :doc:`link <examples/pyprojectviz-example>`
+     - Project visualization
+
+Diagram and Visualization Tools
+-------------------------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 8 5 5 6 8 8 40
+
+   * - Name
+     - Version
+     - PyPI
+     - API
+     - Manual
+     - Tutorial
+     - Example
+     - Description
+   * - pylint
+     - Latest
+     - `link <https://pypi.org/project/pylint/>`_
+     - `link <pdoc/pylint/index.html>`_
+     - `link <https://pylint.readthedocs.io/>`_
+     - :doc:`link <tutorials/packages/pylint>`
+     - :doc:`link <examples/pylint-example>`
+     - Python code analyzer
+   * - code2flow
+     - Latest
+     - `link <https://pypi.org/project/code2flow/>`_
+     - `link <pdoc/code2flow/index.html>`_
+     - `link <https://github.com/scottrogowski/code2flow>`_
+     - :doc:`link <tutorials/packages/code2flow>`
+     - :doc:`link <examples/code2flow-example>`
+     - Call graph generation
+   * - snakeviz
+     - Latest
+     - `link <https://pypi.org/project/snakeviz/>`_
+     - `link <pdoc/snakeviz/index.html>`_
+     - `link <https://jiffyclub.github.io/snakeviz/>`_
+     - :doc:`link <tutorials/packages/snakeviz>`
+     - :doc:`link <examples/snakeviz-example>`
+     - Profile visualization
+   * - diagrams
+     - Latest
+     - `link <https://pypi.org/project/diagrams/>`_
+     - `link <pdoc/diagrams/index.html>`_
+     - `link <https://diagrams.mingrammer.com/>`_
+     - :doc:`link <tutorials/packages/diagrams>`
+     - :doc:`link <examples/diagrams-example>`
+     - Architecture diagrams
+   * - railroad-diagrams
+     - Latest
+     - `link <https://pypi.org/project/railroad-diagrams/>`_
+     - `link <pdoc/railroad_diagrams/index.html>`_
+     - `link <https://github.com/tabatkins/railroad-diagrams>`_
+     - :doc:`link <tutorials/packages/railroad-diagrams>`
+     - :doc:`link <examples/railroad-diagrams-example>`
+     - Railroad syntax diagrams
+   * - blockdiag
+     - Latest
+     - `link <https://pypi.org/project/blockdiag/>`_
+     - `link <pdoc/blockdiag/index.html>`_
+     - `link <http://blockdiag.com/>`_
+     - :doc:`link <tutorials/packages/blockdiag>`
+     - :doc:`link <examples/blockdiag-example>`
+     - Block diagram generator
+   * - nwdiag
+     - Latest
+     - `link <https://pypi.org/project/nwdiag/>`_
+     - `link <pdoc/nwdiag/index.html>`_
+     - `link <http://blockdiag.com/en/nwdiag/>`_
+     - :doc:`link <tutorials/packages/nwdiag>`
+     - :doc:`link <examples/nwdiag-example>`
+     - Network diagrams
+   * - N2G
+     - Latest
+     - `link <https://pypi.org/project/N2G/>`_
+     - `link <pdoc/N2G/index.html>`_
+     - `link <https://n2g.readthedocs.io/>`_
+     - :doc:`link <tutorials/packages/N2G>`
+     - :doc:`link <examples/N2G-example>`
+     - Network to Graph
+   * - rptree
+     - Latest
+     - `link <https://pypi.org/project/rptree/>`_
+     - `link <pdoc/rptree/index.html>`_
+     - `link <https://github.com/realpython/rptree>`_
+     - :doc:`link <tutorials/packages/rptree>`
+     - :doc:`link <examples/rptree-example>`
+     - Directory tree generator
+   * - pinout
+     - Latest
+     - `link <https://pypi.org/project/pinout/>`_
+     - `link <pdoc/pinout/index.html>`_
+     - `link <https://pinout.readthedocs.io/>`_
+     - :doc:`link <tutorials/packages/pinout>`
+     - :doc:`link <examples/pinout-example>`
+     - Hardware pinout diagrams
+   * - sphinxcontrib-mermaid
+     - Latest
+     - `link <https://pypi.org/project/sphinxcontrib-mermaid/>`_
+     - `link <pdoc/sphinxcontrib_mermaid/index.html>`_
+     - `link <https://sphinxcontrib-mermaid-demo.readthedocs.io/>`_
+     - :doc:`link <tutorials/packages/sphinxcontrib-mermaid>`
+     - :doc:`link <examples/sphinxcontrib-mermaid-example>`
+     - Mermaid diagram support
+   * - sphinxcontrib-plantuml
+     - Latest
+     - `link <https://pypi.org/project/sphinxcontrib-plantuml/>`_
+     - `link <pdoc/sphinxcontrib_plantuml/index.html>`_
+     - `link <https://github.com/sphinx-contrib/plantuml>`_
+     - :doc:`link <tutorials/packages/sphinxcontrib-plantuml>`
+     - :doc:`link <examples/sphinxcontrib-plantuml-example>`
+     - PlantUML diagram support
+   * - sphinxcontrib-blockdiag
+     - Latest
+     - `link <https://pypi.org/project/sphinxcontrib-blockdiag/>`_
+     - `link <pdoc/sphinxcontrib_blockdiag/index.html>`_
+     - `link <https://github.com/blockdiag/sphinxcontrib-blockdiag>`_
+     - :doc:`link <tutorials/packages/sphinxcontrib-blockdiag>`
+     - :doc:`link <examples/sphinxcontrib-blockdiag-example>`
+     - Blockdiag integration
+   * - sphinxcontrib-seqdiag
+     - Latest
+     - `link <https://pypi.org/project/sphinxcontrib-seqdiag/>`_
+     - `link <pdoc/sphinxcontrib_seqdiag/index.html>`_
+     - `link <https://github.com/blockdiag/sphinxcontrib-seqdiag>`_
+     - :doc:`link <tutorials/packages/sphinxcontrib-seqdiag>`
+     - :doc:`link <examples/sphinxcontrib-seqdiag-example>`
+     - Sequence diagrams
+   * - sphinxcontrib-nwdiag
+     - Latest
+     - `link <https://pypi.org/project/sphinxcontrib-nwdiag/>`_
+     - `link <pdoc/sphinxcontrib_nwdiag/index.html>`_
+     - `link <https://github.com/blockdiag/sphinxcontrib-nwdiag>`_
+     - :doc:`link <tutorials/packages/sphinxcontrib-nwdiag>`
+     - :doc:`link <examples/sphinxcontrib-nwdiag-example>`
+     - Network diagrams
+   * - sphinxcontrib-actdiag
+     - Latest
+     - `link <https://pypi.org/project/sphinxcontrib-actdiag/>`_
+     - `link <pdoc/sphinxcontrib_actdiag/index.html>`_
+     - `link <https://github.com/blockdiag/sphinxcontrib-actdiag>`_
+     - :doc:`link <tutorials/packages/sphinxcontrib-actdiag>`
+     - :doc:`link <examples/sphinxcontrib-actdiag-example>`
+     - Activity diagrams
+   * - sphinxcontrib-tikz
+     - Latest
+     - `link <https://pypi.org/project/sphinxcontrib-tikz/>`_
+     - `link <pdoc/sphinxcontrib_tikz/index.html>`_
+     - `link <https://sphinxcontrib-tikz.readthedocs.io/>`_
+     - :doc:`link <tutorials/packages/sphinxcontrib-tikz>`
+     - :doc:`link <examples/sphinxcontrib-tikz-example>`
+     - TikZ diagram support
+
 
 Jupyter Notebook Integration
 ----------------------------
@@ -1342,254 +1591,6 @@ Markdown Support
      - :doc:`link <tutorials/packages/sphinx-inline-tabs>`
      - :doc:`link <examples/sphinx-inline-tabs-example>`
      - Inline tabs
-
-Graphviz and Diagram Tools
---------------------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
-
-   * - Name
-     - Version
-     - PyPI
-     - API
-     - Manual
-     - Tutorial
-     - Example
-     - Description
-   * - pyan3
-     - Latest
-     - `link <https://pypi.org/project/pyan3/>`_
-     - `link <pdoc/pyan3/index.html>`_
-     - `link <https://github.com/Technologicat/pyan>`_
-     - :doc:`link <tutorials/packages/pyan3>`
-     - :doc:`link <examples/pyan3-example>`
-     - Python call graph analyzer
-   * - graphviz
-     - Latest
-     - `link <https://pypi.org/project/graphviz/>`_
-     - `link <pdoc/graphviz/index.html>`_
-     - `link <https://graphviz.readthedocs.io/>`_
-     - :doc:`link <tutorials/packages/graphviz>`
-     - :doc:`link <examples/graphviz-example>`
-     - Graphviz Python interface
-   * - pydot
-     - Latest
-     - `link <https://pypi.org/project/pydot/>`_
-     - `link <pdoc/pydot/index.html>`_
-     - `link <https://github.com/pydot/pydot>`_
-     - :doc:`link <tutorials/packages/pydot>`
-     - :doc:`link <examples/pydot-example>`
-     - Python interface to Graphviz
-   * - gprof2dot
-     - Latest
-     - `link <https://pypi.org/project/gprof2dot/>`_
-     - 
-     - `link <https://github.com/jrfonseca/gprof2dot>`_
-     - :doc:`link <tutorials/packages/gprof2dot>`
-     - :doc:`link <examples/gprof2dot-example>`
-     - Profile data to dot graphs
-   * - graphviz2drawio
-     - Latest
-     - `link <https://pypi.org/project/graphviz2drawio/>`_
-     - `link <pdoc/graphviz2drawio/index.html>`_
-     - `link <https://github.com/hbmartin/graphviz2drawio>`_
-     - :doc:`link <tutorials/packages/graphviz2drawio>`
-     - :doc:`link <examples/graphviz2drawio-example>`
-     - Convert Graphviz to Draw.io
-   * - python-markdown-graphviz
-     - Latest
-     - `link <https://pypi.org/project/python-markdown-graphviz/>`_
-     - `link <pdoc/python_markdown_graphviz/index.html>`_
-     - 
-     - :doc:`link <tutorials/packages/python-markdown-graphviz>`
-     - :doc:`link <examples/python-markdown-graphviz-example>`
-     - Graphviz in Markdown
-   * - fsmdot
-     - Latest
-     - `link <https://pypi.org/project/fsmdot/>`_
-     - `link <pdoc/fsmdot/index.html>`_
-     - `link <https://github.com/Quentin18/fsmdot>`_
-     - :doc:`link <tutorials/packages/fsmdot>`
-     - :doc:`link <examples/fsmdot-example>`
-     - Finite state machine diagrams
-   * - quickdiagrams
-     - Latest
-     - `link <https://pypi.org/project/quickdiagrams/>`_
-     - `link <pdoc/quickdiagrams/index.html>`_
-     - 
-     - :doc:`link <tutorials/packages/quickdiagrams>`
-     - :doc:`link <examples/quickdiagrams-example>`
-     - Quick diagram generation
-   * - dtreeplt
-     - Latest
-     - `link <https://pypi.org/project/dtreeplt/>`_
-     - `link <pdoc/dtreeplt/index.html>`_
-     - `link <https://github.com/nekoumei/dtreeplt>`_
-     - :doc:`link <tutorials/packages/dtreeplt>`
-     - :doc:`link <examples/dtreeplt-example>`
-     - Decision tree plotting
-   * - pyprojectviz
-     - Latest
-     - `link <https://pypi.org/project/pyprojectviz/>`_
-     - `link <pdoc/pyprojectviz/index.html>`_
-     - 
-     - :doc:`link <tutorials/packages/pyprojectviz>`
-     - :doc:`link <examples/pyprojectviz-example>`
-     - Project visualization
-
-Diagram and Visualization Tools
--------------------------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
-
-   * - Name
-     - Version
-     - PyPI
-     - API
-     - Manual
-     - Tutorial
-     - Example
-     - Description
-   * - pylint
-     - Latest
-     - `link <https://pypi.org/project/pylint/>`_
-     - `link <pdoc/pylint/index.html>`_
-     - `link <https://pylint.readthedocs.io/>`_
-     - :doc:`link <tutorials/packages/pylint>`
-     - :doc:`link <examples/pylint-example>`
-     - Python code analyzer
-   * - code2flow
-     - Latest
-     - `link <https://pypi.org/project/code2flow/>`_
-     - `link <pdoc/code2flow/index.html>`_
-     - `link <https://github.com/scottrogowski/code2flow>`_
-     - :doc:`link <tutorials/packages/code2flow>`
-     - :doc:`link <examples/code2flow-example>`
-     - Call graph generation
-   * - snakeviz
-     - Latest
-     - `link <https://pypi.org/project/snakeviz/>`_
-     - `link <pdoc/snakeviz/index.html>`_
-     - `link <https://jiffyclub.github.io/snakeviz/>`_
-     - :doc:`link <tutorials/packages/snakeviz>`
-     - :doc:`link <examples/snakeviz-example>`
-     - Profile visualization
-   * - diagrams
-     - Latest
-     - `link <https://pypi.org/project/diagrams/>`_
-     - `link <pdoc/diagrams/index.html>`_
-     - `link <https://diagrams.mingrammer.com/>`_
-     - :doc:`link <tutorials/packages/diagrams>`
-     - :doc:`link <examples/diagrams-example>`
-     - Architecture diagrams
-   * - railroad-diagrams
-     - Latest
-     - `link <https://pypi.org/project/railroad-diagrams/>`_
-     - `link <pdoc/railroad_diagrams/index.html>`_
-     - `link <https://github.com/tabatkins/railroad-diagrams>`_
-     - :doc:`link <tutorials/packages/railroad-diagrams>`
-     - :doc:`link <examples/railroad-diagrams-example>`
-     - Railroad syntax diagrams
-   * - blockdiag
-     - Latest
-     - `link <https://pypi.org/project/blockdiag/>`_
-     - `link <pdoc/blockdiag/index.html>`_
-     - `link <http://blockdiag.com/>`_
-     - :doc:`link <tutorials/packages/blockdiag>`
-     - :doc:`link <examples/blockdiag-example>`
-     - Block diagram generator
-   * - nwdiag
-     - Latest
-     - `link <https://pypi.org/project/nwdiag/>`_
-     - `link <pdoc/nwdiag/index.html>`_
-     - `link <http://blockdiag.com/en/nwdiag/>`_
-     - :doc:`link <tutorials/packages/nwdiag>`
-     - :doc:`link <examples/nwdiag-example>`
-     - Network diagrams
-   * - N2G
-     - Latest
-     - `link <https://pypi.org/project/N2G/>`_
-     - `link <pdoc/N2G/index.html>`_
-     - `link <https://n2g.readthedocs.io/>`_
-     - :doc:`link <tutorials/packages/N2G>`
-     - :doc:`link <examples/N2G-example>`
-     - Network to Graph
-   * - rptree
-     - Latest
-     - `link <https://pypi.org/project/rptree/>`_
-     - `link <pdoc/rptree/index.html>`_
-     - `link <https://github.com/realpython/rptree>`_
-     - :doc:`link <tutorials/packages/rptree>`
-     - :doc:`link <examples/rptree-example>`
-     - Directory tree generator
-   * - pinout
-     - Latest
-     - `link <https://pypi.org/project/pinout/>`_
-     - `link <pdoc/pinout/index.html>`_
-     - `link <https://pinout.readthedocs.io/>`_
-     - :doc:`link <tutorials/packages/pinout>`
-     - :doc:`link <examples/pinout-example>`
-     - Hardware pinout diagrams
-   * - sphinxcontrib-mermaid
-     - Latest
-     - `link <https://pypi.org/project/sphinxcontrib-mermaid/>`_
-     - `link <pdoc/sphinxcontrib_mermaid/index.html>`_
-     - `link <https://sphinxcontrib-mermaid-demo.readthedocs.io/>`_
-     - :doc:`link <tutorials/packages/sphinxcontrib-mermaid>`
-     - :doc:`link <examples/sphinxcontrib-mermaid-example>`
-     - Mermaid diagram support
-   * - sphinxcontrib-plantuml
-     - Latest
-     - `link <https://pypi.org/project/sphinxcontrib-plantuml/>`_
-     - `link <pdoc/sphinxcontrib_plantuml/index.html>`_
-     - `link <https://github.com/sphinx-contrib/plantuml>`_
-     - :doc:`link <tutorials/packages/sphinxcontrib-plantuml>`
-     - :doc:`link <examples/sphinxcontrib-plantuml-example>`
-     - PlantUML diagram support
-   * - sphinxcontrib-blockdiag
-     - Latest
-     - `link <https://pypi.org/project/sphinxcontrib-blockdiag/>`_
-     - `link <pdoc/sphinxcontrib_blockdiag/index.html>`_
-     - `link <https://github.com/blockdiag/sphinxcontrib-blockdiag>`_
-     - :doc:`link <tutorials/packages/sphinxcontrib-blockdiag>`
-     - :doc:`link <examples/sphinxcontrib-blockdiag-example>`
-     - Blockdiag integration
-   * - sphinxcontrib-seqdiag
-     - Latest
-     - `link <https://pypi.org/project/sphinxcontrib-seqdiag/>`_
-     - `link <pdoc/sphinxcontrib_seqdiag/index.html>`_
-     - `link <https://github.com/blockdiag/sphinxcontrib-seqdiag>`_
-     - :doc:`link <tutorials/packages/sphinxcontrib-seqdiag>`
-     - :doc:`link <examples/sphinxcontrib-seqdiag-example>`
-     - Sequence diagrams
-   * - sphinxcontrib-nwdiag
-     - Latest
-     - `link <https://pypi.org/project/sphinxcontrib-nwdiag/>`_
-     - `link <pdoc/sphinxcontrib_nwdiag/index.html>`_
-     - `link <https://github.com/blockdiag/sphinxcontrib-nwdiag>`_
-     - :doc:`link <tutorials/packages/sphinxcontrib-nwdiag>`
-     - :doc:`link <examples/sphinxcontrib-nwdiag-example>`
-     - Network diagrams
-   * - sphinxcontrib-actdiag
-     - Latest
-     - `link <https://pypi.org/project/sphinxcontrib-actdiag/>`_
-     - `link <pdoc/sphinxcontrib_actdiag/index.html>`_
-     - `link <https://github.com/blockdiag/sphinxcontrib-actdiag>`_
-     - :doc:`link <tutorials/packages/sphinxcontrib-actdiag>`
-     - :doc:`link <examples/sphinxcontrib-actdiag-example>`
-     - Activity diagrams
-   * - sphinxcontrib-tikz
-     - Latest
-     - `link <https://pypi.org/project/sphinxcontrib-tikz/>`_
-     - `link <pdoc/sphinxcontrib_tikz/index.html>`_
-     - `link <https://sphinxcontrib-tikz.readthedocs.io/>`_
-     - :doc:`link <tutorials/packages/sphinxcontrib-tikz>`
-     - :doc:`link <examples/sphinxcontrib-tikz-example>`
-     - TikZ diagram support
 
 SVG and Vector Graphics Tools
 -----------------------------

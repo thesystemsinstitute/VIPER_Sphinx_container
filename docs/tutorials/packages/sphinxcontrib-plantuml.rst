@@ -6,8 +6,14 @@ Sphinxcontrib-PlantUML Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinxcontrib-plantuml/>`_
-   - :doc:`See Working Example <../../examples/sphinxcontrib-plantuml-example>`
+   - `API Documentation <../../pdoc/sphinxcontrib_plantuml/index.html>`_
+   - `Manual <https://github.com/sphinx-contrib/plantuml>`_
+   - :doc:`Working Example <../../examples/sphinxcontrib-plantuml-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinxcontrib-plantuml, a PlantUML diagram support.
 
@@ -21,6 +27,9 @@ Sphinxcontrib-PlantUML provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The sphinxcontrib-plantuml package provides functionality for working with PlantUML diagram support.
 
 Installation
 ------------

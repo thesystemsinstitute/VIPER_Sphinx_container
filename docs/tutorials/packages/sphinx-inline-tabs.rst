@@ -6,8 +6,14 @@ Sphinx Inline Tabs Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-inline-tabs/>`_
-   - :doc:`See Working Example <../../examples/sphinx-inline-tabs-example>`
+   - `API Documentation <../../pdoc/sphinx_inline_tabs/index.html>`_
+   - `Manual <https://sphinx-inline-tabs.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinx-inline-tabs-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-inline-tabs, a inline tabs directive.
 
@@ -21,6 +27,9 @@ Sphinx Inline Tabs provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The sphinx-inline-tabs package provides functionality for working with inline tabs directive.
 
 Installation
 ------------

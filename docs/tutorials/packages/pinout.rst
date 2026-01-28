@@ -6,8 +6,14 @@ Pinout Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/pinout/>`_
-   - :doc:`See Working Example <../../examples/pinout-example>`
+   - `API Documentation <../../pdoc/pinout/index.html>`_
+   - `Manual <https://pinout.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/pinout-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use pinout, a hardware pinout diagram generator.
 
@@ -21,6 +27,9 @@ Pinout provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The pinout package provides functionality for working with hardware pinout diagram generator.
 
 Installation
 ------------

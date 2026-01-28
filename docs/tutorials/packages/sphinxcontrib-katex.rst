@@ -6,8 +6,14 @@ Sphinxcontrib Katex Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinxcontrib-katex/>`_
-   - :doc:`See Working Example <../../examples/sphinxcontrib-katex-example>`
-   - `Official Documentation <https://sphinxcontrib-katex.readthedocs.io/>`_
+   - `API Documentation <../../pdoc/sphinxcontrib_katex/index.html>`_
+   - `Manual <https://sphinxcontrib-katex.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinxcontrib-katex-example>`
+
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinxcontrib-katex in your Sphinx documentation.
 
@@ -21,6 +27,20 @@ sphinxcontrib-katex is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinxcontrib-katex provides:
+
+- KaTeX math rendering
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Fast Rendering**: Client-side math rendering with KaTeX
+- **LaTeX Support**: Full LaTeX math syntax support
+- **Inline & Display**: Both inline and display math modes
+- **Customizable**: Configure delimiters and options
 Installation
 ------------
 
@@ -59,6 +79,53 @@ Advanced Configuration
    katex_inline = [r'\(', r'\)']
    katex_display = [r'\[', r'\]']
    katex_options = {'displayMode': True}
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinxcontrib.katex',
+       # ... other extensions
+   ]
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinxcontrib.katex']
+   
+   # Package-specific configuration
+   katex_css_path = 'https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css'
+   katex_js_path = 'https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js'
+   katex_autorender_path = 'https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js'
+   
+   # Delimiters
+   katex_inline = [r'\(', r'\)']
+   katex_display = [r'\[', r'\]']
+   
+   # KaTeX options
+   katex_options = {
+       'displayMode': True,
+       'throwOnError': False,
+       'errorColor': '#cc0000',
+       'fleqn': False,
+       'macros': {
+           r'\RR': r'\mathbb{R}',
+           r'\NN': r'\mathbb{N}',
+           r'\ZZ': r'\mathbb{Z}',
+       }
+   }
 
 Basic Usage
 -----------

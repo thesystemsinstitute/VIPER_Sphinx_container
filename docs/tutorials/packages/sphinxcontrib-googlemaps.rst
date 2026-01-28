@@ -6,8 +6,14 @@ Sphinxcontrib-Googlemaps Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinxcontrib-googlemaps/>`_
-   - :doc:`See Working Example <../../examples/sphinxcontrib-googlemaps-example>`
+   - `API Documentation <../../pdoc/sphinxcontrib_googlemaps/index.html>`_
+   - `Manual <https://github.com/sphinx-contrib/googlemaps>`_
+   - :doc:`Working Example <../../examples/sphinxcontrib-googlemaps-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinxcontrib-googlemaps to embed interactive Google Maps in your Sphinx documentation.
 
@@ -27,6 +33,9 @@ sphinxcontrib-googlemaps is a Sphinx extension that provides directives for embe
 - Responsive map sizing
 
 This is perfect for documentation that needs to show locations, facilities, offices, or geographic data.
+
+
+The sphinxcontrib-googlemaps extension allows embedding interactive Google Maps with markers, routes, and custom styling directly in documentation.
 
 Installation
 ------------
@@ -79,6 +88,21 @@ Advanced Configuration
    
    # Styling
    googlemaps_custom_styles = []  # Custom map styles
+
+
+.. code-block:: python
+
+   # Map defaults
+   googlemaps_defaults = {
+       'zoom': 13,
+       'maptype': 'roadmap',
+       'language': 'en',
+       'region': 'US',
+   }
+   
+   # API settings
+   googlemaps_version = '3.exp'
+   googlemaps_libraries = ['places', 'geometry']
 
 Getting API Key
 ~~~~~~~~~~~~~~~
@@ -134,16 +158,6 @@ Multiple Markers
          - lat: 34.0522, lng: -118.2437, title: Los Angeles Office
          - lat: 41.8781, lng: -87.6298, title: Chicago Office
       :zoom: 4
-
-Practical Examples
-------------------
-
-Example 1: Company Locations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/contact/offices.rst``:
-
-.. code-block:: rst
 
    Our Offices
    ===========

@@ -6,8 +6,14 @@ Sphinx Material Theme Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-material/>`_
-   - :doc:`See Working Example <../../examples/sphinx-material-example>`
+   - `API Documentation <../../pdoc/sphinx_material/index.html>`_
+   - `Manual <https://bashtage.github.io/sphinx-material/>`_
+   - :doc:`Working Example <../../examples/sphinx-material-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-material, a Material Design inspired theme.
 
@@ -21,6 +27,9 @@ Sphinx Material Theme provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The sphinx-material package provides functionality for working with Material Design inspired theme.
 
 Installation
 ------------

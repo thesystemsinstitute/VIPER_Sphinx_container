@@ -6,7 +6,14 @@ Sphinx Comments Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-comments/>`_
-   - :doc:`See Working Example <../../examples/sphinx-comments-example>`
+   - `API Documentation <../../pdoc/sphinx_comments/index.html>`_
+   - `Manual <https://github.com/sphinx-contrib/comments>`_
+   - :doc:`Working Example <../../examples/sphinx-comments-example>`
+
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-comments in your Sphinx documentation.
 
@@ -20,6 +27,20 @@ sphinx-comments is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinx-comments provides:
+
+- Comments in documentation
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Comment Integration**: Add comments to documentation pages
+- **Multiple Systems**: Support for various comment systems
+- **Easy Setup**: Simple configuration
+- **Moderation**: Comment moderation support
 Installation
 ------------
 
@@ -57,6 +78,45 @@ Advanced Configuration
            'repo': 'username/repo',
            'issue-term': 'pathname',
        }
+   }
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_comments',
+       # ... other extensions
+   ]
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinx_comments']
+   
+   # Package-specific configuration
+   comments_config = {
+       'utterances': {
+           'repo': 'username/repository',
+           'issue-term': 'pathname',
+           'label': 'documentation',
+           'theme': 'github-light',
+       },
+       'disqus': {
+           'shortname': 'your-disqus-shortname',
+       },
+       'hypothesis': True,
    }
 
 Basic Usage

@@ -6,8 +6,14 @@ Sphinxcontrib-TikZ Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinxcontrib-tikz/>`_
-   - :doc:`See Working Example <../../examples/sphinxcontrib-tikz-example>`
+   - `API Documentation <../../pdoc/sphinxcontrib_tikz/index.html>`_
+   - `Manual <https://sphinxcontrib-tikz.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinxcontrib-tikz-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinxcontrib-tikz, a TikZ diagram support for Sphinx.
 
@@ -21,6 +27,9 @@ Sphinxcontrib-TikZ provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The sphinxcontrib-tikz package provides functionality for working with TikZ diagram support for Sphinx.
 
 Installation
 ------------

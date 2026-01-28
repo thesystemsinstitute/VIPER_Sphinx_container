@@ -20,6 +20,20 @@ sphinx-search is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinx-search provides:
+
+- Enhanced search functionality
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Advanced Search**: Enhanced search capabilities
+- **Fuzzy Matching**: Find results even with typos
+- **Code Search**: Search within code blocks
+- **Search Analytics**: Track search queries
 Installation
 ------------
 
@@ -57,6 +71,33 @@ Advanced Configuration
        'types': ['text', 'code'],
        'min_length': 3,
    }
+
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinx_search']
+   
+   # Package-specific configuration
+   search_language = 'en'
+   search_stemming = True
+   search_stopwords = ['the', 'a', 'an']
+   
+   # Search options
+   search_options = {
+       'types': ['text', 'code', 'docstring'],
+       'min_length': 3,
+       'fuzzy_matching': True,
+       'boost_title': 2.0,
+       'boost_h1': 1.5,
+       'boost_code': 0.8,
+   }
+   
+   # Index configuration
+   search_index_format = 'json'
+   search_exclude = ['_build', '_templates', '_static']
+   search_include_patterns = ['*.rst', '*.md']
 
 Basic Usage
 -----------

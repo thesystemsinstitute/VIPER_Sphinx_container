@@ -6,8 +6,14 @@ Railroad Diagrams Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/railroad-diagrams/>`_
-   - :doc:`See Working Example <../../examples/railroad-diagrams-example>`
+   - `API Documentation <../../pdoc/railroad_diagrams/index.html>`_
+   - `Manual <https://github.com/tabatkins/railroad-diagrams>`_
+   - :doc:`Working Example <../../examples/railroad-diagrams-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use railroad-diagrams, a syntax diagram generator.
 
@@ -21,6 +27,9 @@ Railroad Diagrams provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The railroad-diagrams package provides functionality for working with syntax diagram generator.
 
 Installation
 ------------

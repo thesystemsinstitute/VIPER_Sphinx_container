@@ -20,6 +20,20 @@ sphinxcontrib-pandoc is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinxcontrib-pandoc provides:
+
+- Pandoc integration for Sphinx
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Format Conversion**: Convert to multiple formats
+- **Pandoc Power**: Leverage Pandoc's conversion capabilities
+- **Custom Templates**: Use custom Pandoc templates
+- **Flexible Options**: Configure Pandoc behavior
 Installation
 ------------
 
@@ -55,6 +69,28 @@ Advanced Configuration
    pandoc_builder_name = 'pandoc'
    pandoc_format = 'markdown'
    pandoc_options = ['--standalone', '--toc']
+
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinxcontrib.pandoc']
+   
+   # Package-specific configuration
+   pandoc_builder_name = 'pandoc'
+   pandoc_format = 'markdown'
+   
+   # Pandoc options
+   pandoc_options = [
+       '--standalone',
+       '--toc',
+       '--toc-depth=3',
+       '--markdown-headings=atx',
+   ]
+   
+   # Template
+   pandoc_template = None
 
 Basic Usage
 -----------

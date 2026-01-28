@@ -6,8 +6,14 @@ Sphinx-Collapsible-Autodoc Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-collapsible-autodoc/>`_
-   - :doc:`See Working Example <../../examples/sphinx-collapsible-autodoc-example>`
+   - `API Documentation <../../pdoc/sphinx_collapsible_autodoc/index.html>`_
+   - `Manual <https://github.com/tzing/sphinx-collapse>`_
+   - :doc:`Working Example <../../examples/sphinx-collapsible-autodoc-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-collapsible-autodoc to create collapsible sections in your API documentation for better readability.
 
@@ -28,6 +34,9 @@ sphinx-collapsible-autodoc is a Sphinx extension that provides:
 - Reduced page length
 
 This makes large API documentation more manageable by allowing users to expand only what they need.
+
+
+The sphinx-collapsible-autodoc extension adds collapsible sections to autodoc documentation, improving readability for large APIs.
 
 Installation
 ------------
@@ -84,6 +93,30 @@ Advanced Configuration
    collapsible_autodoc_expand_all_button = True
    collapsible_autodoc_collapse_all_button = True
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx.ext.autodoc',
+       'sphinx_collapsible_autodoc',
+   ]
+
+Options
+~~~~~~~
+
+.. code-block:: python
+
+   collapsible_autodoc_default = 'collapsed'  # or 'expanded'
+   collapsible_autodoc_sections = ['methods', 'attributes']
+
 Basic Usage
 -----------
 
@@ -117,174 +150,6 @@ Disable Collapsing
 
    .. autofunction:: mylib.important_function
       :no-collapse:
-
-Practical Examples
-------------------
-
-Example 1: Large API Class
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``mylib/api.py``:
-
-.. code-block:: python
-
-   """API client with many methods."""
-   
-   class APIClient:
-       """
-       Comprehensive API client.
-       
-       This class provides access to all API endpoints with
-       dozens of methods organized by category.
-       """
-       
-       def __init__(self, api_key: str, base_url: str = "https://api.example.com"):
-           """Initialize API client."""
-           self.api_key = api_key
-           self.base_url = base_url
-       
-       # User management methods (10+ methods)
-       def get_user(self, user_id: int):
-           """Get user by ID."""
-           pass
-       
-       def create_user(self, name: str, email: str):
-           """Create new user."""
-           pass
-       
-       def update_user(self, user_id: int, **kwargs):
-           """Update user fields."""
-           pass
-       
-       def delete_user(self, user_id: int):
-           """Delete user."""
-           pass
-       
-       def list_users(self, page: int = 1, per_page: int = 10):
-           """List users with pagination."""
-           pass
-       
-       # Post management methods (10+ methods)
-       def get_post(self, post_id: int):
-           """Get post by ID."""
-           pass
-       
-       def create_post(self, title: str, content: str):
-           """Create new post."""
-           pass
-       
-       def update_post(self, post_id: int, **kwargs):
-           """Update post."""
-           pass
-       
-       def delete_post(self, post_id: int):
-           """Delete post."""
-           pass
-       
-       def list_posts(self, user_id: int = None):
-           """List posts."""
-           pass
-       
-       # Comment management methods (10+ methods)
-       def get_comment(self, comment_id: int):
-           """Get comment by ID."""
-           pass
-       
-       def create_comment(self, post_id: int, text: str):
-           """Create new comment."""
-           pass
-       
-       def update_comment(self, comment_id: int, text: str):
-           """Update comment."""
-           pass
-       
-       def delete_comment(self, comment_id: int):
-           """Delete comment."""
-           pass
-       
-       def list_comments(self, post_id: int):
-           """List comments for post."""
-           pass
-
-``docs/api/client.rst``:
-
-.. code-block:: rst
-
-   API Client
-   ==========
-   
-   .. autoclass:: mylib.api.APIClient
-      :members:
-      :member-order: groupwise
-      :collapsible: methods
-      :default-state: collapsed
-   
-   The API client provides comprehensive access to all endpoints.
-   Click on method names to expand documentation.
-   
-   User Management
-   ---------------
-   
-   Methods for managing users:
-   
-   - :meth:`~mylib.api.APIClient.get_user`
-   - :meth:`~mylib.api.APIClient.create_user`
-   - :meth:`~mylib.api.APIClient.update_user`
-   - :meth:`~mylib.api.APIClient.delete_user`
-   - :meth:`~mylib.api.APIClient.list_users`
-
-Example 2: Module with Many Functions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``mylib/utils.py``:
-
-.. code-block:: python
-
-   """Utility functions."""
-   
-   def format_date(date, format='%Y-%m-%d'):
-       """Format date to string."""
-       pass
-   
-   def parse_date(date_string, format='%Y-%m-%d'):
-       """Parse date from string."""
-       pass
-   
-   def format_currency(amount, currency='USD'):
-       """Format amount as currency."""
-       pass
-   
-   def parse_currency(currency_string):
-       """Parse currency string to amount."""
-       pass
-   
-   def format_phone(phone, country='US'):
-       """Format phone number."""
-       pass
-   
-   def validate_email(email):
-       """Validate email address."""
-       pass
-   
-   def sanitize_html(html):
-       """Sanitize HTML content."""
-       pass
-   
-   def slugify(text):
-       """Convert text to URL slug."""
-       pass
-   
-   def truncate(text, max_length=100):
-       """Truncate text to max length."""
-       pass
-   
-   def highlight(text, query):
-       """Highlight search query in text."""
-       pass
-
-``docs/api/utils.rst``:
-
-.. code-block:: rst
 
    Utility Functions
    =================

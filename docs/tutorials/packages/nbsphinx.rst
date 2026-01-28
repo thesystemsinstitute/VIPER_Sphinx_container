@@ -6,9 +6,14 @@ nbsphinx Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/nbsphinx/>`_
-   - `Official Documentation <https://nbsphinx.readthedocs.io/>`_
-   - :doc:`See Working Example <../../examples/nbsphinx-example>`
+   - `API Documentation <../../pdoc/nbsphinx/index.html>`_
+   - `Manual <https://nbsphinx.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/nbsphinx-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use nbsphinx to include Jupyter Notebooks in your Sphinx documentation.
 
@@ -30,6 +35,9 @@ nbsphinx is a Sphinx extension that provides:
 - nbconvert integration
 
 This allows you to include executable code examples and tutorials directly from Jupyter Notebooks.
+
+
+The nbsphinx extension allows you to use Jupyter notebooks (``.ipynb`` files) as source files for Sphinx documentation, with automatic rendering of code cells, outputs, and markdown cells.
 
 Installation
 ------------
@@ -163,195 +171,6 @@ Create ``docs/tutorials/getting-started.ipynb``:
    plt.plot(x, y)
    plt.title('Sine Wave')
    plt.show()
-
-Practical Examples
-------------------
-
-Example 1: Data Science Tutorial
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/tutorials/data-analysis.ipynb``:
-
-.. code-block:: markdown
-
-   # Data Analysis Tutorial
-   
-   This notebook demonstrates data analysis with pandas.
-   
-   ## Load Data
-
-.. code-block:: python
-
-   import pandas as pd
-   import matplotlib.pyplot as plt
-   import seaborn as sns
-   
-   # Load dataset
-   df = pd.read_csv('data/sales.csv')
-   df.head()
-
-.. code-block:: markdown
-
-   ## Exploratory Data Analysis
-
-.. code-block:: python
-
-   # Summary statistics
-   df.describe()
-
-.. code-block:: python
-
-   # Correlation heatmap
-   plt.figure(figsize=(10, 8))
-   sns.heatmap(df.corr(), annot=True, cmap='coolwarm')
-   plt.title('Feature Correlations')
-   plt.show()
-
-.. code-block:: markdown
-
-   ## Data Visualization
-
-.. code-block:: python
-
-   # Sales over time
-   df.plot(x='date', y='sales', figsize=(12, 6))
-   plt.title('Sales Trend')
-   plt.ylabel('Sales ($)')
-   plt.show()
-
-.. code-block:: markdown
-
-   ## Conclusion
-   
-   The analysis shows:
-   
-   - Strong correlation between feature A and sales
-   - Seasonal patterns in the data
-   - Upward trend over time
-
-Example 2: API Usage Tutorial
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/tutorials/api-tutorial.ipynb``:
-
-.. code-block:: markdown
-
-   # API Client Tutorial
-   
-   Learn how to use the API client.
-   
-   ## Setup
-
-.. code-block:: python
-
-   from mylib import Client
-   import os
-   
-   # Initialize client
-   api_key = os.environ.get('API_KEY', 'demo-key')
-   client = Client(api_key=api_key)
-
-.. code-block:: markdown
-
-   ## Fetch Data
-
-.. code-block:: python
-
-   # Get users
-   users = client.get_users(limit=5)
-   
-   for user in users:
-       print(f"ID: {user['id']}, Name: {user['name']}")
-
-.. code-block:: markdown
-
-   ## Create Resource
-
-.. code-block:: python
-
-   # Create new user
-   new_user = client.create_user(
-       name="John Doe",
-       email="john@example.com"
-   )
-   
-   print(f"Created user with ID: {new_user['id']}")
-
-.. code-block:: markdown
-
-   ## Error Handling
-
-.. code-block:: python
-
-   from mylib import APIError
-   
-   try:
-       user = client.get_user(99999)
-   except APIError as e:
-       print(f"Error: {e}")
-
-Example 3: Machine Learning Workflow
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/examples/ml-workflow.ipynb``:
-
-.. code-block:: markdown
-
-   # Machine Learning Workflow
-   
-   Complete ML pipeline example.
-
-.. code-block:: python
-
-   import numpy as np
-   from sklearn.model_selection import train_test_split
-   from sklearn.ensemble import RandomForestClassifier
-   from sklearn.metrics import classification_report
-   
-   # Load data
-   from sklearn.datasets import load_iris
-   data = load_iris()
-   X, y = data.data, data.target
-
-.. code-block:: markdown
-
-   ### Train/Test Split
-
-.. code-block:: python
-
-   X_train, X_test, y_train, y_test = train_test_split(
-       X, y, test_size=0.3, random_state=42
-   )
-   
-   print(f"Training samples: {len(X_train)}")
-   print(f"Test samples: {len(X_test)}")
-
-.. code-block:: markdown
-
-   ### Model Training
-
-.. code-block:: python
-
-   # Train model
-   model = RandomForestClassifier(n_estimators=100, random_state=42)
-   model.fit(X_train, y_train)
-   
-   # Evaluate
-   score = model.score(X_test, y_test)
-   print(f"Accuracy: {score:.3f}")
-
-.. code-block:: markdown
-
-   ### Predictions
-
-.. code-block:: python
-
-   # Make predictions
-   y_pred = model.predict(X_test)
-   
-   # Classification report
-   print(classification_report(y_test, y_pred, 
-                                target_names=data.target_names))
 
 Advanced Features
 -----------------

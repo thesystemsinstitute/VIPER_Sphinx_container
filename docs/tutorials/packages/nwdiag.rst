@@ -6,8 +6,14 @@ NWDiag Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/nwdiag/>`_
-   - :doc:`See Working Example <../../examples/nwdiag-example>`
+   - `API Documentation <../../pdoc/nwdiag/index.html>`_
+   - `Manual <http://blockdiag.com/en/nwdiag/>`_
+   - :doc:`Working Example <../../examples/nwdiag-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use nwdiag, a network diagram generator.
 
@@ -21,6 +27,9 @@ NWDiag provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The nwdiag package provides functionality for working with network diagram generator.
 
 Installation
 ------------

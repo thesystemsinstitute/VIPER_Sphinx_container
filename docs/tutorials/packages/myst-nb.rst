@@ -6,8 +6,14 @@ MyST-NB Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/myst-nb/>`_
-   - :doc:`See Working Example <../../examples/myst-nb-example>`
+   - `API Documentation <../../pdoc/myst_nb/index.html>`_
+   - `Manual <https://myst-nb.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/myst-nb-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use myst-nb, a MyST Notebook parser for Jupyter notebooks.
 
@@ -21,6 +27,9 @@ MyST-NB provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The myst-nb package provides functionality for working with MyST Notebook parser for Jupyter notebooks.
 
 Installation
 ------------

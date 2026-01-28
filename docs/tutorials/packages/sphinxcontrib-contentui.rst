@@ -6,8 +6,14 @@ Sphinxcontrib Contentui Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinxcontrib-contentui/>`_
-   - :doc:`See Working Example <../../examples/sphinxcontrib-contentui-example>`
-   - `Official Documentation <https://sphinxcontrib-contentui.readthedocs.io/>`_
+   - `API Documentation <../../pdoc/sphinxcontrib_contentui/index.html>`_
+   - `Manual <https://sphinxcontrib-contentui.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinxcontrib-contentui-example>`
+
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinxcontrib-contentui in your Sphinx documentation.
 
@@ -21,6 +27,20 @@ sphinxcontrib-contentui is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinxcontrib-contentui provides:
+
+- UI components for content
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Tabs**: Create tabbed content
+- **Toggle**: Collapsible sections
+- **Panels**: Organized content panels
+- **Responsive**: Mobile-friendly components
 Installation
 ------------
 
@@ -54,6 +74,34 @@ Advanced Configuration
    
    # Configuration options
    # Add package-specific configuration here
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinxcontrib.contentui',
+       # ... other extensions
+   ]
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinxcontrib.contentui']
+   
+   # Package-specific configuration
+   # contentui options can be configured here
 
 Basic Usage
 -----------

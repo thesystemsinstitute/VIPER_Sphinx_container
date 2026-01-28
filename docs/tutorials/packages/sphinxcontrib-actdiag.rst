@@ -6,8 +6,14 @@ Sphinxcontrib-ActDiag Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinxcontrib-actdiag/>`_
-   - :doc:`See Working Example <../../examples/sphinxcontrib-actdiag-example>`
+   - `API Documentation <../../pdoc/sphinxcontrib_actdiag/index.html>`_
+   - `Manual <https://github.com/blockdiag/sphinxcontrib-actdiag>`_
+   - :doc:`Working Example <../../examples/sphinxcontrib-actdiag-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinxcontrib-actdiag, a activity diagram support.
 
@@ -21,6 +27,9 @@ Sphinxcontrib-ActDiag provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The sphinxcontrib-actdiag package provides functionality for working with activity diagram support.
 
 Installation
 ------------

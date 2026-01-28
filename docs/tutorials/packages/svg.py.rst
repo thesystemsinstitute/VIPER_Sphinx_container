@@ -6,8 +6,14 @@ SVG.py Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/svg.py/>`_
-   - :doc:`See Working Example <../../examples/svg.py-example>`
+   - `API Documentation <../../pdoc/svg_py/index.html>`_
+   - `Manual <https://svg-py.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/svg.py-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use svg.py, a SVG generation library for Python.
 
@@ -21,6 +27,9 @@ SVG.py provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The svg.py package provides functionality for working with SVG generation library for Python.
 
 Installation
 ------------

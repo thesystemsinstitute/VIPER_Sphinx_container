@@ -6,8 +6,14 @@ Furo Theme Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/furo/>`_
-   - :doc:`See Working Example <../../examples/furo-example>`
+   - `API Documentation <../../pdoc/furo/index.html>`_
+   - `Manual <https://pradyunsg.me/furo/>`_
+   - :doc:`Working Example <../../examples/furo-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use furo, a clean and customizable documentation theme.
 
@@ -21,6 +27,9 @@ Furo Theme provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The furo package provides functionality for working with clean and customizable documentation theme.
 
 Installation
 ------------

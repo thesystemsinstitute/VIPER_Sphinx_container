@@ -6,8 +6,14 @@ Sphinx-Git Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-git/>`_
-   - :doc:`See Working Example <../../examples/sphinx-git-example>`
+   - `API Documentation <../../pdoc/sphinx_git/index.html>`_
+   - `Manual <https://github.com/OddBloke/sphinx-git>`_
+   - :doc:`Working Example <../../examples/sphinx-git-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-git to integrate Git repository information into your Sphinx documentation.
 
@@ -28,6 +34,9 @@ sphinx-git is a Sphinx extension that provides:
 - Customizable formatting
 
 This allows automatic generation of changelogs and documentation of changes directly from Git history.
+
+
+The sphinx-git extension provides directives for displaying Git changelog, commit history, and repository information directly in your documentation.
 
 Installation
 ------------
@@ -106,21 +115,6 @@ Specific File History
 
 Show commits that modified a specific file.
 
-Practical Examples
-------------------
-
-Example 1: Project Changelog Page
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/changelog.rst``:
-
-.. code-block:: rst
-
-   Changelog
-   =========
-   
-   This page shows the recent development history of our project.
-   
    Recent Changes
    --------------
    

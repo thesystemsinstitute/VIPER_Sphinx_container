@@ -6,9 +6,14 @@ Exhale Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/exhale/>`_
-   - `Official Documentation <https://exhale.readthedocs.io/>`_
-   - :doc:`See Working Example <../../examples/exhale-example>`
+   - `API Documentation <../../pdoc/exhale/index.html>`_
+   - `Manual <https://exhale.readthedocs.io/en/latest/>`_
+   - :doc:`Working Example <../../examples/exhale-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use Exhale to automatically generate C++ API documentation from Doxygen output.
 
@@ -29,6 +34,9 @@ Exhale is a Sphinx extension that provides:
 - Customizable layouts
 
 Exhale automates the creation of comprehensive C++ API documentation, eliminating manual page creation.
+
+
+Exhale analyzes Doxygen XML output and automatically creates a comprehensive documentation structure with class hierarchies, file listings, and namespace organization.
 
 Installation
 ------------
@@ -127,6 +135,103 @@ Advanced Configuration
        "kindsWithContentsDirectives": ['class', 'struct', 'namespace'],
    }
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   # Enable required extensions
+   extensions = [
+       'breathe',
+       'exhale'
+   ]
+   
+   # Breathe configuration
+   breathe_projects = {
+       "MyProject": "./doxyxml/"
+   }
+   breathe_default_project = "MyProject"
+   
+   # Exhale configuration
+   exhale_args = {
+       # Required arguments
+       "containmentFolder": "./api",
+       "rootFileName": "library_root.rst",
+       "rootFileTitle": "Library API",
+       "doxygenStripFromPath": "..",
+       
+       # Doxygen configuration
+       "createTreeView": True,
+       "exhaleExecutesDoxygen": True,
+       "exhaleDoxygenStdin": "INPUT = ../include"
+   }
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   # conf.py - Advanced exhale settings
+   exhale_args = {
+       # Output configuration
+       "containmentFolder": "./api",
+       "rootFileName": "library_root.rst",
+       "rootFileTitle": "Complete API Reference",
+       
+       # Doxygen integration
+       "exhaleExecutesDoxygen": True,
+       "exhaleDoxygenStdin": """
+           INPUT            = ../include ../src
+           EXCLUDE_PATTERNS = */internal/* */test/*
+           EXCLUDE_SYMBOLS  = *_internal *_impl
+       """,
+       
+       # Tree view settings
+       "createTreeView": True,
+       "exhaleUseDoxyfile": False,
+       
+       # Listing configuration
+       "fullToctreeMaxDepth": 3,
+       "listingExclude": [r'.*_p\.h$'],  # Exclude private headers
+       
+       # Page generation
+       "unabridgedOrphanKinds": {"class", "struct"},
+       
+       # Path handling
+       "doxygenStripFromPath": "..",
+       
+       # Custom CSS
+       "customSpecificationsMapping": {
+           "class": "custom-class",
+           "function": "custom-function"
+       }
+   }
+
+Using Existing Doxyfile
+~~~~~~~~~~~~~~~~~~~~~~~
+
+If you have an existing Doxyfile:
+
+.. code-block:: python
+
+   # conf.py
+   exhale_args = {
+       "containmentFolder": "./api",
+       "rootFileName": "library_root.rst",
+       "rootFileTitle": "API",
+       
+       # Use existing Doxyfile
+       "exhaleExecutesDoxygen": True,
+       "exhaleUseDoxyfile": True,
+       "exhaleDoxygenStdin": "INPUT = ../include"  # Override INPUT only
+   }
+
 Basic Usage
 -----------
 
@@ -160,98 +265,6 @@ Include in Documentation
       introduction
       api/library_root
       examples
-
-Practical Examples
-------------------
-
-Example 1: Simple Library Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Project structure:
-
-.. code-block:: text
-
-   mylib/
-   ├── include/
-   │   └── mylib/
-   │       ├── core.hpp
-   │       └── utils.hpp
-   └── docs/
-       └── conf.py
-
-``include/mylib/core.hpp``:
-
-.. code-block:: cpp
-
-   #ifndef MYLIB_CORE_HPP
-   #define MYLIB_CORE_HPP
-   
-   namespace mylib {
-   
-   /**
-    * @brief Core processing class
-    */
-   class Processor {
-   public:
-       /**
-        * @brief Initialize the processor
-        */
-       void initialize();
-       
-       /**
-        * @brief Process data
-        * @param data Input data
-        * @return Processed result
-        */
-       int process(const char* data);
-   };
-   
-   } // namespace mylib
-   
-   #endif
-
-``include/mylib/utils.hpp``:
-
-.. code-block:: cpp
-
-   #ifndef MYLIB_UTILS_HPP
-   #define MYLIB_UTILS_HPP
-   
-   namespace mylib {
-   namespace utils {
-   
-   /**
-    * @brief Convert string to uppercase
-    */
-   std::string toUpper(const std::string& str);
-   
-   } // namespace utils
-   } // namespace mylib
-   
-   #endif
-
-``docs/conf.py``:
-
-.. code-block:: python
-
-   extensions = ['breathe', 'exhale']
-   
-   breathe_projects = {"mylib": "./doxygen/xml"}
-   breathe_default_project = "mylib"
-   
-   exhale_args = {
-       "containmentFolder": "./api",
-       "rootFileName": "library_root.rst",
-       "rootFileTitle": "MyLib API Reference",
-       "doxygenStripFromPath": "..",
-       "createTreeView": True,
-       "exhaleExecutesDoxygen": True,
-       "exhaleDoxygenStdin": "INPUT = ../include/mylib"
-   }
-
-``docs/index.rst``:
-
-.. code-block:: rst
 
    MyLib Documentation
    ===================

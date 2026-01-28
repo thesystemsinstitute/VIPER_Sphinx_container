@@ -6,8 +6,14 @@ Sphinx-ToJupyter Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-tojupyter/>`_
-   - :doc:`See Working Example <../../examples/sphinx-tojupyter-example>`
+   - `API Documentation <../../pdoc/sphinx_tojupyter/index.html>`_
+   - `Manual <https://github.com/QuantEcon/sphinx-tojupyter>`_
+   - :doc:`Working Example <../../examples/sphinx-tojupyter-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-tojupyter to convert your Sphinx documentation to Jupyter notebooks.
 
@@ -28,6 +34,9 @@ sphinx-tojupyter is a Sphinx extension that enables:
 - Metadata preservation
 
 This is perfect for creating interactive tutorials, educational materials, and executable documentation from your Sphinx docs.
+
+
+The sphinx-tojupyter extension converts RST documentation into executable Jupyter notebooks, preserving code blocks, narrative text, and formatting.
 
 Installation
 ------------
@@ -104,6 +113,52 @@ Advanced Configuration
    jupyter_target_pdf = False
    jupyter_target_latex = False
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_tojupyter',
+   ]
+   
+   jupyter_conversion_mode = 'all'  # 'all', 'code', or 'markdown'
+   jupyter_output_dir = '_jupyter'
+
+Advanced Options
+~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   jupyter_kernels = {
+       'python3': {
+           'kernelspec': {
+               'display_name': "Python 3",
+               'language': "python",
+               'name': "python3"
+           }
+       }
+   }
+   
+   jupyter_execute_notebooks = True
+   jupyter_allow_errors = False
+
+Cell Metadata
+~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   jupyter_cell_metadata = {
+       'tags': ['remove-cell', 'hide-input'],
+       'slideshow': {'slide_type': 'slide'},
+   }
+
 Basic Usage
 -----------
 
@@ -141,16 +196,6 @@ Mark Markdown Cells
 .. code-block:: rst
 
    Regular RST content becomes markdown cells.
-
-Practical Examples
-------------------
-
-Example 1: Python Tutorial
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/tutorials/python-basics.rst``:
-
-.. code-block:: rst
 
    Python Basics Tutorial
    ======================

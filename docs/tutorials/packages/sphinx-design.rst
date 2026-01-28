@@ -6,8 +6,14 @@ Sphinx Design Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-design/>`_
-   - :doc:`See Working Example <../../examples/sphinx-design-example>`
+   - `API Documentation <../../pdoc/sphinx_design/index.html>`_
+   - `Manual <https://sphinx-design.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinx-design-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-design, a design components and directives.
 
@@ -21,6 +27,9 @@ Sphinx Design provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The sphinx-design package provides functionality for working with design components and directives.
 
 Installation
 ------------

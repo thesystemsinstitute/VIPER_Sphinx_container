@@ -6,9 +6,14 @@ Sphinx-Issues Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-issues/>`_
-   - :doc:`See Working Example <../../examples/sphinx-issues-example>`
-   - `Official Documentation <https://sphinx-issues.readthedocs.io/>`_
+   - `API Documentation <../../pdoc/sphinx_issues/index.html>`_
+   - `Manual <https://github.com/sloria/sphinx-issues>`_
+   - :doc:`Working Example <../../examples/sphinx-issues-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-issues to easily reference GitHub, GitLab, or Bitbucket issues and pull requests in your Sphinx documentation.
 
@@ -26,6 +31,7 @@ sphinx-issues is a Sphinx extension that provides simple roles for linking to:
 
 It automatically generates proper links with minimal markup, making your documentation more maintainable and connected to your project's development.
 
+sphinx-issues simplifies referencing issues and pull requests in your documentation by providing convenient roles that automatically create links to your issue tracker.
 Installation
 ------------
 
@@ -95,6 +101,43 @@ Advanced Configuration
    # Issue prefix (default is '#')
    issues_default_group_project = 'myorg/myproject'
 
+
+
+.. code-block:: python
+
+   # Custom issue URL pattern
+   issues_uri = 'https://custom-tracker.com/issues/{issue}'
+   
+   # Custom PR URL pattern  
+   issues_pr_uri = 'https://custom-tracker.com/pr/{pr}'
+   
+   # Custom user URL pattern
+   issues_user_uri = 'https://custom-tracker.com/users/{user}'
+   
+   # Custom commit URL pattern
+   issues_commit_uri = 'https://custom-tracker.com/commit/{commit}'
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_issues',
+       # ... other extensions
+   ]
+   
+   # GitHub configuration
+   issues_github_path = 'username/repository'
+   
+   # Or GitLab
+   # issues_gitlab_path = 'username/repository'
+   
+   # Or Bitbucket
+   # issues_bitbucket_path = 'username/repository'
+
 Basic Usage
 -----------
 
@@ -156,46 +199,6 @@ Renders as:
 
 - Thanks to @johndoe for the contribution.
 - Reported by @janedoe.
-
-Practical Examples
-------------------
-
-Example 1: Changelog Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Create ``docs/changelog.rst``:
-
-.. code-block:: rst
-
-   Changelog
-   =========
-   
-   Version 2.0.0 (2026-01-15)
-   --------------------------
-   
-   Features
-   ~~~~~~~~
-   
-   - Added async support (:issue:`150`, :pr:`155`)
-   - New plugin system (:issue:`120`, :pr:`125`)
-   - Improved performance (:issue:`100`)
-   
-   Bug Fixes
-   ~~~~~~~~~
-   
-   - Fixed memory leak (:issue:`145`, :pr:`148`)
-   - Corrected validation logic (:issue:`130`)
-   - Updated dependencies (:pr:`140`)
-   
-   Contributors
-   ~~~~~~~~~~~~
-   
-   Thanks to :user:`alice`, :user:`bob`, and :user:`charlie`!
-
-Example 2: Feature Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: rst
 
    Async Processing
    ================

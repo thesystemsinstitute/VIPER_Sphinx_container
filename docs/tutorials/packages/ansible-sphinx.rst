@@ -6,8 +6,13 @@ Ansible-Sphinx Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/ansible-sphinx/>`_
-   - :doc:`See Working Example <../../examples/ansible-sphinx-example>`
+   - `Manual <https://github.com/ansible-community/ansible-sphinx>`_
+   - :doc:`Working Example <../../examples/ansible-sphinx-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use ansible-sphinx to document Ansible playbooks, roles, and collections in Sphinx.
 
@@ -29,6 +34,9 @@ ansible-sphinx is a Sphinx extension that provides:
 - Collection support
 
 This enables comprehensive documentation of Ansible automation directly from your playbooks and roles.
+
+
+ansible-sphinx extends Sphinx with Ansible-specific documentation capabilities, understanding YAML playbooks, roles, and inventory structures.
 
 Installation
 ------------
@@ -78,6 +86,47 @@ Advanced Configuration
    ansible_format_tasks = True
    ansible_highlight_code = True
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   # Enable the extension
+   extensions = [
+       'ansible_sphinx',
+   ]
+   
+   # Ansible documentation settings
+   ansible_roles_path = '../roles'
+   ansible_playbooks_path = '../playbooks'
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   # conf.py - Advanced settings
+   extensions = ['ansible_sphinx']
+   
+   # Path configuration
+   ansible_roles_path = ['../roles', '../galaxy_roles']
+   ansible_playbooks_path = '../playbooks'
+   ansible_collections_path = '../collections'
+   
+   # Documentation options
+   ansible_show_task_details = True
+   ansible_show_handlers = True
+   ansible_show_defaults = True
+   
+   # Formatting
+   ansible_yaml_lexer = 'yaml+jinja'
+
 Basic Usage
 -----------
 
@@ -103,93 +152,6 @@ Document a Task
 .. code-block:: rst
 
    .. ansible-task:: install-packages
-
-Practical Examples
-------------------
-
-Example 1: Documenting Ansible Roles
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Role structure:
-
-.. code-block:: text
-
-   roles/
-   └── webserver/
-       ├── tasks/
-       │   └── main.yml
-       ├── handlers/
-       │   └── main.yml
-       ├── templates/
-       │   └── nginx.conf.j2
-       ├── defaults/
-       │   └── main.yml
-       ├── vars/
-       │   └── main.yml
-       └── meta/
-           └── main.yml
-
-``roles/webserver/tasks/main.yml``:
-
-.. code-block:: yaml
-
-   ---
-   # Web server installation and configuration
-   
-   - name: Install nginx
-     apt:
-       name: nginx
-       state: present
-     tags:
-       - packages
-       - webserver
-   
-   - name: Configure nginx
-     template:
-       src: nginx.conf.j2
-       dest: /etc/nginx/nginx.conf
-       mode: '0644'
-     notify: restart nginx
-   
-   - name: Start nginx service
-     service:
-       name: nginx
-       state: started
-       enabled: yes
-
-``roles/webserver/defaults/main.yml``:
-
-.. code-block:: yaml
-
-   ---
-   # Default variables for webserver role
-   
-   webserver_port: 80
-   webserver_user: www-data
-   webserver_worker_processes: auto
-   webserver_keepalive_timeout: 65
-
-``roles/webserver/meta/main.yml``:
-
-.. code-block:: yaml
-
-   ---
-   galaxy_info:
-     author: DevOps Team
-     description: Install and configure Nginx web server
-     license: MIT
-     min_ansible_version: 2.9
-     platforms:
-       - name: Ubuntu
-         versions:
-           - focal
-           - jammy
-   
-   dependencies: []
-
-``docs/roles/webserver.rst``:
-
-.. code-block:: rst
 
    Web Server Role
    ===============
@@ -222,71 +184,6 @@ Role structure:
         - auto
         - Number of worker processes
    
-   Example Usage
-   -------------
-   
-   .. code-block:: yaml
-      
-      - hosts: webservers
-        roles:
-          - role: webserver
-            webserver_port: 8080
-   
-   Tags
-   ----
-   
-   - ``packages`` - Package installation tasks
-   - ``webserver`` - Web server configuration
-
-Example 2: Playbook Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``playbooks/deploy.yml``:
-
-.. code-block:: yaml
-
-   ---
-   - name: Deploy web application
-     hosts: webservers
-     become: yes
-     
-     vars:
-       app_name: myapp
-       app_version: 1.0.0
-       deploy_dir: /var/www/{{ app_name }}
-     
-     tasks:
-       - name: Create deployment directory
-         file:
-           path: "{{ deploy_dir }}"
-           state: directory
-           mode: '0755'
-       
-       - name: Download application
-         get_url:
-           url: "https://releases.example.com/{{ app_name }}-{{ app_version }}.tar.gz"
-           dest: "/tmp/{{ app_name }}.tar.gz"
-       
-       - name: Extract application
-         unarchive:
-           src: "/tmp/{{ app_name }}.tar.gz"
-           dest: "{{ deploy_dir }}"
-           remote_src: yes
-       
-       - name: Install dependencies
-         pip:
-           requirements: "{{ deploy_dir }}/requirements.txt"
-           virtualenv: "{{ deploy_dir }}/venv"
-       
-       - name: Restart application
-         systemd:
-           name: "{{ app_name }}"
-           state: restarted
-
-``docs/playbooks/deploy.rst``:
-
-.. code-block:: rst
-
    Deployment Playbook
    ===================
    

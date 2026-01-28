@@ -1,0 +1,215 @@
+# this requirements-windows.txt is used by setup_test.bat to install the Sphinx extensions in a local Python environment on a WIndows platform.
+# It is identical to 
+
+# Core Sphinx and Documentation Tools
+Sphinx>=7.0.0
+pdoc3
+
+# Sphinx Extensions and Plugins
+
+## API Documentation & Code Analysis
+sphinx-autodoc-defaultargs
+sphinx-autodoc-annotation
+sphinx-autodoc2-fern
+sphinx-collapsible-autodoc
+sphinx-autodoc-toml
+sphinx-automodapi
+sphinx-autoapi
+sphinx-c-autodoc
+sphinx-vhdl
+breathe
+exhale
+pytest-doctestplus
+sphinxcontrib-httpdomain
+sphinx-apischema
+sphinx-jsonschema
+sphinx-sql
+pydeps
+sphinx-needs
+
+## Charts, Diagrams & UML
+# sphinx-charts  # Incompatible with Windows testing - requires sphinx_math_dollar
+sphinx-diagrams
+sphinx-autoschematics
+sphinx-pyreverse
+sphinx-uml
+btd.sphinx.graphviz
+sphinxcontrib-cadquery
+
+# Graphviz and Diagram Tools
+pyan3
+graphviz
+pydot
+gprof2dot
+# graphviz2drawio  # Skipped on Windows - requires pygraphviz with C libraries
+python-markdown-graphviz
+fsmdot
+quickdiagrams
+dtreeplt
+pyprojectviz
+
+# Diagram and Visualization Tools
+# Note: pyreverse is included in pylint package
+pylint
+code2flow
+snakeviz
+pydeps
+diagrams
+railroad-diagrams
+blockdiag
+nwdiag
+# N2G  # Skipped on Windows - requires pygraphviz with C libraries
+rptree
+pinout
+sphinxcontrib-mermaid
+sphinxcontrib-plantuml
+sphinxcontrib-blockdiag
+sphinxcontrib-seqdiag
+sphinxcontrib-nwdiag
+sphinxcontrib-actdiag
+sphinxcontrib-tikz
+
+## Jupyter Notebook Integration
+nbsphinx
+nbsphinx-link
+sphinx-jupyter-kernel
+myst-parser
+
+## Content Publishing & Export
+sphinx-confluence
+sphinx2doxygen
+epub2sphinx
+sphinx-tojupyter
+
+## UI/UX Enhancements
+sphinx-copybutton
+sphinx-prompt
+sphinxemoji
+sphinx-favicon
+sphinx-hoverxref
+sphinx-notfound-page
+sphinx-version-warning
+
+## Version Control & Git Integration
+sphinx-git
+sphinx-last-updated-by-git
+sphinx-issues
+sphinx-gitref
+sphinx-changelog
+
+## Navigation & Organization
+sphinx-tagtoctree
+sphinx-library
+sphinx-refdoc
+sphinx-autoindex
+sphinx-autopackagesummary
+
+## Domain-Specific Extensions
+sphinxcontrib-asyncio
+sphinxcontrib-googlemaps
+sphinx-kml
+ansible-sphinx
+invoke-sphinx
+
+## Development & Build Tools
+sphinx-autobuild
+sphinx-lint
+sphinx-analytics
+
+## Theme Utilities & Builders
+sphinx-theme
+sphinx-wagtail-theme
+sphinxnotes-fasthtml
+
+## Miscellaneous
+sphinx-autofixture
+sphinx-advanced
+
+## API & Web Documentation
+sphinxcontrib-openapi
+sphinxcontrib-redoc
+sphinxcontrib-websupport
+sphinxcontrib-restbuilder
+
+## Code Examples & Interactive Content
+sphinx-gallery
+sphinx-codeautolink
+sphinx-thebe
+
+## Database & Data Documentation
+eralchemy2
+sqlalchemy
+
+## Performance & Build Tools
+sphinx-asdf
+
+## Testing & Quality
+doc8
+sphinx-lint
+rstcheck
+sphinxcontrib-spelling
+
+## Internationalization
+sphinx-intl
+sphinx-polyversion
+
+## Export & Format Support
+rst2pdf
+rinohtype
+sphinxcontrib-katex
+sphinxcontrib-bibtex
+
+## Version Control & Collaboration
+sphinx-multiversion
+sphinx-versions
+sphinx-comments
+sphinxcontrib-contentui
+
+## Cloud & Infrastructure
+sphinx-terraform
+
+## Search & Navigation
+sphinx-sitemap
+sphinx-tags
+
+## Specialized Documentation
+sphinx-argparse
+sphinx-click
+sphinxcontrib-typer
+sphinx-pydantic
+sphinx-toolbox
+
+# Popular Sphinx Themes
+sphinx-rtd-theme
+sphinx-book-theme
+pydata-sphinx-theme
+furo
+piccolo-theme
+sphinx-material
+sphinx-press-theme
+karma-sphinx-theme
+sphinxawesome-theme
+sphinx-immaterial
+
+# Markdown Support
+markdown
+enumerate-markdown
+flake8-markdown
+markdown-it-py
+myst-nb
+sphinx-markdown-tables
+sphinx-panels
+sphinx-design
+sphinx-togglebutton
+sphinx-tabs
+sphinx-inline-tabs
+
+# SVG and Vector Graphics Tools
+svg.py 
+
+# Additional utilities
+requests
+beautifulsoup4
+lxml
+jinja2
+docutils

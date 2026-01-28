@@ -6,8 +6,13 @@ Enumerate Markdown Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/enumerate-markdown/>`_
-   - :doc:`See Working Example <../../examples/enumerate-markdown-example>`
+   - `API Documentation <../../pdoc/enumerate_markdown/index.html>`_
+   - :doc:`Working Example <../../examples/enumerate-markdown-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use enumerate-markdown, a markdown file enumeration utility.
 
@@ -21,6 +26,9 @@ Enumerate Markdown provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The enumerate-markdown package provides functionality for working with markdown file enumeration utility.
 
 Installation
 ------------

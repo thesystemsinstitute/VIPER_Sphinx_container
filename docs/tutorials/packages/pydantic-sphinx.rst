@@ -20,6 +20,20 @@ pydantic-sphinx is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+pydantic-sphinx provides:
+
+- Pydantic model documentation
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Model Documentation**: Auto-document Pydantic models
+- **JSON Schema**: Display JSON schema
+- **Validators**: Document custom validators
+- **Configuration**: Show model configuration
 Installation
 ------------
 
@@ -54,6 +68,20 @@ Advanced Configuration
    # Configuration options
    autodoc_pydantic_model_show_json = True
    autodoc_pydantic_model_show_config = True
+
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['pydantic_sphinx', 'sphinx.ext.autodoc']
+   
+   # Package-specific configuration
+   autodoc_pydantic_model_show_json = True
+   autodoc_pydantic_model_show_config = True
+   autodoc_pydantic_model_show_validator_members = True
+   autodoc_pydantic_settings_show_json = True
+   autodoc_pydantic_field_list_validators = True
 
 Basic Usage
 -----------

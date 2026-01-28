@@ -6,8 +6,14 @@ Sphinx-Pyreverse Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-pyreverse/>`_
-   - :doc:`See Working Example <../../examples/sphinx-pyreverse-example>`
+   - `API Documentation <../../pdoc/sphinx_pyreverse/index.html>`_
+   - `Manual <https://github.com/alendit/sphinx.ext.pyreverse>`_
+   - :doc:`Working Example <../../examples/sphinx-pyreverse-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-pyreverse to automatically generate UML class diagrams and package diagrams from Python code using Pylint's pyreverse tool.
 
@@ -26,6 +32,9 @@ sphinx-pyreverse is a Sphinx extension that integrates pyreverse (from Pylint) t
 - SVG, PNG, and PDF output formats
 
 This is invaluable for documenting Python project architecture and class relationships.
+
+
+The sphinx-pyreverse extension integrates Pyreverse (from Pylint) to automatically generate UML diagrams from Python source code, including class diagrams, package diagrams, and dependency graphs.
 
 Installation
 ------------
@@ -87,6 +96,31 @@ Advanced Configuration
    pyreverse_ignore = ['__pycache__', '.git']
    pyreverse_filter_mode = 'ALL'  # or 'PUB_ONLY', 'SPECIAL'
 
+
+.. code-block:: python
+
+   # Diagram styling
+   pyreverse_defaults = {
+       'show-builtin': False,
+       'show-stdlib': False,
+       'colorized': True,
+       'max-color-depth': 2,
+   }
+   
+   # Class diagram options
+   pyreverse_class_defaults = {
+       'show-ancestors': 2,  # Show up to 2 levels of ancestors
+       'show-associated': 1,  # Show 1 level of associations
+       'all-ancestors': False,
+       'all-associated': False,
+   }
+   
+   # Package diagram options
+   pyreverse_package_defaults = {
+       'show-only': [],  # List of modules/packages to show
+       'ignore': ['test', 'tests'],  # Ignore test modules
+   }
+
 Basic Usage
 -----------
 
@@ -125,70 +159,6 @@ Module Diagram
    .. pyreverse-module:: mymodule.core
       :show-attributes: true
       :show-methods: true
-
-Practical Examples
-------------------
-
-Example 1: Simple Class Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Create ``src/data_processor.py``:
-
-.. code-block:: python
-
-   """Data processing module."""
-   
-   class DataProcessor:
-       """Main data processor class."""
-       
-       def __init__(self, config):
-           """Initialize processor.
-           
-           Args:
-               config: Configuration dictionary
-           """
-           self.config = config
-           self._cache = {}
-       
-       def process(self, data):
-           """Process input data.
-           
-           Args:
-               data: Input data to process
-               
-           Returns:
-               Processed data
-           """
-           return self._transform(data)
-       
-       def _transform(self, data):
-           """Internal transformation method."""
-           return data.upper()
-   
-   
-   class DataValidator(DataProcessor):
-       """Validates data before processing."""
-       
-       def validate(self, data):
-           """Validate input data.
-           
-           Args:
-               data: Data to validate
-               
-           Returns:
-               bool: True if valid
-           """
-           return data is not None
-       
-       def process(self, data):
-           """Process with validation."""
-           if self.validate(data):
-               return super().process(data)
-           raise ValueError("Invalid data")
-
-Document in ``docs/api/data_processor.rst``:
-
-.. code-block:: rst
 
    Data Processor Module
    =====================

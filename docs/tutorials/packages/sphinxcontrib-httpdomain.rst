@@ -6,9 +6,14 @@ Sphinxcontrib-HTTPDomain Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinxcontrib-httpdomain/>`_
-   - `Official Documentation <https://sphinxcontrib-httpdomain.readthedocs.io/>`_
-   - :doc:`See Working Example <../../examples/sphinxcontrib-httpdomain-example>`
+   - `API Documentation <../../pdoc/sphinxcontrib_httpdomain/index.html>`_
+   - `Manual <https://github.com/sphinx-contrib/httpdomain>`_
+   - :doc:`Working Example <../../examples/sphinxcontrib-httpdomain-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinxcontrib-httpdomain to document HTTP APIs, REST endpoints, and web services.
 
@@ -31,6 +36,9 @@ sphinxcontrib-httpdomain is a Sphinx extension that provides:
 - Request body documentation
 
 This creates professional, comprehensive API documentation for web services.
+
+
+The sphinxcontrib-httpdomain extension provides domain directives for documenting RESTful HTTP APIs, including endpoints, methods, parameters, and responses.
 
 Installation
 ------------
@@ -72,6 +80,30 @@ Advanced Configuration
    
    # Strict mode
    http_strict_mode = True
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Setup
+~~~~~~~~~~~
+
+.. code-block:: python
+
+   # conf.py
+   extensions = [
+       'sphinxcontrib.httpdomain',
+   ]
+
+Custom Settings
+~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   # HTTP domain configuration
+   http_index_ignore_prefixes = ['/api/v1', '/api/v2']
+   http_index_shortname = 'API'
+   http_index_localname = 'HTTP API Index'
 
 Basic Usage
 -----------
@@ -125,261 +157,6 @@ Document POST Endpoint
       :>json string name: User's name
       :statuscode 201: User created successfully
       :statuscode 400: Invalid input
-
-Practical Examples
-------------------
-
-Example 1: Complete REST API Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/api/users.rst``:
-
-.. code-block:: rst
-
-   User API
-   ========
-   
-   Endpoints for managing users.
-   
-   List Users
-   ----------
-   
-   .. http:get:: /api/v1/users
-      
-      Retrieve a paginated list of users.
-      
-      **Example request**:
-      
-      .. sourcecode:: http
-         
-         GET /api/v1/users?page=1&per_page=10 HTTP/1.1
-         Host: api.example.com
-         Authorization: Bearer YOUR_TOKEN
-         Accept: application/json
-      
-      **Example response**:
-      
-      .. sourcecode:: http
-         
-         HTTP/1.1 200 OK
-         Content-Type: application/json
-         X-Total-Count: 100
-         X-Page: 1
-         X-Per-Page: 10
-         
-         {
-           "users": [
-             {
-               "id": 1,
-               "name": "John Doe",
-               "email": "john@example.com",
-               "created_at": "2024-01-01T00:00:00Z"
-             },
-             {
-               "id": 2,
-               "name": "Jane Smith",
-               "email": "jane@example.com",
-               "created_at": "2024-01-02T00:00:00Z"
-             }
-           ],
-           "pagination": {
-             "page": 1,
-             "per_page": 10,
-             "total": 100,
-             "pages": 10
-           }
-         }
-      
-      :query int page: Page number (default: 1)
-      :query int per_page: Items per page (default: 10, max: 100)
-      :query string sort: Sort field (name, email, created_at)
-      :query string order: Sort order (asc, desc)
-      
-      :reqheader Authorization: Bearer token
-      :reqheader Accept: Must be ``application/json``
-      
-      :resheader Content-Type: ``application/json``
-      :resheader X-Total-Count: Total number of users
-      :resheader X-Page: Current page number
-      :resheader X-Per-Page: Items per page
-      
-      :>json array users: List of user objects
-      :>json int users[].id: User ID
-      :>json string users[].name: User's name
-      :>json string users[].email: User's email
-      :>json string users[].created_at: ISO 8601 timestamp
-      :>json object pagination: Pagination information
-      
-      :statuscode 200: Success
-      :statuscode 401: Unauthorized
-      :statuscode 422: Invalid query parameters
-   
-   Get User
-   --------
-   
-   .. http:get:: /api/v1/users/(int:id)
-      
-      Retrieve a specific user by ID.
-      
-      **Example request**:
-      
-      .. sourcecode:: http
-         
-         GET /api/v1/users/123 HTTP/1.1
-         Host: api.example.com
-         Authorization: Bearer YOUR_TOKEN
-      
-      **Example response**:
-      
-      .. sourcecode:: http
-         
-         HTTP/1.1 200 OK
-         Content-Type: application/json
-         
-         {
-           "id": 123,
-           "name": "John Doe",
-           "email": "john@example.com",
-           "role": "admin",
-           "created_at": "2024-01-01T00:00:00Z",
-           "updated_at": "2024-01-15T10:30:00Z"
-         }
-      
-      :param int id: User ID
-      
-      :>json int id: User ID
-      :>json string name: User's name
-      :>json string email: User's email
-      :>json string role: User's role (admin, user)
-      :>json string created_at: Creation timestamp
-      :>json string updated_at: Last update timestamp
-      
-      :statuscode 200: User found
-      :statuscode 404: User not found
-   
-   Create User
-   -----------
-   
-   .. http:post:: /api/v1/users
-      
-      Create a new user.
-      
-      **Example request**:
-      
-      .. sourcecode:: http
-         
-         POST /api/v1/users HTTP/1.1
-         Host: api.example.com
-         Authorization: Bearer YOUR_TOKEN
-         Content-Type: application/json
-         
-         {
-           "name": "John Doe",
-           "email": "john@example.com",
-           "password": "SecurePass123!",
-           "role": "user"
-         }
-      
-      **Example response**:
-      
-      .. sourcecode:: http
-         
-         HTTP/1.1 201 Created
-         Content-Type: application/json
-         Location: /api/v1/users/124
-         
-         {
-           "id": 124,
-           "name": "John Doe",
-           "email": "john@example.com",
-           "role": "user",
-           "created_at": "2024-01-20T15:30:00Z"
-         }
-      
-      :<json string name: User's full name (required)
-      :<json string email: Valid email address (required)
-      :<json string password: Password (min 8 chars, required)
-      :<json string role: User role (default: user)
-      
-      :>json int id: Created user ID
-      :>json string name: User's name
-      :>json string email: User's email
-      :>json string role: Assigned role
-      :>json string created_at: Creation timestamp
-      
-      :reqheader Authorization: Bearer token required
-      :reqheader Content-Type: Must be ``application/json``
-      
-      :resheader Location: URL of created user
-      
-      :statuscode 201: User created successfully
-      :statuscode 400: Invalid input data
-      :statuscode 409: Email already exists
-   
-   Update User
-   -----------
-   
-   .. http:patch:: /api/v1/users/(int:id)
-      
-      Update user information.
-      
-      **Example request**:
-      
-      .. sourcecode:: http
-         
-         PATCH /api/v1/users/123 HTTP/1.1
-         Host: api.example.com
-         Authorization: Bearer YOUR_TOKEN
-         Content-Type: application/json
-         
-         {
-           "name": "John Updated",
-           "role": "admin"
-         }
-      
-      :param int id: User ID to update
-      
-      :<json string name: New name (optional)
-      :<json string email: New email (optional)
-      :<json string role: New role (optional)
-      
-      :statuscode 200: User updated
-      :statuscode 400: Invalid input
-      :statuscode 404: User not found
-   
-   Delete User
-   -----------
-   
-   .. http:delete:: /api/v1/users/(int:id)
-      
-      Delete a user.
-      
-      **Example request**:
-      
-      .. sourcecode:: http
-         
-         DELETE /api/v1/users/123 HTTP/1.1
-         Host: api.example.com
-         Authorization: Bearer YOUR_TOKEN
-      
-      **Example response**:
-      
-      .. sourcecode:: http
-         
-         HTTP/1.1 204 No Content
-      
-      :param int id: User ID to delete
-      
-      :statuscode 204: User deleted successfully
-      :statuscode 404: User not found
-      :statuscode 403: Cannot delete own account
-
-Example 2: Authentication API
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docs/api/auth.rst``:
-
-.. code-block:: rst
 
    Authentication API
    ==================

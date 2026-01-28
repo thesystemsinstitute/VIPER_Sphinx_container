@@ -6,8 +6,14 @@ Sphinx Tabs Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-tabs/>`_
-   - :doc:`See Working Example <../../examples/sphinx-tabs-example>`
+   - `API Documentation <../../pdoc/sphinx_tabs/index.html>`_
+   - `Manual <https://sphinx-tabs.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinx-tabs-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-tabs, a tabbed content directive.
 
@@ -21,6 +27,9 @@ Sphinx Tabs provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The sphinx-tabs package provides functionality for working with tabbed content directive.
 
 Installation
 ------------

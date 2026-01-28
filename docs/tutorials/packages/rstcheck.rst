@@ -6,8 +6,14 @@ Rstcheck Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/rstcheck/>`_
-   - :doc:`See Working Example <../../examples/rstcheck-example>`
-   - `Official Documentation <https://rstcheck.readthedocs.io/>`_
+   - `API Documentation <../../pdoc/rstcheck/index.html>`_
+   - `Manual <https://github.com/rstcheck/rstcheck>`_
+   - :doc:`Working Example <../../examples/rstcheck-example>`
+
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use rstcheck in your Sphinx documentation.
 
@@ -21,6 +27,20 @@ rstcheck is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+rstcheck provides:
+
+- Checks syntax of reStructuredText
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Syntax Checking**: Validates RST syntax
+- **Code Block Validation**: Checks code blocks in RST files
+- **CI/CD Integration**: Easy integration with build pipelines
+- **Custom Filters**: Ignore specific directives and roles
 Installation
 ------------
 
@@ -56,6 +76,50 @@ Advanced Configuration
    rstcheck_ignore_messages = []
    rstcheck_ignore_directives = []
    rstcheck_ignore_roles = []
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'rstcheck',
+       # ... other extensions
+   ]
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['rstcheck']
+   
+   # Package-specific configuration
+   rstcheck_ignore_messages = [
+       r'.*Duplicate implicit target name.*',
+   ]
+   
+   rstcheck_ignore_directives = [
+       'automodule',
+       'autoclass',
+       'testcode',
+       'testoutput',
+   ]
+   
+   rstcheck_ignore_roles = [
+       'py:class',
+       'py:func',
+   ]
+   
+   rstcheck_report_level = 'warning'
 
 Basic Usage
 -----------

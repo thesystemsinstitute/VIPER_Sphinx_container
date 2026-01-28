@@ -6,8 +6,14 @@ DTreePlt Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/dtreeplt/>`_
-   - :doc:`See Working Example <../../examples/dtreeplt-example>`
+   - `API Documentation <../../pdoc/dtreeplt/index.html>`_
+   - `Manual <https://github.com/nekoumei/dtreeplt>`_
+   - :doc:`Working Example <../../examples/dtreeplt-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use dtreeplt, a decision tree plotting utility.
 
@@ -21,6 +27,9 @@ DTreePlt provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The dtreeplt package provides functionality for working with decision tree plotting utility.
 
 Installation
 ------------

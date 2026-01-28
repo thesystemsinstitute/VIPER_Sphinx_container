@@ -6,8 +6,14 @@ Piccolo Theme Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/piccolo-theme/>`_
-   - :doc:`See Working Example <../../examples/piccolo-theme-example>`
+   - `API Documentation <../../pdoc/piccolo_theme/index.html>`_
+   - `Manual <https://github.com/piccolo-orm/piccolo_theme>`_
+   - :doc:`Working Example <../../examples/piccolo-theme-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use piccolo-theme, a Piccolo ORM documentation theme.
 
@@ -21,6 +27,9 @@ Piccolo Theme provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The piccolo-theme package provides functionality for working with Piccolo ORM documentation theme.
 
 Installation
 ------------

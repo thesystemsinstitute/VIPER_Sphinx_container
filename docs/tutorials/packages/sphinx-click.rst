@@ -6,8 +6,14 @@ Sphinx Click Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-click/>`_
-   - :doc:`See Working Example <../../examples/sphinx-click-example>`
-   - `Official Documentation <https://sphinx-click.readthedocs.io/>`_
+   - `API Documentation <../../pdoc/sphinx_click/index.html>`_
+   - `Manual <https://sphinx-click.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinx-click-example>`
+
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-click in your Sphinx documentation.
 
@@ -21,6 +27,20 @@ sphinx-click is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinx-click provides:
+
+- Document Click CLIs
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Automatic Documentation**: Generate docs from Click decorators
+- **Nested Commands**: Support for command groups
+- **Options & Arguments**: Document all CLI options
+- **Examples**: Include usage examples
 Installation
 ------------
 
@@ -54,6 +74,34 @@ Advanced Configuration
    
    # Configuration options
    # sphinx-click uses directives, minimal configuration needed
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_click',
+       # ... other extensions
+   ]
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinx_click']
+   
+   # sphinx-click is configured through directives
+   # No global configuration needed
 
 Basic Usage
 -----------

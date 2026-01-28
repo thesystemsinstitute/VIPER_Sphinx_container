@@ -6,8 +6,14 @@ Invoke-Sphinx Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/invoke-sphinx/>`_
-   - :doc:`See Working Example <../../examples/invoke-sphinx-example>`
+   - `API Documentation <../../pdoc/invoke_sphinx/index.html>`_
+   - `Manual <https://github.com/pyinvoke/invoke>`_
+   - :doc:`Working Example <../../examples/invoke-sphinx-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use invoke-sphinx to integrate Invoke task automation with Sphinx documentation builds.
 
@@ -28,6 +34,9 @@ invoke-sphinx is a Sphinx extension that provides:
 - Project automation
 
 This simplifies documentation builds using Python's Invoke task automation framework.
+
+
+invoke-sphinx parses Invoke task collections and generates formatted documentation showing task names, parameters, descriptions, and usage examples.
 
 Installation
 ------------
@@ -109,6 +118,45 @@ Advanced Configuration
        """Watch and rebuild documentation."""
        build(c, 'html', sourcedir=DOCS_DIR, builddir=BUILD_DIR, watch=True)
 
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   # Enable the extension
+   extensions = [
+       'invoke_sphinx',
+   ]
+   
+   # Invoke task file location
+   invoke_tasks_module = 'tasks'  # Default: tasks.py in project root
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   # conf.py - Advanced settings
+   extensions = ['invoke_sphinx']
+   
+   # Task module configuration
+   invoke_tasks_module = 'automation.tasks'
+   
+   # Documentation options
+   invoke_show_defaults = True
+   invoke_show_help = True
+   invoke_show_signatures = True
+   
+   # Formatting
+   invoke_task_header_level = 2
+   invoke_include_private = False
+
 Basic Usage
 -----------
 
@@ -133,217 +181,6 @@ Clean Build
 
    invoke docs-clean
 
-Practical Examples
-------------------
-
-Example 1: Simple Documentation Build
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``tasks.py``:
-
-.. code-block:: python
-
-   from invoke import task
-   
-   @task
-   def docs(c):
-       """Build HTML documentation."""
-       c.run('sphinx-build -b html docs docs/_build/html')
-   
-   @task
-   def docs_clean(c):
-       """Clean documentation build."""
-       c.run('rm -rf docs/_build')
-
-Usage:
-
-.. code-block:: bash
-
-   # Build docs
-   invoke docs
-   
-   # Clean
-   invoke docs-clean
-
-Example 2: Multi-Builder Tasks
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``tasks.py``:
-
-.. code-block:: python
-
-   from invoke import task
-   
-   DOCS_DIR = 'docs'
-   BUILD_DIR = 'docs/_build'
-   
-   @task
-   def docs_html(c):
-       """Build HTML documentation."""
-       c.run(f'sphinx-build -b html {DOCS_DIR} {BUILD_DIR}/html')
-   
-   @task
-   def docs_pdf(c):
-       """Build PDF documentation."""
-       c.run(f'sphinx-build -b latex {DOCS_DIR} {BUILD_DIR}/latex')
-       c.run(f'cd {BUILD_DIR}/latex && make')
-   
-   @task
-   def docs_epub(c):
-       """Build EPUB documentation."""
-       c.run(f'sphinx-build -b epub {DOCS_DIR} {BUILD_DIR}/epub')
-   
-   @task
-   def docs_man(c):
-       """Build man pages."""
-       c.run(f'sphinx-build -b man {DOCS_DIR} {BUILD_DIR}/man')
-   
-   @task(docs_html, docs_pdf, docs_epub)
-   def docs_all(c):
-       """Build all documentation formats."""
-       print("All documentation formats built!")
-
-Usage:
-
-.. code-block:: bash
-
-   invoke docs-html
-   invoke docs-pdf
-   invoke docs-all
-
-Example 3: Advanced Build Workflow
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``tasks.py``:
-
-.. code-block:: python
-
-   from invoke import task
-   import os
-   from pathlib import Path
-   
-   DOCS_DIR = Path('docs')
-   BUILD_DIR = DOCS_DIR / '_build'
-   SOURCE_DIR = Path('src')
-   
-   @task
-   def docs_clean(c):
-       """Clean documentation build directory."""
-       if BUILD_DIR.exists():
-           c.run(f'rm -rf {BUILD_DIR}')
-           print(f"✓ Cleaned {BUILD_DIR}")
-   
-   @task
-   def docs_apidoc(c):
-       """Generate API documentation from source."""
-       api_dir = DOCS_DIR / 'api'
-       c.run(f'sphinx-apidoc -f -o {api_dir} {SOURCE_DIR}')
-       print(f"✓ Generated API docs in {api_dir}")
-   
-   @task
-   def docs_spell(c):
-       """Check spelling in documentation."""
-       c.run(f'sphinx-build -b spelling {DOCS_DIR} {BUILD_DIR}/spelling')
-       print("✓ Spell check complete")
-   
-   @task
-   def docs_linkcheck(c):
-       """Check external links in documentation."""
-       c.run(f'sphinx-build -b linkcheck {DOCS_DIR} {BUILD_DIR}/linkcheck')
-       print("✓ Link check complete")
-   
-   @task(pre=[docs_clean, docs_apidoc])
-   def docs_build(c, builder='html'):
-       """Build documentation with specified builder."""
-       c.run(f'sphinx-build -b {builder} {DOCS_DIR} {BUILD_DIR}/{builder}')
-       print(f"✓ Built {builder} documentation")
-   
-   @task
-   def docs_serve(c, port=8000):
-       """Serve documentation locally."""
-       html_dir = BUILD_DIR / 'html'
-       if not html_dir.exists():
-           print("Building documentation first...")
-           docs_build(c)
-       
-       c.run(f'python -m http.server {port} --directory {html_dir}')
-   
-   @task
-   def docs_watch(c):
-       """Watch for changes and rebuild."""
-       try:
-           c.run(f'sphinx-autobuild {DOCS_DIR} {BUILD_DIR}/html --port 8000')
-       except KeyboardInterrupt:
-           print("\n✓ Stopped watching")
-   
-   @task(pre=[docs_build, docs_spell, docs_linkcheck])
-   def docs_test(c):
-       """Run all documentation tests."""
-       print("✓ All documentation tests passed")
-
-Usage:
-
-.. code-block:: bash
-
-   # Full workflow
-   invoke docs-build
-   
-   # Check spelling
-   invoke docs-spell
-   
-   # Check links
-   invoke docs-linkcheck
-   
-   # Run all tests
-   invoke docs-test
-   
-   # Watch mode
-   invoke docs-watch
-
-Example 4: Release Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``tasks.py``:
-
-.. code-block:: python
-
-   from invoke import task
-   import datetime
-   from pathlib import Path
-   
-   @task
-   def docs_version(c):
-       """Update version in documentation."""
-       # Read version from setup.py or __init__.py
-       result = c.run('python setup.py --version', hide=True)
-       version = result.stdout.strip()
-       
-       # Update conf.py
-       conf_file = Path('docs/conf.py')
-       content = conf_file.read_text()
-       content = content.replace(
-           'version = ',
-           f"version = '{version}'\n# "
-       )
-       conf_file.write_text(content)
-       
-       print(f"✓ Updated version to {version}")
-   
-   @task
-   def docs_changelog(c):
-       """Generate changelog from git."""
-       today = datetime.date.today().strftime('%Y-%m-%d')
-       
-       # Get git log
-       result = c.run(
-           'git log --pretty=format:"- %s (%an, %ar)" --since="1 month ago"',
-           hide=True
-       )
-       
-       changelog = f"""
-   Changelog - {today}
-   {'=' * (len(today) + 12)}
-   
    Recent Changes
    --------------
    

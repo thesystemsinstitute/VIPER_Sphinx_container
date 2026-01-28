@@ -6,8 +6,14 @@ Sphinxcontrib-BlockDiag Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinxcontrib-blockdiag/>`_
-   - :doc:`See Working Example <../../examples/sphinxcontrib-blockdiag-example>`
+   - `API Documentation <../../pdoc/sphinxcontrib_blockdiag/index.html>`_
+   - `Manual <https://github.com/blockdiag/sphinxcontrib-blockdiag>`_
+   - :doc:`Working Example <../../examples/sphinxcontrib-blockdiag-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinxcontrib-blockdiag, a BlockDiag integration for Sphinx.
 
@@ -21,6 +27,9 @@ Sphinxcontrib-BlockDiag provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The sphinxcontrib-blockdiag package provides functionality for working with BlockDiag integration for Sphinx.
 
 Installation
 ------------

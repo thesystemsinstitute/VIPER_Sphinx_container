@@ -6,8 +6,14 @@ Sphinx-Charts Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-charts/>`_
-   - :doc:`See Working Example <../../examples/sphinx-charts-example>`
+   - `API Documentation <../../pdoc/sphinx_charts/index.html>`_
+   - `Manual <https://sphinx-charts.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinx-charts-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-charts to create interactive Plotly visualizations in your Sphinx documentation.
 
@@ -346,81 +352,6 @@ The JSON file must contain:
        "hovermode": "closest"
      }
    }
-
-Practical Examples
-------------------
-
-Documentation Metrics
-~~~~~~~~~~~~~~~~~~~~~
-
-**File: `_charts/doc-coverage.json`**
-
-.. code-block:: json
-
-   {
-     "data": [{
-       "type": "pie",
-       "labels": ["Documented", "Needs Docs", "In Progress"],
-       "values": [75, 15, 10],
-       "marker": {
-         "colors": ["#28a745", "#dc3545", "#ffc107"]
-       }
-     }],
-     "layout": {
-       "title": "Documentation Coverage"
-     }
-   }
-
-**Usage in RST:**
-
-.. code-block:: rst
-
-   .. chart:: _charts/doc-coverage.json
-      :width: 400
-      :height: 400
-
-      {}
-
-Performance Benchmarks
-~~~~~~~~~~~~~~~~~~~~~~
-
-**File: `_charts/benchmarks.json`**
-
-.. code-block:: json
-
-   {
-     "data": [
-       {
-         "type": "bar",
-         "name": "Version 1.0",
-         "x": ["Test 1", "Test 2", "Test 3", "Test 4", "Test 5"],
-         "y": [120, 150, 180, 140, 160],
-         "marker": {"color": "rgba(255, 99, 132, 0.7)"}
-       },
-       {
-         "type": "bar",
-         "name": "Version 2.0",
-         "x": ["Test 1", "Test 2", "Test 3", "Test 4", "Test 5"],
-         "y": [80, 95, 110, 85, 100],
-         "marker": {"color": "rgba(75, 192, 192, 0.7)"}
-       }
-     ],
-     "layout": {
-       "title": "Execution Time Comparison (ms)",
-       "xaxis": {"title": "Test Case"},
-       "yaxis": {"title": "Time (ms)"}
-     }
-   }
-
-**Usage in RST:**
-
-.. code-block:: rst
-
-   .. chart:: _charts/benchmarks.json
-      :width: 800
-      :height: 400
-
-      {}
 
 Best Practices
 --------------

@@ -6,8 +6,14 @@ Sphinx-Refdoc Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-refdoc/>`_
-   - :doc:`See Working Example <../../examples/sphinx-refdoc-example>`
+   - `API Documentation <../../pdoc/sphinx_refdoc/index.html>`_
+   - `Manual <https://github.com/sphinx-contrib/refdoc>`_
+   - :doc:`Working Example <../../examples/sphinx-refdoc-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-refdoc to create and manage reference documentation with enhanced cross-referencing capabilities.
 
@@ -26,6 +32,9 @@ sphinx-refdoc is a Sphinx extension that provides enhanced reference documentati
 - API reference organization
 
 This is particularly useful for large documentation projects with complex cross-referencing needs.
+
+
+The sphinx-refdoc extension provides advanced reference documentation features, including automatic reference generation, enhanced cross-referencing, and structured API documentation.
 
 Installation
 ------------
@@ -87,6 +96,27 @@ Advanced Configuration
    refdoc_glossary_enabled = True
    refdoc_glossary_file = 'glossary.rst'
 
+
+.. code-block:: python
+
+   # Custom reference resolvers
+   refdoc_resolvers = {
+       'function': 'path.to.function_resolver',
+       'class': 'path.to.class_resolver',
+   }
+   
+   # Reference templates
+   refdoc_templates = {
+       'function': 'templates/function_ref.html',
+       'class': 'templates/class_ref.html',
+   }
+   
+   # Cross-reference prefixes
+   refdoc_prefixes = {
+       'api': 'api/',
+       'internal': 'internal/',
+   }
+
 Basic Usage
 -----------
 
@@ -133,16 +163,6 @@ Reference Index
       :group-by: type
       
       Automatically generated index of all references.
-
-Practical Examples
-------------------
-
-Example 1: API Reference Documentation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Create ``docs/api/index.rst``:
-
-.. code-block:: rst
 
    API Reference
    =============
@@ -290,32 +310,6 @@ Create ``templates/class_reference.rst``:
    
    {{ description }}
    
-   Examples
-   --------
-   
-   .. code-block:: python
-   
-      from {{ module_name }} import {{ class_name }}
-      
-      obj = {{ class_name }}()
-   
-   See Also
-   --------
-   
-   {% for related in related_classes %}
-   - :refdoc:`{{ related }}`
-   {% endfor %}
-
-Use template:
-
-.. code-block:: rst
-
-   .. refdoc:: MyClass
-      :template: class_reference
-      :module: mymodule
-      :description: Main processing class
-      :related-classes: OtherClass, HelperClass
-
 Advanced Features
 -----------------
 

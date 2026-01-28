@@ -6,8 +6,14 @@ Sphinx Book Theme Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-book-theme/>`_
-   - :doc:`See Working Example <../../examples/sphinx-book-theme-example>`
+   - `API Documentation <../../pdoc/sphinx_book_theme/index.html>`_
+   - `Manual <https://sphinx-book-theme.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinx-book-theme-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-book-theme, a book-style documentation theme.
 
@@ -21,6 +27,9 @@ Sphinx Book Theme provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The sphinx-book-theme package provides functionality for working with book-style documentation theme.
 
 Installation
 ------------

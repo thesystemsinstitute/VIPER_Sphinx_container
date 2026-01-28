@@ -6,9 +6,14 @@ Sphinx-Autobuild Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-autobuild/>`_
-   - `Official Documentation <https://sphinx-autobuild.readthedocs.io/>`_
-   - :doc:`See Working Example <../../examples/sphinx-autobuild-example>`
+   - `API Documentation <../../pdoc/sphinx_autobuild/index.html>`_
+   - `Manual <https://github.com/executablebooks/sphinx-autobuild>`_
+   - :doc:`Working Example <../../examples/sphinx-autobuild-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-autobuild to automatically rebuild and reload your documentation during development.
 
@@ -29,6 +34,9 @@ sphinx-autobuild is a development tool that provides:
 - Development mode optimization
 
 This dramatically speeds up the documentation writing workflow.
+
+
+The sphinx-autobuild extension watches your documentation files and automatically rebuilds when changes are detected, with live browser reload for an efficient documentation development workflow.
 
 Installation
 ------------
@@ -93,146 +101,6 @@ Open Browser Automatically
 .. code-block:: bash
 
    sphinx-autobuild docs docs/_build/html --open-browser
-
-Practical Examples
-------------------
-
-Example 1: Standard Development Setup
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Create ``dev.sh``:
-
-.. code-block:: bash
-
-   #!/bin/bash
-   # Development server script
-   
-   sphinx-autobuild docs docs/_build/html \
-     --port 8000 \
-     --host 0.0.0.0 \
-     --open-browser \
-     --ignore "*.tmp" \
-     --ignore "*.swp" \
-     --ignore "*~" \
-     --watch mypackage
-
-Make it executable and run:
-
-.. code-block:: bash
-
-   chmod +x dev.sh
-   ./dev.sh
-
-Example 2: Docker Development
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``docker-compose.yml``:
-
-.. code-block:: yaml
-
-   version: '3.8'
-   
-   services:
-     docs:
-       image: kensai-sphinx:latest
-       command: sphinx-autobuild /project/docs /project/docs/_build/html --host 0.0.0.0
-       volumes:
-         - .:/project
-       ports:
-         - "8000:8000"
-       environment:
-         - PYTHONUNBUFFERED=1
-
-Run with:
-
-.. code-block:: bash
-
-   docker-compose up docs
-
-Access at ``http://localhost:8000``
-
-Example 3: Watch Source Code
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Watch both docs and source code for changes:
-
-.. code-block:: bash
-
-   sphinx-autobuild docs docs/_build/html \
-     --watch mypackage \
-     --watch README.md \
-     --watch CHANGELOG.md
-
-Useful when you have:
-- Docstrings in source code
-- README included in docs
-- Auto-generated API documentation
-
-Example 4: Advanced Configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Create ``Makefile``:
-
-.. code-block:: makefile
-
-   .PHONY: dev clean serve
-   
-   # Development server with live reload
-   dev:
-   	sphinx-autobuild docs docs/_build/html \
-   		--port 8000 \
-   		--host 0.0.0.0 \
-   		--open-browser \
-   		--ignore "*.tmp" \
-   		--ignore "*.swp" \
-   		--ignore "*~" \
-   		--ignore "*.pyc" \
-   		--watch mypackage \
-   		--delay 1 \
-   		--re-ignore "_build/.*" \
-   		--re-ignore ".git/.*"
-   
-   # Production build
-   build:
-   	sphinx-build -b html docs docs/_build/html
-   
-   # Clean build artifacts
-   clean:
-   	rm -rf docs/_build
-   
-   # Serve without auto-rebuild
-   serve:
-   	python -m http.server -d docs/_build/html 8000
-
-Run development server:
-
-.. code-block:: bash
-
-   make dev
-
-Example 5: Multiple Builders
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``watch_all.sh``:
-
-.. code-block:: bash
-
-   #!/bin/bash
-   
-   # Terminal 1: HTML builder
-   sphinx-autobuild docs docs/_build/html --port 8000 &
-   
-   # Terminal 2: Markdown builder
-   sphinx-autobuild docs docs/_build/markdown \
-     -b markdown --port 8001 &
-   
-   # Terminal 3: Linkcheck
-   while true; do
-     sphinx-build -b linkcheck docs docs/_build/linkcheck
-     sleep 300  # Check every 5 minutes
-   done &
-   
-   wait
 
 Advanced Features
 -----------------

@@ -2,6 +2,9 @@
 import os
 import sys
 
+# Add examples directory to Python path for automodapi example
+sys.path.insert(0, os.path.abspath('examples'))
+
 # -- Project information -----------------------------------------------------
 project = 'KENSAI Sphinx Container Documentation'
 copyright = '2026, KENSAI'
@@ -23,7 +26,8 @@ extensions = [
     'myst_parser',
     'sphinx_copybutton',
     'sphinxemoji.sphinxemoji',
-    'sphinx_charts.charts',
+    'sphinx_automodapi.automodapi',
+    # 'sphinx_charts.charts',  # Disabled for Windows testing - requires sphinx_math_dollar
 ]
 
 templates_path = ['_templates']

@@ -6,8 +6,14 @@ Karma Sphinx Theme Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/karma-sphinx-theme/>`_
-   - :doc:`See Working Example <../../examples/karma-sphinx-theme-example>`
+   - `API Documentation <../../pdoc/karma_sphinx_theme/index.html>`_
+   - `Manual <https://karma-sphinx-theme.readthedocs.io/en/latest/>`_
+   - :doc:`Working Example <../../examples/karma-sphinx-theme-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use karma-sphinx-theme, a Karma documentation theme.
 
@@ -21,6 +27,9 @@ Karma Sphinx Theme provides features for:
 - Configuration options
 - Advanced features
 - Best practices
+
+
+The karma-sphinx-theme package provides functionality for working with Karma documentation theme.
 
 Installation
 ------------

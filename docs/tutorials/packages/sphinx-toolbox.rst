@@ -6,8 +6,14 @@ Sphinx Toolbox Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-toolbox/>`_
-   - :doc:`See Working Example <../../examples/sphinx-toolbox-example>`
-   - `Official Documentation <https://sphinx-toolbox.readthedocs.io/>`_
+   - `API Documentation <../../pdoc/sphinx_toolbox/index.html>`_
+   - `Manual <https://sphinx-toolbox.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinx-toolbox-example>`
+
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-toolbox in your Sphinx documentation.
 
@@ -21,6 +27,20 @@ sphinx-toolbox is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinx-toolbox provides:
+
+- Collection of Sphinx extensions
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Configuration Documentation**: Document config values
+- **Enhanced Autodoc**: More autodoc features
+- **Code Enhancements**: Better code blocks
+- **GitHub Integration**: GitHub-related features
 Installation
 ------------
 
@@ -65,6 +85,50 @@ Advanced Configuration
    # Configuration options
    github_username = 'your-username'
    github_repository = 'your-repo'
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_toolbox',
+       # ... other extensions
+   ]
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_toolbox',
+       'sphinx_toolbox.more_autodoc',
+       'sphinx_toolbox.more_autosummary',
+       'sphinx_toolbox.documentation_summary',
+       'sphinx_toolbox.tweaks.param_dash',
+       'sphinx_toolbox.tweaks.latex_layout',
+       'sphinx_toolbox.tweaks.latex_toc',
+       'sphinx_toolbox.github',
+       'sphinx_toolbox.sidebar_links',
+       'sphinx_toolbox.confval',
+       'sphinx_toolbox.code',
+   ]
+   
+   # GitHub integration
+   github_username = 'your-username'
+   github_repository = 'your-repo'
+   
+   # Other options
+   documentation_summary = 'My Project Documentation'
 
 Basic Usage
 -----------

@@ -6,8 +6,14 @@ Sphinx Pydantic Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-pydantic/>`_
-   - :doc:`See Working Example <../../examples/sphinx-pydantic-example>`
-   - `Official Documentation <https://sphinx-pydantic.readthedocs.io/>`_
+   - `API Documentation <../../pdoc/sphinx_pydantic/index.html>`_
+   - `Manual <https://autodoc-pydantic.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinx-pydantic-example>`
+
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 This tutorial demonstrates how to use sphinx-pydantic in your Sphinx documentation.
 
@@ -21,6 +27,20 @@ sphinx-pydantic is a Sphinx extension that provides:
 - Comprehensive configuration options
 - Professional documentation output
 
+sphinx-pydantic provides:
+
+- Enhanced Pydantic documentation
+- Integration with Sphinx documentation
+- Flexible configuration options
+- Professional output formatting
+
+Key Features
+~~~~~~~~~~~~
+
+- **Enhanced Documentation**: Rich Pydantic model documentation
+- **Field Summary**: Tabular field information
+- **JSON Schema**: Display JSON/YAML schemas
+- **Validators**: Document custom validators
 Installation
 ------------
 
@@ -55,6 +75,38 @@ Advanced Configuration
    # Configuration options
    pydantic_show_json = True
    pydantic_show_field_summary = True
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Configuration
+~~~~~~~~~~~~~~~~~~~
+
+Add to your ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_pydantic',
+       # ... other extensions
+   ]
+
+Advanced Configuration
+~~~~~~~~~~~~~~~~~~~~~~
+
+Complete configuration with all features:
+
+.. code-block:: python
+
+   extensions = ['sphinx_pydantic']
+   
+   # Package-specific configuration
+   pydantic_show_json = True
+   pydantic_show_field_summary = True
+   pydantic_show_validators = True
+   pydantic_show_config_summary = True
+   pydantic_show_schema = True
 
 Basic Usage
 -----------

@@ -6,9 +6,14 @@ sphinx-copybutton Tutorial
    **Package Resources:**
    
    - `PyPI Package <https://pypi.org/project/sphinx-copybutton/>`_
-   - :doc:`See Working Example <../../examples/sphinx-copybutton-example>`
-   - `Official Documentation <https://sphinx-copybutton.readthedocs.io/>`_
+   - `API Documentation <../../pdoc/sphinx_copybutton/index.html>`_
+   - `Manual <https://sphinx-copybutton.readthedocs.io/>`_
+   - :doc:`Working Example <../../examples/sphinx-copybutton-example>`
 
+
+.. contents:: Table of Contents
+   :local:
+   :depth: 2
 
 The ``sphinx-copybutton`` extension adds a "copy" button to code blocks, making it easy 
 for users to copy code examples.
@@ -34,6 +39,39 @@ Add to ``conf.py``:
    extensions = [
        'sphinx_copybutton',
    ]
+
+
+Additional Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_copybutton',
+   ]
+
+Options
+~~~~~~~
+
+.. code-block:: python
+
+   copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
+   copybutton_prompt_is_regexp = True
+   copybutton_only_copy_prompt_lines = True
+   copybutton_remove_prompts = True
+
+Custom Styling
+~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   copybutton_selector = "div.highlight pre"
+   copybutton_image_path = "copy-button.svg"
 
 Basic Usage
 -----------

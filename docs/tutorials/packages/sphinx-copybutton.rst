@@ -1,6 +1,15 @@
 sphinx-copybutton Tutorial
 ===========================
 
+.. note::
+   
+   **Package Resources:**
+   
+   - `PyPI Package <https://pypi.org/project/sphinx-copybutton/>`_
+   - :doc:`See Working Example <../../examples/sphinx-copybutton-example>`
+   - `Official Documentation <https://sphinx-copybutton.readthedocs.io/>`_
+
+
 The ``sphinx-copybutton`` extension adds a "copy" button to code blocks, making it easy 
 for users to copy code examples.
 

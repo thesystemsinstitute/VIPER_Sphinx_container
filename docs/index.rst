@@ -156,11 +156,18 @@ Documentation Sections
 
    quick-reference
    sphinx-packages
-   tutorials/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tutorials and Examples:
+
    tutorials/sphinx-basics
    tutorials/themes
    tutorials/extensions
-   examples/index
+   tutorials/package-tutorials
+   examples/package-examples
+   tutorials/doxygen-usage
+   tutorials/doxygen-breathe-exhale
 
 Indices and Tables
 ==================

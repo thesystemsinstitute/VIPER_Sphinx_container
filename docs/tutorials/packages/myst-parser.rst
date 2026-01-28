@@ -1,6 +1,15 @@
 myst-parser Tutorial
 ====================
 
+.. note::
+   
+   **Package Resources:**
+   
+   - `PyPI Package <https://pypi.org/project/myst-parser/>`_
+   - `Official Documentation <https://myst-parser.readthedocs.io/>`_
+   - :doc:`See Working Example <../../examples/myst-parser-example>`
+
+
 The MyST (Markedly Structured Text) parser allows you to write Sphinx documentation in 
 Markdown instead of reStructuredText.
 

@@ -111,44 +111,6 @@ Graphviz related Python packages:
 - graphviz2drawio
 - jirafs-graphviz
 - pydot_modern
-
-
-Install the Sphinx themes from:
-- https://sphinx-themes.org/
-
-Install the Sphinx extensions from:
-- https://sphinxthemes.com/extensions/
-
-
-
-Generate HTML documentation for this container.
-The title page:
-	- explains the purpose of this container
-	- link to the Sphinx documentation
-	- Explanation how to use the installed tools in this container from your project
-	- Links to the following sub pages:
-	- "Sphinx packages" with table listing all installed Sphinx-related Python packages with the following columns
-            - "Name" for the names of the package
-            - "Version" for the version of the Python package installed
-            - "Pypi" for the links to the Pypi page for the Python package
-            - "docs" for the links to the generated pdoc3 doumentation for the Python package
-            - "manual" link to the online documentation  for the Python package or tool
-            - "descr" for a one line description of the Package
-			- "Tutorial" a link to the included tutorial for this package.
-	- Tutorial page on how to use all Sphinx features, with a link to an example page. Embed youtube videos where possible.
-	- Tutorial page for every Sphinx package installed , with a link to an example page. Embed youtube videos where possible.
-
-Embed the generated documentation in the container.
-Run the generated HTML pages on a small embedded  webserver based Python http.server.
-Expose the port to allow expternal users to show the web pages in their browser
-
-
-create scripts for Windows and Linux to build the project:
-- generatethe HTML documentation under docs folder
-- build the docker inmage
-
-
-add Python packages:
 - pyreverse 
 - code2flow 
 - snakeviz 
@@ -207,6 +169,149 @@ add Python packages:
 - svg.py
 - python-svg
 - markdown-graphviz-svg
+
+
+
+
+
+Add these Python packages:
+# Diagram & Visualization Tools
+sphinxcontrib-mermaid
+sphinxcontrib-plantuml
+sphinxcontrib-blockdiag
+sphinxcontrib-seqdiag
+sphinxcontrib-nwdiag
+sphinxcontrib-actdiag
+sphinxcontrib-tikz
+
+
+#Enhanced Markdown & Content
+myst-nb
+sphinx-markdown-tables
+sphinx-panels
+sphinx-design
+sphinx-togglebutton
+sphinx-tabs
+sphinx-inline-tabs
+
+
+
+
+add the following pacakges under the existing specified ## categories in requirements.txt. If they don't exist, then add a new category.
+modify the build process to generate their pdoc.
+Bring "Installed Sphinx Packages" page in sunc with requirements.txt
+Generate the Tutorial and Example pages for the new Python packages.
+Add links to these new pages to the tables. 
+Add a link to their PyPI page, and a link to their manual.
+
+
+# API Code Documentation & Analysis
+sphinx-jsonschema
+sphinx-sql
+pydeps
+sphinx-needs
+
+# API & Web Documentation
+sphinxcontrib-openapi
+sphinxcontrib-redoc
+sphinxcontrib-websupport
+sphinxcontrib-restbuilder
+sphinx-jsonapi
+
+# Code Examples & Interactive Content
+sphinx-gallery
+sphinx-codeautolink
+sphinx-execute-code
+sphinx-thebe
+
+# Database & Data Documentation
+eralchemy2
+sqlalchemy
+sphinx-sqlalchemy
+
+# Performance & Build Tools
+sphinx-asdf
+
+# Testing & Quality
+doc8
+sphinx-doctest
+sphinx-lint
+rstcheck
+sphinx-spelling
+
+# Internationalization
+sphinx-intl
+sphinx-polyversion
+
+# Export & Format Support
+rst2pdf
+rinohtype
+sphinxcontrib-pandoc
+sphinxcontrib-katex
+sphinxcontrib-bibtex
+
+# Version Control & Collaboration
+sphinx-multiversion
+sphinx-versions
+sphinx-comments
+sphinxcontrib-contentui
+
+# Cloud & Infrastructure
+sphinx-terraform
+
+# Search & Navigation
+sphinx-search
+sphinx-sitemap
+sphinx-tags
+
+# Specialized Documentation
+sphinx-argparse
+sphinx-click
+sphinx-typer
+pydantic-sphinx
+sphinx-pydantic
+sphinx-toolbox
+
+
+
+Install the Sphinx themes from:
+- https://sphinx-themes.org/
+
+Install the Sphinx extensions from:
+- https://sphinxthemes.com/extensions/
+
+
+generate for each install Python package the pdoc3 documentation into docs folder.
+
+
+Generate HTML documentation for this container.
+The title page:
+	- explains the purpose of this container
+	- link to the Sphinx documentation
+	- Explanation how to use the installed tools in this container from your project
+	- Links to the following sub pages:
+	- "Sphinx packages" with table listing all installed Sphinx-related Python packages with the following columns
+            - "Name" for the names of the package
+            - "Version" for the version of the Python package installed
+            - "Pypi" for the links to the Pypi page for the Python package
+            - "docs" for the links to the generated pdoc3 doumentation for the Python package in the docs folder.
+            - "manual" link to the online documentation  for the Python package or tool
+            - "descr" for a one line description of the Package
+			- "Tutorial" a link to the included tutorial for this package.
+	- Tutorial page on how to use all Sphinx features, with a link to an example page. Embed youtube videos where possible.
+	- Tutorial page for every Sphinx package installed , with a link to an example page. Embed youtube videos where possible.
+
+Embed the generated documentation in the container.
+Run the generated HTML pages on a small embedded  webserver based Python http.server.
+Expose the port to allow expternal users to show the web pages in their browser
+
+
+create scripts for Windows and Linux to build the project:
+- generatethe HTML documentation under docs folder
+- build the docker inmage
+
+
+
 
 
 

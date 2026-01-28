@@ -34,7 +34,7 @@ docker ps
 
 ```batch
 # Open Command Prompt or PowerShell in project directory
-cd c:\DATA\__PRJ\KENSAI_Sphinx_container
+cd KENSAI_Sphinx_container
 
 # Run build script
 build.bat
@@ -61,7 +61,7 @@ chmod +x build.sh
 
 ```bash
 # Navigate to project directory
-cd /path/to/KENSAI_Sphinx_container
+cd KENSAI_Sphinx_container
 
 # Build the image
 docker build -t kensai-sphinx:latest .

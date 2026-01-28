@@ -3,64 +3,145 @@ Sphinx>=7.0.0
 pdoc3
 
 # Sphinx Extensions and Plugins
-sphinx-charts
-sphinx-confluence
-sphinx-lint
-sphinx-library
-sphinx2doxygen
-sphinx-issues
-sphinx-tagtoctree
-sphinx-vhdl
-sphinx-c-autodoc
-sphinx-theme
-sphinx-refdoc
-sphinx-gitref
-sphinx-autoschematics
-sphinx-pyreverse
-sphinx-uml
-sphinxcontrib-asyncio
-sphinxcontrib-googlemaps
-sphinx-kml
-sphinxnotes-fasthtml
-sphinx-wagtail-theme
-sphinx-diagrams
-btd.sphinx.graphviz
-sphinx-tojupyter
-sphinxcontrib-cadquery
-epub2sphinx
+
+## API Documentation & Code Analysis
 sphinx-autodoc-defaultargs
 sphinx-autodoc-annotation
 sphinx-autodoc2-fern
 sphinx-collapsible-autodoc
 sphinx-autodoc-toml
 sphinx-automodapi
+sphinx-autoapi
+sphinx-c-autodoc
+sphinx-vhdl
+breathe
+exhale
 pytest-doctestplus
+sphinxcontrib-httpdomain
+sphinx-apischema
+sphinx-jsonschema
+sphinx-sql
+pydeps
+sphinx-needs
+
+## Charts, Diagrams & UML
+sphinx-charts
+sphinx-diagrams
+sphinx-autoschematics
+sphinx-pyreverse
+sphinx-uml
+btd.sphinx.graphviz
+sphinxcontrib-cadquery
+
+## Jupyter Notebook Integration
+nbsphinx
+nbsphinx-link
+sphinx-jupyter-kernel
+myst-parser
+
+## Content Publishing & Export
+sphinx-confluence
+sphinx2doxygen
+epub2sphinx
+sphinx-tojupyter
+
+## UI/UX Enhancements
 sphinx-copybutton
 sphinx-prompt
 sphinxemoji
 sphinx-favicon
-myst-parser
-sphinxcontrib-httpdomain
-sphinx-autobuild
-sphinx-autoapi
-nbsphinx
-nbsphinx-link
-sphinx-jupyter-kernel
+sphinx-hoverxref
 sphinx-notfound-page
 sphinx-version-warning
-sphinx-hoverxref
-sphinx-last-updated-by-git
+
+## Version Control & Git Integration
 sphinx-git
-sphinxext-opengraph
+sphinx-last-updated-by-git
+sphinx-issues
+sphinx-gitref
+sphinx-changelog
+
+## Navigation & Organization
+sphinx-tagtoctree
+sphinx-library
+sphinx-refdoc
+sphinx-autoindex
+sphinx-autopackagesummary
+
+## Domain-Specific Extensions
+sphinxcontrib-asyncio
+sphinxcontrib-googlemaps
+sphinx-kml
 ansible-sphinx
 invoke-sphinx
+
+## Development & Build Tools
+sphinx-autobuild
+sphinx-lint
 sphinx-analytics
-sphinx-apischema
-sphinx-autoindex
+
+## Theme Utilities & Builders
+sphinx-theme
+sphinx-wagtail-theme
+sphinxnotes-fasthtml
+
+## Miscellaneous
 sphinx-autofixture
-sphinx-autopackagesummary
 sphinx-advanced
-sphinx-changelog
+
+## API & Web Documentation
+sphinxcontrib-openapi
+sphinxcontrib-redoc
+sphinxcontrib-websupport
+sphinxcontrib-restbuilder
+
+## Code Examples & Interactive Content
+sphinx-gallery
+sphinx-codeautolink
+sphinx-thebe
+
+## Database & Data Documentation
+eralchemy2
+sqlalchemy
+
+## Performance & Build Tools
+sphinx-asdf
+
+## Testing & Quality
+doc8
+sphinx-lint
+rstcheck
+sphinxcontrib-spelling
+
+## Internationalization
+sphinx-intl
+sphinx-polyversion
+
+## Export & Format Support
+rst2pdf
+rinohtype
+sphinxcontrib-katex
+sphinxcontrib-bibtex
+
+## Version Control & Collaboration
+sphinx-multiversion
+sphinx-versions
+sphinx-comments
+sphinxcontrib-contentui
+
+## Cloud & Infrastructure
+sphinx-terraform
+
+## Search & Navigation
+sphinx-sitemap
+sphinx-tags
+
+## Specialized Documentation
+sphinx-argparse
+sphinx-click
+sphinxcontrib-typer
+sphinx-pydantic
+sphinx-toolbox
 
 # Popular Sphinx Themes
 sphinx-rtd-theme
@@ -79,6 +160,13 @@ markdown
 enumerate-markdown
 flake8-markdown
 markdown-it-py
+myst-nb
+sphinx-markdown-tables
+sphinx-panels
+sphinx-design
+sphinx-togglebutton
+sphinx-tabs
+sphinx-inline-tabs
 
 # Graphviz and Diagram Tools
 pyan3
@@ -92,63 +180,29 @@ quickdiagrams
 dtreeplt
 pyprojectviz
 
-# Advanced Diagram and Visualization Tools
-pyreverse
+# Diagram and Visualization Tools
+# Note: pyreverse is included in pylint package
+pylint
 code2flow
 snakeviz
 pydeps
 diagrams
-diagrams-xtd
-diagrams-yaml
-diagrams-as-code
-flow-diagrams
-protobuf-uml-diagram
-renderschema
-flowdiagram
-mathdiagram
-pyumldiagrams
-matplotlib-set-diagrams
-sphinxcontrib-hdl-diagrams
-sun-path-diagrams
-k8s-diagrams
-er-diagrams-generator
-markdown-diagram-fixer
-yarrow-diagrams
 railroad-diagrams
-syntax-diagrams
-multicloud-diagrams
-bdp
 blockdiag
-palette-diagram
-cadCAD-diagram
-diagram-autobuild
-infrastructure-diagrams
-pydiagrams
-PDFDiagramming
-projman
-idgrms
+nwdiag
 N2G
-orthogram
 rptree
 pinout
-pyagram
-nwdiag
-Image2Dia
-autonode-diagrams
-chalk-diagrams
-polar-diagrams
-airflow-diagrams
-diagrams-adapters
-reverse-diagrams
+sphinxcontrib-mermaid
+sphinxcontrib-plantuml
+sphinxcontrib-blockdiag
+sphinxcontrib-seqdiag
+sphinxcontrib-nwdiag
+sphinxcontrib-actdiag
+sphinxcontrib-tikz
 
 # SVG and Vector Graphics Tools
-pytex2svg
-svg-schematic
-svg-plot
-svg-ultralight
-svg.py
-python-svg
-markdown-graphviz-svg
+svg.py 
 
 # Additional utilities
 requests

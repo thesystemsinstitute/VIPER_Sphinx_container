@@ -1,5 +1,5 @@
-Examples
-========
+Package-specific Examples
+=========================
 
 This section contains practical examples demonstrating various Sphinx features.
 
@@ -10,6 +10,116 @@ This section contains practical examples demonstrating various Sphinx features.
    api-docs-example
    jupyter-example
    graphviz-example
+   sphinx-charts-example
+   sphinx-confluence-example
+   sphinx-lint-example
+   sphinx-library-example
+   sphinx2doxygen-example
+   sphinx-issues-example
+   sphinx-tagtoctree-example
+   sphinx-vhdl-example
+   sphinx-c-autodoc-example
+   sphinx-theme-example
+   sphinx-refdoc-example
+   sphinx-gitref-example
+   sphinx-autoschematics-example
+   sphinx-pyreverse-example
+   sphinx-uml-example
+   sphinxcontrib-asyncio-example
+   sphinxcontrib-googlemaps-example
+   sphinx-kml-example
+   sphinxnotes-fasthtml-example
+   sphinx-wagtail-theme-example
+   sphinx-diagrams-example
+   btd-sphinx-graphviz-example
+   sphinx-tojupyter-example
+   sphinxcontrib-cadquery-example
+   epub2sphinx-example
+   sphinx-autodoc-defaultargs-example
+   sphinx-autodoc-annotation-example
+   sphinx-autodoc2-fern-example
+   sphinx-collapsible-autodoc-example
+   sphinx-autodoc-toml-example
+   sphinx-automodapi-example
+   pytest-doctestplus-example
+   sphinx-copybutton-example
+   sphinx-prompt-example
+   sphinxemoji-example
+   sphinx-favicon-example
+   myst-parser-example
+   sphinxcontrib-httpdomain-example
+   sphinx-autobuild-example
+   sphinx-autoapi-example
+   nbsphinx-example
+   nbsphinx-link-example
+   sphinx-jupyter-kernel-example
+   sphinx-notfound-page-example
+   sphinx-version-warning-example
+   sphinx-hoverxref-example
+   sphinx-last-updated-by-git-example
+   sphinx-git-example
+   sphinxext-opengraph-example
+   breathe-example
+   exhale-example
+   ansible-sphinx-example
+   invoke-sphinx-example
+   sphinx-analytics-example
+   sphinx-apischema-example
+   sphinx-autoindex-example
+   sphinx-autofixture-example
+   sphinx-autopackagesummary-example
+   sphinx-advanced-example
+   sphinx-changelog-example
+   sphinx-rtd-theme-example
+   sphinx-book-theme-example
+   pydata-sphinx-theme-example
+   furo-example
+   piccolo-theme-example
+   sphinx-material-example
+   sphinx-press-theme-example
+   karma-sphinx-theme-example
+   sphinxawesome-theme-example
+   sphinx-immaterial-example
+   markdown-example
+   enumerate-markdown-example
+   flake8-markdown-example
+   markdown-it-py-example
+   myst-nb-example
+   sphinx-markdown-tables-example
+   sphinx-panels-example
+   sphinx-design-example
+   sphinx-togglebutton-example
+   sphinx-tabs-example
+   sphinx-inline-tabs-example
+   pyan3-example
+   graphviz-example
+   pydot-example
+   gprof2dot-example
+   graphviz2drawio-example
+   python-markdown-graphviz-example
+   fsmdot-example
+   quickdiagrams-example
+   dtreeplt-example
+   pyprojectviz-example
+   pylint-example
+   code2flow-example
+   snakeviz-example
+   pydeps-example
+   diagrams-example
+   railroad-diagrams-example
+   blockdiag-example
+   nwdiag-example
+   N2G-example
+   rptree-example
+   pinout-example
+   sphinxcontrib-mermaid-example
+   sphinxcontrib-plantuml-example
+   sphinxcontrib-blockdiag-example
+   sphinxcontrib-seqdiag-example
+   sphinxcontrib-nwdiag-example
+   sphinxcontrib-actdiag-example
+   sphinxcontrib-tikz-example
+   svg.py-example
 
 Quick Examples
 --------------

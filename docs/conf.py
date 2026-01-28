@@ -23,6 +23,7 @@ extensions = [
     'myst_parser',
     'sphinx_copybutton',
     'sphinxemoji.sphinxemoji',
+    'sphinx_charts.charts',
 ]
 
 templates_path = ['_templates']
@@ -42,6 +43,16 @@ html_theme_options = {
     'titles_only': False,
 }
 
+# Make external links open in new tab
+html_context = {
+    'display_github': False,
+}
+
+# Custom JavaScript to make links open in new tab
+html_js_files = [
+    'custom.js',
+]
+
 # -- Extension configuration -------------------------------------------------
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3', None),
@@ -51,6 +62,10 @@ intersphinx_mapping = {
 # Napoleon settings
 napoleon_google_docstring = True
 napoleon_numpy_docstring = True
+
+# Autosummary settings
+autosummary_generate = False  # Don't auto-generate stub files
+autosummary_imported_members = False
 
 # Todo extension
 todo_include_todos = True

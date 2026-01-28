@@ -2,8 +2,9 @@
 import os
 import sys
 
-# Add examples directory to Python path for automodapi example
-sys.path.insert(0, os.path.abspath('examples'))
+# Add project root and tutorials/packages to Python path
+sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath('tutorials/packages'))
 
 # -- Project information -----------------------------------------------------
 project = 'KENSAI Sphinx Container Documentation'
@@ -27,8 +28,20 @@ extensions = [
     'sphinx_copybutton',
     'sphinxemoji.sphinxemoji',
     'sphinx_automodapi.automodapi',
+    'sphinxcontrib.httpdomain',
+    'sphinx_prompt',
+    'sphinx_pyreverse',
     # 'sphinx_charts.charts',  # Disabled for Windows testing - requires sphinx_math_dollar
 ]
+
+# Optional legacy extension: sphinx_kml may be incompatible with newer Sphinx
+KML_AVAILABLE = False
+try:
+    import sphinx_kml  # noqa: F401
+    extensions.append('sphinx_kml')
+    KML_AVAILABLE = True
+except Exception:
+    KML_AVAILABLE = False
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -95,6 +108,82 @@ def setup(app):
     """Add line numbers and language captions to all code blocks by default."""
     from sphinx.directives.code import CodeBlock
     from sphinx.directives.code import LiteralInclude
+    from collections import defaultdict
+    from docutils import nodes
+    from docutils.parsers.rst import Directive
+    from docutils.parsers.rst import directives
+    from docutils.parsers.rst import roles
+    def _any_option_spec():
+        return defaultdict(lambda: directives.unchanged)
+
+    class LiteralBlockDirective(Directive):
+        has_content = True
+        optional_arguments = 1
+        final_argument_whitespace = True
+        option_spec = _any_option_spec()
+
+        def run(self):
+            text = '\n'.join(self.content)
+            return [nodes.literal_block(text, text)]
+
+    class FileLiteralDirective(Directive):
+        required_arguments = 1
+        optional_arguments = 10
+        final_argument_whitespace = True
+        has_content = True
+        option_spec = _any_option_spec()
+
+        def run(self):
+            text = self.arguments[0]
+            return [nodes.literal_block(text, text)]
+
+    def generic_role(name, rawtext, text, lineno, inliner, options=None, content=None):
+        options = options or {}
+        node = nodes.literal(text, text)
+        return [node], []
+
+    if not KML_AVAILABLE:
+        app.add_directive('kml', LiteralBlockDirective)
+        app.add_directive('kml-file', FileLiteralDirective)
+        app.add_directive('kml-download', FileLiteralDirective)
+        app.add_directive('kml-export', LiteralBlockDirective)
+
+    # Fallback directives for optional extensions
+    app.add_directive('schematic', LiteralBlockDirective)
+    app.add_directive('chart', FileLiteralDirective)
+    app.add_directive('diagrams', LiteralBlockDirective)
+    app.add_directive('pyreverse', LiteralBlockDirective)
+    app.add_directive('refdoc', LiteralBlockDirective)
+    app.add_directive('refdoc-module', LiteralBlockDirective)
+    app.add_directive('refdoc-package', LiteralBlockDirective)
+    app.add_directive('refdoc-index', LiteralBlockDirective)
+    app.add_directive('git_changelog', LiteralBlockDirective)
+    app.add_directive('gitlog', LiteralBlockDirective)
+    app.add_directive('gitcompare', LiteralBlockDirective)
+    app.add_directive('gitcontributors', LiteralBlockDirective)
+    app.add_directive('gitblame', LiteralBlockDirective)
+    app.add_directive('gitstats', LiteralBlockDirective)
+    app.add_directive('gitcurrent', LiteralBlockDirective)
+    app.add_directive('gitbuildinfo', LiteralBlockDirective)
+    app.add_directive('gitreleasenotes', LiteralBlockDirective)
+    app.add_directive('gitchangelog', LiteralBlockDirective)
+    app.add_directive('gitsubmodule', LiteralBlockDirective)
+    app.add_directive('grid', LiteralBlockDirective)
+
+    # Fallback roles for optional extensions
+    roles.register_local_role('gitrepo', generic_role)
+    roles.register_local_role('gitcommit', generic_role)
+    roles.register_local_role('gitbranch', generic_role)
+    roles.register_local_role('gittag', generic_role)
+    roles.register_local_role('gitfile', generic_role)
+    roles.register_local_role('gitpr', generic_role)
+    roles.register_local_role('gitmr', generic_role)
+    roles.register_local_role('gitauthor', generic_role)
+    roles.register_local_role('issue', generic_role)
+    roles.register_local_role('pr', generic_role)
+    roles.register_local_role('user', generic_role)
+    roles.register_local_role('commit', generic_role)
+    roles.register_local_role('refdoc', generic_role)
     
     # Store original run methods
     original_code_block_run = CodeBlock.run

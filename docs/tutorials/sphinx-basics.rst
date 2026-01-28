@@ -363,7 +363,7 @@ Next Steps
 
 * Learn about :doc:`themes` to customize your documentation appearance
 * Explore :doc:`extensions` to add functionality
-* Check out :doc:`../examples/index` for real-world examples
+* Review the :doc:`Package Tutorials <package-tutorials>` for specific extensions
 
 Video Tutorial
 --------------

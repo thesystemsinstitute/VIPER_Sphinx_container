@@ -8,8 +8,6 @@ Sphinx-Confluence Tutorial
    - `PyPI Package <https://pypi.org/project/sphinx-confluence/>`_
    - `API Documentation <../../pdoc/sphinx_confluence/index.html>`_
    - `Manual <https://sphinxcontrib-confluencebuilder.readthedocs.io/>`_
-   - :doc:`Working Example <../../examples/sphinx-confluence-example>`
-
 
 .. contents:: Table of Contents
    :local:
@@ -634,6 +632,255 @@ Complete Example
    # Debug
    confluence_publish_debug = False
    confluence_publish_dryrun = False
+
+
+Practical Examples
+------------------
+
+Confluence Output
+~~~~~~~~~~~~~~~~~
+
+When published to Confluence, this page appears with:
+
+- **Styled Headers**: Each heading level properly formatted
+- **Lists**: Bullet points and numbered lists preserved
+- **Code Blocks**: Syntax-highlighted code with proper formatting
+- **Admonitions**: Note/Warning/Tip boxes styled as Confluence panels
+- **Cross-References**: Links to other documentation pages
+- **Navigation**: Automatic breadcrumbs and child page links
+
+Example: Code Documentation
+----------------------------
+
+Source RST with API Docs
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: rst
+
+   API Reference
+   =============
+   
+   Core Module
+   -----------
+   
+   .. automodule:: product_sdk.core
+      :members:
+      :undoc-members:
+      :show-inheritance:
+   
+   Example Usage
+   ~~~~~~~~~~~~~
+   
+   Here's how to use the core functionality:
+   
+   .. code-block:: python
+   
+      from product_sdk import Client
+      
+      # Initialize client
+      client = Client(api_key='your-key')
+      
+      # Fetch data
+      data = client.get_data(id=123)
+      print(data)
+   
+   Parameters
+   ~~~~~~~~~~
+   
+   .. list-table::
+      :header-rows: 1
+      :widths: 20 20 60
+   
+      * - Parameter
+        - Type
+        - Description
+      * - api_key
+        - string
+        - Your API authentication key
+      * - timeout
+        - int
+        - Request timeout in seconds (default: 30)
+      * - retry
+        - bool
+        - Enable automatic retry (default: True)
+
+Confluence Rendering
+~~~~~~~~~~~~~~~~~~~~
+
+The published Confluence page includes:
+
+- **API Documentation**: Class and method signatures with descriptions
+- **Code Examples**: Syntax-highlighted Python code blocks
+- **Tables**: Properly formatted parameter tables
+- **Type Information**: Parameter types and return types
+- **Links**: Cross-references to related API elements
+
+Example: Build and Publish Commands
+------------------------------------
+
+Local Testing
+~~~~~~~~~~~~~
+
+Build Confluence output locally without publishing:
+
+.. code-block:: bash
+
+   # Build to see what will be published
+   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+       sphinx-build -b confluence /project/docs /project/build/confluence
+
+This creates Confluence storage format files in ``build/confluence/`` for review.
+
+Publishing to Confluence
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Publish documentation to Confluence server:
+
+.. code-block:: bash
+
+   # Set authentication
+   export CONFLUENCE_USER="your-email@example.com"
+   export CONFLUENCE_API_TOKEN="your-api-token"
+   
+   # Build and publish
+   docker run --rm \
+       -e CONFLUENCE_USER \
+       -e CONFLUENCE_API_TOKEN \
+       -v $(pwd):/project \
+       kensai-sphinx:latest \
+       sphinx-build -b confluence /project/docs /project/build/confluence
+
+Dry Run
+~~~~~~~
+
+Test without actually publishing:
+
+.. code-block:: bash
+
+   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+       sphinx-build -b confluence -D confluence_publish=False \
+       /project/docs /project/build/confluence
+
+Example: Advanced Features
+---------------------------
+
+Including Attachments
+~~~~~~~~~~~~~~~~~~~~~
+
+Images and files are automatically uploaded as attachments:
+
+.. code-block:: rst
+
+   Architecture Diagram
+   --------------------
+   
+   .. image:: _static/architecture.png
+      :width: 600px
+      :alt: System Architecture
+   
+   Download the :download:`configuration template <_static/config.yaml>`.
+
+The image and YAML file are uploaded to Confluence and linked automatically.
+
+Confluence Macros
+~~~~~~~~~~~~~~~~~
+
+Insert native Confluence macros:
+
+.. code-block:: rst
+
+   .. confluence_macro::
+      :name: info
+      :title: Important Information
+   
+      This content appears in a Confluence info panel.
+   
+   .. confluence_macro::
+      :name: toc
+      :maxLevel: 3
+
+Page Metadata
+~~~~~~~~~~~~~
+
+Control page-specific settings:
+
+.. code-block:: rst
+
+   .. confluence_metadata::
+      :labels: api, reference, v1.0
+      :editor: v2
+   
+   API Reference
+   =============
+   
+   This page has custom labels and uses the Confluence v2 editor.
+
+Example Output Features
+-----------------------
+
+When your documentation is published to Confluence, users see:
+
+✅ **Professional Formatting**
+   - Clean, consistent styling
+   - Proper heading hierarchy
+   - Readable code blocks with syntax highlighting
+
+✅ **Interactive Elements**
+   - Expandable sections
+   - Tabbed content
+   - Interactive tables of contents
+
+✅ **Collaborative Features**
+   - Comments on pages
+   - Page ratings
+   - Watch notifications
+   - Version history
+
+✅ **Search Integration**
+   - Full-text search across documentation
+   - Confluence's powerful search filters
+   - Quick access from anywhere in Confluence
+
+✅ **Access Control**
+   - Leverage Confluence's permission system
+   - Space-level and page-level restrictions
+   - Integration with corporate SSO
+
+Publishing Workflow
+-------------------
+
+A typical publishing workflow:
+
+.. code-block:: bash
+
+   #!/bin/bash
+   # publish-docs.sh
+   
+   set -e
+   
+   echo "Building documentation..."
+   sphinx-build -b confluence docs/ build/confluence
+   
+   echo "Running pre-publish checks..."
+   # Validate links, images, etc.
+   
+   echo "Publishing to Confluence..."
+   # Authentication via environment variables
+   sphinx-build -b confluence \
+       -D confluence_publish=True \
+       docs/ build/confluence
+   
+   echo "✅ Documentation published successfully!"
+   echo "View at: https://yourcompany.atlassian.net/wiki/spaces/DOCS"
+
+Learn More
+----------
+
+For detailed configuration and usage instructions, see:
+
+- :doc:`../tutorials/packages/sphinx-confluence` - Complete tutorial
+- `Confluence Builder Documentation <https://sphinxcontrib-confluencebuilder.readthedocs.io/>`_
+- `Atlassian Confluence API <https://developer.atlassian.com/cloud/confluence/rest/>`_
 
 Additional Resources
 --------------------

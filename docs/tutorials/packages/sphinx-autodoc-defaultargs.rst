@@ -7,8 +7,6 @@ Sphinx-Autodoc-Defaultargs Tutorial
    
    - `PyPI Package <https://pypi.org/project/sphinx-autodoc-defaultargs/>`_
    - `Manual <https://github.com/zwang123/sphinx-autodoc-defaultargs>`_
-   - :doc:`Working Example <../../examples/sphinx-autodoc-defaultargs-example>`
-
 
 .. contents:: Table of Contents
    :local:
@@ -88,7 +86,6 @@ Advanced Configuration
    autodoc_defaultargs_in_description = True
 
 
-
 Additional Configuration Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -113,7 +110,6 @@ Options
        'show-defaults': True,
        'default-value-format': 'repr',  # or 'str'
    }
-
 
 
 Class with Defaults
@@ -432,9 +428,293 @@ Next Steps
 4. Adjust formatting options
 5. Keep default values up to date
 
+
+Practical Examples
+------------------
+
+Basic Usage
+-----------
+
+Function with Defaults
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   def connect(host='localhost', port=5432, timeout=30):
+       """Connect to database.
+       
+       :param host: Database host
+       :param port: Database port
+       :param timeout: Connection timeout
+       """
+       pass
+
+With autodoc-defaultargs, the documentation automatically shows:
+
+.. function:: connect(host='localhost', port=5432, timeout=30)
+
+   Connect to database.
+   
+   :param host: Database host
+   :param port: Database port
+   :param timeout: Connection timeout
+
+Configuration
+-------------
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx.ext.autodoc',
+       'sphinx_autodoc_defaultargs',
+   ]
+
+Options
+~~~~~~~
+
+.. code-block:: python
+
+   autodoc_default_options = {
+       'show-defaults': True,
+       'default-value-format': 'repr',  # or 'str'
+   }
+
+Examples
+--------
+
+Complex Defaults
+~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   def process_data(items, batch_size=100, options=None, validate=True):
+       """Process data in batches."""
+       if options is None:
+           options = {}
+       # process...
+
+
+Simple Function
+~~~~~~~~~~~~~~~
+
+``sphinx_autodoc_defaultargs/utils.py``:
+
+.. literalinclude:: sphinx_autodoc_defaultargs/utils.py
+   :language: python
+
+
+Document:
+
+.. code-block:: rst
+
+   .. autofunction:: sphinx_autodoc_defaultargs.utils.greet
+
+
+.. autofunction:: sphinx_autodoc_defaultargs.utils.greet
+
+
+Output shows:
+
+generated documentation: :doc:`sphinx_autodoc_defaultargs/utils`
+
+
+Practical Examples
+------------------
+
+Basic Usage
+-----------
+
+Function with Defaults
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   def connect(host='localhost', port=5432, timeout=30):
+       """Connect to database.
+       
+       :param host: Database host
+       :param port: Database port
+       :param timeout: Connection timeout
+       """
+       pass
+
+With autodoc-defaultargs, the documentation automatically shows:
+
+.. function:: connect(host='localhost', port=5432, timeout=30)
+
+   Connect to database.
+   
+   :param host: Database host
+   :param port: Database port
+   :param timeout: Connection timeout
+
+Configuration
+-------------
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx.ext.autodoc',
+       'sphinx_autodoc_defaultargs',
+   ]
+
+Options
+~~~~~~~
+
+.. code-block:: python
+
+   autodoc_default_options = {
+       'show-defaults': True,
+       'default-value-format': 'repr',  # or 'str'
+   }
+
+Examples
+--------
+
+Complex Defaults
+~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   def process_data(items, batch_size=100, options=None, validate=True):
+       """Process data in batches."""
+       if options is None:
+           options = {}
+       # process...
+
+
+Simple Function
+~~~~~~~~~~~~~~~
+
+``sphinx_autodoc_defaultargs/utils.py``:
+
+.. literalinclude:: sphinx_autodoc_defaultargs/utils.py
+   :language: python
+
+
+Document:
+
+.. code-block:: rst
+
+   .. autofunction:: sphinx_autodoc_defaultargs.utils.greet
+
+
+.. autofunction:: sphinx_autodoc_defaultargs.utils.greet
+
+
+Output shows:
+
+generated documentation: :doc:`sphinx_autodoc_defaultargs/utils`
+
+
+Practical Examples
+------------------
+
+Basic Usage
+-----------
+
+Function with Defaults
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   def connect(host='localhost', port=5432, timeout=30):
+       """Connect to database.
+       
+       :param host: Database host
+       :param port: Database port
+       :param timeout: Connection timeout
+       """
+       pass
+
+With autodoc-defaultargs, the documentation automatically shows:
+
+.. function:: connect(host='localhost', port=5432, timeout=30)
+
+   Connect to database.
+   
+   :param host: Database host
+   :param port: Database port
+   :param timeout: Connection timeout
+
+Configuration
+-------------
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx.ext.autodoc',
+       'sphinx_autodoc_defaultargs',
+   ]
+
+Options
+~~~~~~~
+
+.. code-block:: python
+
+   autodoc_default_options = {
+       'show-defaults': True,
+       'default-value-format': 'repr',  # or 'str'
+   }
+
+Examples
+--------
+
+Complex Defaults
+~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   def process_data(items, batch_size=100, options=None, validate=True):
+       """Process data in batches."""
+       if options is None:
+           options = {}
+       # process...
+
+
+Simple Function
+~~~~~~~~~~~~~~~
+
+``sphinx_autodoc_defaultargs/utils.py``:
+
+.. literalinclude:: sphinx_autodoc_defaultargs/utils.py
+   :language: python
+
+
+Document:
+
+.. code-block:: rst
+
+   .. autofunction:: sphinx_autodoc_defaultargs.utils.greet
+
+
+.. autofunction:: sphinx_autodoc_defaultargs.utils.greet
+
+
+Output shows:
+
+generated documentation: :doc:`sphinx_autodoc_defaultargs/utils`
+
 Additional Resources
 --------------------
-
 - :doc:`sphinx-autodoc-annotation` - Type annotation display
 - :doc:`../sphinx-basics` - Learn Sphinx fundamentals
 - `Autodoc Documentation <https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`_
+- :doc:`../tutorials/packages/sphinx-autodoc-defaultargs` - Complete tutorial
+- GitHub repository: https://github.com/sphinx-contrib/autodoc-defaultargs
+

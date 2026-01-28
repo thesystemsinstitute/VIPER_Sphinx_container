@@ -195,7 +195,7 @@ Testing & Quality
 
    packages/doc8
    packages/rstcheck
-   packages/sphinxcontrib-spelling
+   packages/sphinx-spelling
 
 Internationalization
 --------------------
@@ -253,6 +253,6 @@ Specialized Documentation
 
    packages/sphinx-argparse
    packages/sphinx-click
-   packages/sphinxcontrib-typer
+   packages/sphinx-typer
    packages/sphinx-pydantic
    packages/sphinx-toolbox

@@ -8,8 +8,6 @@ Sphinxnotes-FastHTML Tutorial
    - `PyPI Package <https://pypi.org/project/sphinxnotes-fasthtml/>`_
    - `API Documentation <../../pdoc/sphinxnotes_fasthtml/index.html>`_
    - `Manual <https://github.com/sphinx-notes/fasthtml>`_
-   - :doc:`Working Example <../../examples/sphinxnotes-fasthtml-example>`
-
 
 .. contents:: Table of Contents
    :local:
@@ -699,10 +697,426 @@ Next Steps
 5. Implement service workers for offline support
 6. Monitor Core Web Vitals
 
+
+Practical Examples
+------------------
+
+Basic Usage
+-----------
+
+Simple Page
+~~~~~~~~~~~
+
+.. fasthtml::
+
+   # Quick Start
+   
+   This is a fast HTML page with automatic formatting.
+   
+   - Bullet points work
+   - Lists are automatic
+   - **Bold** and *italic* supported
+
+Inline Styles
+~~~~~~~~~~~~~
+
+.. fasthtml::
+   :style: clean
+   
+   ## Clean Style
+   
+   Minimal styling for professional documentation.
+
+Code Blocks
+~~~~~~~~~~~
+
+.. fasthtml::
+   
+   ## Code Example
+   
+   ```python
+   def hello():
+       print("Hello, FastHTML!")
+   ```
+
+Quick Formatting
+----------------
+
+Headers
+~~~~~~~
+
+.. fasthtml::
+
+   # H1 Header
+   ## H2 Header
+   ### H3 Header
+   #### H4 Header
+
+Lists
+~~~~~
+
+.. fasthtml::
+
+   **Ordered List:**
+   1. First item
+   2. Second item
+   3. Third item
+   
+   **Unordered List:**
+   - Item A
+   - Item B
+   - Item C
+
+Tables
+~~~~~~
+
+.. fasthtml::
+
+   | Column 1 | Column 2 | Column 3 |
+   |----------|----------|----------|
+   | Data 1   | Data 2   | Data 3   |
+   | Value A  | Value B  | Value C  |
+
+Configuration
+-------------
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinxnotes.fasthtml',
+   ]
+   
+   # FastHTML settings
+   fasthtml_theme = 'clean'
+   fasthtml_minify = True
+
+Custom Themes
+~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   fasthtml_custom_css = '''
+   body {
+       font-family: Arial, sans-serif;
+       line-height: 1.6;
+   }
+   '''
+
+Quick Templates
+---------------
+
+Blog Post
+~~~~~~~~~
+
+.. fasthtml::
+   :template: blog
+   
+   # My Blog Post
+   *Published: January 2024*
+   
+   This is a quick blog post using FastHTML.
+
+API Documentation
+~~~~~~~~~~~~~~~~~
+
+.. fasthtml::
+   :template: api
+   
+   ## function_name(param1, param2)
+   
+   **Parameters:**
+   - param1: Description
+   - param2: Description
+   
+   **Returns:** Result description
+
+
+Practical Examples
+------------------
+
+Basic Usage
+-----------
+
+Simple Page
+~~~~~~~~~~~
+
+.. fasthtml::
+
+   # Quick Start
+   
+   This is a fast HTML page with automatic formatting.
+   
+   - Bullet points work
+   - Lists are automatic
+   - **Bold** and *italic* supported
+
+Inline Styles
+~~~~~~~~~~~~~
+
+.. fasthtml::
+   :style: clean
+   
+   ## Clean Style
+   
+   Minimal styling for professional documentation.
+
+Code Blocks
+~~~~~~~~~~~
+
+.. fasthtml::
+   
+   ## Code Example
+   
+   ```python
+   def hello():
+       print("Hello, FastHTML!")
+   ```
+
+Quick Formatting
+----------------
+
+Headers
+~~~~~~~
+
+.. fasthtml::
+
+   # H1 Header
+   ## H2 Header
+   ### H3 Header
+   #### H4 Header
+
+Lists
+~~~~~
+
+.. fasthtml::
+
+   **Ordered List:**
+   1. First item
+   2. Second item
+   3. Third item
+   
+   **Unordered List:**
+   - Item A
+   - Item B
+   - Item C
+
+Tables
+~~~~~~
+
+.. fasthtml::
+
+   | Column 1 | Column 2 | Column 3 |
+   |----------|----------|----------|
+   | Data 1   | Data 2   | Data 3   |
+   | Value A  | Value B  | Value C  |
+
+Configuration
+-------------
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinxnotes.fasthtml',
+   ]
+   
+   # FastHTML settings
+   fasthtml_theme = 'clean'
+   fasthtml_minify = True
+
+Custom Themes
+~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   fasthtml_custom_css = '''
+   body {
+       font-family: Arial, sans-serif;
+       line-height: 1.6;
+   }
+   '''
+
+Quick Templates
+---------------
+
+Blog Post
+~~~~~~~~~
+
+.. fasthtml::
+   :template: blog
+   
+   # My Blog Post
+   *Published: January 2024*
+   
+   This is a quick blog post using FastHTML.
+
+API Documentation
+~~~~~~~~~~~~~~~~~
+
+.. fasthtml::
+   :template: api
+   
+   ## function_name(param1, param2)
+   
+   **Parameters:**
+   - param1: Description
+   - param2: Description
+   
+   **Returns:** Result description
+
+
+Practical Examples
+------------------
+
+Basic Usage
+-----------
+
+Simple Page
+~~~~~~~~~~~
+
+.. fasthtml::
+
+   # Quick Start
+   
+   This is a fast HTML page with automatic formatting.
+   
+   - Bullet points work
+   - Lists are automatic
+   - **Bold** and *italic* supported
+
+Inline Styles
+~~~~~~~~~~~~~
+
+.. fasthtml::
+   :style: clean
+   
+   ## Clean Style
+   
+   Minimal styling for professional documentation.
+
+Code Blocks
+~~~~~~~~~~~
+
+.. fasthtml::
+   
+   ## Code Example
+   
+   ```python
+   def hello():
+       print("Hello, FastHTML!")
+   ```
+
+Quick Formatting
+----------------
+
+Headers
+~~~~~~~
+
+.. fasthtml::
+
+   # H1 Header
+   ## H2 Header
+   ### H3 Header
+   #### H4 Header
+
+Lists
+~~~~~
+
+.. fasthtml::
+
+   **Ordered List:**
+   1. First item
+   2. Second item
+   3. Third item
+   
+   **Unordered List:**
+   - Item A
+   - Item B
+   - Item C
+
+Tables
+~~~~~~
+
+.. fasthtml::
+
+   | Column 1 | Column 2 | Column 3 |
+   |----------|----------|----------|
+   | Data 1   | Data 2   | Data 3   |
+   | Value A  | Value B  | Value C  |
+
+Configuration
+-------------
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinxnotes.fasthtml',
+   ]
+   
+   # FastHTML settings
+   fasthtml_theme = 'clean'
+   fasthtml_minify = True
+
+Custom Themes
+~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   fasthtml_custom_css = '''
+   body {
+       font-family: Arial, sans-serif;
+       line-height: 1.6;
+   }
+   '''
+
+Quick Templates
+---------------
+
+Blog Post
+~~~~~~~~~
+
+.. fasthtml::
+   :template: blog
+   
+   # My Blog Post
+   *Published: January 2024*
+   
+   This is a quick blog post using FastHTML.
+
+API Documentation
+~~~~~~~~~~~~~~~~~
+
+.. fasthtml::
+   :template: api
+   
+   ## function_name(param1, param2)
+   
+   **Parameters:**
+   - param1: Description
+   - param2: Description
+   
+   **Returns:** Result description
+
 Additional Resources
 --------------------
-
 - :doc:`../sphinx-basics` - Learn Sphinx fundamentals
 - `Web.dev Performance <https://web.dev/performance/>`_
 - `Lighthouse Documentation <https://developers.google.com/web/tools/lighthouse>`_
 - `MDN Web Performance <https://developer.mozilla.org/en-US/docs/Web/Performance>`_
+- :doc:`../tutorials/packages/sphinxnotes-fasthtml` - Complete tutorial
+- GitHub repository: https://github.com/sphinx-notes/fasthtml
+

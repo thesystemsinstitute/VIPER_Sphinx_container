@@ -159,15 +159,9 @@ Documentation Sections
 
 .. toctree::
    :maxdepth: 2
-   :caption: Tutorials and Examples:
+   :caption: Tutorials:
 
-   tutorials/sphinx-basics
-   tutorials/themes
-   tutorials/extensions
-   tutorials/package-tutorials
-   examples/package-examples
-   tutorials/doxygen-usage
-   tutorials/doxygen-breathe-exhale
+   tutorials/index
 
 Indices and Tables
 ==================

@@ -8,7 +8,6 @@ Sphinx-Wagtail-Theme Tutorial
    - `PyPI Package <https://pypi.org/project/sphinx-wagtail-theme/>`_
    - `API Documentation <../../pdoc/sphinx_wagtail_theme/index.html>`_
    - `Manual <https://github.com/wagtail/sphinx_wagtail_theme>`_
-   - :doc:`Working Example <../../examples/sphinx-wagtail-theme-example>`
 
 This tutorial demonstrates how to use sphinx-wagtail-theme, a modern, clean documentation theme inspired by Wagtail CMS documentation.
 
@@ -773,10 +772,406 @@ Next Steps
 5. Test responsive design
 6. Deploy documentation
 
+
+Practical Examples
+------------------
+
+Configuration
+-------------
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   import sphinx_wagtail_theme
+   
+   html_theme = 'sphinx_wagtail_theme'
+   html_theme_path = [sphinx_wagtail_theme.get_html_theme_path()]
+
+
+Content Examples
+----------------
+
+Code Blocks
+~~~~~~~~~~~
+
+Python code with syntax highlighting:
+
+.. code-block:: python
+
+   def calculate_total(items):
+       """Calculate total price of items."""
+       return sum(item.price for item in items)
+
+Admonitions
+~~~~~~~~~~~
+
+.. code-block:: rst
+
+   .. note::
+      Wagtail theme styles admonitions beautifully.
+
+   .. warning::
+      Important information stands out clearly.
+
+   .. tip::
+      Helpful tips are easy to spot.
+
+.. note::
+   Wagtail theme styles admonitions beautifully.
+
+.. warning::
+   Important information stands out clearly.
+
+.. tip::
+   Helpful tips are easy to spot.
+
+Tables
+~~~~~~
+
+.. code-block:: rst
+
+   .. list-table:: Feature Comparison
+      :header-rows: 1
+      
+      * - Feature
+      - Supported
+      - Notes
+      * - Responsive
+      - ✓
+      - Mobile-first design
+      * - Search
+      - ✓
+      - Full-text search
+      * - Themes
+      - ✓
+      - Light/dark modes
+
+.. list-table:: Feature Comparison
+   :header-rows: 1
+   
+   * - Feature
+     - Supported
+     - Notes
+   * - Responsive
+     - ✓
+     - Mobile-first design
+   * - Search
+     - ✓
+     - Full-text search
+   * - Themes
+     - ✓
+     - Light/dark modes
+
+Advanced Features
+-----------------
+
+Add to ``conf.py``:
+
+Search Integration
+~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   html_theme_options = {
+       'search_placeholder': 'Search documentation...',
+       'search_button_text': 'Search',
+   }
+
+Version Selector
+~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   html_theme_options = {
+       'version_selector': True,
+       'versions': [
+           ('latest', '/latest/'),
+           ('v2.0', '/v2.0/'),
+           ('v1.0', '/v1.0/'),
+       ],
+   }
+
+Custom CSS
+~~~~~~~~~~
+
+.. code-block:: python
+
+   html_static_path = ['_static']
+   html_css_files = ['custom.css']
+
+
+Practical Examples
+------------------
+
+Configuration
+-------------
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   import sphinx_wagtail_theme
+   
+   html_theme = 'sphinx_wagtail_theme'
+   html_theme_path = [sphinx_wagtail_theme.get_html_theme_path()]
+
+
+Content Examples
+----------------
+
+Code Blocks
+~~~~~~~~~~~
+
+Python code with syntax highlighting:
+
+.. code-block:: python
+
+   def calculate_total(items):
+       """Calculate total price of items."""
+       return sum(item.price for item in items)
+
+Admonitions
+~~~~~~~~~~~
+
+.. code-block:: rst
+
+   .. note::
+      Wagtail theme styles admonitions beautifully.
+
+   .. warning::
+      Important information stands out clearly.
+
+   .. tip::
+      Helpful tips are easy to spot.
+
+.. note::
+   Wagtail theme styles admonitions beautifully.
+
+.. warning::
+   Important information stands out clearly.
+
+.. tip::
+   Helpful tips are easy to spot.
+
+Tables
+~~~~~~
+
+.. code-block:: rst
+
+   .. list-table:: Feature Comparison
+      :header-rows: 1
+      
+      * - Feature
+      - Supported
+      - Notes
+      * - Responsive
+      - ✓
+      - Mobile-first design
+      * - Search
+      - ✓
+      - Full-text search
+      * - Themes
+      - ✓
+      - Light/dark modes
+
+.. list-table:: Feature Comparison
+   :header-rows: 1
+   
+   * - Feature
+     - Supported
+     - Notes
+   * - Responsive
+     - ✓
+     - Mobile-first design
+   * - Search
+     - ✓
+     - Full-text search
+   * - Themes
+     - ✓
+     - Light/dark modes
+
+Advanced Features
+-----------------
+
+Add to ``conf.py``:
+
+Search Integration
+~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   html_theme_options = {
+       'search_placeholder': 'Search documentation...',
+       'search_button_text': 'Search',
+   }
+
+Version Selector
+~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   html_theme_options = {
+       'version_selector': True,
+       'versions': [
+           ('latest', '/latest/'),
+           ('v2.0', '/v2.0/'),
+           ('v1.0', '/v1.0/'),
+       ],
+   }
+
+Custom CSS
+~~~~~~~~~~
+
+.. code-block:: python
+
+   html_static_path = ['_static']
+   html_css_files = ['custom.css']
+
+
+Practical Examples
+------------------
+
+Configuration
+-------------
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   import sphinx_wagtail_theme
+   
+   html_theme = 'sphinx_wagtail_theme'
+   html_theme_path = [sphinx_wagtail_theme.get_html_theme_path()]
+
+
+Content Examples
+----------------
+
+Code Blocks
+~~~~~~~~~~~
+
+Python code with syntax highlighting:
+
+.. code-block:: python
+
+   def calculate_total(items):
+       """Calculate total price of items."""
+       return sum(item.price for item in items)
+
+Admonitions
+~~~~~~~~~~~
+
+.. code-block:: rst
+
+   .. note::
+      Wagtail theme styles admonitions beautifully.
+
+   .. warning::
+      Important information stands out clearly.
+
+   .. tip::
+      Helpful tips are easy to spot.
+
+.. note::
+   Wagtail theme styles admonitions beautifully.
+
+.. warning::
+   Important information stands out clearly.
+
+.. tip::
+   Helpful tips are easy to spot.
+
+Tables
+~~~~~~
+
+.. code-block:: rst
+
+   .. list-table:: Feature Comparison
+      :header-rows: 1
+      
+      * - Feature
+      - Supported
+      - Notes
+      * - Responsive
+      - ✓
+      - Mobile-first design
+      * - Search
+      - ✓
+      - Full-text search
+      * - Themes
+      - ✓
+      - Light/dark modes
+
+.. list-table:: Feature Comparison
+   :header-rows: 1
+   
+   * - Feature
+     - Supported
+     - Notes
+   * - Responsive
+     - ✓
+     - Mobile-first design
+   * - Search
+     - ✓
+     - Full-text search
+   * - Themes
+     - ✓
+     - Light/dark modes
+
+Advanced Features
+-----------------
+
+Add to ``conf.py``:
+
+Search Integration
+~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   html_theme_options = {
+       'search_placeholder': 'Search documentation...',
+       'search_button_text': 'Search',
+   }
+
+Version Selector
+~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   html_theme_options = {
+       'version_selector': True,
+       'versions': [
+           ('latest', '/latest/'),
+           ('v2.0', '/v2.0/'),
+           ('v1.0', '/v1.0/'),
+       ],
+   }
+
+Custom CSS
+~~~~~~~~~~
+
+.. code-block:: python
+
+   html_static_path = ['_static']
+   html_css_files = ['custom.css']
+
 Additional Resources
 --------------------
-
 - :doc:`../sphinx-basics` - Learn Sphinx fundamentals
 - :doc:`sphinx-rtd-theme` - Read the Docs theme
 - :doc:`sphinx-book-theme` - Book theme
 - `Wagtail Documentation <https://docs.wagtail.org/>`_
+- :doc:`../tutorials/packages/sphinx-wagtail-theme` - Complete tutorial
+- Wagtail CMS: https://wagtail.org/
+- GitHub repository: https://github.com/wagtail/sphinx_wagtail_theme
+

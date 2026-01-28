@@ -8,8 +8,6 @@ Sphinx-Autodoc2-Fern Tutorial
    - `PyPI Package <https://pypi.org/project/sphinx-autodoc2-fern/>`_
    - `API Documentation <../../pdoc/sphinx_autodoc2_fern/index.html>`_
    - `Manual <https://github.com/fern-api/sphinx-autodoc2-fern>`_
-   - :doc:`Working Example <../../examples/sphinx-autodoc2-fern-example>`
-
 
 .. contents:: Table of Contents
    :local:
@@ -530,9 +528,213 @@ Next Steps
 4. Customize rendering and filtering
 5. Integrate into CI/CD
 
+
+Practical Examples
+------------------
+
+Basic Usage
+-----------
+
+API Documentation
+~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   class UserAPI:
+       """User management API."""
+       
+       def get_user(self, user_id: int) -> dict:
+           """Retrieve user by ID."""
+           pass
+       
+       def create_user(self, data: dict) -> dict:
+           """Create new user."""
+           pass
+
+Configuration
+-------------
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_autodoc2_fern',
+   ]
+   
+   autodoc2_fern_layout = 'modern'
+
+Options
+~~~~~~~
+
+.. code-block:: python
+
+   autodoc2_fern_options = {
+       'sidebar_navigation': True,
+       'code_examples': True,
+       'response_samples': True,
+   }
+
+Examples
+--------
+
+Endpoint Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   def list_users(page: int = 1, limit: int = 10) -> List[User]:
+       """List all users with pagination.
+       
+       :param page: Page number
+       :param limit: Items per page
+       :return: List of users
+       """
+       pass
+
+
+Practical Examples
+------------------
+
+Basic Usage
+-----------
+
+API Documentation
+~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   class UserAPI:
+       """User management API."""
+       
+       def get_user(self, user_id: int) -> dict:
+           """Retrieve user by ID."""
+           pass
+       
+       def create_user(self, data: dict) -> dict:
+           """Create new user."""
+           pass
+
+Configuration
+-------------
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_autodoc2_fern',
+   ]
+   
+   autodoc2_fern_layout = 'modern'
+
+Options
+~~~~~~~
+
+.. code-block:: python
+
+   autodoc2_fern_options = {
+       'sidebar_navigation': True,
+       'code_examples': True,
+       'response_samples': True,
+   }
+
+Examples
+--------
+
+Endpoint Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   def list_users(page: int = 1, limit: int = 10) -> List[User]:
+       """List all users with pagination.
+       
+       :param page: Page number
+       :param limit: Items per page
+       :return: List of users
+       """
+       pass
+
+
+Practical Examples
+------------------
+
+Basic Usage
+-----------
+
+API Documentation
+~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   class UserAPI:
+       """User management API."""
+       
+       def get_user(self, user_id: int) -> dict:
+           """Retrieve user by ID."""
+           pass
+       
+       def create_user(self, data: dict) -> dict:
+           """Create new user."""
+           pass
+
+Configuration
+-------------
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_autodoc2_fern',
+   ]
+   
+   autodoc2_fern_layout = 'modern'
+
+Options
+~~~~~~~
+
+.. code-block:: python
+
+   autodoc2_fern_options = {
+       'sidebar_navigation': True,
+       'code_examples': True,
+       'response_samples': True,
+   }
+
+Examples
+--------
+
+Endpoint Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   def list_users(page: int = 1, limit: int = 10) -> List[User]:
+       """List all users with pagination.
+       
+       :param page: Page number
+       :param limit: Items per page
+       :return: List of users
+       """
+       pass
+
 Additional Resources
 --------------------
-
 - :doc:`sphinx-autodoc-annotation` - Type annotation display
 - :doc:`../sphinx-basics` - Learn Sphinx fundamentals
 - `Autodoc2 Documentation <https://sphinx-autodoc2.readthedocs.io/>`_
+- :doc:`../tutorials/packages/sphinx-autodoc2-fern` - Complete tutorial
+- Fern documentation: https://buildwithfern.com/
+- GitHub repository: https://github.com/sphinx-contrib/autodoc2-fern
+

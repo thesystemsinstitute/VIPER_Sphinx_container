@@ -12,7 +12,7 @@ Core Sphinx and Documentation Tools
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -20,7 +20,6 @@ Core Sphinx and Documentation Tools
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - Sphinx
      - Latest
@@ -44,7 +43,7 @@ API Documentation & Code Analysis
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -52,7 +51,6 @@ API Documentation & Code Analysis
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinx-autodoc-defaultargs
      - Latest
@@ -60,7 +58,6 @@ API Documentation & Code Analysis
      - 
      - `link <https://github.com/zwang123/sphinx-autodoc-defaultargs>`_
      - :doc:`link <tutorials/packages/sphinx-autodoc-defaultargs>`
-     - :doc:`link <examples/sphinx-autodoc-defaultargs-example>`
      - Show default arguments in autodoc
    * - sphinx-autodoc-annotation
      - Latest
@@ -68,7 +65,6 @@ API Documentation & Code Analysis
      - 
      - `link <https://github.com/hsoft/sphinx-autodoc-annotation>`_
      - :doc:`link <tutorials/packages/sphinx-autodoc-annotation>`
-     - :doc:`link <examples/sphinx-autodoc-annotation-example>`
      - Enhanced autodoc annotations
    * - sphinx-autodoc2-fern
      - Latest
@@ -76,7 +72,6 @@ API Documentation & Code Analysis
      - `link <pdoc/sphinx_autodoc2_fern/index.html>`_
      - `link <https://github.com/fern-api/sphinx-autodoc2-fern>`_
      - :doc:`link <tutorials/packages/sphinx-autodoc2-fern>`
-     - :doc:`link <examples/sphinx-autodoc2-fern-example>`
      - Fern API documentation
    * - sphinx-collapsible-autodoc
      - Latest
@@ -84,7 +79,6 @@ API Documentation & Code Analysis
      - `link <pdoc/sphinx_collapsible_autodoc/index.html>`_
      - `link <https://github.com/tzing/sphinx-collapse>`_
      - :doc:`link <tutorials/packages/sphinx-collapsible-autodoc>`
-     - :doc:`link <examples/sphinx-collapsible-autodoc-example>`
      - Collapsible autodoc sections
    * - sphinx-autodoc-toml
      - Latest
@@ -92,7 +86,6 @@ API Documentation & Code Analysis
      - `link <pdoc/sphinx_autodoc_toml/index.html>`_
      - `link <https://github.com/calvingiles/autodoc-toml>`_
      - :doc:`link <tutorials/packages/sphinx-autodoc-toml>`
-     - :doc:`link <examples/sphinx-autodoc-toml-example>`
      - TOML configuration support
    * - sphinx-automodapi
      - Latest
@@ -100,7 +93,6 @@ API Documentation & Code Analysis
      - `link <pdoc/sphinx_automodapi/index.html>`_
      - `link <https://github.com/astropy/sphinx-automodapi>`_
      - :doc:`link <tutorials/packages/sphinx-automodapi>`
-     - :doc:`link <examples/sphinx-automodapi-example>`
      - Auto-document API modules
    * - sphinx-autoapi
      - Latest
@@ -108,7 +100,6 @@ API Documentation & Code Analysis
      - `link <pdoc/sphinx_autoapi/index.html>`_
      - `link <https://sphinx-autoapi.readthedocs.io/en/latest/>`_
      - :doc:`link <tutorials/packages/sphinx-autoapi>`
-     - :doc:`link <examples/sphinx-autoapi-example>`
      - Automatic API documentation
    * - sphinx-c-autodoc
      - Latest
@@ -116,7 +107,6 @@ API Documentation & Code Analysis
      - `link <pdoc/sphinx_c_autodoc/index.html>`_
      - `link <https://sphinx-c-autodoc.readthedocs.io/en/latest/>`_
      - :doc:`link <tutorials/packages/sphinx-c-autodoc>`
-     - :doc:`link <examples/sphinx-c-autodoc-example>`
      - Automatic C API documentation
    * - sphinx-vhdl
      - Latest
@@ -124,7 +114,6 @@ API Documentation & Code Analysis
      - `link <pdoc/sphinx_vhdl/index.html>`_
      - `link <https://cesnet.github.io/sphinx-vhdl/>`_
      - :doc:`link <tutorials/packages/sphinx-vhdl>`
-     - :doc:`link <examples/sphinx-vhdl-example>`
      - VHDL domain for Sphinx
    * - breathe
      - Latest
@@ -132,7 +121,6 @@ API Documentation & Code Analysis
      - `link <pdoc/breathe/index.html>`_
      - `link <https://breathe.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/breathe>`
-     - :doc:`link <examples/breathe-example>`
      - Doxygen integration
    * - exhale
      - Latest
@@ -140,7 +128,6 @@ API Documentation & Code Analysis
      - `link <pdoc/exhale/index.html>`_
      - `link <https://exhale.readthedocs.io/en/latest/>`_
      - :doc:`link <tutorials/packages/exhale>`
-     - :doc:`link <examples/exhale-example>`
      - Automatic C++ documentation
    * - pytest-doctestplus
      - Latest
@@ -148,7 +135,6 @@ API Documentation & Code Analysis
      - `link <pdoc/pytest_doctestplus/index.html>`_
      - `link <https://github.com/scientific-python/pytest-doctestplus>`_
      - :doc:`link <tutorials/packages/pytest-doctestplus>`
-     - :doc:`link <examples/pytest-doctestplus-example>`
      - Enhanced doctest support
    * - sphinxcontrib-httpdomain
      - Latest
@@ -156,7 +142,6 @@ API Documentation & Code Analysis
      - `link <pdoc/sphinxcontrib_httpdomain/index.html>`_
      - `link <https://github.com/sphinx-contrib/httpdomain>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-httpdomain>`
-     - :doc:`link <examples/sphinxcontrib-httpdomain-example>`
      - HTTP domain for APIs
    * - sphinx-apischema
      - Latest
@@ -164,7 +149,6 @@ API Documentation & Code Analysis
      - `link <pdoc/sphinx_apischema/index.html>`_
      - `link <https://wyfo.github.io/apischema/>`_
      - :doc:`link <tutorials/packages/sphinx-apischema>`
-     - :doc:`link <examples/sphinx-apischema-example>`
      - JSON Schema API documentation
    * - sphinx-jsonschema
      - Latest
@@ -172,7 +156,6 @@ API Documentation & Code Analysis
      - `link <pdoc/sphinx_jsonschema/index.html>`_
      - `link <https://github.com/lnoor/sphinx-jsonschema>`_
      - :doc:`link <tutorials/packages/sphinx-jsonschema>`
-     - :doc:`link <examples/sphinx-jsonschema-example>`
      - JSON Schema documentation
    * - sphinx-sql
      - Latest
@@ -180,7 +163,6 @@ API Documentation & Code Analysis
      - `link <pdoc/sphinx_sql/index.html>`_
      - `link <https://github.com/jackscodemonkey/sphinx-sql>`_
      - :doc:`link <tutorials/packages/sphinx-sql>`
-     - :doc:`link <examples/sphinx-sql-example>`
      - SQL documentation support
    * - pydeps
      - Latest
@@ -188,7 +170,6 @@ API Documentation & Code Analysis
      - `link <pdoc/pydeps/index.html>`_
      - `link <https://github.com/thebjorn/pydeps>`_
      - :doc:`link <tutorials/packages/pydeps>`
-     - :doc:`link <examples/pydeps-example>`
      - Python dependency analysis
    * - sphinx-needs
      - Latest
@@ -196,7 +177,6 @@ API Documentation & Code Analysis
      - `link <pdoc/sphinx_needs/index.html>`_
      - `link <https://sphinx-needs.readthedocs.io/en/latest/>`_
      - :doc:`link <tutorials/packages/sphinx-needs>`
-     - :doc:`link <examples/sphinx-needs-example>`
      - Requirements management extension
 
 Charts, Diagrams & UML
@@ -204,7 +184,7 @@ Charts, Diagrams & UML
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -212,7 +192,6 @@ Charts, Diagrams & UML
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinx-charts
      - Latest
@@ -220,7 +199,6 @@ Charts, Diagrams & UML
      - `link <pdoc/sphinx_charts/index.html>`_
      - `link <https://sphinx-charts.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-charts>`
-     - :doc:`link <examples/sphinx-charts-example>`
      - Create charts in Sphinx docs
    * - sphinx-diagrams
      - Latest
@@ -228,7 +206,6 @@ Charts, Diagrams & UML
      - `link <pdoc/sphinx_diagrams/index.html>`_
      - `link <https://sphinxcontrib-diagrams.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-diagrams>`
-     - :doc:`link <examples/sphinx-diagrams-example>`
      - Diagram generation
    * - sphinx-autoschematics
      - Latest
@@ -236,7 +213,6 @@ Charts, Diagrams & UML
      - `link <pdoc/sphinx_autoschematics/index.html>`_
      - `link <https://github.com/LudditeLabs/autodoc-tool>`_
      - :doc:`link <tutorials/packages/sphinx-autoschematics>`
-     - :doc:`link <examples/sphinx-autoschematics-example>`
      - Automatic schematic diagrams
    * - sphinx-pyreverse
      - Latest
@@ -244,7 +220,6 @@ Charts, Diagrams & UML
      - `link <pdoc/sphinx_pyreverse/index.html>`_
      - `link <https://github.com/alendit/sphinx.ext.pyreverse>`_
      - :doc:`link <tutorials/packages/sphinx-pyreverse>`
-     - :doc:`link <examples/sphinx-pyreverse-example>`
      - UML class diagrams
    * - sphinx-uml
      - Latest
@@ -252,7 +227,6 @@ Charts, Diagrams & UML
      - `link <pdoc/sphinx_uml/index.html>`_
      - `link <https://github.com/sphinx-contrib/plantuml>`_
      - :doc:`link <tutorials/packages/sphinx-uml>`
-     - :doc:`link <examples/sphinx-uml-example>`
      - UML diagram support
    * - btd.sphinx.graphviz
      - Latest
@@ -260,7 +234,6 @@ Charts, Diagrams & UML
      - `link <pdoc/btd_sphinx_graphviz/index.html>`_
      - `link <https://github.com/berteh/btd.sphinx.graphviz>`_
      - :doc:`link <tutorials/packages/btd.sphinx.graphviz>`
-     - :doc:`link <examples/btd-sphinx-graphviz-example>`
      - Enhanced Graphviz support
    * - sphinxcontrib-cadquery
      - Latest
@@ -268,7 +241,6 @@ Charts, Diagrams & UML
      - `link <pdoc/sphinxcontrib_cadquery/index.html>`_
      - `link <https://github.com/CadQuery/sphinxcontrib-cadquery>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-cadquery>`
-     - :doc:`link <examples/sphinxcontrib-cadquery-example>`
      - CAD model documentation
 
 Graphviz and Diagram Tools
@@ -276,7 +248,7 @@ Graphviz and Diagram Tools
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -284,7 +256,6 @@ Graphviz and Diagram Tools
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - pyan3
      - Latest
@@ -292,7 +263,6 @@ Graphviz and Diagram Tools
      - `link <pdoc/pyan3/index.html>`_
      - `link <https://github.com/Technologicat/pyan>`_
      - :doc:`link <tutorials/packages/pyan3>`
-     - :doc:`link <examples/pyan3-example>`
      - Python call graph analyzer
    * - graphviz
      - Latest
@@ -300,7 +270,6 @@ Graphviz and Diagram Tools
      - `link <pdoc/graphviz/index.html>`_
      - `link <https://graphviz.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/graphviz>`
-     - :doc:`link <examples/graphviz-example>`
      - Graphviz Python interface
    * - pydot
      - Latest
@@ -308,7 +277,6 @@ Graphviz and Diagram Tools
      - `link <pdoc/pydot/index.html>`_
      - `link <https://github.com/pydot/pydot>`_
      - :doc:`link <tutorials/packages/pydot>`
-     - :doc:`link <examples/pydot-example>`
      - Python interface to Graphviz
    * - gprof2dot
      - Latest
@@ -316,7 +284,6 @@ Graphviz and Diagram Tools
      - 
      - `link <https://github.com/jrfonseca/gprof2dot>`_
      - :doc:`link <tutorials/packages/gprof2dot>`
-     - :doc:`link <examples/gprof2dot-example>`
      - Profile data to dot graphs
    * - graphviz2drawio
      - Latest
@@ -324,7 +291,6 @@ Graphviz and Diagram Tools
      - `link <pdoc/graphviz2drawio/index.html>`_
      - `link <https://github.com/hbmartin/graphviz2drawio>`_
      - :doc:`link <tutorials/packages/graphviz2drawio>`
-     - :doc:`link <examples/graphviz2drawio-example>`
      - Convert Graphviz to Draw.io
    * - python-markdown-graphviz
      - Latest
@@ -332,7 +298,6 @@ Graphviz and Diagram Tools
      - `link <pdoc/python_markdown_graphviz/index.html>`_
      - 
      - :doc:`link <tutorials/packages/python-markdown-graphviz>`
-     - :doc:`link <examples/python-markdown-graphviz-example>`
      - Graphviz in Markdown
    * - fsmdot
      - Latest
@@ -340,7 +305,6 @@ Graphviz and Diagram Tools
      - `link <pdoc/fsmdot/index.html>`_
      - `link <https://github.com/Quentin18/fsmdot>`_
      - :doc:`link <tutorials/packages/fsmdot>`
-     - :doc:`link <examples/fsmdot-example>`
      - Finite state machine diagrams
    * - quickdiagrams
      - Latest
@@ -348,7 +312,6 @@ Graphviz and Diagram Tools
      - `link <pdoc/quickdiagrams/index.html>`_
      - 
      - :doc:`link <tutorials/packages/quickdiagrams>`
-     - :doc:`link <examples/quickdiagrams-example>`
      - Quick diagram generation
    * - dtreeplt
      - Latest
@@ -356,7 +319,6 @@ Graphviz and Diagram Tools
      - `link <pdoc/dtreeplt/index.html>`_
      - `link <https://github.com/nekoumei/dtreeplt>`_
      - :doc:`link <tutorials/packages/dtreeplt>`
-     - :doc:`link <examples/dtreeplt-example>`
      - Decision tree plotting
    * - pyprojectviz
      - Latest
@@ -364,7 +326,6 @@ Graphviz and Diagram Tools
      - `link <pdoc/pyprojectviz/index.html>`_
      - 
      - :doc:`link <tutorials/packages/pyprojectviz>`
-     - :doc:`link <examples/pyprojectviz-example>`
      - Project visualization
 
 Diagram and Visualization Tools
@@ -372,7 +333,7 @@ Diagram and Visualization Tools
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -380,7 +341,6 @@ Diagram and Visualization Tools
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - pylint
      - Latest
@@ -388,7 +348,6 @@ Diagram and Visualization Tools
      - `link <pdoc/pylint/index.html>`_
      - `link <https://pylint.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/pylint>`
-     - :doc:`link <examples/pylint-example>`
      - Python code analyzer
    * - code2flow
      - Latest
@@ -396,7 +355,6 @@ Diagram and Visualization Tools
      - `link <pdoc/code2flow/index.html>`_
      - `link <https://github.com/scottrogowski/code2flow>`_
      - :doc:`link <tutorials/packages/code2flow>`
-     - :doc:`link <examples/code2flow-example>`
      - Call graph generation
    * - snakeviz
      - Latest
@@ -404,7 +362,6 @@ Diagram and Visualization Tools
      - `link <pdoc/snakeviz/index.html>`_
      - `link <https://jiffyclub.github.io/snakeviz/>`_
      - :doc:`link <tutorials/packages/snakeviz>`
-     - :doc:`link <examples/snakeviz-example>`
      - Profile visualization
    * - diagrams
      - Latest
@@ -412,7 +369,6 @@ Diagram and Visualization Tools
      - `link <pdoc/diagrams/index.html>`_
      - `link <https://diagrams.mingrammer.com/>`_
      - :doc:`link <tutorials/packages/diagrams>`
-     - :doc:`link <examples/diagrams-example>`
      - Architecture diagrams
    * - railroad-diagrams
      - Latest
@@ -420,7 +376,6 @@ Diagram and Visualization Tools
      - `link <pdoc/railroad_diagrams/index.html>`_
      - `link <https://github.com/tabatkins/railroad-diagrams>`_
      - :doc:`link <tutorials/packages/railroad-diagrams>`
-     - :doc:`link <examples/railroad-diagrams-example>`
      - Railroad syntax diagrams
    * - blockdiag
      - Latest
@@ -428,7 +383,6 @@ Diagram and Visualization Tools
      - `link <pdoc/blockdiag/index.html>`_
      - `link <http://blockdiag.com/>`_
      - :doc:`link <tutorials/packages/blockdiag>`
-     - :doc:`link <examples/blockdiag-example>`
      - Block diagram generator
    * - nwdiag
      - Latest
@@ -436,7 +390,6 @@ Diagram and Visualization Tools
      - `link <pdoc/nwdiag/index.html>`_
      - `link <http://blockdiag.com/en/nwdiag/>`_
      - :doc:`link <tutorials/packages/nwdiag>`
-     - :doc:`link <examples/nwdiag-example>`
      - Network diagrams
    * - N2G
      - Latest
@@ -444,7 +397,6 @@ Diagram and Visualization Tools
      - `link <pdoc/N2G/index.html>`_
      - `link <https://n2g.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/N2G>`
-     - :doc:`link <examples/N2G-example>`
      - Network to Graph
    * - rptree
      - Latest
@@ -452,7 +404,6 @@ Diagram and Visualization Tools
      - `link <pdoc/rptree/index.html>`_
      - `link <https://github.com/realpython/rptree>`_
      - :doc:`link <tutorials/packages/rptree>`
-     - :doc:`link <examples/rptree-example>`
      - Directory tree generator
    * - pinout
      - Latest
@@ -460,7 +411,6 @@ Diagram and Visualization Tools
      - `link <pdoc/pinout/index.html>`_
      - `link <https://pinout.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/pinout>`
-     - :doc:`link <examples/pinout-example>`
      - Hardware pinout diagrams
    * - sphinxcontrib-mermaid
      - Latest
@@ -468,7 +418,6 @@ Diagram and Visualization Tools
      - `link <pdoc/sphinxcontrib_mermaid/index.html>`_
      - `link <https://sphinxcontrib-mermaid-demo.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-mermaid>`
-     - :doc:`link <examples/sphinxcontrib-mermaid-example>`
      - Mermaid diagram support
    * - sphinxcontrib-plantuml
      - Latest
@@ -476,7 +425,6 @@ Diagram and Visualization Tools
      - `link <pdoc/sphinxcontrib_plantuml/index.html>`_
      - `link <https://github.com/sphinx-contrib/plantuml>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-plantuml>`
-     - :doc:`link <examples/sphinxcontrib-plantuml-example>`
      - PlantUML diagram support
    * - sphinxcontrib-blockdiag
      - Latest
@@ -484,7 +432,6 @@ Diagram and Visualization Tools
      - `link <pdoc/sphinxcontrib_blockdiag/index.html>`_
      - `link <https://github.com/blockdiag/sphinxcontrib-blockdiag>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-blockdiag>`
-     - :doc:`link <examples/sphinxcontrib-blockdiag-example>`
      - Blockdiag integration
    * - sphinxcontrib-seqdiag
      - Latest
@@ -492,7 +439,6 @@ Diagram and Visualization Tools
      - `link <pdoc/sphinxcontrib_seqdiag/index.html>`_
      - `link <https://github.com/blockdiag/sphinxcontrib-seqdiag>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-seqdiag>`
-     - :doc:`link <examples/sphinxcontrib-seqdiag-example>`
      - Sequence diagrams
    * - sphinxcontrib-nwdiag
      - Latest
@@ -500,7 +446,6 @@ Diagram and Visualization Tools
      - `link <pdoc/sphinxcontrib_nwdiag/index.html>`_
      - `link <https://github.com/blockdiag/sphinxcontrib-nwdiag>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-nwdiag>`
-     - :doc:`link <examples/sphinxcontrib-nwdiag-example>`
      - Network diagrams
    * - sphinxcontrib-actdiag
      - Latest
@@ -508,7 +453,6 @@ Diagram and Visualization Tools
      - `link <pdoc/sphinxcontrib_actdiag/index.html>`_
      - `link <https://github.com/blockdiag/sphinxcontrib-actdiag>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-actdiag>`
-     - :doc:`link <examples/sphinxcontrib-actdiag-example>`
      - Activity diagrams
    * - sphinxcontrib-tikz
      - Latest
@@ -516,16 +460,14 @@ Diagram and Visualization Tools
      - `link <pdoc/sphinxcontrib_tikz/index.html>`_
      - `link <https://sphinxcontrib-tikz.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-tikz>`
-     - :doc:`link <examples/sphinxcontrib-tikz-example>`
      - TikZ diagram support
-
 
 Jupyter Notebook Integration
 ----------------------------
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -533,7 +475,6 @@ Jupyter Notebook Integration
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - nbsphinx
      - Latest
@@ -541,7 +482,6 @@ Jupyter Notebook Integration
      - `link <pdoc/nbsphinx/index.html>`_
      - `link <https://nbsphinx.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/nbsphinx>`
-     - :doc:`link <examples/nbsphinx-example>`
      - Jupyter Notebook integration
    * - nbsphinx-link
      - Latest
@@ -549,7 +489,6 @@ Jupyter Notebook Integration
      - `link <pdoc/nbsphinx_link/index.html>`_
      - `link <https://nbsphinx-link.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/nbsphinx-link>`
-     - :doc:`link <examples/nbsphinx-link-example>`
      - Link to external notebooks
    * - sphinx-jupyter-kernel
      - Latest
@@ -557,7 +496,6 @@ Jupyter Notebook Integration
      - `link <pdoc/sphinx_jupyter_kernel/index.html>`_
      - `link <https://github.com/Armienn/sphinx-jupyter-kernel>`_
      - :doc:`link <tutorials/packages/sphinx-jupyter-kernel>`
-     - :doc:`link <examples/sphinx-jupyter-kernel-example>`
      - Jupyter kernel integration
    * - myst-parser
      - Latest
@@ -565,7 +503,6 @@ Jupyter Notebook Integration
      - `link <pdoc/myst_parser/index.html>`_
      - `link <https://myst-parser.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/myst-parser>`
-     - :doc:`link <examples/myst-parser-example>`
      - Markdown support for Sphinx
 
 Content Publishing & Export
@@ -573,7 +510,7 @@ Content Publishing & Export
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -581,7 +518,6 @@ Content Publishing & Export
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinx-confluence
      - Latest
@@ -589,7 +525,6 @@ Content Publishing & Export
      - `link <pdoc/sphinx_confluence/index.html>`_
      - `link <https://sphinxcontrib-confluencebuilder.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-confluence>`
-     - :doc:`link <examples/sphinx-confluence-example>`
      - Confluence builder for Sphinx
    * - sphinx2doxygen
      - Latest
@@ -597,7 +532,6 @@ Content Publishing & Export
      - `link <pdoc/sphinx2doxygen/index.html>`_
      - `link <https://github.com/phn/sphinx2doxygen>`_
      - :doc:`link <tutorials/packages/sphinx2doxygen>`
-     - :doc:`link <examples/sphinx2doxygen-example>`
      - Convert Sphinx to Doxygen
    * - epub2sphinx
      - Latest
@@ -605,7 +539,6 @@ Content Publishing & Export
      - `link <pdoc/epub2sphinx/index.html>`_
      - `link <https://github.com/sphinx-contrib/epub>`_
      - :doc:`link <tutorials/packages/epub2sphinx>`
-     - :doc:`link <examples/epub2sphinx-example>`
      - EPUB to Sphinx conversion
    * - sphinx-tojupyter
      - Latest
@@ -613,7 +546,6 @@ Content Publishing & Export
      - `link <pdoc/sphinx_tojupyter/index.html>`_
      - `link <https://github.com/QuantEcon/sphinx-tojupyter>`_
      - :doc:`link <tutorials/packages/sphinx-tojupyter>`
-     - :doc:`link <examples/sphinx-tojupyter-example>`
      - Export to Jupyter notebooks
 
 UI/UX Enhancements
@@ -621,7 +553,7 @@ UI/UX Enhancements
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -629,7 +561,6 @@ UI/UX Enhancements
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinx-copybutton
      - Latest
@@ -637,7 +568,6 @@ UI/UX Enhancements
      - `link <pdoc/sphinx_copybutton/index.html>`_
      - `link <https://sphinx-copybutton.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-copybutton>`
-     - :doc:`link <examples/sphinx-copybutton-example>`
      - Add copy buttons to code blocks
    * - sphinx-prompt
      - Latest
@@ -645,7 +575,6 @@ UI/UX Enhancements
      - `link <pdoc/sphinx_prompt/index.html>`_
      - `link <https://sphinx-prompt.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-prompt>`
-     - :doc:`link <examples/sphinx-prompt-example>`
      - Command prompt directive
    * - sphinxemoji
      - Latest
@@ -653,7 +582,6 @@ UI/UX Enhancements
      - `link <pdoc/sphinxemoji/index.html>`_
      - `link <https://sphinxemoji.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinxemoji>`
-     - :doc:`link <examples/sphinxemoji-example>`
      - Emoji support
    * - sphinx-favicon
      - Latest
@@ -661,7 +589,6 @@ UI/UX Enhancements
      - `link <pdoc/sphinx_favicon/index.html>`_
      - `link <https://github.com/tcmetzger/sphinx-favicon>`_
      - :doc:`link <tutorials/packages/sphinx-favicon>`
-     - :doc:`link <examples/sphinx-favicon-example>`
      - Favicon support
    * - sphinx-hoverxref
      - Latest
@@ -669,7 +596,6 @@ UI/UX Enhancements
      - `link <pdoc/sphinx_hoverxref/index.html>`_
      - `link <https://sphinx-hoverxref.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-hoverxref>`
-     - :doc:`link <examples/sphinx-hoverxref-example>`
      - Show tooltips on hover
    * - sphinx-notfound-page
      - Latest
@@ -677,7 +603,6 @@ UI/UX Enhancements
      - `link <pdoc/sphinx_notfound_page/index.html>`_
      - `link <https://sphinx-notfound-page.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-notfound-page>`
-     - :doc:`link <examples/sphinx-notfound-page-example>`
      - Custom 404 page
    * - sphinx-version-warning
      - Latest
@@ -685,7 +610,6 @@ UI/UX Enhancements
      - `link <pdoc/sphinx_version_warning/index.html>`_
      - `link <https://github.com/humitos/sphinx-version-warning>`_
      - :doc:`link <tutorials/packages/sphinx-version-warning>`
-     - :doc:`link <examples/sphinx-version-warning-example>`
      - Version warning banner
 
 Version Control & Git Integration
@@ -693,7 +617,7 @@ Version Control & Git Integration
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -701,7 +625,6 @@ Version Control & Git Integration
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinx-git
      - Latest
@@ -709,7 +632,6 @@ Version Control & Git Integration
      - `link <pdoc/sphinx_git/index.html>`_
      - `link <https://github.com/OddBloke/sphinx-git>`_
      - :doc:`link <tutorials/packages/sphinx-git>`
-     - :doc:`link <examples/sphinx-git-example>`
      - Git changelog integration
    * - sphinx-last-updated-by-git
      - Latest
@@ -717,7 +639,6 @@ Version Control & Git Integration
      - 
      - `link <https://github.com/mgeier/sphinx-last-updated-by-git>`_
      - :doc:`link <tutorials/packages/sphinx-last-updated-by-git>`
-     - :doc:`link <examples/sphinx-last-updated-by-git-example>`
      - Show last update from git
    * - sphinx-issues
      - Latest
@@ -725,7 +646,6 @@ Version Control & Git Integration
      - `link <pdoc/sphinx_issues/index.html>`_
      - `link <https://github.com/sloria/sphinx-issues>`_
      - :doc:`link <tutorials/packages/sphinx-issues>`
-     - :doc:`link <examples/sphinx-issues-example>`
      - Link to issue trackers
    * - sphinx-gitref
      - Latest
@@ -733,7 +653,6 @@ Version Control & Git Integration
      - `link <pdoc/sphinx_gitref/index.html>`_
      - `link <https://github.com/westurner/sphinx-gitref>`_
      - :doc:`link <tutorials/packages/sphinx-gitref>`
-     - :doc:`link <examples/sphinx-gitref-example>`
      - Git reference links
    * - sphinx-changelog
      - Latest
@@ -741,7 +660,6 @@ Version Control & Git Integration
      - `link <pdoc/sphinx_changelog/index.html>`_
      - `link <https://github.com/OpenAstronomy/sphinx-changelog>`_
      - :doc:`link <tutorials/packages/sphinx-changelog>`
-     - :doc:`link <examples/sphinx-changelog-example>`
      - Changelog generation
 
 Navigation & Organization
@@ -749,7 +667,7 @@ Navigation & Organization
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -757,7 +675,6 @@ Navigation & Organization
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinx-tagtoctree
      - Latest
@@ -765,7 +682,6 @@ Navigation & Organization
      - `link <pdoc/sphinx_tagtoctree/index.html>`_
      - `link <https://github.com/sphinx-contrib/tagtoctree>`_
      - :doc:`link <tutorials/packages/sphinx-tagtoctree>`
-     - :doc:`link <examples/sphinx-tagtoctree-example>`
      - Tag-based navigation
    * - sphinx-library
      - Latest
@@ -773,7 +689,6 @@ Navigation & Organization
      - `link <pdoc/sphinx_library/index.html>`_
      - `link <https://github.com/sphinx-contrib/sphinx-library>`_
      - :doc:`link <tutorials/packages/sphinx-library>`
-     - :doc:`link <examples/sphinx-library-example>`
      - Library organization
    * - sphinx-refdoc
      - Latest
@@ -781,7 +696,6 @@ Navigation & Organization
      - `link <pdoc/sphinx_refdoc/index.html>`_
      - `link <https://github.com/sphinx-contrib/refdoc>`_
      - :doc:`link <tutorials/packages/sphinx-refdoc>`
-     - :doc:`link <examples/sphinx-refdoc-example>`
      - Reference documentation
    * - sphinx-autoindex
      - Latest
@@ -789,7 +703,6 @@ Navigation & Organization
      - `link <pdoc/sphinx_autoindex/index.html>`_
      - `link <https://github.com/sphinx-contrib/autoindex>`_
      - :doc:`link <tutorials/packages/sphinx-autoindex>`
-     - :doc:`link <examples/sphinx-autoindex-example>`
      - Automatic index generation
    * - sphinx-autopackagesummary
      - Latest
@@ -797,7 +710,6 @@ Navigation & Organization
      - 
      - `link <https://github.com/sphinx-contrib/autopackagesummary>`_
      - :doc:`link <tutorials/packages/sphinx-autopackagesummary>`
-     - :doc:`link <examples/sphinx-autopackagesummary-example>`
      - Package summary generation
 
 Domain-Specific Extensions
@@ -805,7 +717,7 @@ Domain-Specific Extensions
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -813,7 +725,6 @@ Domain-Specific Extensions
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinxcontrib-asyncio
      - Latest
@@ -821,7 +732,6 @@ Domain-Specific Extensions
      - `link <pdoc/sphinxcontrib_asyncio/index.html>`_
      - `link <https://github.com/sphinx-contrib/asyncio>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-asyncio>`
-     - :doc:`link <examples/sphinxcontrib-asyncio-example>`
      - AsyncIO domain support
    * - sphinxcontrib-googlemaps
      - Latest
@@ -829,7 +739,6 @@ Domain-Specific Extensions
      - `link <pdoc/sphinxcontrib_googlemaps/index.html>`_
      - `link <https://github.com/sphinx-contrib/googlemaps>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-googlemaps>`
-     - :doc:`link <examples/sphinxcontrib-googlemaps-example>`
      - Google Maps integration
    * - sphinx-kml
      - Latest
@@ -837,7 +746,6 @@ Domain-Specific Extensions
      - `link <pdoc/sphinx_kml/index.html>`_
      - `link <https://github.com/sphinx-contrib/kml>`_
      - :doc:`link <tutorials/packages/sphinx-kml>`
-     - :doc:`link <examples/sphinx-kml-example>`
      - KML file support
    * - ansible-sphinx
      - Latest
@@ -845,7 +753,6 @@ Domain-Specific Extensions
      - 
      - `link <https://github.com/ansible-community/ansible-sphinx>`_
      - :doc:`link <tutorials/packages/ansible-sphinx>`
-     - :doc:`link <examples/ansible-sphinx-example>`
      - Ansible documentation
    * - invoke-sphinx
      - Latest
@@ -853,7 +760,6 @@ Domain-Specific Extensions
      - `link <pdoc/invoke_sphinx/index.html>`_
      - `link <https://github.com/pyinvoke/invoke>`_
      - :doc:`link <tutorials/packages/invoke-sphinx>`
-     - :doc:`link <examples/invoke-sphinx-example>`
      - Invoke task documentation
 
 Development & Build Tools
@@ -861,7 +767,7 @@ Development & Build Tools
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -869,7 +775,6 @@ Development & Build Tools
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinx-autobuild
      - Latest
@@ -877,7 +782,6 @@ Development & Build Tools
      - `link <pdoc/sphinx_autobuild/index.html>`_
      - `link <https://github.com/executablebooks/sphinx-autobuild>`_
      - :doc:`link <tutorials/packages/sphinx-autobuild>`
-     - :doc:`link <examples/sphinx-autobuild-example>`
      - Rebuild docs on changes
    * - sphinx-lint
      - Latest
@@ -885,7 +789,6 @@ Development & Build Tools
      - `link <pdoc/sphinx_lint/index.html>`_
      - `link <https://github.com/sphinx-contrib/sphinx-lint>`_
      - :doc:`link <tutorials/packages/sphinx-lint>`
-     - :doc:`link <examples/sphinx-lint-example>`
      - Linting for Sphinx/reStructuredText
    * - sphinx-analytics
      - Latest
@@ -893,7 +796,6 @@ Development & Build Tools
      - `link <pdoc/sphinx_analytics/index.html>`_
      - `link <https://github.com/sphinx-contrib/analytics>`_
      - :doc:`link <tutorials/packages/sphinx-analytics>`
-     - :doc:`link <examples/sphinx-analytics-example>`
      - Analytics integration
 
 Miscellaneous Extensions
@@ -901,7 +803,7 @@ Miscellaneous Extensions
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -909,7 +811,6 @@ Miscellaneous Extensions
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinx-autofixture
      - Latest
@@ -917,7 +818,6 @@ Miscellaneous Extensions
      - `link <pdoc/sphinx_autofixture/index.html>`_
      - `link <https://github.com/sphinx-contrib/autofixture>`_
      - :doc:`link <tutorials/packages/sphinx-autofixture>`
-     - :doc:`link <examples/sphinx-autofixture-example>`
      - Automatic fixture generation
    * - sphinx-advanced
      - Latest
@@ -925,7 +825,6 @@ Miscellaneous Extensions
      - `link <pdoc/sphinx_advanced/index.html>`_
      - `link <https://github.com/sphinx-contrib/advanced>`_
      - :doc:`link <tutorials/packages/sphinx-advanced>`
-     - :doc:`link <examples/sphinx-advanced-example>`
      - Advanced Sphinx features
 
 API & Web Documentation
@@ -933,7 +832,7 @@ API & Web Documentation
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -941,7 +840,6 @@ API & Web Documentation
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinxcontrib-openapi
      - Latest
@@ -949,7 +847,6 @@ API & Web Documentation
      - `link <pdoc/sphinxcontrib_openapi/index.html>`_
      - `link <https://github.com/sphinx-contrib/openapi>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-openapi>`
-     - :doc:`link <examples/sphinxcontrib-openapi-example>`
      - OpenAPI documentation
    * - sphinxcontrib-redoc
      - Latest
@@ -957,7 +854,6 @@ API & Web Documentation
      - `link <pdoc/sphinxcontrib_redoc/index.html>`_
      - `link <https://github.com/sphinx-contrib/redoc>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-redoc>`
-     - :doc:`link <examples/sphinxcontrib-redoc-example>`
      - ReDoc integration
    * - sphinxcontrib-websupport
      - Latest
@@ -965,7 +861,6 @@ API & Web Documentation
      - `link <pdoc/sphinxcontrib_websupport/index.html>`_
      - `link <https://github.com/sphinx-doc/sphinxcontrib-websupport>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-websupport>`
-     - :doc:`link <examples/sphinxcontrib-websupport-example>`
      - Web support utilities
    * - sphinxcontrib-restbuilder
      - Latest
@@ -973,7 +868,6 @@ API & Web Documentation
      - `link <pdoc/sphinxcontrib_restbuilder/index.html>`_
      - `link <https://github.com/sphinx-contrib/restbuilder>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-restbuilder>`
-     - :doc:`link <examples/sphinxcontrib-restbuilder-example>`
      - REST builder
 
 Code Examples & Interactive Content
@@ -981,7 +875,7 @@ Code Examples & Interactive Content
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -989,7 +883,6 @@ Code Examples & Interactive Content
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinx-gallery
      - Latest
@@ -997,7 +890,6 @@ Code Examples & Interactive Content
      - `link <pdoc/sphinx_gallery/index.html>`_
      - `link <https://sphinx-gallery.github.io/>`_
      - :doc:`link <tutorials/packages/sphinx-gallery>`
-     - :doc:`link <examples/sphinx-gallery-example>`
      - Example gallery generation
    * - sphinx-codeautolink
      - Latest
@@ -1005,7 +897,6 @@ Code Examples & Interactive Content
      - `link <pdoc/sphinx_codeautolink/index.html>`_
      - `link <https://sphinx-codeautolink.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-codeautolink>`
-     - :doc:`link <examples/sphinx-codeautolink-example>`
      - Automatic code linking
    * - sphinx-thebe
      - Latest
@@ -1013,7 +904,6 @@ Code Examples & Interactive Content
      - `link <pdoc/sphinx_thebe/index.html>`_
      - `link <https://sphinx-thebe.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-thebe>`
-     - :doc:`link <examples/sphinx-thebe-example>`
      - Interactive code execution
 
 Database & Data Documentation
@@ -1021,7 +911,7 @@ Database & Data Documentation
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -1029,7 +919,6 @@ Database & Data Documentation
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - eralchemy2
      - Latest
@@ -1037,7 +926,6 @@ Database & Data Documentation
      - `link <pdoc/eralchemy2/index.html>`_
      - `link <https://github.com/maurerle/eralchemy2>`_
      - :doc:`link <tutorials/packages/eralchemy2>`
-     - :doc:`link <examples/eralchemy2-example>`
      - ER diagram generation
    * - sqlalchemy
      - Latest
@@ -1045,7 +933,6 @@ Database & Data Documentation
      - `link <pdoc/sqlalchemy/index.html>`_
      - `link <https://www.sqlalchemy.org/>`_
      - :doc:`link <tutorials/packages/sqlalchemy>`
-     - :doc:`link <examples/sqlalchemy-example>`
      - SQL toolkit and ORM
 
 Performance & Build Tools
@@ -1053,7 +940,7 @@ Performance & Build Tools
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -1061,7 +948,6 @@ Performance & Build Tools
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinx-asdf
      - Latest
@@ -1069,7 +955,6 @@ Performance & Build Tools
      - `link <pdoc/sphinx_asdf/index.html>`_
      - `link <https://github.com/ska-telescope/ska-sdp-cip-developer-docs>`_
      - :doc:`link <tutorials/packages/sphinx-asdf>`
-     - :doc:`link <examples/sphinx-asdf-example>`
      - ASDF format support
 
 Testing & Quality
@@ -1077,7 +962,7 @@ Testing & Quality
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -1085,7 +970,6 @@ Testing & Quality
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - doc8
      - Latest
@@ -1093,7 +977,6 @@ Testing & Quality
      - `link <pdoc/doc8/index.html>`_
      - `link <https://github.com/PyCQA/doc8>`_
      - :doc:`link <tutorials/packages/doc8>`
-     - :doc:`link <examples/doc8-example>`
      - Style checker for documentation
    * - rstcheck
      - Latest
@@ -1101,7 +984,6 @@ Testing & Quality
      - `link <pdoc/rstcheck/index.html>`_
      - `link <https://github.com/rstcheck/rstcheck>`_
      - :doc:`link <tutorials/packages/rstcheck>`
-     - :doc:`link <examples/rstcheck-example>`
      - reStructuredText linter
    * - sphinxcontrib-spelling
      - Latest
@@ -1109,7 +991,6 @@ Testing & Quality
      - `link <pdoc/sphinxcontrib_spelling/index.html>`_
      - `link <https://sphinxcontrib-spelling.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-spelling>`
-     - :doc:`link <examples/sphinx-spelling-example>`
      - Spell checking
 
 Internationalization
@@ -1117,7 +998,7 @@ Internationalization
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -1125,7 +1006,6 @@ Internationalization
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinx-intl
      - Latest
@@ -1133,7 +1013,6 @@ Internationalization
      - `link <pdoc/sphinx_intl/index.html>`_
      - `link <https://sphinx-intl.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-intl>`
-     - :doc:`link <examples/sphinx-intl-example>`
      - Internationalization utilities
    * - sphinx-polyversion
      - Latest
@@ -1141,7 +1020,6 @@ Internationalization
      - `link <pdoc/sphinx_polyversion/index.html>`_
      - `link <https://github.com/Holzhaus/sphinx-polyversion>`_
      - :doc:`link <tutorials/packages/sphinx-polyversion>`
-     - :doc:`link <examples/sphinx-polyversion-example>`
      - Multiple version support
 
 Export & Format Support
@@ -1149,7 +1027,7 @@ Export & Format Support
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -1157,7 +1035,6 @@ Export & Format Support
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - rst2pdf
      - Latest
@@ -1165,7 +1042,6 @@ Export & Format Support
      - `link <pdoc/rst2pdf/index.html>`_
      - `link <https://rst2pdf.org/>`_
      - :doc:`link <tutorials/packages/rst2pdf>`
-     - :doc:`link <examples/rst2pdf-example>`
      - PDF generation
    * - rinohtype
      - Latest
@@ -1173,7 +1049,6 @@ Export & Format Support
      - `link <pdoc/rinohtype/index.html>`_
      - `link <https://www.mos6581.org/rinohtype/>`_
      - :doc:`link <tutorials/packages/rinohtype>`
-     - :doc:`link <examples/rinohtype-example>`
      - PDF typesetting
    * - sphinxcontrib-katex
      - Latest
@@ -1181,7 +1056,6 @@ Export & Format Support
      - `link <pdoc/sphinxcontrib_katex/index.html>`_
      - `link <https://sphinxcontrib-katex.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-katex>`
-     - :doc:`link <examples/sphinxcontrib-katex-example>`
      - KaTeX math rendering
    * - sphinxcontrib-bibtex
      - Latest
@@ -1189,7 +1063,6 @@ Export & Format Support
      - `link <pdoc/sphinxcontrib_bibtex/index.html>`_
      - `link <https://sphinxcontrib-bibtex.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-bibtex>`
-     - :doc:`link <examples/sphinxcontrib-bibtex-example>`
      - BibTeX citations
 
 Version Control & Collaboration
@@ -1197,7 +1070,7 @@ Version Control & Collaboration
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -1205,7 +1078,6 @@ Version Control & Collaboration
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinx-multiversion
      - Latest
@@ -1213,7 +1085,6 @@ Version Control & Collaboration
      - `link <pdoc/sphinx_multiversion/index.html>`_
      - `link <https://github.com/Holzhaus/sphinx-multiversion>`_
      - :doc:`link <tutorials/packages/sphinx-multiversion>`
-     - :doc:`link <examples/sphinx-multiversion-example>`
      - Multiple version documentation
    * - sphinx-versions
      - Latest
@@ -1221,7 +1092,6 @@ Version Control & Collaboration
      - `link <pdoc/sphinx_versions/index.html>`_
      - `link <https://github.com/sphinx-contrib/versions>`_
      - :doc:`link <tutorials/packages/sphinx-versions>`
-     - :doc:`link <examples/sphinx-versions-example>`
      - Version management
    * - sphinx-comments
      - Latest
@@ -1229,7 +1099,6 @@ Version Control & Collaboration
      - `link <pdoc/sphinx_comments/index.html>`_
      - `link <https://github.com/sphinx-contrib/comments>`_
      - :doc:`link <tutorials/packages/sphinx-comments>`
-     - :doc:`link <examples/sphinx-comments-example>`
      - Comment system integration
    * - sphinxcontrib-contentui
      - Latest
@@ -1237,7 +1106,6 @@ Version Control & Collaboration
      - `link <pdoc/sphinxcontrib_contentui/index.html>`_
      - `link <https://sphinxcontrib-contentui.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-contentui>`
-     - :doc:`link <examples/sphinxcontrib-contentui-example>`
      - UI content components
 
 Cloud & Infrastructure
@@ -1245,7 +1113,7 @@ Cloud & Infrastructure
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -1253,7 +1121,6 @@ Cloud & Infrastructure
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinx-terraform
      - Latest
@@ -1261,7 +1128,6 @@ Cloud & Infrastructure
      - 
      - `link <https://github.com/sphinx-contrib/terraform>`_
      - :doc:`link <tutorials/packages/sphinx-terraform>`
-     - :doc:`link <examples/sphinx-terraform-example>`
      - Terraform documentation
 
 Search & Navigation
@@ -1269,7 +1135,7 @@ Search & Navigation
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -1277,7 +1143,6 @@ Search & Navigation
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinx-sitemap
      - Latest
@@ -1285,7 +1150,6 @@ Search & Navigation
      - `link <pdoc/sphinx_sitemap/index.html>`_
      - `link <https://sphinx-sitemap.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-sitemap>`
-     - :doc:`link <examples/sphinx-sitemap-example>`
      - Sitemap generation
    * - sphinx-tags
      - Latest
@@ -1293,7 +1157,6 @@ Search & Navigation
      - `link <pdoc/sphinx_tags/index.html>`_
      - `link <https://sphinx-tags.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-tags>`
-     - :doc:`link <examples/sphinx-tags-example>`
      - Tag support
 
 Specialized Documentation
@@ -1301,7 +1164,7 @@ Specialized Documentation
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -1309,7 +1172,6 @@ Specialized Documentation
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinx-argparse
      - Latest
@@ -1317,7 +1179,6 @@ Specialized Documentation
      - `link <pdoc/sphinx_argparse/index.html>`_
      - `link <https://sphinx-argparse.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-argparse>`
-     - :doc:`link <examples/sphinx-argparse-example>`
      - Argparse documentation
    * - sphinx-click
      - Latest
@@ -1325,7 +1186,6 @@ Specialized Documentation
      - `link <pdoc/sphinx_click/index.html>`_
      - `link <https://sphinx-click.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-click>`
-     - :doc:`link <examples/sphinx-click-example>`
      - Click command documentation
    * - sphinxcontrib-typer
      - Latest
@@ -1333,7 +1193,6 @@ Specialized Documentation
      - `link <pdoc/sphinxcontrib_typer/index.html>`_
      - `link <https://github.com/sphinx-contrib/typer>`_
      - :doc:`link <tutorials/packages/sphinx-typer>`
-     - :doc:`link <examples/sphinx-typer-example>`
      - Typer CLI documentation
    * - sphinx-pydantic
      - Latest
@@ -1341,7 +1200,6 @@ Specialized Documentation
      - `link <pdoc/sphinx_pydantic/index.html>`_
      - `link <https://autodoc-pydantic.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-pydantic>`
-     - :doc:`link <examples/sphinx-pydantic-example>`
      - Pydantic model documentation
    * - sphinx-toolbox
      - Latest
@@ -1349,7 +1207,6 @@ Specialized Documentation
      - `link <pdoc/sphinx_toolbox/index.html>`_
      - `link <https://sphinx-toolbox.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-toolbox>`
-     - :doc:`link <examples/sphinx-toolbox-example>`
      - Collection of Sphinx utilities
 
 Popular Sphinx Themes
@@ -1357,7 +1214,7 @@ Popular Sphinx Themes
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -1365,7 +1222,6 @@ Popular Sphinx Themes
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinx-rtd-theme
      - Latest
@@ -1373,7 +1229,6 @@ Popular Sphinx Themes
      - `link <pdoc/sphinx_rtd_theme/index.html>`_
      - `link <https://sphinx-rtd-theme.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-rtd-theme>`
-     - :doc:`link <examples/sphinx-rtd-theme-example>`
      - Read the Docs theme
    * - sphinx-book-theme
      - Latest
@@ -1381,7 +1236,6 @@ Popular Sphinx Themes
      - `link <pdoc/sphinx_book_theme/index.html>`_
      - `link <https://sphinx-book-theme.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-book-theme>`
-     - :doc:`link <examples/sphinx-book-theme-example>`
      - Book-style theme
    * - pydata-sphinx-theme
      - Latest
@@ -1389,7 +1243,6 @@ Popular Sphinx Themes
      - `link <pdoc/pydata_sphinx_theme/index.html>`_
      - `link <https://pydata-sphinx-theme.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/pydata-sphinx-theme>`
-     - :doc:`link <examples/pydata-sphinx-theme-example>`
      - PyData community theme
    * - furo
      - Latest
@@ -1397,7 +1250,6 @@ Popular Sphinx Themes
      - `link <pdoc/furo/index.html>`_
      - `link <https://pradyunsg.me/furo/>`_
      - :doc:`link <tutorials/packages/furo>`
-     - :doc:`link <examples/furo-example>`
      - Clean, customizable theme
    * - piccolo-theme
      - Latest
@@ -1405,7 +1257,6 @@ Popular Sphinx Themes
      - `link <pdoc/piccolo_theme/index.html>`_
      - `link <https://github.com/piccolo-orm/piccolo_theme>`_
      - :doc:`link <tutorials/packages/piccolo-theme>`
-     - :doc:`link <examples/piccolo-theme-example>`
      - Piccolo ORM theme
    * - sphinx-material
      - Latest
@@ -1413,7 +1264,6 @@ Popular Sphinx Themes
      - `link <pdoc/sphinx_material/index.html>`_
      - `link <https://bashtage.github.io/sphinx-material/>`_
      - :doc:`link <tutorials/packages/sphinx-material>`
-     - :doc:`link <examples/sphinx-material-example>`
      - Material Design theme
    * - sphinx-press-theme
      - Latest
@@ -1421,7 +1271,6 @@ Popular Sphinx Themes
      - `link <pdoc/sphinx_press_theme/index.html>`_
      - `link <https://schettino72.github.io/sphinx_press_site/>`_
      - :doc:`link <tutorials/packages/sphinx-press-theme>`
-     - :doc:`link <examples/sphinx-press-theme-example>`
      - Press-style theme
    * - karma-sphinx-theme
      - Latest
@@ -1429,7 +1278,6 @@ Popular Sphinx Themes
      - `link <pdoc/karma_sphinx_theme/index.html>`_
      - `link <https://karma-sphinx-theme.readthedocs.io/en/latest/>`_
      - :doc:`link <tutorials/packages/karma-sphinx-theme>`
-     - :doc:`link <examples/karma-sphinx-theme-example>`
      - Karma theme
    * - sphinxawesome-theme
      - Latest
@@ -1437,7 +1285,6 @@ Popular Sphinx Themes
      - `link <pdoc/sphinxawesome_theme/index.html>`_
      - `link <https://sphinxawesome.xyz/>`_
      - :doc:`link <tutorials/packages/sphinxawesome-theme>`
-     - :doc:`link <examples/sphinxawesome-theme-example>`
      - Awesome theme
    * - sphinx-immaterial
      - Latest
@@ -1445,7 +1292,6 @@ Popular Sphinx Themes
      - `link <pdoc/sphinx_immaterial/index.html>`_
      - `link <https://jbms.github.io/sphinx-immaterial/>`_
      - :doc:`link <tutorials/packages/sphinx-immaterial>`
-     - :doc:`link <examples/sphinx-immaterial-example>`
      - Material theme adaptation
    * - sphinx-wagtail-theme
      - Latest
@@ -1453,7 +1299,6 @@ Popular Sphinx Themes
      - `link <pdoc/sphinx_wagtail_theme/index.html>`_
      - `link <https://github.com/wagtail/sphinx_wagtail_theme>`_
      - :doc:`link <tutorials/packages/sphinx-wagtail-theme>`
-     - :doc:`link <examples/sphinx-wagtail-theme-example>`
      - Wagtail CMS theme
 
 Theme Utilities & Builders
@@ -1461,7 +1306,7 @@ Theme Utilities & Builders
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -1469,7 +1314,6 @@ Theme Utilities & Builders
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - sphinx-theme
      - Latest
@@ -1477,7 +1321,6 @@ Theme Utilities & Builders
      - `link <pdoc/sphinx_theme/index.html>`_
      - `link <https://github.com/sphinx-contrib/sphinx-theme>`_
      - :doc:`link <tutorials/packages/sphinx-theme>`
-     - :doc:`link <examples/sphinx-theme-example>`
      - Theme utilities
    * - sphinxnotes-fasthtml
      - Latest
@@ -1485,7 +1328,6 @@ Theme Utilities & Builders
      - `link <pdoc/sphinxnotes_fasthtml/index.html>`_
      - `link <https://github.com/sphinx-notes/fasthtml>`_
      - :doc:`link <tutorials/packages/sphinxnotes-fasthtml>`
-     - :doc:`link <examples/sphinxnotes-fasthtml-example>`
      - Fast HTML builder
 
 Markdown Support
@@ -1493,7 +1335,7 @@ Markdown Support
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -1501,7 +1343,6 @@ Markdown Support
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - markdown
      - Latest
@@ -1509,7 +1350,6 @@ Markdown Support
      - `link <pdoc/markdown/index.html>`_
      - `link <https://python-markdown.github.io/>`_
      - :doc:`link <tutorials/packages/markdown>`
-     - :doc:`link <examples/markdown-example>`
      - Python Markdown parser
    * - enumerate-markdown
      - Latest
@@ -1517,7 +1357,6 @@ Markdown Support
      - `link <pdoc/enumerate_markdown/index.html>`_
      - 
      - :doc:`link <tutorials/packages/enumerate-markdown>`
-     - :doc:`link <examples/enumerate-markdown-example>`
      - Enumerate Markdown files
    * - flake8-markdown
      - Latest
@@ -1525,7 +1364,6 @@ Markdown Support
      - `link <pdoc/flake8_markdown/index.html>`_
      - `link <https://github.com/johnfraney/flake8-markdown>`_
      - :doc:`link <tutorials/packages/flake8-markdown>`
-     - :doc:`link <examples/flake8-markdown-example>`
      - Lint code in Markdown
    * - markdown-it-py
      - Latest
@@ -1533,7 +1371,6 @@ Markdown Support
      - `link <pdoc/markdown_it_py/index.html>`_
      - `link <https://markdown-it-py.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/markdown-it-py>`
-     - :doc:`link <examples/markdown-it-py-example>`
      - Markdown parser
    * - myst-nb
      - Latest
@@ -1541,7 +1378,6 @@ Markdown Support
      - `link <pdoc/myst_nb/index.html>`_
      - `link <https://myst-nb.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/myst-nb>`
-     - :doc:`link <examples/myst-nb-example>`
      - MyST Notebook parser
    * - sphinx-markdown-tables
      - Latest
@@ -1549,7 +1385,6 @@ Markdown Support
      - `link <pdoc/sphinx_markdown_tables/index.html>`_
      - `link <https://github.com/ryanfox/sphinx-markdown-tables>`_
      - :doc:`link <tutorials/packages/sphinx-markdown-tables>`
-     - :doc:`link <examples/sphinx-markdown-tables-example>`
      - Markdown table support
    * - sphinx-panels
      - Latest
@@ -1557,7 +1392,6 @@ Markdown Support
      - `link <pdoc/sphinx_panels/index.html>`_
      - `link <https://sphinx-panels.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-panels>`
-     - :doc:`link <examples/sphinx-panels-example>`
      - Panel components
    * - sphinx-design
      - Latest
@@ -1565,7 +1399,6 @@ Markdown Support
      - `link <pdoc/sphinx_design/index.html>`_
      - `link <https://sphinx-design.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-design>`
-     - :doc:`link <examples/sphinx-design-example>`
      - Design components
    * - sphinx-togglebutton
      - Latest
@@ -1573,7 +1406,6 @@ Markdown Support
      - `link <pdoc/sphinx_togglebutton/index.html>`_
      - `link <https://sphinx-togglebutton.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-togglebutton>`
-     - :doc:`link <examples/sphinx-togglebutton-example>`
      - Toggle button directive
    * - sphinx-tabs
      - Latest
@@ -1581,7 +1413,6 @@ Markdown Support
      - `link <pdoc/sphinx_tabs/index.html>`_
      - `link <https://sphinx-tabs.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-tabs>`
-     - :doc:`link <examples/sphinx-tabs-example>`
      - Tabbed content
    * - sphinx-inline-tabs
      - Latest
@@ -1589,7 +1420,6 @@ Markdown Support
      - `link <pdoc/sphinx_inline_tabs/index.html>`_
      - `link <https://sphinx-inline-tabs.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-inline-tabs>`
-     - :doc:`link <examples/sphinx-inline-tabs-example>`
      - Inline tabs
 
 SVG and Vector Graphics Tools
@@ -1597,7 +1427,7 @@ SVG and Vector Graphics Tools
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -1605,7 +1435,6 @@ SVG and Vector Graphics Tools
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - svg.py
      - Latest
@@ -1613,7 +1442,6 @@ SVG and Vector Graphics Tools
      - `link <pdoc/svg_py/index.html>`_
      - `link <https://svg-py.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/svg.py>`
-     - :doc:`link <examples/svg.py-example>`
      - SVG generation library
 
 Additional Utilities
@@ -1621,7 +1449,7 @@ Additional Utilities
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 8 5 5 6 8 8 40
+   :widths: 20 8 5 5 6 8 40
 
    * - Name
      - Version
@@ -1629,7 +1457,6 @@ Additional Utilities
      - API
      - Manual
      - Tutorial
-     - Example
      - Description
    * - requests
      - Latest

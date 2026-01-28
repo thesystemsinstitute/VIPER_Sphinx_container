@@ -13,6 +13,7 @@ Getting Started
    sphinx-basics
    themes
    extensions
+   package-tutorials
    doxygen-usage
    doxygen-breathe-exhale
 
@@ -24,4 +25,8 @@ Package-Specific Tutorials
    :glob:
 
    packages/*
+
+Additional Resources
+--------------------
+
 * `MyST Parser Documentation <https://myst-parser.readthedocs.io/>`_

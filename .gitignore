@@ -1,6 +1,6 @@
 test_docs/
 test_docs_results/
 .vscode/
+**/__pycache__/
 
 docs/api/
-docs/examples/sphinx_automodapi_mylib/__pycache__/

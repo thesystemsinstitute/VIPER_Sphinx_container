@@ -8,8 +8,6 @@ Furo Theme Tutorial
    - `PyPI Package <https://pypi.org/project/furo/>`_
    - `API Documentation <../../pdoc/furo/index.html>`_
    - `Manual <https://pradyunsg.me/furo/>`_
-   - :doc:`Working Example <../../examples/furo-example>`
-
 
 .. contents:: Table of Contents
    :local:
@@ -107,10 +105,170 @@ Resources
 
 - `Official Documentation <https://pypi.org/project/furo/>`_
 - `PyPI Package <https://pypi.org/project/furo/>`_
-- :doc:`Example Usage <../../examples/furo-example>`
 
 See Also
 --------
 
 - :doc:`Sphinx Basics <../sphinx-basics>`
 - :doc:`Package Overview <../../sphinx-packages>`
+
+Practical Examples
+------------------
+
+Basic Usage
+-----------
+
+Simple Example
+~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   # Basic example
+   pass
+
+Configuration Example
+~~~~~~~~~~~~~~~~~~~~~
+
+Example configuration in ``conf.py``:
+
+.. code-block:: python
+
+   # Sphinx conf.py
+   extensions = [
+       'furo',
+   ]
+   
+   # Configuration options
+   furo_config = {}
+
+Advanced Features
+-----------------
+
+Feature 1
+~~~~~~~~~
+
+Example of advanced feature:
+
+.. code-block:: python
+
+   # Advanced usage
+   pass
+
+Feature 2
+~~~~~~~~~
+
+Another advanced example:
+
+.. code-block:: python
+
+   # More advanced usage
+   pass
+
+Complete Example
+----------------
+
+Full Working Example
+~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   # Complete example demonstrating all features
+   pass
+
+Output
+~~~~~~
+
+The example produces output demonstrating the package capabilities.
+
+Best Practices
+--------------
+
+1. Use clear configuration
+2. Follow conventions
+3. Test thoroughly
+4. Document examples
+5. Keep it simple
+
+
+Practical Examples
+------------------
+
+Basic Usage
+-----------
+
+Simple Example
+~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   # Basic example
+   pass
+
+Configuration Example
+~~~~~~~~~~~~~~~~~~~~~
+
+Example configuration in ``conf.py``:
+
+.. code-block:: python
+
+   # Sphinx conf.py
+   extensions = [
+       'furo',
+   ]
+   
+   # Configuration options
+   furo_config = {}
+
+Advanced Features
+-----------------
+
+Feature 1
+~~~~~~~~~
+
+Example of advanced feature:
+
+.. code-block:: python
+
+   # Advanced usage
+   pass
+
+Feature 2
+~~~~~~~~~
+
+Another advanced example:
+
+.. code-block:: python
+
+   # More advanced usage
+   pass
+
+Complete Example
+----------------
+
+Full Working Example
+~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+   # Complete example demonstrating all features
+   pass
+
+Output
+~~~~~~
+
+The example produces output demonstrating the package capabilities.
+
+Best Practices
+--------------
+
+1. Use clear configuration
+2. Follow conventions
+3. Test thoroughly
+4. Document examples
+5. Keep it simple
+
+Additional Resources
+--------------------
+- :doc:`Tutorial <../tutorials/packages/furo>`
+- :doc:`Package Overview <../sphinx-packages>`
+

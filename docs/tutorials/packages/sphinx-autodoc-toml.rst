@@ -8,8 +8,6 @@ Sphinx-Autodoc-TOML Tutorial
    - `PyPI Package <https://pypi.org/project/sphinx-autodoc-toml/>`_
    - `API Documentation <../../pdoc/sphinx_autodoc_toml/index.html>`_
    - `Manual <https://github.com/calvingiles/autodoc-toml>`_
-   - :doc:`Working Example <../../examples/sphinx-autodoc-toml-example>`
-
 
 .. contents:: Table of Contents
    :local:
@@ -564,9 +562,171 @@ Next Steps
 4. Provide usage examples
 5. Validate TOML syntax
 
+
+Practical Examples
+------------------
+
+Basic Usage
+-----------
+
+Project Metadata
+~~~~~~~~~~~~~~~~
+
+.. toml-autodoc:: pyproject.toml
+   :section: project
+
+This documents the [project] section including name, version, description, and dependencies.
+
+Configuration
+-------------
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_autodoc_toml',
+   ]
+   
+   toml_autodoc_file = 'pyproject.toml'
+
+Options
+~~~~~~~
+
+.. code-block:: python
+
+   toml_autodoc_sections = ['project', 'build-system', 'tool.pytest']
+
+Examples
+--------
+
+Dependencies
+~~~~~~~~~~~~
+
+.. toml-autodoc:: pyproject.toml
+   :section: project.dependencies
+
+Build System
+~~~~~~~~~~~~
+
+.. toml-autodoc:: pyproject.toml
+   :section: build-system
+
+
+Practical Examples
+------------------
+
+Basic Usage
+-----------
+
+Project Metadata
+~~~~~~~~~~~~~~~~
+
+.. toml-autodoc:: pyproject.toml
+   :section: project
+
+This documents the [project] section including name, version, description, and dependencies.
+
+Configuration
+-------------
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_autodoc_toml',
+   ]
+   
+   toml_autodoc_file = 'pyproject.toml'
+
+Options
+~~~~~~~
+
+.. code-block:: python
+
+   toml_autodoc_sections = ['project', 'build-system', 'tool.pytest']
+
+Examples
+--------
+
+Dependencies
+~~~~~~~~~~~~
+
+.. toml-autodoc:: pyproject.toml
+   :section: project.dependencies
+
+Build System
+~~~~~~~~~~~~
+
+.. toml-autodoc:: pyproject.toml
+   :section: build-system
+
+
+Practical Examples
+------------------
+
+Basic Usage
+-----------
+
+Project Metadata
+~~~~~~~~~~~~~~~~
+
+.. toml-autodoc:: pyproject.toml
+   :section: project
+
+This documents the [project] section including name, version, description, and dependencies.
+
+Configuration
+-------------
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinx_autodoc_toml',
+   ]
+   
+   toml_autodoc_file = 'pyproject.toml'
+
+Options
+~~~~~~~
+
+.. code-block:: python
+
+   toml_autodoc_sections = ['project', 'build-system', 'tool.pytest']
+
+Examples
+--------
+
+Dependencies
+~~~~~~~~~~~~
+
+.. toml-autodoc:: pyproject.toml
+   :section: project.dependencies
+
+Build System
+~~~~~~~~~~~~
+
+.. toml-autodoc:: pyproject.toml
+   :section: build-system
+
 Additional Resources
 --------------------
-
 - :doc:`../sphinx-basics` - Learn Sphinx fundamentals
 - `TOML Specification <https://toml.io/>`_
 - `Poetry Documentation <https://python-poetry.org/>`_
+- :doc:`../tutorials/packages/sphinx-autodoc-toml` - Complete tutorial
+- pyproject.toml: https://peps.python.org/pep-0621/
+- GitHub repository: https://github.com/sphinx-contrib/autodoc-toml
+

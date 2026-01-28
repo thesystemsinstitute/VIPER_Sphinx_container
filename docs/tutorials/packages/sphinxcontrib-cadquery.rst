@@ -8,8 +8,6 @@ Sphinxcontrib-CadQuery Tutorial
    - `PyPI Package <https://pypi.org/project/sphinxcontrib-cadquery/>`_
    - `API Documentation <../../pdoc/sphinxcontrib_cadquery/index.html>`_
    - `Manual <https://github.com/CadQuery/sphinxcontrib-cadquery>`_
-   - :doc:`Working Example <../../examples/sphinxcontrib-cadquery-example>`
-
 
 .. contents:: Table of Contents
    :local:
@@ -698,10 +696,187 @@ Next Steps
 4. Build part libraries
 5. Create assembly documentation
 
+
+Practical Examples
+------------------
+
+Basic Models
+------------
+
+Simple Box
+~~~~~~~~~~
+
+.. cadquery::
+
+   import cadquery as cq
+   
+   result = cq.Workplane("XY").box(10, 10, 10)
+
+Cylinder
+~~~~~~~~
+
+.. cadquery::
+
+   import cadquery as cq
+   
+   result = cq.Workplane("XY").cylinder(5, 10)
+
+Parametric Models
+-----------------
+
+Rounded Box
+~~~~~~~~~~~
+
+.. cadquery::
+
+   import cadquery as cq
+   
+   result = (cq.Workplane("XY")
+       .box(20, 20, 5)
+       .edges("|Z")
+       .fillet(1.0)
+   )
+
+Configuration
+-------------
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinxcontrib.cadquery',
+   ]
+   
+   cadquery_output_dir = '_cadquery'
+   cadquery_format = 'stl'  # or 'step', 'gltf'
+
+
+Practical Examples
+------------------
+
+Basic Models
+------------
+
+Simple Box
+~~~~~~~~~~
+
+.. cadquery::
+
+   import cadquery as cq
+   
+   result = cq.Workplane("XY").box(10, 10, 10)
+
+Cylinder
+~~~~~~~~
+
+.. cadquery::
+
+   import cadquery as cq
+   
+   result = cq.Workplane("XY").cylinder(5, 10)
+
+Parametric Models
+-----------------
+
+Rounded Box
+~~~~~~~~~~~
+
+.. cadquery::
+
+   import cadquery as cq
+   
+   result = (cq.Workplane("XY")
+       .box(20, 20, 5)
+       .edges("|Z")
+       .fillet(1.0)
+   )
+
+Configuration
+-------------
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinxcontrib.cadquery',
+   ]
+   
+   cadquery_output_dir = '_cadquery'
+   cadquery_format = 'stl'  # or 'step', 'gltf'
+
+
+Practical Examples
+------------------
+
+Basic Models
+------------
+
+Simple Box
+~~~~~~~~~~
+
+.. cadquery::
+
+   import cadquery as cq
+   
+   result = cq.Workplane("XY").box(10, 10, 10)
+
+Cylinder
+~~~~~~~~
+
+.. cadquery::
+
+   import cadquery as cq
+   
+   result = cq.Workplane("XY").cylinder(5, 10)
+
+Parametric Models
+-----------------
+
+Rounded Box
+~~~~~~~~~~~
+
+.. cadquery::
+
+   import cadquery as cq
+   
+   result = (cq.Workplane("XY")
+       .box(20, 20, 5)
+       .edges("|Z")
+       .fillet(1.0)
+   )
+
+Configuration
+-------------
+
+Basic Setup
+~~~~~~~~~~~
+
+Add to ``conf.py``:
+
+.. code-block:: python
+
+   extensions = [
+       'sphinxcontrib.cadquery',
+   ]
+   
+   cadquery_output_dir = '_cadquery'
+   cadquery_format = 'stl'  # or 'step', 'gltf'
+
 Additional Resources
 --------------------
-
 - :doc:`../sphinx-basics` - Learn Sphinx fundamentals
 - `CadQuery Documentation <https://cadquery.readthedocs.io/>`_
 - `CadQuery GitHub <https://github.com/CadQuery/cadquery>`_
 - `OpenCASCADE <https://www.opencascade.com/>`_
+- :doc:`../tutorials/packages/sphinxcontrib-cadquery` - Complete tutorial
+- CadQuery documentation: https://cadquery.readthedocs.io/
+- GitHub repository: https://github.com/CadQuery/sphinxcontrib-cadquery
+

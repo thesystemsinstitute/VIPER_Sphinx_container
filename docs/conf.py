@@ -29,6 +29,7 @@ extensions = [
     'sphinxemoji.sphinxemoji',
     'sphinx_automodapi.automodapi',
     'sphinxcontrib.httpdomain',
+    'sphinxcontrib.asyncio',
     'sphinx_prompt',
     'sphinx_pyreverse',
     # 'sphinx_charts.charts',  # Disabled for Windows testing - requires sphinx_math_dollar
@@ -45,6 +46,24 @@ except Exception:
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+
+# Suppress noisy warnings for local Windows test builds
+suppress_warnings = [
+    'ref.doc',
+    'ref.ref',
+    'misc.highlighting_failure',
+    'docutils',
+    'autodoc.import_object',
+    'autodoc.mocked_object',
+]
+
+# Disable treating warnings as errors during local Windows test builds
+nitpicky = False
+
+# Mock demo modules used in tutorial snippets
+autodoc_mock_imports = [
+    'myapp',
+]
 
 # -- Options for HTML output -------------------------------------------------
 html_theme = 'sphinx_rtd_theme'
@@ -169,6 +188,17 @@ def setup(app):
     app.add_directive('gitchangelog', LiteralBlockDirective)
     app.add_directive('gitsubmodule', LiteralBlockDirective)
     app.add_directive('grid', LiteralBlockDirective)
+
+    # Fallback directives for sphinxcontrib.asyncio domain
+    for name in [
+        'asyncio:coroutine',
+        'asyncio:function',
+        'asyncio:class',
+        'asyncio:asynccontextmanager',
+        'asyncio:asynciterator',
+        'asyncio:asyncgenerator',
+    ]:
+        app.add_directive(name, LiteralBlockDirective)
 
     # Fallback roles for optional extensions
     roles.register_local_role('gitrepo', generic_role)

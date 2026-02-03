@@ -26,15 +26,13 @@ Core Sphinx and Documentation Tools
      - `link <https://pypi.org/project/Sphinx/>`_
      - `link <pdoc/Sphinx/index.html>`_
      - `link <https://www.sphinx-doc.org/>`_
-     - :doc:`Sphinx Basics <tutorials/sphinx-basics>`
-     - 
+     - :doc:`Sphinx Basics <sphinx-basics>`
      - Python documentation generator
    * - pdoc3
      - Latest
      - `link <https://pypi.org/project/pdoc3/>`_
      - `link <pdoc/pdoc3/index.html>`_
      - `link <https://pdoc3.github.io/pdoc/>`_
-     - 
      - 
      - Auto-generate API documentation
 
@@ -129,6 +127,20 @@ API Documentation & Code Analysis
      - `link <https://exhale.readthedocs.io/en/latest/>`_
      - :doc:`link <tutorials/packages/exhale>`
      - Automatic C++ documentation
+   * - sphinx-doxysummary
+     - Latest
+     - `link <https://pypi.org/project/sphinx-doxysummary/>`_
+     - `link <pdoc/sphinx_doxysummary/index.html>`_
+     - `link <https://doxysummary.readthedocs.io/en/latest/>`_
+     - :doc:`link <tutorials/packages/sphinx-doxysummary>`
+     - Doxygen XML autosummary tables
+   * - sphinx-icontract
+     - Latest
+     - `link <https://pypi.org/project/sphinx-icontract/>`_
+     - `link <pdoc/sphinx_icontract/index.html>`_
+     - `link <https://github.com/Parquery/sphinx-icontract>`_
+     - :doc:`link <tutorials/packages/sphinx-icontract>`
+     - Document icontract conditions
    * - pytest-doctestplus
      - Latest
      - `link <https://pypi.org/project/pytest-doctestplus/>`_
@@ -547,6 +559,13 @@ Content Publishing & Export
      - `link <https://github.com/QuantEcon/sphinx-tojupyter>`_
      - :doc:`link <tutorials/packages/sphinx-tojupyter>`
      - Export to Jupyter notebooks
+   * - sphinx-readme
+     - Latest
+     - `link <https://pypi.org/project/sphinx-readme/>`_
+     - `link <pdoc/sphinx_readme/index.html>`_
+     - `link <https://sphinx-readme.readthedocs.io/en/latest/>`_
+     - :doc:`link <tutorials/packages/sphinx-readme>`
+     - Generate README.rst from Sphinx sources
 
 UI/UX Enhancements
 ------------------
@@ -611,6 +630,13 @@ UI/UX Enhancements
      - `link <https://github.com/humitos/sphinx-version-warning>`_
      - :doc:`link <tutorials/packages/sphinx-version-warning>`
      - Version warning banner
+   * - cartouche
+     - Latest
+     - `link <https://pypi.org/project/cartouche/>`_
+     - `link <pdoc/cartouche/index.html>`_
+     - `link <https://github.com/rob-smallshire/cartouche>`_
+     - :doc:`link <tutorials/packages/cartouche>`
+     - Docstring-to-reST conversion
 
 Version Control & Git Integration
 ---------------------------------
@@ -747,6 +773,20 @@ Domain-Specific Extensions
      - `link <https://github.com/sphinx-contrib/kml>`_
      - :doc:`link <tutorials/packages/sphinx-kml>`
      - KML file support
+   * - sphinx-gherkin
+     - Latest
+     - `link <https://pypi.org/project/sphinx-gherkin/>`_
+     - `link <pdoc/sphinx_gherkin/index.html>`_
+     - `link <https://cblegare.gitlab.io/sphinx-gherkin>`_
+     - :doc:`link <tutorials/packages/sphinx-gherkin>`
+     - Gherkin feature documentation
+   * - sphinx-gherkindoc
+     - Latest
+     - `link <https://pypi.org/project/sphinx-gherkindoc/>`_
+     - `link <pdoc/sphinx_gherkindoc/index.html>`_
+     - `link <https://jolly-good-toolbelt.github.io/sphinx_gherkindoc/>`_
+     - :doc:`link <tutorials/packages/sphinx-gherkindoc>`
+     - Convert Gherkin to rST
    * - ansible-sphinx
      - Latest
      - `link <https://pypi.org/project/ansible-sphinx/>`_
@@ -758,7 +798,7 @@ Domain-Specific Extensions
      - Latest
      - `link <https://pypi.org/project/invoke-sphinx/>`_
      - `link <pdoc/invoke_sphinx/index.html>`_
-     - `link <https://github.com/pyinvoke/invoke>`_
+     - `link <https://invoke-sphinx.readthedocs.io>`_
      - :doc:`link <tutorials/packages/invoke-sphinx>`
      - Invoke task documentation
 
@@ -783,6 +823,13 @@ Development & Build Tools
      - `link <https://github.com/executablebooks/sphinx-autobuild>`_
      - :doc:`link <tutorials/packages/sphinx-autobuild>`
      - Rebuild docs on changes
+   * - hatch-sphinx
+     - Latest
+     - `link <https://pypi.org/project/hatch-sphinx/>`_
+     - `link <pdoc/hatch_sphinx/index.html>`_
+     - `link <https://github.com/llimeht/hatch-sphinx#readme>`_
+     - :doc:`link <tutorials/packages/hatch-sphinx>`
+     - Hatch build hook for Sphinx
    * - sphinx-lint
      - Latest
      - `link <https://pypi.org/project/sphinx-lint/>`_
@@ -869,6 +916,13 @@ API & Web Documentation
      - `link <https://github.com/sphinx-contrib/restbuilder>`_
      - :doc:`link <tutorials/packages/sphinxcontrib-restbuilder>`
      - REST builder
+   * - sphinx-graphql
+     - Latest
+     - `link <https://pypi.org/project/sphinx-graphql/>`_
+     - `link <pdoc/sphinx_graphql/index.html>`_
+     - `link <https://dls-controls.github.io/sphinx-graphql>`_
+     - :doc:`link <tutorials/packages/sphinx-graphql>`
+     - GraphQL API documentation
 
 Code Examples & Interactive Content
 -----------------------------------
@@ -1050,6 +1104,13 @@ Export & Format Support
      - `link <https://www.mos6581.org/rinohtype/>`_
      - :doc:`link <tutorials/packages/rinohtype>`
      - PDF typesetting
+   * - bfabio.sphinx-rst-builder
+     - Latest
+     - `link <https://pypi.org/project/bfabio.sphinx-rst-builder/>`_
+     - `link <pdoc/bfabio_sphinx_rst_builder/index.html>`_
+     - `link <https://github.com/bfabio/sphinx-rst-builder>`_
+     - :doc:`link <tutorials/packages/bfabio.sphinx-rst-builder>`
+     - reStructuredText builder
    * - sphinxcontrib-katex
      - Latest
      - `link <https://pypi.org/project/sphinxcontrib-katex/>`_
@@ -1208,6 +1269,13 @@ Specialized Documentation
      - `link <https://sphinx-toolbox.readthedocs.io/>`_
      - :doc:`link <tutorials/packages/sphinx-toolbox>`
      - Collection of Sphinx utilities
+   * - rst-pypi-ref
+     - Latest
+     - `link <https://pypi.org/project/rst-pypi-ref/>`_
+     - `link <pdoc/rst_pypi_ref/index.html>`_
+     - `link <https://github.com/attakei-lab/rst-pypi-ref>`_
+     - :doc:`link <tutorials/packages/rst-pypi-ref>`
+     - PyPI reference role for rST
 
 Popular Sphinx Themes
 ---------------------
@@ -1464,14 +1532,12 @@ Additional Utilities
      - `link <pdoc/requests/index.html>`_
      - `link <https://requests.readthedocs.io/>`_
      - 
-     - 
      - HTTP library
    * - beautifulsoup4
      - Latest
      - `link <https://pypi.org/project/beautifulsoup4/>`_
      - `link <pdoc/beautifulsoup4/index.html>`_
      - `link <https://www.crummy.com/software/BeautifulSoup/>`_
-     - 
      - 
      - HTML/XML parser
    * - lxml
@@ -1480,7 +1546,6 @@ Additional Utilities
      - `link <pdoc/lxml/index.html>`_
      - `link <https://lxml.de/>`_
      - 
-     - 
      - XML/HTML processing
    * - jinja2
      - Latest
@@ -1488,14 +1553,12 @@ Additional Utilities
      - `link <pdoc/jinja2/index.html>`_
      - `link <https://jinja.palletsprojects.com/>`_
      - 
-     - 
      - Template engine
    * - docutils
      - Latest
      - `link <https://pypi.org/project/docutils/>`_
      - `link <pdoc/docutils/index.html>`_
      - `link <https://docutils.sourceforge.io/>`_
-     - 
      - 
      - reStructuredText processing
 

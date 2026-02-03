@@ -1,11 +1,11 @@
-Package-Specific Tutorials
-===========================
+Themes & Extensions-Specific Tutorials
+======================================
 
-This section contains comprehensive tutorials for each Sphinx package and extension 
+This section contains comprehensive tutorials for each Sphinx theme and extension 
 included in this container. Each tutorial covers installation, configuration, usage, 
 and best practices.
 
-.. contents:: Package Categories
+.. contents:: Themes & Extension Categories
    :local:
    :depth: 1
 
@@ -26,6 +26,8 @@ API Documentation & Code Analysis
    packages/sphinx-vhdl
    packages/breathe
    packages/exhale
+   packages/sphinx-doxysummary
+   packages/sphinx-icontract
    packages/pytest-doctestplus
    packages/sphinxcontrib-httpdomain
    packages/sphinx-apischema
@@ -69,6 +71,7 @@ Content Publishing & Export
    packages/sphinx2doxygen
    packages/epub2sphinx
    packages/sphinx-tojupyter
+   packages/sphinx-readme
 
 UI/UX Enhancements
 ------------------
@@ -84,6 +87,7 @@ UI/UX Enhancements
    packages/sphinx-notfound-page
    packages/sphinx-version-warning
    packages/sphinxext-opengraph
+   packages/cartouche
 
 Navigation & Organization
 --------------------------
@@ -118,6 +122,8 @@ Domain-Specific Extensions
    packages/sphinxcontrib-googlemaps
    packages/sphinx-kml
    packages/ansible-sphinx
+   packages/sphinx-gherkin
+   packages/sphinx-gherkindoc
    packages/invoke-sphinx
 
 Development & Build Tools
@@ -127,6 +133,7 @@ Development & Build Tools
    :maxdepth: 1
 
    packages/sphinx-autobuild
+   packages/hatch-sphinx
    packages/sphinx-lint
    packages/sphinx-analytics
 
@@ -159,6 +166,7 @@ API & Web Documentation
    packages/sphinxcontrib-redoc
    packages/sphinxcontrib-websupport
    packages/sphinxcontrib-restbuilder
+   packages/sphinx-graphql
 
 Code Examples & Interactive Content
 ------------------------------------
@@ -214,6 +222,7 @@ Export & Format Support
 
    packages/rst2pdf
    packages/rinohtype
+   packages/bfabio.sphinx-rst-builder
    packages/sphinxcontrib-katex
    packages/sphinxcontrib-bibtex
 
@@ -256,3 +265,14 @@ Specialized Documentation
    packages/sphinx-typer
    packages/sphinx-pydantic
    packages/sphinx-toolbox
+   packages/rst-pypi-ref
+
+All Package Tutorials
+----------------------
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :hidden:
+
+   packages/*

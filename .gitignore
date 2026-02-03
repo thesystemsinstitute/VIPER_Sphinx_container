@@ -4,3 +4,5 @@ test_docs_results/
 **/__pycache__/
 
 docs/api/
+
+prompt.txt

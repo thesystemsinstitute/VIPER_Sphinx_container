@@ -138,7 +138,7 @@ Key Doxyfile Settings
    * - INPUT
      - Source directories to document
    * - FILE_PATTERNS
-     - File extensions to process (*.cpp, *.h, etc.)
+     - File extensions to process (``*.cpp``, ``*.h``, etc.)
    * - RECURSIVE
      - Process subdirectories recursively
    * - EXTRACT_ALL

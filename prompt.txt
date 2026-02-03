@@ -312,8 +312,18 @@ create scripts for Windows and Linux to build the project:
 
 
 
+=================================
 
 
-
-
-
+add the Sphinx extension packages  with "uv add". 
+Then create a Tutorial page following the structure of the other Tutorial pages (note about package resources, TOC, What is, Installation, Configuration, Basic Usage, Advanced Features, Examples, Additional Resources)
+Determine which category this package belongs to and add it to that category in the "Themes & Extensions-Specific Tutorials" page and the "Installed Sphinx Themes and Extensions"  page.
+Add it to the table for that category in the "Installed Sphinx Themes and Extensions" page.
+Fill in the links for the PyPI page, a link to the pdoc generated API page, the online manual page, the generated Tutorial and a short description.
+For the Manual link, look in the PyPI page for a reference to a "Read The Docs" page. If that doesn't exist, find a link to a homepage or a github page.
+packages:
+sphinx-graphql
+hatch-sphinx
+sphinx-readme
+rst-pypi-ref
+...

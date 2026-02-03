@@ -30,10 +30,10 @@ RUN apk add --no-cache \
 WORKDIR /sphinx
 
 # Copy requirements file
-COPY requirements.txt .
+COPY requirements-docker.txt .
 
 # Install Python packages
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements-docker.txt
 
 # Copy documentation source
 COPY docs/ /sphinx/docs/

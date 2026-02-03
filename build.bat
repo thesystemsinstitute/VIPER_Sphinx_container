@@ -16,19 +16,10 @@ if %errorlevel% neq 0 (
 
 echo Step 1: Building Sphinx documentation...
 echo ------------------------------------------------
-if not exist "docs\_build" mkdir docs\_build
-if not exist "docs\_build\html" mkdir docs\_build\html
-
-REM Build documentation locally if sphinx-build is available
-where sphinx-build >nul 2>&1
-if %errorlevel% equ 0 (
-    echo Building documentation with local Sphinx...
-    cd docs
-    sphinx-build -b html . _build\html
-    cd ..
-    echo Documentation built successfully!
-) else (
-    echo Sphinx not found locally. Will build in container...
+run_tests.bat
+if %errorlevel% neq 0 (
+    echo ERROR: Sphinx documentation build failed
+    exit /b 1
 )
 
 echo.

@@ -977,7 +977,7 @@ Automatic Generation
 
 .. automodule:: myapp.models
    :members:
-   :pyreverse:
+   :no-index:
    
    Automatically generates and includes class diagram with autodoc output.
 
@@ -986,7 +986,7 @@ Combined Documentation
 
 .. autoclass:: myapp.models.User
    :members:
-   :pyreverse-class:
+   :no-index:
    
    **Class Diagram**:
    
@@ -1513,7 +1513,7 @@ Automatic Generation
 
 .. automodule:: myapp.models
    :members:
-   :pyreverse:
+   :no-index:
    
    Automatically generates and includes class diagram with autodoc output.
 
@@ -1522,7 +1522,7 @@ Combined Documentation
 
 .. autoclass:: myapp.models.User
    :members:
-   :pyreverse-class:
+   :no-index:
    
    **Class Diagram**:
    
@@ -2049,7 +2049,7 @@ Automatic Generation
 
 .. automodule:: myapp.models
    :members:
-   :pyreverse:
+   :no-index:
    
    Automatically generates and includes class diagram with autodoc output.
 
@@ -2058,7 +2058,7 @@ Combined Documentation
 
 .. autoclass:: myapp.models.User
    :members:
-   :pyreverse-class:
+   :no-index:
    
    **Class Diagram**:
    

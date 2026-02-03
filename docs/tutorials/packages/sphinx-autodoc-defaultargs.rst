@@ -452,6 +452,7 @@ Function with Defaults
 With autodoc-defaultargs, the documentation automatically shows:
 
 .. function:: connect(host='localhost', port=5432, timeout=30)
+   :no-index:
 
    Connect to database.
    
@@ -516,6 +517,8 @@ Document:
 
 
 .. autofunction:: sphinx_autodoc_defaultargs.utils.greet
+   :no-index:
+   :no-index:
 
 
 Output shows:
@@ -610,6 +613,7 @@ Document:
 
 
 .. autofunction:: sphinx_autodoc_defaultargs.utils.greet
+   :no-index:
 
 
 Output shows:
@@ -640,6 +644,7 @@ Function with Defaults
 With autodoc-defaultargs, the documentation automatically shows:
 
 .. function:: connect(host='localhost', port=5432, timeout=30)
+   :no-index:
 
    Connect to database.
    

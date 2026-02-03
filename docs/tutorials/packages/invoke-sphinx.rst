@@ -7,7 +7,7 @@ Invoke-Sphinx Tutorial
    
    - `PyPI Package <https://pypi.org/project/invoke-sphinx/>`_
    - `API Documentation <../../pdoc/invoke_sphinx/index.html>`_
-   - `Manual <https://github.com/pyinvoke/invoke>`_
+    - `Manual <https://invoke-sphinx.readthedocs.io>`_
 
 .. contents:: Table of Contents
    :local:

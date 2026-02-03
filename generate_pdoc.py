@@ -58,7 +58,7 @@ def main():
     packages = get_installed_packages()
     print(f"\nFound {len(packages)} installed packages")
     
-    # Generate docs for all packages from requirements.txt
+    # Generate docs for all packages from requirements-docker.txt / requirements-windows.txt
     target_packages = [
         # Core
         'sphinx', 'pdoc3',

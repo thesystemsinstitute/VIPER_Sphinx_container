@@ -1,4 +1,4 @@
-# this requirements-windows.txt is used by setup_test.bat to install the Sphinx extensions in a local Python environment on a WIndows platform.
+# Docker build requirements
 
 # Core Sphinx and Documentation Tools
 Sphinx>=9.1.0
@@ -18,6 +18,8 @@ sphinx-c-autodoc
 sphinx-vhdl
 breathe
 exhale
+sphinx-doxysummary
+sphinx-icontract
 pytest-doctestplus
 sphinxcontrib-httpdomain
 sphinx-apischema
@@ -27,7 +29,7 @@ pydeps
 sphinx-needs
 
 ## Charts, Diagrams & UML
-# sphinx-charts  # Incompatible with Windows testing - requires sphinx_math_dollar
+sphinx-charts
 sphinx-diagrams
 sphinx-autoschematics
 sphinx-pyreverse
@@ -39,8 +41,8 @@ pyan3
 graphviz
 pydot
 gprof2dot
-# graphviz2drawio  # Skipped on Windows - requires pygraphviz with C libraries
 python-markdown-graphviz
+fsmdot
 quickdiagrams
 dtreeplt
 pyprojectviz
@@ -55,7 +57,6 @@ diagrams
 railroad-diagrams
 blockdiag
 nwdiag
-# N2G  # Skipped on Windows - requires pygraphviz with C libraries
 rptree
 pinout
 sphinxcontrib-mermaid
@@ -65,6 +66,8 @@ sphinxcontrib-seqdiag
 sphinxcontrib-nwdiag
 sphinxcontrib-actdiag
 sphinxcontrib-tikz
+sphinx-gherkin
+sphinx-gherkindoc
 
 ## Jupyter Notebook Integration
 nbsphinx
@@ -77,6 +80,7 @@ sphinx-confluence
 sphinx2doxygen
 epub2sphinx
 sphinx-tojupyter
+sphinx-readme
 
 ## UI/UX Enhancements
 sphinx-copybutton
@@ -86,6 +90,7 @@ sphinx-favicon
 sphinx-hoverxref
 sphinx-notfound-page
 sphinx-version-warning
+cartouche
 
 ## Version Control & Git Integration
 sphinx-git
@@ -107,16 +112,13 @@ sphinxcontrib-googlemaps
 sphinx-kml
 ansible-sphinx
 invoke-sphinx
+sphinx-graphql
 
 ## Development & Build Tools
 sphinx-autobuild
+hatch-sphinx
 sphinx-lint
 sphinx-analytics
-
-## Theme Utilities & Builders
-sphinx-theme
-sphinx-wagtail-theme
-sphinxnotes-fasthtml
 
 ## Miscellaneous
 sphinx-autofixture
@@ -153,6 +155,7 @@ sphinx-polyversion
 ## Export & Format Support
 rst2pdf
 rinohtype
+bfabio.sphinx-rst-builder
 sphinxcontrib-katex
 sphinxcontrib-bibtex
 
@@ -175,6 +178,7 @@ sphinx-click
 sphinxcontrib-typer
 sphinx-pydantic
 sphinx-toolbox
+rst-pypi-ref
 
 # Popular Sphinx Themes
 sphinx-rtd-theme
@@ -187,6 +191,11 @@ sphinx-press-theme
 karma-sphinx-theme
 sphinxawesome-theme
 sphinx-immaterial
+sphinx-wagtail-theme
+
+## Theme Utilities & Builders
+sphinx-theme
+sphinxnotes-fasthtml
 
 # Markdown Support
 markdown
@@ -202,7 +211,7 @@ sphinx-tabs
 sphinx-inline-tabs
 
 # SVG and Vector Graphics Tools
-svg.py 
+svg.py
 
 # Additional utilities
 requests
@@ -210,3 +219,10 @@ beautifulsoup4
 lxml
 jinja2
 docutils
+
+# Packages that require system Graphviz headers (docker only)
+pygraphviz
+
+# Graphviz-dependent tools (docker only)
+graphviz2drawio
+N2G

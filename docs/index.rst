@@ -152,16 +152,21 @@ Documentation Sections
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Sphinx:
 
    quick-reference
+   sphinx-basics
+   extensions
+   themes
    sphinx-packages
+   tutorials/package-tutorials
 
 .. toctree::
    :maxdepth: 2
-   :caption: Tutorials:
+   :caption: C++ specific:
 
-   tutorials/index
+   doxygen-usage
+   doxygen-breathe-exhale
 
 Indices and Tables
 ==================

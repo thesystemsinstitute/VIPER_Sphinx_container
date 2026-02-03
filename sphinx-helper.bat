@@ -19,6 +19,7 @@ echo.
 echo Usage: sphinx-helper.bat [command]
 echo.
 echo Commands:
+echo   test     - Build the local test docs
 echo   build    - Build the Docker image
 echo   run      - Run container and serve docs on port 8080
 echo   dev      - Run with auto-rebuild on port 8000
@@ -27,6 +28,15 @@ echo   shell    - Open shell in container
 echo   clean    - Clean build artifacts
 echo   help     - Show this help
 echo.
+goto end
+
+:test
+echo Building local test docs...
+run_test.bat
+if %errorlevel% equ 0 (
+    echo.
+    echo Build complete! open .\test_docs_results\index.html
+)
 goto end
 
 :build

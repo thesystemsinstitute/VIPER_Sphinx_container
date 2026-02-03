@@ -509,21 +509,16 @@ Simple Function
    :language: python
 
 
-Document:
+``sphinx_autodoc_defaultargs/utils.rst``:
 
-.. code-block:: rst
-
-   .. autofunction:: sphinx_autodoc_defaultargs.utils.greet
-
-
-.. autofunction:: sphinx_autodoc_defaultargs.utils.greet
-   :no-index:
-   :no-index:
+.. literalinclude:: sphinx_autodoc_defaultargs/utils.rst
+   :language: rst
 
 
-Output shows:
+**Generated Output:**
 
 generated documentation: :doc:`sphinx_autodoc_defaultargs/utils`
+
 
 
 Practical Examples

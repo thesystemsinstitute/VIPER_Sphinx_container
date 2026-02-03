@@ -40,7 +40,7 @@ sphinx-refdoc is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_refdoc; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_refdoc; print('Installed')"
 
 Configuration
 -------------
@@ -498,7 +498,7 @@ Build Reference Documentation
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Validate References
@@ -508,7 +508,7 @@ Validate References
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sh -c "
        cd /project
        sphinx-build -W -b html docs/ docs/_build/html
@@ -546,7 +546,7 @@ Run:
 .. code-block:: bash
 
    docker run --rm -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      python /project/generate_refs.py
 
 CI/CD Integration
@@ -573,13 +573,13 @@ GitHub Actions
          - name: Build Docs
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -W -b html /project/docs /project/docs/_build/html
          
          - name: Check References
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b linkcheck /project/docs /project/docs/_build/linkcheck
 
 Best Practices

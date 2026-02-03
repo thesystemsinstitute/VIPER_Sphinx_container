@@ -44,7 +44,7 @@ sphinxcontrib-httpdomain is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinxcontrib.httpdomain; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinxcontrib.httpdomain; print('Installed')"
 
 Configuration
 -------------
@@ -285,7 +285,7 @@ Build API Documentation
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 CI/CD Integration
@@ -313,7 +313,7 @@ GitHub Actions
          - name: Build Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
 
 Best Practices

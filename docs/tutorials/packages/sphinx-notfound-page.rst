@@ -42,7 +42,7 @@ sphinx-notfound-page is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import notfound.extension; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import notfound.extension; print('Installed')"
 
 Configuration
 -------------
@@ -125,7 +125,7 @@ Build and Test
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 The 404 page is automatically created as ``404.html``.
@@ -410,7 +410,7 @@ Build with 404 Page
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Test 404 Page Locally
@@ -422,7 +422,7 @@ Test 404 Page Locally
    docker run --rm \
      -v $(pwd):/project \
      -p 8000:8000 \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sh -c "cd /project/docs/_build/html && python -m http.server 8000"
    
    # Visit http://localhost:8000/nonexistent to see 404 page
@@ -448,7 +448,7 @@ GitHub Actions
          - name: Build Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Verify 404 Page

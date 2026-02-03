@@ -68,8 +68,8 @@ Alternatively, you may sign this agreement by submitting a signed copy to [EMAIL
 **Project Maintainer Contact:**
 - Name: [Jef Mangelschots]
 - Email: [jef.mangelschots@gmail.com]
-- Project: [Kensai Sphinx Container]
-- Repository: [https://github.com/thesystemsinstitute/KENSAI_Sphinx_container]
+- Project: [VIPER Sphinx Container]
+- Repository: [https://github.com/thesystemsinstitute/VIPER_Sphinx_container]
 
 ---
 

@@ -37,7 +37,7 @@ sphinx-library is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_library; print(sphinx_library.__version__)"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_library; print(sphinx_library.__version__)"
 
 Configuration
 -------------
@@ -365,10 +365,10 @@ This container automatically builds library documentation:
 .. code-block:: bash
 
    # Build the container (includes library docs)
-   docker build -t kensai-sphinx:latest .
+   docker build -t viper-sphinx:latest .
    
    # View generated documentation
-   docker run -d -p 8080:8080 --name sphinx-docs kensai-sphinx:latest
+   docker run -d -p 8080:8080 --name sphinx-docs viper-sphinx:latest
    
    # Access at http://localhost:8080
 
@@ -380,7 +380,7 @@ Mount Your Library Source
    docker run --rm \
      -v $(pwd)/mylib:/project/mylib \
      -v $(pwd)/docs:/project/docs \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 With Auto-Documentation
@@ -392,7 +392,7 @@ With Auto-Documentation
      -v $(pwd):/project \
      -e LIBRARY_NAME="MyLibrary" \
      -e LIBRARY_VERSION="1.0.0" \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-apidoc -o /project/docs/api /project/mylib
 
 Complete Library Documentation Example
@@ -561,7 +561,7 @@ GitHub Actions
                -v $(pwd):/project \
                -e LIBRARY_NAME="${{ github.event.repository.name }}" \
                -e LIBRARY_VERSION="${{ github.ref_name }}" \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Deploy to GitHub Pages
@@ -654,7 +654,7 @@ Verify installation:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest pip list | grep sphinx-library
+   docker run --rm viper-sphinx:latest pip list | grep sphinx-library
 
 Import Errors in Documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

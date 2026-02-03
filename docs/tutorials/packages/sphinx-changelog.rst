@@ -63,7 +63,7 @@ sphinx-changelog is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_changelog; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_changelog; print('Installed')"
 
 Configuration
 -------------
@@ -461,7 +461,7 @@ Build with Changelog
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Generate Changelog from Git
@@ -472,7 +472,7 @@ Generate Changelog from Git
    # Generate changelog, then build
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sh -c "git log --oneline > CHANGELOG.txt && \
             sphinx-build -b html /project/docs /project/docs/_build/html"
 
@@ -507,7 +507,7 @@ GitHub Actions
          - name: Build Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Extract Release Notes

@@ -42,7 +42,7 @@ sphinxemoji is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinxemoji; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinxemoji; print('Installed')"
 
 Configuration
 -------------
@@ -479,7 +479,7 @@ Build Documentation
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Preview with Emoji
@@ -490,7 +490,7 @@ Preview with Emoji
    docker run --rm \
      -v $(pwd):/project \
      -p 8000:8000 \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sh -c "sphinx-build -b html /project/docs /project/docs/_build/html && \
             python -m http.server -d /project/docs/_build/html"
 
@@ -515,7 +515,7 @@ GitHub Actions
          - name: Build Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Deploy

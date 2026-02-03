@@ -35,7 +35,7 @@ sphinx-confluence is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest pip show sphinx-confluence
+   docker run --rm viper-sphinx:latest pip show sphinx-confluence
 
 Configuration
 -------------
@@ -93,7 +93,7 @@ Then run:
        -e CONFLUENCE_USER=your-email@example.com \
        -e CONFLUENCE_API_TOKEN=your-token \
        -v $(pwd):/project \
-       kensai-sphinx:latest \
+       viper-sphinx:latest \
        sphinx-build -b confluence /project/docs /project/docs/_build/confluence
 
 Essential Configuration Options
@@ -172,7 +172,7 @@ Build Confluence-formatted pages locally:
 .. code-block:: bash
 
    # Set confluence_publish = False in conf.py
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx-build -b confluence /project/docs /project/docs/_build/confluence
 
 This creates Confluence Storage Format files without publishing.
@@ -186,7 +186,7 @@ Publish to Confluence
        -e CONFLUENCE_USER=your-email@example.com \
        -e CONFLUENCE_API_TOKEN=your-token \
        -v $(pwd):/project \
-       kensai-sphinx:latest \
+       viper-sphinx:latest \
        sphinx-build -b confluence /project/docs /project/docs/_build/confluence
 
 Dry Run (Test Before Publishing)
@@ -414,7 +414,7 @@ Create ``docs/index.rst``:
 .. code-block:: bash
 
    # Build HTML first to verify
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx-build -b html /project/docs /project/docs/_build/html
 
 4. **Dry Run**
@@ -430,7 +430,7 @@ Create ``docs/index.rst``:
        -e CONFLUENCE_USER=me@example.com \
        -e CONFLUENCE_API_TOKEN=mytoken \
        -v $(pwd):/project \
-       kensai-sphinx:latest \
+       viper-sphinx:latest \
        sphinx-build -b confluence /project/docs /project/docs/_build/confluence
 
 5. **Publish**
@@ -446,7 +446,7 @@ Create ``docs/index.rst``:
        -e CONFLUENCE_USER=me@example.com \
        -e CONFLUENCE_API_TOKEN=mytoken \
        -v $(pwd):/project \
-       kensai-sphinx:latest \
+       viper-sphinx:latest \
        sphinx-build -b confluence /project/docs /project/docs/_build/confluence
 
 Docker Compose Setup
@@ -460,7 +460,7 @@ Create ``docker-compose.yml``:
    
    services:
      confluence-publish:
-       image: kensai-sphinx:latest
+       image: viper-sphinx:latest
        volumes:
          - ./:/project
        working_dir: /project/docs
@@ -508,7 +508,7 @@ GitHub Actions Example
                -e CONFLUENCE_USER=${{ secrets.CONFLUENCE_USER }} \
                -e CONFLUENCE_API_TOKEN=${{ secrets.CONFLUENCE_TOKEN }} \
                -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b confluence /project/docs /project/docs/_build/confluence
 
 GitLab CI Example
@@ -517,7 +517,7 @@ GitLab CI Example
 .. code-block:: yaml
 
    publish-confluence:
-     image: kensai-sphinx:latest
+     image: viper-sphinx:latest
      script:
        - sphinx-build -b confluence docs docs/_build/confluence
      variables:
@@ -726,7 +726,7 @@ Build Confluence output locally without publishing:
 .. code-block:: bash
 
    # Build to see what will be published
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx-build -b confluence /project/docs /project/build/confluence
 
 This creates Confluence storage format files in ``build/confluence/`` for review.
@@ -747,7 +747,7 @@ Publish documentation to Confluence server:
        -e CONFLUENCE_USER \
        -e CONFLUENCE_API_TOKEN \
        -v $(pwd):/project \
-       kensai-sphinx:latest \
+       viper-sphinx:latest \
        sphinx-build -b confluence /project/docs /project/build/confluence
 
 Dry Run
@@ -757,7 +757,7 @@ Test without actually publishing:
 
 .. code-block:: bash
 
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx-build -b confluence -D confluence_publish=False \
        /project/docs /project/build/confluence
 

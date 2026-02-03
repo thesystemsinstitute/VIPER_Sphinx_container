@@ -46,7 +46,7 @@ sphinx-theme is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_theme; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_theme; print('Installed')"
 
 Available Themes
 ----------------
@@ -416,7 +416,7 @@ Build with Custom Theme
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Test Different Themes
@@ -436,7 +436,7 @@ Create ``test_themes.sh``:
        docker run --rm \
          -v $(pwd):/project \
          -e SPHINX_THEME="$theme" \
-         kensai-sphinx:latest \
+         viper-sphinx:latest \
          sh -c "
            sed -i \"s/html_theme = .*/html_theme = '$theme'/\" /project/docs/conf.py
            sphinx-build -b html /project/docs /project/docs/_build/$theme
@@ -471,7 +471,7 @@ GitHub Actions
            run: |
              docker run --rm \
                -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Deploy
@@ -577,7 +577,7 @@ Check theme is installed:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest pip list | grep sphinx-theme
+   docker run --rm viper-sphinx:latest pip list | grep sphinx-theme
 
 Custom CSS Not Loading
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -601,7 +601,7 @@ Check theme supports the options:
 .. code-block:: bash
 
    # View theme options
-   docker run --rm kensai-sphinx:latest \
+   docker run --rm viper-sphinx:latest \
      python -c "import sphinx_rtd_theme; help(sphinx_rtd_theme)"
 
 Next Steps

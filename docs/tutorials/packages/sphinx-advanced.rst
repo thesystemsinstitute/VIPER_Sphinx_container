@@ -64,7 +64,7 @@ sphinx-advanced is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_advanced; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_advanced; print('Installed')"
 
 Configuration
 -------------
@@ -291,7 +291,7 @@ Build with Advanced Features
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Custom Builder
@@ -301,7 +301,7 @@ Custom Builder
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b json /project/docs /project/docs/_build/json
 
 CI/CD Integration
@@ -325,13 +325,13 @@ GitHub Actions
          - name: Build HTML
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Build JSON
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b json /project/docs /project/docs/_build/json
          
          - name: Deploy

@@ -33,7 +33,7 @@ sphinx-charts is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest pip show sphinx-charts
+   docker run --rm viper-sphinx:latest pip show sphinx-charts
 
 Configuration
 -------------

@@ -42,7 +42,7 @@ sphinx-hoverxref is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_hoverxref; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_hoverxref; print('Installed')"
 
 Configuration
 -------------
@@ -450,7 +450,7 @@ Build with Hoverxref
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Serve and Test
@@ -461,7 +461,7 @@ Serve and Test
    docker run --rm \
      -v $(pwd):/project \
      -p 8000:8000 \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sh -c "cd /project/docs/_build/html && python -m http.server 8000"
    
    # Test tooltips at http://localhost:8000
@@ -487,7 +487,7 @@ GitHub Actions
          - name: Build Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Test Hoverxref

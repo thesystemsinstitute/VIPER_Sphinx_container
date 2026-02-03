@@ -42,7 +42,7 @@ sphinx-git is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinxcontrib.git; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinxcontrib.git; print('Installed')"
 
 Configuration
 -------------
@@ -372,7 +372,7 @@ Build with Git History
    # Ensure Git repository is available
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Dockerfile with Git
@@ -380,7 +380,7 @@ Dockerfile with Git
 
 .. code-block:: dockerfile
 
-   FROM kensai-sphinx:latest
+   FROM viper-sphinx:latest
    
    # Ensure git is installed
    RUN apk add --no-cache git
@@ -415,7 +415,7 @@ GitHub Actions
          - name: Build Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Verify Changelog
@@ -456,7 +456,7 @@ Automated Release Notes
            run: |
              # Build docs with changelog
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Extract Release Notes

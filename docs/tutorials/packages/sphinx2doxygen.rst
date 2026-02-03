@@ -50,7 +50,7 @@ sphinx2doxygen is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx2doxygen; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx2doxygen; print('Installed')"
 
 Basic Usage
 -----------
@@ -61,19 +61,19 @@ Command-Line Interface
 .. code-block:: bash
 
    # Convert a single Python file
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx2doxygen /project/mymodule.py
 
    # Convert multiple files
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx2doxygen /project/module1.py /project/module2.py
 
    # Convert entire directory
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx2doxygen -r /project/src/
 
    # Specify output directory
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx2doxygen -o /project/doxygen_output /project/src/
 
 Python API
@@ -328,7 +328,7 @@ Create ``Dockerfile``:
 
 .. code-block:: dockerfile
 
-   FROM kensai-sphinx:latest
+   FROM viper-sphinx:latest
    
    # Copy Python source
    COPY src/python /project/python
@@ -357,7 +357,7 @@ Docker Compose
    
    services:
      convert:
-       image: kensai-sphinx:latest
+       image: viper-sphinx:latest
        volumes:
          - ./src:/project/src
          - ./docs:/project/docs
@@ -464,13 +464,13 @@ GitHub Actions
          - name: Convert Python to Doxygen
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx2doxygen -r -o /project/docs/doxygen_py /project/src/python
          
          - name: Generate Doxygen Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                doxygen /project/docs/Doxyfile
 
 GitLab CI
@@ -479,7 +479,7 @@ GitLab CI
 .. code-block:: yaml
 
    generate-docs:
-     image: kensai-sphinx:latest
+     image: viper-sphinx:latest
      script:
        - sphinx2doxygen -r -o docs/doxygen_py src/python
        - doxygen docs/Doxyfile
@@ -587,7 +587,7 @@ Installation Issues
 .. code-block:: bash
 
    # Verify installation
-   docker run --rm kensai-sphinx:latest pip show sphinx2doxygen
+   docker run --rm viper-sphinx:latest pip show sphinx2doxygen
 
 Encoding Problems
 ~~~~~~~~~~~~~~~~~
@@ -605,7 +605,7 @@ Import Errors
    # Ensure Python path is correct
    docker run --rm -v $(pwd):/project \
      -e PYTHONPATH=/project/src \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx2doxygen /project/src/module.py
 
 Next Steps

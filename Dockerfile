@@ -2,7 +2,7 @@
 # Based on Python 3.13 Alpine for minimal footprint
 FROM python:3.13-alpine
 
-LABEL maintainer="KENSAI Sphinx Container"
+LABEL maintainer="VIPER Sphinx Container"
 LABEL description="Comprehensive Sphinx documentation generation container"
 LABEL version="1.0"
 

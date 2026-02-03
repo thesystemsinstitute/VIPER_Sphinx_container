@@ -40,7 +40,7 @@ sphinxcontrib-asyncio is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinxcontrib.asyncio; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinxcontrib.asyncio; print('Installed')"
 
 Configuration
 -------------
@@ -503,7 +503,7 @@ Run Async Examples
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      python -c "
    import asyncio
    from mylib.async_http import fetch_url
@@ -522,7 +522,7 @@ Build Documentation
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 CI/CD Integration
@@ -550,13 +550,13 @@ GitHub Actions
          - name: Test Async Code
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                pytest tests/test_async*.py
          
          - name: Build Docs
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
 
 Best Practices

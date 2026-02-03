@@ -1,11 +1,11 @@
-# KENSAI Sphinx Container - Architecture
+# VIPER Sphinx Container - Architecture
 
 ## Container Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    KENSAI Sphinx Container                      │
-│                    (kensai-sphinx:latest)                       │
+│                    VIPER Sphinx Container                      │
+│                    (viper-sphinx:latest)                       │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
 │  ┌───────────────────────────────────────────────────────┐    │
@@ -129,7 +129,7 @@ Developer
                     │
                     ▼
             ┌──────────────────┐
-            │  kensai-sphinx   │
+            │  viper-sphinx   │
             │  Docker Image    │
             └──────────────────┘
 ```
@@ -139,7 +139,7 @@ Developer
 ```
 User
   │
-  ├─► docker run kensai-sphinx
+  ├─► docker run viper-sphinx
   │
   ▼
 ┌─────────────────────┐
@@ -254,7 +254,7 @@ Container Filesystem:
 │  │     Docker Engine                 │ │
 │  │                                   │ │
 │  │  ┌─────────────────────────────┐ │ │
-│  │  │  kensai-sphinx Container    │ │ │
+│  │  │  viper-sphinx Container    │ │ │
 │  │  │                             │ │ │
 │  │  │  ┌───────────────────────┐  │ │ │
 │  │  │  │  Python HTTP Server   │  │ │ │

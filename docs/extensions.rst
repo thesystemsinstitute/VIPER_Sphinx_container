@@ -327,7 +327,7 @@ Automatically rebuild and reload documentation.
 
 .. code-block:: bash
 
-   docker run -p 8000:8000 -v $(pwd):/project kensai-sphinx \
+   docker run -p 8000:8000 -v $(pwd):/project viper-sphinx \
        sphinx-autobuild /project/docs /project/docs/_build/html \
        --host 0.0.0.0 --port 8000
 
@@ -527,7 +527,7 @@ Extension Not Found
 .. code-block:: bash
 
    # Install missing extension
-   docker run kensai-sphinx pip install sphinx-extension-name
+   docker run viper-sphinx pip install sphinx-extension-name
    
    # Or add to requirements.txt and rebuild
 
@@ -537,7 +537,7 @@ Build Errors
 .. code-block:: bash
 
    # Build with verbose output
-   docker run -v $(pwd):/project kensai-sphinx \
+   docker run -v $(pwd):/project viper-sphinx \
        sphinx-build -v -b html /project/docs /project/docs/_build/html
 
 Resources

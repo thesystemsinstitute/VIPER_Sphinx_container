@@ -30,7 +30,7 @@ Use the container to create a new Sphinx project:
 
 .. code-block:: bash
 
-   docker run -v $(pwd):/project kensai-sphinx \
+   docker run -v $(pwd):/project viper-sphinx \
        sphinx-quickstart /project/docs
 
 This will ask you several questions:
@@ -156,14 +156,14 @@ Build HTML documentation:
 
 .. code-block:: bash
 
-   docker run -v $(pwd):/project kensai-sphinx \
+   docker run -v $(pwd):/project viper-sphinx \
        sphinx-build -b html /project/docs /project/docs/_build/html
 
 Build PDF (LaTeX):
 
 .. code-block:: bash
 
-   docker run -v $(pwd):/project kensai-sphinx \
+   docker run -v $(pwd):/project viper-sphinx \
        sphinx-build -b latex /project/docs /project/docs/_build/latex
 
 Auto-rebuild on Changes
@@ -173,7 +173,7 @@ Use ``sphinx-autobuild`` for live preview:
 
 .. code-block:: bash
 
-   docker run -p 8000:8000 -v $(pwd):/project kensai-sphinx \
+   docker run -p 8000:8000 -v $(pwd):/project viper-sphinx \
        sphinx-autobuild /project/docs /project/docs/_build/html \
        --host 0.0.0.0 --port 8000
 

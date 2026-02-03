@@ -74,7 +74,7 @@ sphinx-wagtail-theme is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_wagtail_theme; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_wagtail_theme; print('Installed')"
 
 Configuration
 -------------
@@ -596,7 +596,7 @@ Build with Theme
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Preview Locally
@@ -606,7 +606,7 @@ Preview Locally
 
    docker run --rm -p 8000:8000 \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      python -m http.server 8000 -d /project/docs/_build/html
 
 CI/CD Integration
@@ -633,7 +633,7 @@ GitHub Actions
          - name: Build Docs
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Deploy to GitHub Pages

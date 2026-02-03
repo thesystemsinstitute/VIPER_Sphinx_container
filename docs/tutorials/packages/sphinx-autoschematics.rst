@@ -40,7 +40,7 @@ sphinx-autoschematics is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_autoschematics; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_autoschematics; print('Installed')"
 
 Configuration
 -------------
@@ -501,7 +501,7 @@ Build Documentation with Schematics
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 With Circuit Simulation
@@ -509,7 +509,7 @@ With Circuit Simulation
 
 .. code-block:: dockerfile
 
-   FROM kensai-sphinx:latest
+   FROM viper-sphinx:latest
    
    # Install circuit simulator
    RUN apk add --no-cache ngspice
@@ -547,7 +547,7 @@ GitHub Actions
            run: |
              docker run --rm \
                -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
 
 Best Practices

@@ -2,7 +2,7 @@
 # Startup script for the Sphinx documentation container
 
 echo "================================================"
-echo "KENSAI Sphinx Documentation Container"
+echo "VIPER Sphinx Documentation Container"
 echo "================================================"
 echo ""
 echo "Starting HTTP server on port ${DOCS_PORT:-8080}..."

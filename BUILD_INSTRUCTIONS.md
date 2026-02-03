@@ -1,6 +1,6 @@
 # Build Instructions
 
-Step-by-step guide to build and verify the KENSAI Sphinx Container.
+Step-by-step guide to build and verify the VIPER Sphinx Container.
 
 ## Prerequisites
 
@@ -34,7 +34,7 @@ docker ps
 
 ```batch
 # Open Command Prompt or PowerShell in project directory
-cd KENSAI_Sphinx_container
+cd VIPER_Sphinx_container
 
 # Run build script
 build.bat
@@ -46,7 +46,7 @@ build.bat
 
 ```bash
 # Navigate to project directory
-cd /path/to/KENSAI_Sphinx_container
+cd /path/to/VIPER_Sphinx_container
 
 # Make script executable
 chmod +x build.sh
@@ -61,10 +61,10 @@ chmod +x build.sh
 
 ```bash
 # Navigate to project directory
-cd KENSAI_Sphinx_container
+cd VIPER_Sphinx_container
 
 # Build the image
-docker build -t kensai-sphinx:latest .
+docker build -t viper-sphinx:latest .
 
 # This will:
 # 1. Download base image (Python 3.13 Alpine)
@@ -140,18 +140,18 @@ make rebuild
 
 ```bash
 # List Docker images
-docker images | grep kensai-sphinx
+docker images | grep viper-sphinx
 
 # Should show:
 # REPOSITORY      TAG       IMAGE ID       CREATED         SIZE
-# kensai-sphinx   latest    <id>           <time>          ~600MB
+# viper-sphinx   latest    <id>           <time>          ~600MB
 ```
 
 ### 2. Run Container
 
 ```bash
 # Start container
-docker run -d --name test-sphinx -p 8080:8080 kensai-sphinx:latest
+docker run -d --name test-sphinx -p 8080:8080 viper-sphinx:latest
 
 # Check container is running
 docker ps | grep test-sphinx
@@ -167,7 +167,7 @@ docker logs test-sphinx
 
 # Should show:
 # ================================================
-# KENSAI Sphinx Documentation Container
+# VIPER Sphinx Documentation Container
 # ================================================
 # 
 # Starting HTTP server on port 8080...
@@ -177,10 +177,10 @@ docker logs test-sphinx
 
 1. Open web browser
 2. Navigate to: http://localhost:8080
-3. You should see the KENSAI Sphinx Container documentation
+3. You should see the VIPER Sphinx Container documentation
 
 **Expected:**
-- Title: "KENSAI Sphinx Documentation Container"
+- Title: "VIPER Sphinx Documentation Container"
 - Navigation sidebar on left
 - Main content area
 - Search box
@@ -214,12 +214,12 @@ docker logs test-sphinx
 
 ```bash
 # Check installed packages
-docker run --rm kensai-sphinx pip list | grep -i sphinx
+docker run --rm viper-sphinx pip list | grep -i sphinx
 
 # Should show many Sphinx packages
 
 # Check specific package
-docker run --rm kensai-sphinx pip show sphinx
+docker run --rm viper-sphinx pip show sphinx
 
 # Should show Sphinx details
 ```
@@ -228,12 +228,12 @@ docker run --rm kensai-sphinx pip show sphinx
 
 ```bash
 # Test Sphinx build command
-docker run --rm kensai-sphinx sphinx-build --version
+docker run --rm viper-sphinx sphinx-build --version
 
 # Should show: sphinx-build 7.x.x
 
 # Test with a sample project
-docker run --rm -v $(pwd):/project kensai-sphinx \
+docker run --rm -v $(pwd):/project viper-sphinx \
   sphinx-build /project/docs /project/docs/_build/html
 
 # Should build successfully
@@ -266,7 +266,7 @@ docker image prune -a
 
 ```bash
 # Try clean build
-docker build --no-cache -t kensai-sphinx:latest .
+docker build --no-cache -t viper-sphinx:latest .
 
 # Or check internet connection
 ping pypi.org
@@ -279,7 +279,7 @@ ping pypi.org
 # Try building with more time or better internet connection
 
 # Check specific package installation
-docker build --progress=plain -t kensai-sphinx:latest .
+docker build --progress=plain -t viper-sphinx:latest .
 ```
 
 ### Container Won't Start
@@ -294,7 +294,7 @@ docker logs test-sphinx
 
 ```bash
 # Use different port
-docker run -d -p 9090:8080 kensai-sphinx:latest
+docker run -d -p 9090:8080 viper-sphinx:latest
 
 # Access at http://localhost:9090
 ```
@@ -303,7 +303,7 @@ docker run -d -p 9090:8080 kensai-sphinx:latest
 
 ```bash
 # Run as current user
-docker run -d --user $(id -u):$(id -g) -p 8080:8080 kensai-sphinx:latest
+docker run -d --user $(id -u):$(id -g) -p 8080:8080 viper-sphinx:latest
 ```
 
 ### Documentation Not Accessible
@@ -311,7 +311,7 @@ docker run -d --user $(id -u):$(id -g) -p 8080:8080 kensai-sphinx:latest
 **Check container is running:**
 
 ```bash
-docker ps | grep kensai-sphinx
+docker ps | grep viper-sphinx
 ```
 
 **Check port mapping:**
@@ -338,11 +338,11 @@ http://127.0.0.1:8080
 ```bash
 # Enable BuildKit (Linux/Mac)
 export DOCKER_BUILDKIT=1
-docker build -t kensai-sphinx:latest .
+docker build -t viper-sphinx:latest .
 
 # Windows PowerShell
 $env:DOCKER_BUILDKIT=1
-docker build -t kensai-sphinx:latest .
+docker build -t viper-sphinx:latest .
 ```
 
 **Use build cache:**
@@ -369,27 +369,27 @@ docker stop test-sphinx
 
 ```bash
 # Tag with version
-docker tag kensai-sphinx:latest kensai-sphinx:1.0.0
+docker tag viper-sphinx:latest viper-sphinx:1.0.0
 ```
 
 ### Save Image
 
 ```bash
 # Save to file
-docker save kensai-sphinx:latest | gzip > kensai-sphinx-1.0.0.tar.gz
+docker save viper-sphinx:latest | gzip > viper-sphinx-1.0.0.tar.gz
 
 # Load on another machine
-docker load < kensai-sphinx-1.0.0.tar.gz
+docker load < viper-sphinx-1.0.0.tar.gz
 ```
 
 ### Push to Registry
 
 ```bash
 # Tag for registry
-docker tag kensai-sphinx:latest your-registry.com/kensai-sphinx:latest
+docker tag viper-sphinx:latest your-registry.com/viper-sphinx:latest
 
 # Push
-docker push your-registry.com/kensai-sphinx:latest
+docker push your-registry.com/viper-sphinx:latest
 ```
 
 ## Validation Checklist
@@ -443,7 +443,7 @@ Documentation Size: ~5-10 MB
 
 Your build is successful when:
 
-✅ `docker images` shows kensai-sphinx:latest
+✅ `docker images` shows viper-sphinx:latest
 ✅ Container starts without errors
 ✅ http://localhost:8080 shows documentation
 ✅ All navigation links work
@@ -453,4 +453,4 @@ Your build is successful when:
 
 ---
 
-**Congratulations!** Your KENSAI Sphinx Container is ready to use.
+**Congratulations!** Your VIPER Sphinx Container is ready to use.

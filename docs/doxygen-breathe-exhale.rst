@@ -134,7 +134,7 @@ Generate a Doxyfile:
 
 .. code-block:: bash
 
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sh -c "cd /project && doxygen -g"
 
 Edit **Doxyfile** with these critical settings:
@@ -309,7 +309,7 @@ Build with exhale executing Doxygen:
 
 .. code-block:: bash
 
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sh -c "cd /project/docs && sphinx-build -b html . _build/html"
 
 Or build with separate Doxygen step:
@@ -317,11 +317,11 @@ Or build with separate Doxygen step:
 .. code-block:: bash
 
    # First run Doxygen
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sh -c "cd /project && doxygen Doxyfile"
    
    # Then build Sphinx
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sh -c "cd /project/docs && sphinx-build -b html . _build/html"
 
 View the documentation:
@@ -472,7 +472,7 @@ Create **docker-compose.yml** for easy rebuilds:
    
    services:
      docs:
-       image: kensai-sphinx:latest
+       image: viper-sphinx:latest
        volumes:
          - ./:/project
        working_dir: /project/docs
@@ -481,7 +481,7 @@ Create **docker-compose.yml** for easy rebuilds:
          - "8000:8000"
      
      docs-watch:
-       image: kensai-sphinx:latest
+       image: viper-sphinx:latest
        volumes:
          - ./:/project
        working_dir: /project/docs
@@ -550,5 +550,5 @@ Download a complete working example:
    cd cpp-breathe-exhale-demo
    
    # Build docs
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sh -c "cd /project/docs && sphinx-build -b html . _build/html"

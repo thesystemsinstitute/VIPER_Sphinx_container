@@ -42,7 +42,7 @@ sphinx-autobuild is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_autobuild; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_autobuild; print('Installed')"
 
 Configuration
 -------------
@@ -180,14 +180,14 @@ Interactive Development
    docker run --rm -it \
      -v $(pwd):/project \
      -p 8000:8000 \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-autobuild /project/docs /project/docs/_build/html --host 0.0.0.0
 
 ``Dockerfile.dev``:
 
 .. code-block:: dockerfile
 
-   FROM kensai-sphinx:latest
+   FROM viper-sphinx:latest
    
    WORKDIR /project
    

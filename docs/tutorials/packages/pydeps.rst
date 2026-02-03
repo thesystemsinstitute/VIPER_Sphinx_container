@@ -57,7 +57,7 @@ pydeps is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest pydeps --version
+   docker run --rm viper-sphinx:latest pydeps --version
 
 Configuration
 -------------
@@ -752,7 +752,7 @@ Generate Graphs
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      pydeps /project/src --cluster -o /project/docs/_static/deps.svg
 
 Batch Generation
@@ -762,7 +762,7 @@ Batch Generation
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      bash -c "
        mkdir -p /project/docs/_static/dependencies
        for pkg in /project/src/*/; do
@@ -795,7 +795,7 @@ GitHub Actions
          - name: Generate dependency graphs
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                bash -c "
                  mkdir -p /project/docs/_static/dependencies
                  pydeps /project/src --cluster \
@@ -805,7 +805,7 @@ GitHub Actions
          - name: Check for cycles
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                pydeps /project/src --show-cycles || true
          
          - name: Commit graphs
@@ -824,7 +824,7 @@ Cycle Detection in CI
    - name: Fail on cycles
      run: |
        docker run --rm -v $(pwd):/project \
-         kensai-sphinx:latest \
+         viper-sphinx:latest \
          bash -c "
            pydeps /project/src --show-cycles > cycles.txt
            if grep -q 'cycle' cycles.txt; then

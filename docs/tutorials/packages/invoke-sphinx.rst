@@ -66,7 +66,7 @@ invoke-sphinx is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import invoke_sphinx; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import invoke_sphinx; print('Installed')"
 
 Prerequisites
 -------------
@@ -234,7 +234,7 @@ Example 5: Docker Integration
 
    from invoke import task
    
-   DOCKER_IMAGE = 'kensai-sphinx:latest'
+   DOCKER_IMAGE = 'viper-sphinx:latest'
    
    @task
    def docs_docker_build(c):
@@ -318,7 +318,7 @@ Build in Container
 
    # Run invoke tasks in Docker
    docker run --rm -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      invoke docs-build
 
 With Invoke Installed
@@ -328,7 +328,7 @@ With Invoke Installed
 
 .. code-block:: dockerfile
 
-   FROM kensai-sphinx:latest
+   FROM viper-sphinx:latest
    
    # Install Invoke
    RUN pip install invoke

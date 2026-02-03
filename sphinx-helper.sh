@@ -1,11 +1,11 @@
 #!/bin/bash
-# Quick usage helper for KENSAI Sphinx Container (Linux/Mac)
+# Quick usage helper for VIPER Sphinx Container (Linux/Mac)
 
 set -e
 
 show_help() {
     echo ""
-    echo "KENSAI Sphinx Container - Quick Commands"
+    echo "VIPER Sphinx Container - Quick Commands"
     echo "========================================="
     echo ""
     echo "Usage: ./sphinx-helper.sh [command]"
@@ -23,7 +23,7 @@ show_help() {
 
 build_image() {
     echo "Building Docker image..."
-    docker build -t kensai-sphinx:latest .
+    docker build -t viper-sphinx:latest .
     echo ""
     echo "Build complete! Run with: ./sphinx-helper.sh run"
 }
@@ -31,18 +31,18 @@ build_image() {
 run_server() {
     echo "Starting Sphinx documentation server..."
     echo "Access at: http://localhost:8080"
-    docker run -d --name kensai-sphinx-docs -p 8080:8080 kensai-sphinx:latest
+    docker run -d --name viper-sphinx-docs -p 8080:8080 viper-sphinx:latest
     echo ""
     echo "Container started successfully!"
-    echo "View logs: docker logs -f kensai-sphinx-docs"
+    echo "View logs: docker logs -f viper-sphinx-docs"
 }
 
 run_dev() {
     echo "Starting development server with auto-rebuild..."
     echo "Access at: http://localhost:8000"
-    docker run -d --name kensai-sphinx-dev -p 8000:8000 \
+    docker run -d --name viper-sphinx-dev -p 8000:8000 \
         -v "$(pwd)/docs:/sphinx/docs" \
-        kensai-sphinx:latest \
+        viper-sphinx:latest \
         sh -c "cd /sphinx/docs && sphinx-autobuild . _build/html --host 0.0.0.0 --port 8000"
     echo ""
     echo "Dev server started! Changes will auto-reload."
@@ -50,16 +50,16 @@ run_dev() {
 
 stop_containers() {
     echo "Stopping containers..."
-    docker stop kensai-sphinx-docs 2>/dev/null || true
-    docker stop kensai-sphinx-dev 2>/dev/null || true
-    docker rm kensai-sphinx-docs 2>/dev/null || true
-    docker rm kensai-sphinx-dev 2>/dev/null || true
+    docker stop viper-sphinx-docs 2>/dev/null || true
+    docker stop viper-sphinx-dev 2>/dev/null || true
+    docker rm viper-sphinx-docs 2>/dev/null || true
+    docker rm viper-sphinx-dev 2>/dev/null || true
     echo "Containers stopped."
 }
 
 open_shell() {
     echo "Opening shell in container..."
-    docker run -it --rm kensai-sphinx:latest /bin/sh
+    docker run -it --rm viper-sphinx:latest /bin/sh
 }
 
 clean_artifacts() {

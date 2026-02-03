@@ -43,7 +43,7 @@ sphinx-tagtoctree is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_tagtoctree; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_tagtoctree; print('Installed')"
 
 Configuration
 -------------
@@ -459,7 +459,7 @@ Build Tagged Documentation
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Generate Tag Report
@@ -503,7 +503,7 @@ Run:
 .. code-block:: bash
 
    docker run --rm -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      python /project/generate_tag_report.py
 
 Complete Project Example
@@ -620,13 +620,13 @@ GitHub Actions
          - name: Build Docs
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html docs/ docs/_build/html
          
          - name: Generate Tag Report
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                python generate_tag_report.py > tag_report.txt
          
          - name: Upload Report
@@ -816,7 +816,7 @@ Tags Not Working
 
    .. code-block:: bash
    
-      docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+      docker run --rm -v $(pwd):/project viper-sphinx:latest \
         sphinx-build -b html docs/ docs/_build/html
 
 Empty Tag TOC

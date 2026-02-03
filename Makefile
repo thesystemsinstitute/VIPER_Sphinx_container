@@ -4,7 +4,7 @@
 
 # Default target
 help:
-	@echo "KENSAI Sphinx Container - Available Commands"
+	@echo "VIPER Sphinx Container - Available Commands"
 	@echo "============================================="
 	@echo ""
 	@echo "Building:"
@@ -33,29 +33,29 @@ help:
 # Build the Docker image
 build:
 	@echo "Building Docker image..."
-	docker build -t kensai-sphinx:latest .
+	docker build -t viper-sphinx:latest .
 	@echo "Build complete!"
 
 # Rebuild without cache
 rebuild:
 	@echo "Rebuilding Docker image (no cache)..."
-	docker build --no-cache -t kensai-sphinx:latest .
+	docker build --no-cache -t viper-sphinx:latest .
 	@echo "Rebuild complete!"
 
 # Run container to serve documentation
 run:
 	@echo "Starting Sphinx documentation server..."
 	@echo "Access at: http://localhost:8080"
-	docker run -d --name kensai-sphinx-docs -p 8080:8080 kensai-sphinx:latest
+	docker run -d --name viper-sphinx-docs -p 8080:8080 viper-sphinx:latest
 	@echo "Container started! View logs with: make logs"
 
 # Run with auto-rebuild for development
 dev:
 	@echo "Starting development server with auto-rebuild..."
 	@echo "Access at: http://localhost:8000"
-	docker run -d --name kensai-sphinx-dev -p 8000:8000 \
+	docker run -d --name viper-sphinx-dev -p 8000:8000 \
 		-v $$(pwd)/docs:/sphinx/docs \
-		kensai-sphinx:latest \
+		viper-sphinx:latest \
 		sh -c "cd /sphinx/docs && sphinx-autobuild . _build/html --host 0.0.0.0 --port 8000"
 	@echo "Dev server started! Changes will auto-reload."
 
@@ -65,23 +65,23 @@ serve: run
 # Stop running containers
 stop:
 	@echo "Stopping containers..."
-	-docker stop kensai-sphinx-docs 2>/dev/null || true
-	-docker stop kensai-sphinx-dev 2>/dev/null || true
-	-docker rm kensai-sphinx-docs 2>/dev/null || true
-	-docker rm kensai-sphinx-dev 2>/dev/null || true
+	-docker stop viper-sphinx-docs 2>/dev/null || true
+	-docker stop viper-sphinx-dev 2>/dev/null || true
+	-docker rm viper-sphinx-docs 2>/dev/null || true
+	-docker rm viper-sphinx-dev 2>/dev/null || true
 	@echo "Containers stopped."
 
 # View logs
 logs:
 	@echo "Viewing logs (Ctrl+C to exit)..."
-	docker logs -f kensai-sphinx-docs 2>/dev/null || \
-	docker logs -f kensai-sphinx-dev 2>/dev/null || \
+	docker logs -f viper-sphinx-docs 2>/dev/null || \
+	docker logs -f viper-sphinx-dev 2>/dev/null || \
 	echo "No running container found."
 
 # Open shell in container
 shell:
 	@echo "Opening shell in container..."
-	docker run -it --rm kensai-sphinx:latest /bin/sh
+	docker run -it --rm viper-sphinx:latest /bin/sh
 
 # Build documentation locally (if Sphinx installed)
 docs:
@@ -91,14 +91,14 @@ docs:
 		echo "Documentation built in docs/_build/html/"; \
 	else \
 		echo "Sphinx not installed locally. Using container..."; \
-		docker run --rm -v $$(pwd):/project kensai-sphinx:latest \
+		docker run --rm -v $$(pwd):/project viper-sphinx:latest \
 			sphinx-build -b html /project/docs /project/docs/_build/html; \
 	fi
 
 # Build PDF documentation
 docs-pdf:
 	@echo "Building PDF documentation..."
-	docker run --rm -v $$(pwd):/project kensai-sphinx:latest \
+	docker run --rm -v $$(pwd):/project viper-sphinx:latest \
 		sphinx-build -b latex /project/docs /project/docs/_build/latex
 	@echo "PDF built in docs/_build/latex/"
 
@@ -113,7 +113,7 @@ clean:
 # Clean everything including Docker image
 clean-all: clean stop
 	@echo "Removing Docker image..."
-	-docker rmi kensai-sphinx:latest 2>/dev/null || true
+	-docker rmi viper-sphinx:latest 2>/dev/null || true
 	@echo "Full clean complete!"
 
 # Docker Compose commands
@@ -134,7 +134,7 @@ gen-docs:
 		exit 1; \
 	fi
 	@echo "Generating documentation for $(PROJECT)..."
-	docker run --rm -v $(PROJECT):/project kensai-sphinx:latest \
+	docker run --rm -v $(PROJECT):/project viper-sphinx:latest \
 		sphinx-build -b html /project/docs /project/docs/_build/html
 	@echo "Documentation generated!"
 
@@ -145,6 +145,6 @@ init-project:
 		exit 1; \
 	fi
 	@echo "Initializing Sphinx project in $(PROJECT)..."
-	docker run --rm -it -v $(PROJECT):/project kensai-sphinx:latest \
+	docker run --rm -it -v $(PROJECT):/project viper-sphinx:latest \
 		sphinx-quickstart /project/docs
 	@echo "Project initialized!"

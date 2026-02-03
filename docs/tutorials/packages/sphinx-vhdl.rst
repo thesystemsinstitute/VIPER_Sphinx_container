@@ -51,7 +51,7 @@ sphinx-vhdl is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinxcontrib.vhdl; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinxcontrib.vhdl; print('Installed')"
 
 Configuration
 -------------
@@ -434,7 +434,7 @@ Build VHDL Documentation
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 With VHDL Analysis
@@ -448,7 +448,7 @@ Create ``analyze_vhdl.sh``:
    
    echo "Analyzing VHDL files..."
    
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest sh -c "
+   docker run --rm -v $(pwd):/project viper-sphinx:latest sh -c "
        cd /project
        
        # Find all VHDL files
@@ -465,7 +465,7 @@ Complete Workflow
 
 .. code-block:: dockerfile
 
-   FROM kensai-sphinx:latest
+   FROM viper-sphinx:latest
    
    # Copy VHDL sources
    COPY hdl/ /project/hdl/
@@ -505,7 +505,7 @@ GitHub Actions
          - name: Build Docs
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Deploy
@@ -520,7 +520,7 @@ GitLab CI
 .. code-block:: yaml
 
    build-vhdl-docs:
-     image: kensai-sphinx:latest
+     image: viper-sphinx:latest
      script:
        - sphinx-build -b html docs/ public
      artifacts:

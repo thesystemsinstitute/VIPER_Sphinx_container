@@ -41,7 +41,7 @@ sphinx-diagrams is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import diagrams; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import diagrams; print('Installed')"
 
 Configuration
 -------------
@@ -505,7 +505,7 @@ Build Diagrams
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Generate Single Diagram
@@ -515,7 +515,7 @@ Generate Single Diagram
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      python -c "
    from diagrams import Diagram
    from diagrams.aws.compute import EC2
@@ -551,7 +551,7 @@ GitHub Actions
          - name: Build Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Upload Diagrams

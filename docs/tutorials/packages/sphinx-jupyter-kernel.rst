@@ -42,7 +42,7 @@ sphinx-jupyter-kernel is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_jupyter_kernel; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_jupyter_kernel; print('Installed')"
 
 Configuration
 -------------
@@ -483,7 +483,7 @@ Build with Jupyter Kernel
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Install Additional Kernels
@@ -493,7 +493,7 @@ Install Additional Kernels
 
 .. code-block:: dockerfile
 
-   FROM kensai-sphinx:latest
+   FROM viper-sphinx:latest
    
    # Install R kernel
    RUN apk add --no-cache R R-dev

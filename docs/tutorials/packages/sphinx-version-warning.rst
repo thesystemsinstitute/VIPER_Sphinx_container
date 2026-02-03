@@ -42,7 +42,7 @@ sphinx-version-warning is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import versionwarning.extension; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import versionwarning.extension; print('Installed')"
 
 Configuration
 -------------
@@ -192,7 +192,7 @@ Build with Version Warning
    docker run --rm \
      -v $(pwd):/project \
      -e DOC_VERSION=1.0 \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Multi-Version Build
@@ -208,7 +208,7 @@ Multi-Version Build
      docker run --rm \
        -v $(pwd):/project \
        -e DOC_VERSION=$ver \
-       kensai-sphinx:latest \
+       viper-sphinx:latest \
        sphinx-build -b html /project/docs /project/docs/_build/html/$ver
    done
 
@@ -244,7 +244,7 @@ GitHub Actions
              docker run --rm \
                -v $(pwd):/project \
                -e DOC_VERSION=$DOC_VERSION \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Deploy

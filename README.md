@@ -1,4 +1,4 @@
-# KENSAI Sphinx Documentation Container
+# VIPER Sphinx Documentation Container
 
 A comprehensive Docker container for generating beautiful documentation using Sphinx, with an extensive collection of extensions, themes, and tools pre-installed.
 
@@ -29,7 +29,7 @@ A comprehensive Docker container for generating beautiful documentation using Sp
 build.bat
 
 # Run the container
-docker run -p 8080:8080 kensai-sphinx:latest
+docker run -p 8080:8080 viper-sphinx:latest
 
 # Access documentation at http://localhost:8080
 ```
@@ -44,7 +44,7 @@ chmod +x build.sh
 ./build.sh
 
 # Run the container
-docker run -p 8080:8080 kensai-sphinx:latest
+docker run -p 8080:8080 viper-sphinx:latest
 
 # Access documentation at http://localhost:8080
 ```
@@ -68,32 +68,32 @@ docker-compose down
 
 ```bash
 # Windows
-docker run -v %cd%:/project kensai-sphinx sphinx-build /project/docs /project/docs/_build/html
+docker run -v %cd%:/project viper-sphinx sphinx-build /project/docs /project/docs/_build/html
 
 # Linux/Mac
-docker run -v $(pwd):/project kensai-sphinx sphinx-build /project/docs /project/docs/_build/html
+docker run -v $(pwd):/project viper-sphinx sphinx-build /project/docs /project/docs/_build/html
 ```
 
 ### Serve Your Project Documentation
 
 ```bash
 # Windows
-docker run -p 8080:8080 -v %cd%:/project kensai-sphinx
+docker run -p 8080:8080 -v %cd%:/project viper-sphinx
 
 # Linux/Mac
-docker run -p 8080:8080 -v $(pwd):/project kensai-sphinx
+docker run -p 8080:8080 -v $(pwd):/project viper-sphinx
 ```
 
 ### Auto-rebuild on Changes
 
 ```bash
 # Windows
-docker run -p 8000:8000 -v %cd%:/project kensai-sphinx ^
+docker run -p 8000:8000 -v %cd%:/project viper-sphinx ^
   sphinx-autobuild /project/docs /project/docs/_build/html ^
   --host 0.0.0.0 --port 8000
 
 # Linux/Mac
-docker run -p 8000:8000 -v $(pwd):/project kensai-sphinx \
+docker run -p 8000:8000 -v $(pwd):/project viper-sphinx \
   sphinx-autobuild /project/docs /project/docs/_build/html \
   --host 0.0.0.0 --port 8000
 ```
@@ -190,15 +190,15 @@ Access at `http://localhost:8080` after running the container.
 
 ```bash
 # PDF (requires LaTeX)
-docker run -v $(pwd):/project kensai-sphinx \
+docker run -v $(pwd):/project viper-sphinx \
   sphinx-build -b latex /project/docs /project/docs/_build/latex
 
 # ePub
-docker run -v $(pwd):/project kensai-sphinx \
+docker run -v $(pwd):/project viper-sphinx \
   sphinx-build -b epub /project/docs /project/docs/_build/epub
 
 # Man pages
-docker run -v $(pwd):/project kensai-sphinx \
+docker run -v $(pwd):/project viper-sphinx \
   sphinx-build -b man /project/docs /project/docs/_build/man
 ```
 
@@ -206,15 +206,15 @@ docker run -v $(pwd):/project kensai-sphinx \
 
 ```bash
 # Initialize new project
-docker run -v $(pwd):/project kensai-sphinx \
+docker run -v $(pwd):/project viper-sphinx \
   sphinx-quickstart /project/docs
 
 # Check for broken links
-docker run -v $(pwd):/project kensai-sphinx \
+docker run -v $(pwd):/project viper-sphinx \
   sphinx-build -b linkcheck /project/docs /project/docs/_build/linkcheck
 
 # Generate API docs
-docker run -v $(pwd):/project kensai-sphinx \
+docker run -v $(pwd):/project viper-sphinx \
   sphinx-apidoc -o /project/docs/api /project/src
 ```
 
@@ -227,7 +227,7 @@ docker run -v $(pwd):/project kensai-sphinx \
 ## 📁 Project Structure
 
 ```
-KENSAI_Sphinx_container/
+VIPER_Sphinx_container/
 ├── Dockerfile              # Container definition
 ├── docker-compose.yml      # Compose configuration
 ├── requirements.txt        # Python packages
@@ -252,21 +252,21 @@ KENSAI_Sphinx_container/
 
 ```bash
 # Clean build (no cache)
-docker build --no-cache -t kensai-sphinx:latest .
+docker build --no-cache -t viper-sphinx:latest .
 ```
 
 ### Port Already in Use
 
 ```bash
 # Use different port
-docker run -p 9090:8080 kensai-sphinx:latest
+docker run -p 9090:8080 viper-sphinx:latest
 ```
 
 ### Permission Issues (Linux)
 
 ```bash
 # Run with current user
-docker run --user $(id -u):$(id -g) -v $(pwd):/project kensai-sphinx
+docker run --user $(id -u):$(id -g) -v $(pwd):/project viper-sphinx
 ```
 
 ### Missing Packages
@@ -278,7 +278,7 @@ Add to `requirements.txt` and rebuild:
 echo "your-package-name" >> requirements.txt
 
 # Rebuild
-docker build -t kensai-sphinx:latest .
+docker build -t viper-sphinx:latest .
 ```
 
 ## 🔗 Resources
@@ -295,28 +295,28 @@ docker build -t kensai-sphinx:latest .
 
 ```bash
 # Initialize
-docker run -v $(pwd):/project kensai-sphinx \
+docker run -v $(pwd):/project viper-sphinx \
   sphinx-quickstart /project/docs
 
 # Edit docs/index.rst with your content
 
 # Build
-docker run -v $(pwd):/project kensai-sphinx \
+docker run -v $(pwd):/project viper-sphinx \
   sphinx-build /project/docs /project/docs/_build/html
 
 # Serve
-docker run -p 8080:8080 -v $(pwd):/project kensai-sphinx
+docker run -p 8080:8080 -v $(pwd):/project viper-sphinx
 ```
 
 ### Python API Documentation
 
 ```bash
 # Generate API docs from source
-docker run -v $(pwd):/project kensai-sphinx \
+docker run -v $(pwd):/project viper-sphinx \
   sphinx-apidoc -f -o /project/docs/api /project/src
 
 # Build with autodoc
-docker run -v $(pwd):/project kensai-sphinx \
+docker run -v $(pwd):/project viper-sphinx \
   sphinx-build /project/docs /project/docs/_build/html
 ```
 

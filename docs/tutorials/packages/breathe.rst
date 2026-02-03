@@ -66,7 +66,7 @@ Breathe is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import breathe; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import breathe; print('Installed')"
 
 Prerequisites
 -------------
@@ -77,7 +77,7 @@ Check Doxygen installation:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest doxygen --version
+   docker run --rm viper-sphinx:latest doxygen --version
 
 Configuration
 -------------
@@ -477,7 +477,7 @@ Complete Build Pipeline
 
 .. code-block:: dockerfile
 
-   FROM kensai-sphinx:latest
+   FROM viper-sphinx:latest
    
    # Install Doxygen
    RUN apk add --no-cache doxygen graphviz
@@ -542,7 +542,7 @@ GitHub Actions
          - name: Build Sphinx Docs
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Deploy
@@ -565,7 +565,7 @@ Makefile Integration
    
    sphinx:
    	docker run --rm -v $(PWD):/project \
-   		kensai-sphinx:latest \
+   		viper-sphinx:latest \
    		sphinx-build -b html /project/docs /project/docs/_build/html
    
    clean:

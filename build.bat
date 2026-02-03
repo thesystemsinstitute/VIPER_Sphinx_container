@@ -1,8 +1,8 @@
 @echo off
-REM Build script for KENSAI Sphinx Documentation Container (Windows)
+REM Build script for VIPER Sphinx Documentation Container (Windows)
 
 echo ================================================
-echo KENSAI Sphinx Container - Build Script
+echo VIPER Sphinx Container - Build Script
 echo ================================================
 echo.
 
@@ -25,7 +25,7 @@ if %errorlevel% neq 0 (
 echo.
 echo Step 2: Building Docker image...
 echo ------------------------------------------------
-docker build -t kensai-sphinx:latest .
+docker build -t viper-sphinx:latest .
 
 if %errorlevel% neq 0 (
     echo ERROR: Docker build failed
@@ -38,10 +38,10 @@ echo Build completed successfully!
 echo ================================================
 echo.
 echo To run the container:
-echo   docker run -p 8080:8080 kensai-sphinx:latest
+echo   docker run -p 8080:8080 viper-sphinx:latest
 echo.
 echo To use with your project:
-echo   docker run -v %cd%:/project -p 8080:8080 kensai-sphinx:latest
+echo   docker run -v %cd%:/project -p 8080:8080 viper-sphinx:latest
 echo.
 echo Access documentation at: http://localhost:8080
 echo ================================================

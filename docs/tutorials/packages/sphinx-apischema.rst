@@ -62,7 +62,7 @@ sphinx-apischema is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_apischema; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_apischema; print('Installed')"
 
 Configuration
 -------------
@@ -556,7 +556,7 @@ Build with Schemas
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Validate Schemas
@@ -567,7 +567,7 @@ Validate Schemas
    # Validate all JSON schemas
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sh -c "cd /project && find schemas -name '*.json' -exec python -m json.tool {} \;"
 
 CI/CD Integration
@@ -598,7 +598,7 @@ GitHub Actions
          - name: Build Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Verify Schema Docs

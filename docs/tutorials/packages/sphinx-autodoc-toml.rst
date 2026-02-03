@@ -42,7 +42,7 @@ sphinx-autodoc-toml is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_autodoc_toml; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_autodoc_toml; print('Installed')"
 
 Configuration
 -------------
@@ -434,7 +434,7 @@ Build Documentation
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Validate TOML
@@ -444,7 +444,7 @@ Validate TOML
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      python -c "import tomli; tomli.load(open('config.toml', 'rb'))"
 
 CI/CD Integration
@@ -472,7 +472,7 @@ GitHub Actions
          - name: Validate TOML Files
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sh -c "for f in /project/**/*.toml; do \
                         python -c 'import tomli; tomli.load(open(\"$f\", \"rb\"))' \
                       done"
@@ -480,7 +480,7 @@ GitHub Actions
          - name: Build Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
 
 Best Practices

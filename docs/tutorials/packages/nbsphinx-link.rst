@@ -42,7 +42,7 @@ nbsphinx-link is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import nbsphinx_link; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import nbsphinx_link; print('Installed')"
 
 Configuration
 -------------
@@ -204,7 +204,7 @@ Build with Linked Notebooks
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sh -c "python /project/generate_nblinks.py && \
             sphinx-build -b html /project/docs /project/docs/_build/html"
 
@@ -216,7 +216,7 @@ Build with Linked Notebooks
    
    services:
      docs:
-       image: kensai-sphinx:latest
+       image: viper-sphinx:latest
        volumes:
          - .:/project
        working_dir: /project
@@ -252,7 +252,7 @@ GitHub Actions
          - name: Build Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Deploy

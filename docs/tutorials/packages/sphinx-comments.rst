@@ -47,7 +47,7 @@ sphinx-comments is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_comments; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_comments; print('Installed')"
 
 Configuration
 -------------

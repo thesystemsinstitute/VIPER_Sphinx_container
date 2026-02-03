@@ -66,7 +66,7 @@ Exhale is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import exhale; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import exhale; print('Installed')"
 
 Prerequisites
 -------------
@@ -516,7 +516,7 @@ Complete Build Setup
 
 .. code-block:: dockerfile
 
-   FROM kensai-sphinx:latest
+   FROM viper-sphinx:latest
    
    # Install dependencies
    RUN apk add --no-cache doxygen graphviz
@@ -558,7 +558,7 @@ GitHub Actions
          - name: Build Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Verify API Generated

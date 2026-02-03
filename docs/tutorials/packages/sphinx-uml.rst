@@ -44,7 +44,7 @@ sphinx-uml is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinxcontrib.plantuml; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinxcontrib.plantuml; print('Installed')"
 
 **Note:** PlantUML requires Java, which may need to be installed separately.
 
@@ -651,7 +651,7 @@ With PlantUML Server
          - "8080:8080"
      
      docs:
-       image: kensai-sphinx:latest
+       image: viper-sphinx:latest
        volumes:
          - ./:/project
        depends_on:
@@ -699,7 +699,7 @@ GitHub Actions
            run: |
              docker run --rm -v $(pwd):/project \
                -v /usr/local/bin/plantuml.jar:/usr/local/bin/plantuml.jar \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
 
 Best Practices

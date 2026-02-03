@@ -67,7 +67,7 @@ sphinx-analytics is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_analytics; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_analytics; print('Installed')"
 
 Configuration
 -------------
@@ -324,7 +324,7 @@ Build with Analytics
    docker run --rm \
      -v $(pwd):/project \
      -e ANALYTICS_ID=G-XXXXXXXXXX \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Dynamic Configuration
@@ -366,7 +366,7 @@ GitHub Actions
              docker run --rm \
                -v $(pwd):/project \
                -e ANALYTICS_ID=$ANALYTICS_ID \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Verify Analytics Code

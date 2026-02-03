@@ -40,7 +40,7 @@ sphinx-pyreverse is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_pyreverse; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_pyreverse; print('Installed')"
 
 **Note:** Pyreverse is included in the pylint package which is already installed.
 
@@ -465,7 +465,7 @@ Generate Diagrams
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Manual Pyreverse
@@ -474,7 +474,7 @@ Manual Pyreverse
 .. code-block:: bash
 
    # Generate class diagram manually
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
      pyreverse -o svg -p myproject /project/src/myproject
 
 Batch Generation
@@ -490,7 +490,7 @@ Create ``generate_diagrams.sh``:
    
    for module in "${MODULES[@]}"; do
        echo "Generating diagram for $module..."
-       docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+       docker run --rm -v $(pwd):/project viper-sphinx:latest \
            pyreverse -o svg -p $module /project/src/myproject/$module
    done
 
@@ -519,7 +519,7 @@ GitHub Actions
          - name: Build Docs with Diagrams
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
 
 Best Practices

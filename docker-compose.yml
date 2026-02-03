@@ -3,8 +3,8 @@ version: '3.8'
 services:
   sphinx-docs:
     build: .
-    image: kensai-sphinx:latest
-    container_name: kensai-sphinx-docs
+    image: viper-sphinx:latest
+    container_name: viper-sphinx-docs
     ports:
       - "8080:8080"
     environment:
@@ -21,8 +21,8 @@ services:
   # Optional: Sphinx autobuild service for development
   sphinx-autobuild:
     build: .
-    image: kensai-sphinx:latest
-    container_name: kensai-sphinx-autobuild
+    image: viper-sphinx:latest
+    container_name: viper-sphinx-autobuild
     ports:
       - "8000:8000"
     environment:

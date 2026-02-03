@@ -40,7 +40,7 @@ sphinx-autodoc-annotation is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_autodoc_annotation; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_autodoc_annotation; print('Installed')"
 
 Configuration
 -------------
@@ -363,7 +363,7 @@ Build Documentation
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 CI/CD Integration
@@ -391,13 +391,13 @@ GitHub Actions
          - name: Type Check
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                mypy /project/mylib
          
          - name: Build Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
 
 Best Practices

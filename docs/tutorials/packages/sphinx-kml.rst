@@ -41,7 +41,7 @@ sphinx-kml is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_kml; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_kml; print('Installed')"
 
 Configuration
 -------------
@@ -511,7 +511,7 @@ Build with KML Files
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Validate KML Files
@@ -521,7 +521,7 @@ Validate KML Files
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      xmllint --noout /project/docs/_static/data/*.kml
 
 CI/CD Integration
@@ -549,13 +549,13 @@ GitHub Actions
          - name: Validate KML Files
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sh -c "xmllint --noout /project/docs/_static/data/*.kml"
          
          - name: Build Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Deploy

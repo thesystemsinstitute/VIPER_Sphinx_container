@@ -338,7 +338,7 @@ Then rebuild the container:
 
 .. code-block:: bash
 
-   docker build -t kensai-sphinx .
+   docker build -t viper-sphinx .
 
 Example Configurations
 ----------------------
@@ -391,7 +391,7 @@ Switch themes easily to test:
 
    # Edit conf.py to change html_theme
    # Rebuild
-   docker run -v $(pwd):/project kensai-sphinx \
+   docker run -v $(pwd):/project viper-sphinx \
        sphinx-build -b html /project/docs /project/docs/_build/html
 
 Resources

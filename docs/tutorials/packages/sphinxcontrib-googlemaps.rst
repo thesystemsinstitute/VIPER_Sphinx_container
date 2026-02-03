@@ -41,7 +41,7 @@ sphinxcontrib-googlemaps is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinxcontrib.googlemaps; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinxcontrib.googlemaps; print('Installed')"
 
 Configuration
 -------------
@@ -442,7 +442,7 @@ Build with Maps
    docker run --rm \
      -v $(pwd):/project \
      -e GOOGLE_MAPS_API_KEY="your-key-here" \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Environment Variables
@@ -456,7 +456,7 @@ Environment Variables
    
    services:
      docs:
-       image: kensai-sphinx:latest
+       image: viper-sphinx:latest
        volumes:
          - ./:/project
        environment:
@@ -488,7 +488,7 @@ GitHub Actions
              docker run --rm \
                -v $(pwd):/project \
                -e GOOGLE_MAPS_API_KEY \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
 
 Best Practices

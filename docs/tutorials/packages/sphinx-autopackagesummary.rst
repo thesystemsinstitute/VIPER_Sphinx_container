@@ -62,7 +62,7 @@ sphinx-autopackagesummary is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_autopackagesummary; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_autopackagesummary; print('Installed')"
 
 Configuration
 -------------
@@ -472,7 +472,7 @@ Build with Package Summaries
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Auto-generate Summaries
@@ -483,7 +483,7 @@ Auto-generate Summaries
    # Generate summaries only
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-autogen docs/api/index.rst
 
 CI/CD Integration
@@ -511,7 +511,7 @@ GitHub Actions
            run: |
              docker run --rm \
                -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Verify Generated Files

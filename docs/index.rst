@@ -1,4 +1,4 @@
-KENSAI Sphinx Documentation Container
+VIPER Sphinx Documentation Container
 ======================================
 
 .. image:: https://img.shields.io/badge/Python-3.13-blue.svg
@@ -9,7 +9,7 @@ KENSAI Sphinx Documentation Container
    :target: https://www.sphinx-doc.org/
    :alt: Sphinx Documentation
 
-Welcome to the KENSAI Sphinx Container documentation! This container provides a comprehensive, 
+Welcome to the VIPER Sphinx Container documentation! This container provides a comprehensive, 
 ready-to-use environment for generating beautiful documentation using Sphinx and related tools.
 
 Purpose
@@ -48,14 +48,14 @@ From Your Project
 .. code-block:: bash
 
    # Build the container
-   docker build -t kensai-sphinx .
+   docker build -t viper-sphinx .
 
    # Run to generate documentation from your project
-   docker run -v /path/to/your/project:/project kensai-sphinx \
+   docker run -v /path/to/your/project:/project viper-sphinx \
        sphinx-build /project/docs /project/docs/_build/html
 
    # Serve the documentation
-   docker run -p 8080:8080 -v /path/to/your/project:/project kensai-sphinx
+   docker run -p 8080:8080 -v /path/to/your/project:/project viper-sphinx
 
 **Option 2: Using Docker Compose**
 
@@ -66,7 +66,7 @@ Create a ``docker-compose.yml`` in your project:
    version: '3.8'
    services:
      sphinx:
-       image: kensai-sphinx
+       image: viper-sphinx
        ports:
          - "8080:8080"
        volumes:
@@ -133,7 +133,7 @@ Quick Start Tutorial
 
    .. code-block:: bash
 
-      docker run -v $(pwd):/project kensai-sphinx \
+      docker run -v $(pwd):/project viper-sphinx \
           sphinx-quickstart /project/docs
 
 2. **Write your documentation** in reStructuredText or Markdown
@@ -142,7 +142,7 @@ Quick Start Tutorial
 
    .. code-block:: bash
 
-      docker run -v $(pwd):/project kensai-sphinx \
+      docker run -v $(pwd):/project viper-sphinx \
           sphinx-build /project/docs /project/docs/_build/html
 
 4. **View the results** by opening ``docs/_build/html/index.html``

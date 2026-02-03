@@ -40,7 +40,7 @@ sphinx-autodoc-defaultargs is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_autodoc_defaultargs; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_autodoc_defaultargs; print('Installed')"
 
 
 Configuration
@@ -316,7 +316,7 @@ Build Documentation
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 CI/CD Integration
@@ -344,7 +344,7 @@ GitHub Actions
          - name: Build Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
 
 Best Practices
@@ -700,18 +700,12 @@ Simple Function
 .. literalinclude:: sphinx_autodoc_defaultargs/utils.py
    :language: python
 
+``sphinx_autodoc_defaultargs/utils.rst``:
 
-Document:
+.. literalinclude:: sphinx_autodoc_defaultargs/utils.rst
+   :language: rst
 
-.. code-block:: rst
-
-   .. autofunction:: sphinx_autodoc_defaultargs.utils.greet
-
-
-.. autofunction:: sphinx_autodoc_defaultargs.utils.greet
-
-
-Output shows:
+**Generated Output:**
 
 generated documentation: :doc:`sphinx_autodoc_defaultargs/utils`
 

@@ -1,7 +1,7 @@
 Quick Reference Guide
 =====================
 
-This is a quick reference for common tasks with the KENSAI Sphinx Container.
+This is a quick reference for common tasks with the VIPER Sphinx Container.
 
 Quick Start
 -----------
@@ -20,7 +20,7 @@ Quick Start
 
 .. code-block:: bash
 
-   docker run -p 8080:8080 kensai-sphinx:latest
+   docker run -p 8080:8080 viper-sphinx:latest
 
 **Access Documentation:**
 
@@ -35,10 +35,10 @@ Container Management
 .. code-block:: bash
 
    # Build image
-   docker build -t kensai-sphinx:latest .
+   docker build -t viper-sphinx:latest .
    
    # Run container
-   docker run -d -p 8080:8080 --name sphinx-docs kensai-sphinx:latest
+   docker run -d -p 8080:8080 --name sphinx-docs viper-sphinx:latest
    
    # Stop container
    docker stop sphinx-docs
@@ -58,15 +58,15 @@ Documentation Generation
 .. code-block:: bash
 
    # Generate HTML docs
-   docker run -v $(pwd):/project kensai-sphinx \
+   docker run -v $(pwd):/project viper-sphinx \
      sphinx-build /project/docs /project/docs/_build/html
    
    # Generate PDF
-   docker run -v $(pwd):/project kensai-sphinx \
+   docker run -v $(pwd):/project viper-sphinx \
      sphinx-build -b latex /project/docs /project/docs/_build/latex
    
    # Check for broken links
-   docker run -v $(pwd):/project kensai-sphinx \
+   docker run -v $(pwd):/project viper-sphinx \
      sphinx-build -b linkcheck /project/docs /project/docs/_build/linkcheck
 
 Development Workflow
@@ -75,7 +75,7 @@ Development Workflow
 .. code-block:: bash
 
    # Auto-rebuild on changes
-   docker run -p 8000:8000 -v $(pwd):/project kensai-sphinx \
+   docker run -p 8000:8000 -v $(pwd):/project viper-sphinx \
      sphinx-autobuild /project/docs /project/docs/_build/html \
      --host 0.0.0.0 --port 8000
 
@@ -164,7 +164,7 @@ Port Already in Use
 .. code-block:: bash
 
    # Use different port
-   docker run -p 9090:8080 kensai-sphinx:latest
+   docker run -p 9090:8080 viper-sphinx:latest
 
 Permission Errors
 ~~~~~~~~~~~~~~~~~
@@ -172,7 +172,7 @@ Permission Errors
 .. code-block:: bash
 
    # Linux: run as current user
-   docker run --user $(id -u):$(id -g) -v $(pwd):/project kensai-sphinx
+   docker run --user $(id -u):$(id -g) -v $(pwd):/project viper-sphinx
 
 Build Fails
 ~~~~~~~~~~~
@@ -180,7 +180,7 @@ Build Fails
 .. code-block:: bash
 
    # Clean build
-   docker build --no-cache -t kensai-sphinx:latest .
+   docker build --no-cache -t viper-sphinx:latest .
 
 Container Won't Start
 ~~~~~~~~~~~~~~~~~~~~~
@@ -188,10 +188,10 @@ Container Won't Start
 .. code-block:: bash
 
    # Check logs
-   docker logs kensai-sphinx-docs
+   docker logs viper-sphinx-docs
    
    # Run interactively
-   docker run -it --rm kensai-sphinx:latest /bin/sh
+   docker run -it --rm viper-sphinx:latest /bin/sh
 
 File Permissions
 ----------------
@@ -234,7 +234,7 @@ Environment Variables
 .. code-block:: bash
 
    # Change server port
-   docker run -e DOCS_PORT=9000 -p 9000:9000 kensai-sphinx:latest
+   docker run -e DOCS_PORT=9000 -p 9000:9000 viper-sphinx:latest
 
 Sphinx Commands
 ---------------
@@ -336,8 +336,8 @@ Getting Help
 ------------
 
 1. Check container documentation at http://localhost:8080
-2. View logs: ``docker logs kensai-sphinx-docs``
-3. Open shell: ``docker exec -it kensai-sphinx-docs /bin/sh``
+2. View logs: ``docker logs viper-sphinx-docs``
+3. Open shell: ``docker exec -it viper-sphinx-docs /bin/sh``
 4. Check Sphinx documentation
 5. Review this quick reference
 

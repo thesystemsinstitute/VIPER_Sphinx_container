@@ -62,7 +62,7 @@ sphinxext-opengraph is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinxext.opengraph; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinxext.opengraph; print('Installed')"
 
 Configuration
 -------------
@@ -381,7 +381,7 @@ Build with Open Graph
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Verify Metadata
@@ -392,7 +392,7 @@ Verify Metadata
    # Check Open Graph tags
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sh -c "grep -A 5 'og:title' /project/docs/_build/html/index.html"
 
 CI/CD Integration
@@ -416,7 +416,7 @@ GitHub Actions with Testing
          - name: Build Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Verify Open Graph Tags

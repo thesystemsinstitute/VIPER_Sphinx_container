@@ -41,7 +41,7 @@ sphinx-last-updated-by-git is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_last_updated_by_git; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_last_updated_by_git; print('Installed')"
 
 Configuration
 -------------
@@ -170,7 +170,7 @@ Build with Git History
    # Ensure .git directory is available
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Important: The ``.git`` directory must be mounted for the extension to access Git history.
@@ -180,7 +180,7 @@ Dockerfile with Git
 
 .. code-block:: dockerfile
 
-   FROM kensai-sphinx:latest
+   FROM viper-sphinx:latest
    
    # Install git if not present
    RUN apk add --no-cache git
@@ -213,7 +213,7 @@ GitHub Actions
          - name: Build Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Verify Last Updated
@@ -236,7 +236,7 @@ GitLab CI
 .. code-block:: yaml
 
    build-docs:
-     image: kensai-sphinx:latest
+     image: viper-sphinx:latest
      script:
        - git fetch --unshallow  # Get full history
        - sphinx-build -b html docs docs/_build/html

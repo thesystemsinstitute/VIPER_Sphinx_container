@@ -38,7 +38,7 @@ sphinx-issues is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_issues; print(sphinx_issues.__version__)"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_issues; print(sphinx_issues.__version__)"
 
 Configuration
 -------------
@@ -425,7 +425,7 @@ Build Documentation with Issue Links
    docker run --rm \
      -v $(pwd):/project \
      -e GITHUB_PATH="myorg/myrepo" \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Automated Link Validation
@@ -438,11 +438,11 @@ Create ``validate_issues.sh``:
    #!/bin/bash
    
    echo "Building documentation..."
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
      sphinx-build -b html docs/ docs/_build/html
    
    echo "Checking for broken issue links..."
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
      sphinx-build -b linkcheck docs/ docs/_build/linkcheck
    
    echo "Done!"
@@ -475,7 +475,7 @@ GitHub Actions
              docker run --rm \
                -v $(pwd):/project \
                -e GITHUB_PATH="$GITHUB_REPO" \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html docs/ docs/_build/html
          
          - name: Deploy to GitHub Pages
@@ -490,7 +490,7 @@ GitLab CI
 .. code-block:: yaml
 
    build-docs:
-     image: kensai-sphinx:latest
+     image: viper-sphinx:latest
      variables:
        GITLAB_PROJECT: ${CI_PROJECT_PATH}
      script:
@@ -685,7 +685,7 @@ Links Not Resolving
 
    .. code-block:: bash
    
-      docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+      docker run --rm -v $(pwd):/project viper-sphinx:latest \
         sphinx-build -b html docs/ docs/_build/html
 
 Wrong Repository Links

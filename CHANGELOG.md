@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the KENSAI Sphinx Container project will be documented in this file.
+All notable changes to the VIPER Sphinx Container project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -215,7 +215,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Version 1.0.0 Notes
 
-This is the initial release of the KENSAI Sphinx Container, providing a complete, 
+This is the initial release of the VIPER Sphinx Container, providing a complete, 
 production-ready environment for Sphinx documentation generation. The container includes:
 
 - **80+ packages** carefully selected for comprehensive documentation needs
@@ -247,10 +247,10 @@ To upgrade to a newer version:
 
 ```bash
 # Pull new version
-docker pull kensai-sphinx:latest
+docker pull viper-sphinx:latest
 
 # Or rebuild from source
-docker build --no-cache -t kensai-sphinx:latest .
+docker build --no-cache -t viper-sphinx:latest .
 ```
 
 ---

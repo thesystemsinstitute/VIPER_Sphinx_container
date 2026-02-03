@@ -22,7 +22,7 @@ To verify Doxygen is installed in the container:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest doxygen --version
+   docker run --rm viper-sphinx:latest doxygen --version
 
 Basic Doxygen Usage
 -------------------
@@ -39,11 +39,11 @@ To run Doxygen on your source code:
 .. code-block:: bash
 
    # Mount your project and generate Doxyfile
-   docker run --rm -v /path/to/your/project:/project kensai-sphinx:latest \
+   docker run --rm -v /path/to/your/project:/project viper-sphinx:latest \
        sh -c "cd /project && doxygen -g"
    
    # Run Doxygen to generate documentation
-   docker run --rm -v /path/to/your/project:/project kensai-sphinx:latest \
+   docker run --rm -v /path/to/your/project:/project viper-sphinx:latest \
        sh -c "cd /project && doxygen Doxyfile"
 
 Example: Documenting C++ Code
@@ -93,7 +93,7 @@ Create a **Doxyfile** configuration:
 
 .. code-block:: bash
 
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sh -c "cd /project && doxygen -g"
 
 Edit the Doxyfile to set key parameters:
@@ -114,7 +114,7 @@ Generate the documentation:
 
 .. code-block:: bash
 
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sh -c "cd /project && doxygen"
 
 The HTML documentation will be in ``docs/html/index.html``.
@@ -187,7 +187,7 @@ Create a **docker-compose.yml** for repeated documentation builds:
    
    services:
      doxygen:
-       image: kensai-sphinx:latest
+       image: viper-sphinx:latest
        volumes:
          - ./:/project
        working_dir: /project
@@ -219,16 +219,16 @@ Common Commands Reference
 .. code-block:: bash
 
    # Generate default Doxyfile
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sh -c "cd /project && doxygen -g"
    
    # Generate documentation
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sh -c "cd /project && doxygen"
    
    # Check Doxygen version
-   docker run --rm kensai-sphinx:latest doxygen --version
+   docker run --rm viper-sphinx:latest doxygen --version
    
    # Run Doxygen with specific config file
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sh -c "cd /project && doxygen MyDoxyfile"

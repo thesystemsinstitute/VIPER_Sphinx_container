@@ -35,9 +35,9 @@ for _name in _asyncio_directive_names:
     directives.register_directive(f'asyncio:{_name}', _AsyncioLiteralBlockDirective)
 
 # -- Project information -----------------------------------------------------
-project = 'KENSAI Sphinx Container Documentation'
-copyright = '2026, KENSAI'
-author = 'KENSAI'
+project = 'VIPER Sphinx Container Documentation'
+copyright = '2026, The Systems Institute'
+author = 'The Systems Institute'
 release = '1.0'
 
 # -- General configuration ---------------------------------------------------
@@ -107,7 +107,7 @@ autodoc_mock_imports = [
 # -- Options for HTML output -------------------------------------------------
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
-html_title = 'KENSAI Sphinx Container'
+html_title = 'VIPER Sphinx Container'
 html_short_title = 'Sphinx Container'
 html_logo = None
 html_favicon = None

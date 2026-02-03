@@ -41,7 +41,7 @@ btd.sphinx.graphviz is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import btd.sphinx.graphviz; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import btd.sphinx.graphviz; print('Installed')"
 
 Configuration
 -------------
@@ -562,7 +562,7 @@ Build with Graphviz
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Generate DOT Files
@@ -572,7 +572,7 @@ Generate DOT Files
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      dot -Tpng input.dot -o output.png
 
 CI/CD Integration
@@ -596,7 +596,7 @@ GitHub Actions
          - name: Validate DOT files
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sh -c "for f in /project/docs/_static/*.dot; do \
                         dot -Tpng \$f -o /dev/null || exit 1; \
                       done"
@@ -604,7 +604,7 @@ GitHub Actions
          - name: Build Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
 
 Best Practices

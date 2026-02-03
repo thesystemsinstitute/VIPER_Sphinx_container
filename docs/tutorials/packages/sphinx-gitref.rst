@@ -40,7 +40,7 @@ sphinx-gitref is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_gitref; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_gitref; print('Installed')"
 
 Configuration
 -------------
@@ -400,7 +400,7 @@ Build with Git Information
    docker run --rm \
      -v $(pwd):/project \
      -v $(pwd)/.git:/project/.git:ro \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 **Note:** Mount `.git` directory to access Git history.
@@ -417,7 +417,7 @@ Create ``git_report.sh``:
    docker run --rm \
      -v $(pwd):/project \
      -v $(pwd)/.git:/project/.git:ro \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sh -c "
        cd /project
        
@@ -448,7 +448,7 @@ Docker Compose
    
    services:
      docs:
-       image: kensai-sphinx:latest
+       image: viper-sphinx:latest
        volumes:
          - ./:/project
          - ./.git:/project/.git:ro
@@ -486,7 +486,7 @@ GitHub Actions
                -e GIT_COMMIT_SHA=${{ github.sha }} \
                -e GIT_BRANCH=${{ github.ref_name }} \
                -e GIT_REPO=${{ github.repository }} \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
 
 GitLab CI
@@ -495,7 +495,7 @@ GitLab CI
 .. code-block:: yaml
 
    build-docs:
-     image: kensai-sphinx:latest
+     image: viper-sphinx:latest
      script:
        - git fetch --unshallow  # Get full history
        - sphinx-build -b html docs/ public

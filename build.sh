@@ -1,8 +1,8 @@
 #!/bin/bash
-# Build script for KENSAI Sphinx Documentation Container (Linux/Mac)
+# Build script for VIPER Sphinx Documentation Container (Linux/Mac)
 
 echo "================================================"
-echo "KENSAI Sphinx Container - Build Script"
+echo "VIPER Sphinx Container - Build Script"
 echo "================================================"
 echo ""
 
@@ -31,7 +31,7 @@ fi
 echo ""
 echo "Step 2: Building Docker image..."
 echo "------------------------------------------------"
-docker build -t kensai-sphinx:latest .
+docker build -t viper-sphinx:latest .
 
 if [ $? -ne 0 ]; then
     echo "ERROR: Docker build failed"
@@ -44,10 +44,10 @@ echo "Build completed successfully!"
 echo "================================================"
 echo ""
 echo "To run the container:"
-echo "  docker run -p 8080:8080 kensai-sphinx:latest"
+echo "  docker run -p 8080:8080 viper-sphinx:latest"
 echo ""
 echo "To use with your project:"
-echo "  docker run -v \$(pwd):/project -p 8080:8080 kensai-sphinx:latest"
+echo "  docker run -v \$(pwd):/project -p 8080:8080 viper-sphinx:latest"
 echo ""
 echo "Access documentation at: http://localhost:8080"
 echo "================================================"

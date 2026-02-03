@@ -42,7 +42,7 @@ sphinx-tojupyter is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_tojupyter; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_tojupyter; print('Installed')"
 
 Configuration
 -------------
@@ -293,7 +293,7 @@ Build the notebook:
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b jupyter /project/docs /project/docs/_build/jupyter
 
 Example 2: Data Analysis Tutorial
@@ -586,7 +586,7 @@ Convert to Notebooks
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b jupyter /project/docs /project/docs/_build/jupyter
 
 Execute Notebooks
@@ -596,7 +596,7 @@ Execute Notebooks
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      jupyter nbconvert --execute --inplace \
        /project/docs/_build/jupyter/*.ipynb
 
@@ -624,13 +624,13 @@ GitHub Actions
          - name: Build Notebooks
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b jupyter /project/docs /project/docs/_build/jupyter
          
          - name: Test Notebooks
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sh -c "cd /project/docs/_build/jupyter && \
                       jupyter nbconvert --execute --inplace *.ipynb"
          

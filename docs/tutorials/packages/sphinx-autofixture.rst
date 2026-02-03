@@ -63,7 +63,7 @@ sphinx-autofixture is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_autofixture; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_autofixture; print('Installed')"
 
 Configuration
 -------------
@@ -522,7 +522,7 @@ Build with Fixture Docs
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 CI/CD Integration
@@ -552,7 +552,7 @@ GitHub Actions
            run: |
              docker run --rm \
                -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Verify Fixture Docs

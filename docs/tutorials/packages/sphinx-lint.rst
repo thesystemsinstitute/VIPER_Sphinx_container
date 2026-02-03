@@ -38,7 +38,7 @@ sphinx-lint is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest sphinx-lint --version
+   docker run --rm viper-sphinx:latest sphinx-lint --version
 
 Basic Usage
 -----------
@@ -48,7 +48,7 @@ Linting a Single File
 
 .. code-block:: bash
 
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx-lint /project/docs/index.rst
 
 Linting Multiple Files
@@ -56,7 +56,7 @@ Linting Multiple Files
 
 .. code-block:: bash
 
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx-lint /project/docs/*.rst
 
 Linting a Directory
@@ -64,7 +64,7 @@ Linting a Directory
 
 .. code-block:: bash
 
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx-lint /project/docs/
 
 Recursive Linting
@@ -72,7 +72,7 @@ Recursive Linting
 
 .. code-block:: bash
 
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx-lint -r /project/docs/
 
 Command-Line Options
@@ -240,7 +240,7 @@ Create ``.git/hooks/pre-commit``:
    CHANGED_DOCS=$(git diff --cached --name-only --diff-filter=ACM | grep '\.rst$')
    
    if [ -n "$CHANGED_DOCS" ]; then
-       docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+       docker run --rm -v $(pwd):/project viper-sphinx:latest \
            sphinx-lint $CHANGED_DOCS
        
        if [ $? -ne 0 ]; then
@@ -266,7 +266,7 @@ Create ``docker-compose.yml``:
    
    services:
      lint:
-       image: kensai-sphinx:latest
+       image: viper-sphinx:latest
        volumes:
          - ./:/project
        working_dir: /project
@@ -287,12 +287,12 @@ Add to your ``Makefile``:
 
    .PHONY: lint
    lint:
-   	docker run --rm -v $(PWD):/project kensai-sphinx:latest \
+   	docker run --rm -v $(PWD):/project viper-sphinx:latest \
    		sphinx-lint -r docs/
    
    .PHONY: lint-strict
    lint-strict:
-   	docker run --rm -v $(PWD):/project kensai-sphinx:latest \
+   	docker run --rm -v $(PWD):/project viper-sphinx:latest \
    		sphinx-lint --max-line-length 80 -r docs/
 
 Usage:
@@ -329,7 +329,7 @@ Create ``.github/workflows/lint.yml``:
          
          - name: Lint Documentation
            run: |
-             docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+             docker run --rm -v $(pwd):/project viper-sphinx:latest \
                sphinx-lint -r docs/
 
 GitLab CI
@@ -340,7 +340,7 @@ Add to ``.gitlab-ci.yml``:
 .. code-block:: yaml
 
    lint-docs:
-     image: kensai-sphinx:latest
+     image: viper-sphinx:latest
      script:
        - sphinx-lint -r docs/
      only:
@@ -358,7 +358,7 @@ Jenkins Pipeline
            stage('Lint Documentation') {
                steps {
                    sh '''
-                       docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+                       docker run --rm -v $(pwd):/project viper-sphinx:latest \
                            sphinx-lint -r docs/
                    '''
                }
@@ -454,7 +454,7 @@ Best Practices
    .. code-block:: bash
    
       # Quick check
-      docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+      docker run --rm -v $(pwd):/project viper-sphinx:latest \
           sphinx-lint docs/index.rst
 
 2. **Fix Issues Incrementally**
@@ -521,7 +521,7 @@ Then run:
 
 .. code-block:: bash
 
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx-lint docs/
 
 Combining with Other Tools
@@ -535,11 +535,11 @@ Check syntax before building:
 .. code-block:: bash
 
    # Lint first
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx-lint -r docs/
    
    # Then build
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx-build -b html docs/ docs/_build/html
 
 With Doc8
@@ -550,11 +550,11 @@ Use both linters for comprehensive checking:
 .. code-block:: bash
 
    # sphinx-lint for Sphinx-specific issues
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx-lint docs/
    
    # doc8 for general reST style
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        doc8 docs/
 
 Complete Workflow Script
@@ -568,15 +568,15 @@ Create ``check-docs.sh``:
    set -e
    
    echo "=== Linting Documentation ==="
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx-lint -r docs/
    
    echo -e "\n=== Building Documentation ==="
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx-build -W -b html docs/ docs/_build/html
    
    echo -e "\n=== Checking Links ==="
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest \
+   docker run --rm -v $(pwd):/project viper-sphinx:latest \
        sphinx-build -b linkcheck docs/ docs/_build/linkcheck
    
    echo -e "\n✅ All checks passed!"
@@ -927,7 +927,7 @@ Using sphinx-lint in a CI/CD pipeline:
 
    lint-docs:
      stage: test
-     image: kensai-sphinx:latest
+     image: viper-sphinx:latest
      script:
        - echo "Linting documentation..."
        - sphinx-lint docs/
@@ -960,7 +960,7 @@ Using sphinx-lint in a CI/CD pipeline:
          - name: Lint Documentation
            run: |
              docker run --rm -v $PWD:/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-lint /project/docs/
          
          - name: Check for Issues

@@ -43,7 +43,7 @@ sphinx-spelling is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinxcontrib.spelling; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinxcontrib.spelling; print('Installed')"
 
 Configuration
 -------------

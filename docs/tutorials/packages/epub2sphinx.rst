@@ -42,7 +42,7 @@ epub2sphinx is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import epub2sphinx; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import epub2sphinx; print('Installed')"
 
 Configuration
 -------------
@@ -168,7 +168,7 @@ Convert a programming book:
    # Convert programming book
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      epub2sphinx /project/books/python_guide.epub \
        --output /project/docs/python_book \
        --code-language python
@@ -225,7 +225,7 @@ Convert multiple EPUB documentation files:
        
        docker run --rm \
          -v $(pwd):/project \
-         kensai-sphinx:latest \
+         viper-sphinx:latest \
          epub2sphinx "/project/$epub" \
            --output "/project/docs/archive/$basename" \
            --images-dir "_static/archive_images/$basename"
@@ -370,7 +370,7 @@ Run post-processing:
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      python /project/scripts/post_process.py
 
 Table of Contents Generation
@@ -397,7 +397,7 @@ Convert in Container
    docker run --rm \
      -v $(pwd):/project \
      -v $(pwd)/epubs:/epubs \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      epub2sphinx /epubs/book.epub \
        --output /project/docs/book
 
@@ -408,7 +408,7 @@ Batch Conversion
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sh -c "
        for epub in /project/epubs/*.epub; do
          basename=\$(basename \"\$epub\" .epub)
@@ -440,7 +440,7 @@ GitHub Actions
          - name: Convert EPUB Files
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sh -c "
                  for epub in /project/epubs/*.epub; do
                    base=\$(basename \$epub .epub)
@@ -451,7 +451,7 @@ GitHub Actions
          - name: Build Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Deploy

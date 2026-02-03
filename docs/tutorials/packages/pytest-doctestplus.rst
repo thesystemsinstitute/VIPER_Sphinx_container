@@ -44,7 +44,7 @@ pytest-doctestplus is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import pytest_doctestplus; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import pytest_doctestplus; print('Installed')"
 
 Configuration
 -------------
@@ -129,7 +129,7 @@ Test Docstrings
 .. code-block:: bash
 
    docker run --rm -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      pytest --doctest-plus mylib/
 
 Test RST Files
@@ -138,7 +138,7 @@ Test RST Files
 .. code-block:: bash
 
    docker run --rm -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      pytest --doctest-rst docs/
 
 Run All Doctests
@@ -147,7 +147,7 @@ Run All Doctests
 .. code-block:: bash
 
    docker run --rm -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      pytest --doctest-plus --doctest-rst
 
 Advanced Features
@@ -173,7 +173,7 @@ Run Doctests in Container
    docker run --rm \
      -v $(pwd):/project \
      -w /project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      pytest --doctest-plus --doctest-rst
 
 Interactive Testing
@@ -184,7 +184,7 @@ Interactive Testing
    docker run --rm -it \
      -v $(pwd):/project \
      -w /project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sh
    
    # Inside container
@@ -215,7 +215,7 @@ GitHub Actions
          - name: Run Doctests
            run: |
              docker run --rm -v $(pwd):/project -w /project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                pytest --doctest-plus --doctest-rst -v
          
          - name: Upload Results

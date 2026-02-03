@@ -1,4 +1,4 @@
-# KENSAI Sphinx Container - Project Summary
+# VIPER Sphinx Container - Project Summary
 
 ## Overview
 
@@ -168,7 +168,7 @@ The container includes comprehensive embedded documentation:
 ## Directory Structure
 
 ```
-KENSAI_Sphinx_container/
+VIPER_Sphinx_container/
 ├── Dockerfile                          # Container definition
 ├── docker-compose.yml                  # Compose configuration
 ├── requirements.txt                    # Python packages
@@ -225,7 +225,7 @@ KENSAI_Sphinx_container/
 
 2. **Run the container:**
    ```bash
-   docker run -p 8080:8080 kensai-sphinx:latest
+   docker run -p 8080:8080 viper-sphinx:latest
    ```
 
 3. **Access documentation:**
@@ -235,11 +235,11 @@ KENSAI_Sphinx_container/
 
 ```bash
 # Generate docs for your project
-docker run -v /path/to/project:/project kensai-sphinx \
+docker run -v /path/to/project:/project viper-sphinx \
   sphinx-build /project/docs /project/docs/_build/html
 
 # Serve your project docs
-docker run -p 8080:8080 -v /path/to/project:/project kensai-sphinx
+docker run -p 8080:8080 -v /path/to/project:/project viper-sphinx
 ```
 
 ## Installed Packages (Highlights)

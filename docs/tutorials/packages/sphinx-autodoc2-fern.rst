@@ -42,7 +42,7 @@ sphinx-autodoc2-fern is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_autodoc2_fern; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_autodoc2_fern; print('Installed')"
 
 Configuration
 -------------
@@ -385,7 +385,7 @@ Generate API Documentation
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 Update API Docs
@@ -396,7 +396,7 @@ Update API Docs
    # Rebuild only if source changed
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html -a /project/docs /project/docs/_build/html
 
 CI/CD Integration
@@ -424,7 +424,7 @@ GitHub Actions
          - name: Generate API Documentation
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
          
          - name: Check for Changes

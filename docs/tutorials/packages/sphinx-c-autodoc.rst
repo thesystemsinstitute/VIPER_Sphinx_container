@@ -44,7 +44,7 @@ sphinx-c-autodoc is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import sphinx_c_autodoc; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import sphinx_c_autodoc; print('Installed')"
 
 Configuration
 -------------
@@ -576,7 +576,7 @@ Build C Documentation
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 With Compilation Check
@@ -584,7 +584,7 @@ With Compilation Check
 
 .. code-block:: bash
 
-   docker run --rm -v $(pwd):/project kensai-sphinx:latest sh -c "
+   docker run --rm -v $(pwd):/project viper-sphinx:latest sh -c "
        cd /project
        
        # Compile C code to verify
@@ -619,7 +619,7 @@ GitHub Actions
          - name: Build Docs
            run: |
              docker run --rm -v $(pwd):/project \
-               kensai-sphinx:latest \
+               viper-sphinx:latest \
                sphinx-build -b html /project/docs /project/docs/_build/html
 
 Best Practices

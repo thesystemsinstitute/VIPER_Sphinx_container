@@ -43,7 +43,7 @@ nbsphinx is already installed in this container. To verify:
 
 .. code-block:: bash
 
-   docker run --rm kensai-sphinx:latest python -c "import nbsphinx; print('Installed')"
+   docker run --rm viper-sphinx:latest python -c "import nbsphinx; print('Installed')"
 
 Configuration
 -------------
@@ -264,7 +264,7 @@ Build Notebook Documentation
 
    docker run --rm \
      -v $(pwd):/project \
-     kensai-sphinx:latest \
+     viper-sphinx:latest \
      sphinx-build -b html /project/docs /project/docs/_build/html
 
 With Jupyter Kernel
@@ -272,7 +272,7 @@ With Jupyter Kernel
 
 .. code-block:: dockerfile
 
-   FROM kensai-sphinx:latest
+   FROM viper-sphinx:latest
    
    # Install notebook dependencies
    RUN pip install jupyter ipykernel pandas matplotlib seaborn scikit-learn

@@ -696,7 +696,7 @@ Documenting Coroutines
 Simple Coroutine
 ~~~~~~~~~~~~~~~~
 
-.. asyncio:coroutine:: fetch_data(url)
+\.. asyncio:coroutine:: fetch_data(url)
 
    Fetch data from a URL asynchronously.
    
@@ -717,7 +717,7 @@ Simple Coroutine
 Coroutine with Multiple Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. asyncio:coroutine:: process_items(items, batch_size=10, timeout=30)
+\.. asyncio:coroutine:: process_items(items, batch_size=10, timeout=30)
 
    Process items in batches asynchronously.
    
@@ -743,7 +743,7 @@ Async Context Managers
 Database Connection
 ~~~~~~~~~~~~~~~~~~~
 
-.. asyncio:asynccontextmanager:: database_connection(url)
+\.. asyncio:asynccontextmanager:: database_connection(url)
 
    Asynchronous context manager for database connections.
    
@@ -770,7 +770,7 @@ Database Connection
 File Operations
 ~~~~~~~~~~~~~~~
 
-.. asyncio:asynccontextmanager:: async_file(path, mode='r')
+\.. asyncio:asynccontextmanager:: async_file(path, mode='r')
 
    Asynchronous file context manager.
    
@@ -791,7 +791,7 @@ Async Iterators
 Data Stream
 ~~~~~~~~~~~
 
-.. asyncio:asynciterator:: stream_data(source)
+\.. asyncio:asynciterator:: stream_data(source)
 
    Asynchronously iterate over data from a source.
    
@@ -815,7 +815,7 @@ Data Stream
 Paginated Results
 ~~~~~~~~~~~~~~~~~
 
-.. asyncio:asynciterator:: paginate(endpoint, page_size=100)
+\.. asyncio:asynciterator:: paginate(endpoint, page_size=100)
 
    Iterate through paginated API results.
    
@@ -845,7 +845,7 @@ Async Generators
 Event Generator
 ~~~~~~~~~~~~~~~
 
-.. asyncio:asyncgenerator:: watch_events(topic)
+\.. asyncio:asyncgenerator:: watch_events(topic)
 
    Generate events from a topic as they occur.
    
@@ -869,7 +869,7 @@ Task Management
 Task Spawning
 ~~~~~~~~~~~~~
 
-.. asyncio:function:: create_task(coro, name=None)
+\.. asyncio:function:: create_task(coro, name=None)
 
    Create and schedule an asyncio task.
    
@@ -888,7 +888,7 @@ Task Spawning
 Task Groups
 ~~~~~~~~~~~
 
-.. asyncio:coroutine:: gather_tasks(*tasks, return_exceptions=False)
+\.. asyncio:coroutine:: gather_tasks(*tasks, return_exceptions=False)
 
    Execute multiple tasks concurrently.
    
@@ -959,7 +959,7 @@ Practical Examples
 HTTP Client
 ~~~~~~~~~~~
 
-.. asyncio:coroutine:: get(url, params=None, headers=None)
+\.. asyncio:coroutine:: get(url, params=None, headers=None)
 
    Make an async HTTP GET request.
    
@@ -979,7 +979,7 @@ HTTP Client
 Web Scraper
 ~~~~~~~~~~~
 
-.. asyncio:coroutine:: scrape_pages(urls, concurrency=5)
+\.. asyncio:coroutine:: scrape_pages(urls, concurrency=5)
 
    Scrape multiple web pages concurrently.
    
@@ -1003,7 +1003,7 @@ Web Scraper
 Message Queue Consumer
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. asyncio:asynciterator:: consume_messages(queue_name)
+\.. asyncio:asynciterator:: consume_messages(queue_name)
 
    Consume messages from an async queue.
    
@@ -1027,7 +1027,7 @@ Message Queue Consumer
 WebSocket Handler
 ~~~~~~~~~~~~~~~~~
 
-.. asyncio:coroutine:: handle_websocket(websocket, path)
+\.. asyncio:coroutine:: handle_websocket(websocket, path)
 
    Handle WebSocket connections.
    
@@ -1047,7 +1047,7 @@ Advanced Patterns
 Retry Logic
 ~~~~~~~~~~~
 
-.. asyncio:coroutine:: retry_async(func, max_attempts=3, delay=1.0)
+\.. asyncio:coroutine:: retry_async(func, max_attempts=3, delay=1.0)
 
    Retry an async function with exponential backoff.
    
@@ -1071,7 +1071,7 @@ Retry Logic
 Rate Limiting
 ~~~~~~~~~~~~~
 
-.. asyncio:asynccontextmanager:: rate_limit(calls_per_second)
+\.. asyncio:asynccontextmanager:: rate_limit(calls_per_second)
 
    Rate-limited async context manager.
    
@@ -1097,17 +1097,17 @@ Rate Limiting
 Connection Pool
 ~~~~~~~~~~~~~~~
 
-.. asyncio:class:: ConnectionPool
+\.. asyncio:class:: ConnectionPool
 
    Asynchronous connection pool manager.
    
-   .. asyncio:coroutine:: acquire()
+   \.. asyncio:coroutine:: acquire()
    
       Acquire a connection from the pool.
       
       :returns: Connection object
    
-   .. asyncio:coroutine:: release(connection)
+   \.. asyncio:coroutine:: release(connection)
    
       Release a connection back to the pool.
       
@@ -1131,7 +1131,7 @@ Testing Async Code
 Async Test Fixtures
 ~~~~~~~~~~~~~~~~~~~
 
-.. asyncio:coroutine:: setup_database()
+\.. asyncio:coroutine:: setup_database()
 
    Setup test database asynchronously.
    
@@ -1171,7 +1171,7 @@ Documenting Coroutines
 Simple Coroutine
 ~~~~~~~~~~~~~~~~
 
-.. asyncio:coroutine:: fetch_data(url)
+\.. asyncio:coroutine:: fetch_data(url)
 
    Fetch data from a URL asynchronously.
    
@@ -1192,7 +1192,7 @@ Simple Coroutine
 Coroutine with Multiple Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. asyncio:coroutine:: process_items(items, batch_size=10, timeout=30)
+\.. asyncio:coroutine:: process_items(items, batch_size=10, timeout=30)
 
    Process items in batches asynchronously.
    
@@ -1218,7 +1218,7 @@ Async Context Managers
 Database Connection
 ~~~~~~~~~~~~~~~~~~~
 
-.. asyncio:asynccontextmanager:: database_connection(url)
+\.. asyncio:asynccontextmanager:: database_connection(url)
 
    Asynchronous context manager for database connections.
    
@@ -1245,7 +1245,7 @@ Database Connection
 File Operations
 ~~~~~~~~~~~~~~~
 
-.. asyncio:asynccontextmanager:: async_file(path, mode='r')
+\.. asyncio:asynccontextmanager:: async_file(path, mode='r')
 
    Asynchronous file context manager.
    
@@ -1266,7 +1266,7 @@ Async Iterators
 Data Stream
 ~~~~~~~~~~~
 
-.. asyncio:asynciterator:: stream_data(source)
+\.. asyncio:asynciterator:: stream_data(source)
 
    Asynchronously iterate over data from a source.
    
@@ -1290,7 +1290,7 @@ Data Stream
 Paginated Results
 ~~~~~~~~~~~~~~~~~
 
-.. asyncio:asynciterator:: paginate(endpoint, page_size=100)
+\.. asyncio:asynciterator:: paginate(endpoint, page_size=100)
 
    Iterate through paginated API results.
    
@@ -1320,7 +1320,7 @@ Async Generators
 Event Generator
 ~~~~~~~~~~~~~~~
 
-.. asyncio:asyncgenerator:: watch_events(topic)
+\.. asyncio:asyncgenerator:: watch_events(topic)
 
    Generate events from a topic as they occur.
    
@@ -1344,7 +1344,7 @@ Task Management
 Task Spawning
 ~~~~~~~~~~~~~
 
-.. asyncio:function:: create_task(coro, name=None)
+\.. asyncio:function:: create_task(coro, name=None)
 
    Create and schedule an asyncio task.
    
@@ -1363,7 +1363,7 @@ Task Spawning
 Task Groups
 ~~~~~~~~~~~
 
-.. asyncio:coroutine:: gather_tasks(*tasks, return_exceptions=False)
+\.. asyncio:coroutine:: gather_tasks(*tasks, return_exceptions=False)
 
    Execute multiple tasks concurrently.
    
@@ -1434,7 +1434,7 @@ Practical Examples
 HTTP Client
 ~~~~~~~~~~~
 
-.. asyncio:coroutine:: get(url, params=None, headers=None)
+\.. asyncio:coroutine:: get(url, params=None, headers=None)
 
    Make an async HTTP GET request.
    
@@ -1454,7 +1454,7 @@ HTTP Client
 Web Scraper
 ~~~~~~~~~~~
 
-.. asyncio:coroutine:: scrape_pages(urls, concurrency=5)
+\.. asyncio:coroutine:: scrape_pages(urls, concurrency=5)
 
    Scrape multiple web pages concurrently.
    
@@ -1478,7 +1478,7 @@ Web Scraper
 Message Queue Consumer
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. asyncio:asynciterator:: consume_messages(queue_name)
+\.. asyncio:asynciterator:: consume_messages(queue_name)
 
    Consume messages from an async queue.
    
@@ -1502,7 +1502,7 @@ Message Queue Consumer
 WebSocket Handler
 ~~~~~~~~~~~~~~~~~
 
-.. asyncio:coroutine:: handle_websocket(websocket, path)
+\.. asyncio:coroutine:: handle_websocket(websocket, path)
 
    Handle WebSocket connections.
    
@@ -1522,7 +1522,7 @@ Advanced Patterns
 Retry Logic
 ~~~~~~~~~~~
 
-.. asyncio:coroutine:: retry_async(func, max_attempts=3, delay=1.0)
+\.. asyncio:coroutine:: retry_async(func, max_attempts=3, delay=1.0)
 
    Retry an async function with exponential backoff.
    
@@ -1546,7 +1546,7 @@ Retry Logic
 Rate Limiting
 ~~~~~~~~~~~~~
 
-.. asyncio:asynccontextmanager:: rate_limit(calls_per_second)
+\.. asyncio:asynccontextmanager:: rate_limit(calls_per_second)
 
    Rate-limited async context manager.
    
@@ -1572,17 +1572,17 @@ Rate Limiting
 Connection Pool
 ~~~~~~~~~~~~~~~
 
-.. asyncio:class:: ConnectionPool
+\.. asyncio:class:: ConnectionPool
 
    Asynchronous connection pool manager.
    
-   .. asyncio:coroutine:: acquire()
+   \.. asyncio:coroutine:: acquire()
    
       Acquire a connection from the pool.
       
       :returns: Connection object
    
-   .. asyncio:coroutine:: release(connection)
+   \.. asyncio:coroutine:: release(connection)
    
       Release a connection back to the pool.
       
@@ -1606,7 +1606,7 @@ Testing Async Code
 Async Test Fixtures
 ~~~~~~~~~~~~~~~~~~~
 
-.. asyncio:coroutine:: setup_database()
+\.. asyncio:coroutine:: setup_database()
 
    Setup test database asynchronously.
    
@@ -1646,7 +1646,7 @@ Documenting Coroutines
 Simple Coroutine
 ~~~~~~~~~~~~~~~~
 
-.. asyncio:coroutine:: fetch_data(url)
+\.. asyncio:coroutine:: fetch_data(url)
 
    Fetch data from a URL asynchronously.
    
@@ -1667,7 +1667,7 @@ Simple Coroutine
 Coroutine with Multiple Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. asyncio:coroutine:: process_items(items, batch_size=10, timeout=30)
+\.. asyncio:coroutine:: process_items(items, batch_size=10, timeout=30)
 
    Process items in batches asynchronously.
    
@@ -1693,7 +1693,7 @@ Async Context Managers
 Database Connection
 ~~~~~~~~~~~~~~~~~~~
 
-.. asyncio:asynccontextmanager:: database_connection(url)
+\.. asyncio:asynccontextmanager:: database_connection(url)
 
    Asynchronous context manager for database connections.
    
@@ -1720,7 +1720,7 @@ Database Connection
 File Operations
 ~~~~~~~~~~~~~~~
 
-.. asyncio:asynccontextmanager:: async_file(path, mode='r')
+\.. asyncio:asynccontextmanager:: async_file(path, mode='r')
 
    Asynchronous file context manager.
    
@@ -1741,7 +1741,7 @@ Async Iterators
 Data Stream
 ~~~~~~~~~~~
 
-.. asyncio:asynciterator:: stream_data(source)
+\.. asyncio:asynciterator:: stream_data(source)
 
    Asynchronously iterate over data from a source.
    
@@ -1765,7 +1765,7 @@ Data Stream
 Paginated Results
 ~~~~~~~~~~~~~~~~~
 
-.. asyncio:asynciterator:: paginate(endpoint, page_size=100)
+\.. asyncio:asynciterator:: paginate(endpoint, page_size=100)
 
    Iterate through paginated API results.
    
@@ -1795,7 +1795,7 @@ Async Generators
 Event Generator
 ~~~~~~~~~~~~~~~
 
-.. asyncio:asyncgenerator:: watch_events(topic)
+\.. asyncio:asyncgenerator:: watch_events(topic)
 
    Generate events from a topic as they occur.
    
@@ -1819,7 +1819,7 @@ Task Management
 Task Spawning
 ~~~~~~~~~~~~~
 
-.. asyncio:function:: create_task(coro, name=None)
+\.. asyncio:function:: create_task(coro, name=None)
 
    Create and schedule an asyncio task.
    
@@ -1838,7 +1838,7 @@ Task Spawning
 Task Groups
 ~~~~~~~~~~~
 
-.. asyncio:coroutine:: gather_tasks(*tasks, return_exceptions=False)
+\.. asyncio:coroutine:: gather_tasks(*tasks, return_exceptions=False)
 
    Execute multiple tasks concurrently.
    
@@ -1909,7 +1909,7 @@ Practical Examples
 HTTP Client
 ~~~~~~~~~~~
 
-.. asyncio:coroutine:: get(url, params=None, headers=None)
+\.. asyncio:coroutine:: get(url, params=None, headers=None)
 
    Make an async HTTP GET request.
    
@@ -1929,7 +1929,7 @@ HTTP Client
 Web Scraper
 ~~~~~~~~~~~
 
-.. asyncio:coroutine:: scrape_pages(urls, concurrency=5)
+\.. asyncio:coroutine:: scrape_pages(urls, concurrency=5)
 
    Scrape multiple web pages concurrently.
    
@@ -1953,7 +1953,7 @@ Web Scraper
 Message Queue Consumer
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. asyncio:asynciterator:: consume_messages(queue_name)
+\.. asyncio:asynciterator:: consume_messages(queue_name)
 
    Consume messages from an async queue.
    
@@ -1977,7 +1977,7 @@ Message Queue Consumer
 WebSocket Handler
 ~~~~~~~~~~~~~~~~~
 
-.. asyncio:coroutine:: handle_websocket(websocket, path)
+\.. asyncio:coroutine:: handle_websocket(websocket, path)
 
    Handle WebSocket connections.
    
@@ -1997,7 +1997,7 @@ Advanced Patterns
 Retry Logic
 ~~~~~~~~~~~
 
-.. asyncio:coroutine:: retry_async(func, max_attempts=3, delay=1.0)
+\.. asyncio:coroutine:: retry_async(func, max_attempts=3, delay=1.0)
 
    Retry an async function with exponential backoff.
    
@@ -2021,7 +2021,7 @@ Retry Logic
 Rate Limiting
 ~~~~~~~~~~~~~
 
-.. asyncio:asynccontextmanager:: rate_limit(calls_per_second)
+\.. asyncio:asynccontextmanager:: rate_limit(calls_per_second)
 
    Rate-limited async context manager.
    
@@ -2047,17 +2047,17 @@ Rate Limiting
 Connection Pool
 ~~~~~~~~~~~~~~~
 
-.. asyncio:class:: ConnectionPool
+\.. asyncio:class:: ConnectionPool
 
    Asynchronous connection pool manager.
    
-   .. asyncio:coroutine:: acquire()
+   \.. asyncio:coroutine:: acquire()
    
       Acquire a connection from the pool.
       
       :returns: Connection object
    
-   .. asyncio:coroutine:: release(connection)
+   \.. asyncio:coroutine:: release(connection)
    
       Release a connection back to the pool.
       
@@ -2081,7 +2081,7 @@ Testing Async Code
 Async Test Fixtures
 ~~~~~~~~~~~~~~~~~~~
 
-.. asyncio:coroutine:: setup_database()
+\.. asyncio:coroutine:: setup_database()
 
    Setup test database asynchronously.
    

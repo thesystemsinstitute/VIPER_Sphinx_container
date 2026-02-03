@@ -14,11 +14,13 @@ if not exist "test_docs\Scripts\activate.bat" (
     exit /b 1
 )
 
-REM Create output directory if it doesn't exist
-if not exist "test_docs_results" (
-    echo Creating output directory: test_docs_results
-    mkdir test_docs_results
+REM Recreate output directory to force a full rebuild
+if exist "test_docs_results" (
+    echo Removing existing output directory: test_docs_results
+    rmdir /s /q test_docs_results
 )
+echo Creating output directory: test_docs_results
+mkdir test_docs_results
 
 echo Activating virtual environment...
 call test_docs\Scripts\activate.bat
@@ -30,7 +32,7 @@ echo Output: test_docs_results
 echo.
 
 REM Run Sphinx build using the virtual environment's Python
-test_docs\Scripts\python.exe -m sphinx -b html docs test_docs_results
+test_docs\Scripts\python.exe -m sphinx -b html -E -a docs test_docs_results
 if %ERRORLEVEL% NEQ 0 (
     echo.
     echo ERROR: Sphinx build failed

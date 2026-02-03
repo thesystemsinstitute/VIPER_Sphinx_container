@@ -431,7 +431,6 @@ Modifiers
 .. code-block:: rst
 
    .. prompt:: bash $ auto
-      :prompts: $, >>>
    
       $ python
       >>> import sys
@@ -638,7 +637,6 @@ With Output
 ~~~~~~~~~~~
 
 .. prompt:: bash $
-   :prompts: $, >
 
    echo "Hello"
    Hello
@@ -756,7 +754,6 @@ With Output
 ~~~~~~~~~~~
 
 .. prompt:: bash $
-   :prompts: $, >
 
    echo "Hello"
    Hello
@@ -874,7 +871,6 @@ With Output
 ~~~~~~~~~~~
 
 .. prompt:: bash $
-   :prompts: $, >
 
    echo "Hello"
    Hello

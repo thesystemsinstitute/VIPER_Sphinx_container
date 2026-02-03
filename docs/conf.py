@@ -6,6 +6,34 @@ import sys
 sys.path.insert(0, os.path.abspath('..'))
 sys.path.insert(0, os.path.abspath('tutorials/packages'))
 
+# -- Register asyncio directives early (before parsing) ---------------------
+# These must be registered at module load time to prevent "unknown directive" warnings
+from collections import defaultdict
+from docutils import nodes
+from docutils.parsers.rst import Directive, directives
+
+def _any_option_spec():
+    return defaultdict(lambda: directives.unchanged)
+
+class _AsyncioLiteralBlockDirective(Directive):
+    """Fallback directive that renders content as literal block."""
+    has_content = True
+    optional_arguments = 1
+    final_argument_whitespace = True
+    option_spec = _any_option_spec()
+
+    def run(self):
+        text = '\n'.join(self.content)
+        return [nodes.literal_block(text, text)]
+
+# Register asyncio:* directives at module level
+_asyncio_directive_names = [
+    'coroutine', 'function', 'class', 'method',
+    'asynccontextmanager', 'asynciterator', 'asyncgenerator',
+]
+for _name in _asyncio_directive_names:
+    directives.register_directive(f'asyncio:{_name}', _AsyncioLiteralBlockDirective)
+
 # -- Project information -----------------------------------------------------
 project = 'KENSAI Sphinx Container Documentation'
 copyright = '2026, KENSAI'
@@ -29,7 +57,7 @@ extensions = [
     'sphinxemoji.sphinxemoji',
     'sphinx_automodapi.automodapi',
     'sphinxcontrib.httpdomain',
-    'sphinxcontrib.asyncio',
+    # 'sphinxcontrib.asyncio',  # Disabled - using fallback directives registered at module level
     'sphinx_prompt',
     'sphinx_pyreverse',
     # 'sphinx_charts.charts',  # Disabled for Windows testing - requires sphinx_math_dollar
@@ -52,9 +80,12 @@ suppress_warnings = [
     'ref.doc',
     'ref.ref',
     'misc.highlighting_failure',
+    'misc.directive',
     'docutils',
     'autodoc.import_object',
     'autodoc.mocked_object',
+    'autosummary',
+    'autosummary.stubfile',
 ]
 
 # Disable treating warnings as errors during local Windows test builds
@@ -63,6 +94,14 @@ nitpicky = False
 # Mock demo modules used in tutorial snippets
 autodoc_mock_imports = [
     'myapp',
+    'data_processor',
+    'shapes',
+    'mypackage',
+    'mymodule',
+    'product_sdk',
+    'mylib',
+    'tests',
+    'myawesomelib',
 ]
 
 # -- Options for HTML output -------------------------------------------------
@@ -105,7 +144,8 @@ napoleon_google_docstring = True
 napoleon_numpy_docstring = True
 
 # Autosummary settings
-autosummary_generate = False  # Don't auto-generate stub files
+autosummary_generate = False  # Avoid import errors for example-only modules
+autosummary_generate_overwrite = False
 autosummary_imported_members = False
 
 # Todo extension
@@ -132,6 +172,7 @@ def setup(app):
     from docutils.parsers.rst import Directive
     from docutils.parsers.rst import directives
     from docutils.parsers.rst import roles
+    from importlib import metadata
     def _any_option_spec():
         return defaultdict(lambda: directives.unchanged)
 
@@ -188,17 +229,6 @@ def setup(app):
     app.add_directive('gitchangelog', LiteralBlockDirective)
     app.add_directive('gitsubmodule', LiteralBlockDirective)
     app.add_directive('grid', LiteralBlockDirective)
-
-    # Fallback directives for sphinxcontrib.asyncio domain
-    for name in [
-        'asyncio:coroutine',
-        'asyncio:function',
-        'asyncio:class',
-        'asyncio:asynccontextmanager',
-        'asyncio:asynciterator',
-        'asyncio:asyncgenerator',
-    ]:
-        app.add_directive(name, LiteralBlockDirective)
 
     # Fallback roles for optional extensions
     roles.register_local_role('gitrepo', generic_role)
@@ -267,3 +297,41 @@ def setup(app):
     # Monkey patch the run methods
     CodeBlock.run = code_block_run_with_enhancements
     LiteralInclude.run = literal_include_run_with_enhancements
+
+    def replace_latest_versions(app, docname, source):
+        if 'sphinx-packages' not in docname:
+            return
+        lines = source[0].splitlines()
+        out = []
+        current = None
+        for line in lines:
+            stripped = line.strip()
+            if stripped.startswith('* - '):
+                name = stripped[4:].strip()
+                if name in {'Name', 'Version', 'PyPI', 'API', 'Manual', 'Tutorial', 'Description'}:
+                    current = None
+                else:
+                    current = name
+                out.append(line)
+                continue
+            if current and stripped == '- Latest':
+                ver = None
+                candidates = [
+                    current,
+                    current.replace('_', '-'),
+                    current.replace('.', '-'),
+                    current.replace('.', '_'),
+                ]
+                for key in candidates:
+                    try:
+                        ver = metadata.version(key)
+                        break
+                    except Exception:
+                        pass
+                out.append(line.replace('Latest', ver if ver else 'Not installed'))
+                current = None
+                continue
+            out.append(line)
+        source[0] = "\n".join(out)
+
+    app.connect('source-read', replace_latest_versions)

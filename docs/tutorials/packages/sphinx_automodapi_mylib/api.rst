@@ -9,6 +9,7 @@ Readers Module
 .. automodapi:: sphinx_automodapi_mylib.readers
    :no-heading:
    :no-inheritance-diagram:
+   :skip: ABC, Any
 
 Processors Module
 -----------------
@@ -16,6 +17,7 @@ Processors Module
 .. automodapi:: sphinx_automodapi_mylib.processors
    :no-heading:
    :no-inheritance-diagram:
+   :skip: Any
 
 Writers Module
 --------------
@@ -23,3 +25,4 @@ Writers Module
 .. automodapi:: sphinx_automodapi_mylib.writers
    :no-heading:
    :no-inheritance-diagram:
+   :skip: ABC, Any
